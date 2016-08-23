@@ -1,0 +1,137 @@
+{
+	"profiles": [{
+		"id": "01",
+		"UserName": "Vicky008",
+		"Personalinfo": [{
+			"Name": "vicky",
+			"Dob": "08/10/92",
+			"Gender": "Male",
+			"Email": "vckksaj@ksj.in",
+			"Mobile": 7749995677,
+			"Address": "jp nagar"
+		}],
+		"Education": [{
+			"Type": "School",
+			"School": "St teresa's school",
+			"Board": "ICSE",
+			"From": 1998,
+			"To": 2009,
+			"Overall %": 89
+		}, {
+			"Type": "School",
+			"School": "Desouza school",
+			"Board": "ICSE",
+			"From": 2009,
+			"To": 2011,
+			"Overall %": 70
+		}, {
+			"Type": "College",
+			"College": "Silicon Institute of Technology",
+			"Board": "BPUT",
+			"From": 2011,
+			"To": 2015,
+			"Overall percentage": 70
+		}],
+
+		"Skills": [{
+			"primary": "c++",
+			"secondary": "c",
+			"secondary": "java"
+		}, {
+			"primary": "jquery",
+			"secondary": "javascript",
+			"primary": "angular"
+		}],
+		"Work Experiance": [{
+			"Organisation": "Wipro",
+			"Designation": "Senior software eng",
+			"Joining Date": "23/11/2015",
+			"Leaving date": "23/11/2017",
+			"Projects": "Loyd Bank",
+			"Location": "Bangalore"
+		}, {
+			"Organisation": "Philips",
+			"Designation": "Senior software eng",
+			"Joining Date": "23/11/2017",
+			"Leaving date": "20/10/2019",
+			"Projects": "HSBC Bank",
+			"Location": "Bangalore"
+		}, {
+			"Organisation": "Microsoft",
+			"Designation": "Senior software eng",
+			"Joining Date": "20/10/2019",
+			"Leaving date": "20/10/2020",
+			"Projects": "Big Data",
+			"Location": "Bangalore"
+		}],
+		"Projects": [{}],
+		"Certification": [{}]
+	}, {
+		"id": "02",
+		"UserName": "Avadhesh",
+		"Personalinfo": {
+			"Name": "Avadesh",
+			"Dob": "01/11/94",
+			"Gender": "Male",
+			"Email": "avadaj@ksj.in",
+			"Mobile": 8899765677,
+			"Address": "Marathalli"
+		},
+		"Education": [{
+			"Type": "School",
+			"School": "St Mary's school",
+			"Board": "ICSE",
+			"From": 1998,
+			"To": 2009,
+			"Overall %": 89
+		}, {
+			"Type": "School",
+			"School": "St pauls school",
+			"Board": "ICSE",
+			"From": 2009,
+			"To": 2011,
+			"Overall %": 70
+		}, {
+			"Type": "College",
+			"College": "CV Raman Institute of Technology",
+			"Board": "BPUT",
+			"From": 2011,
+			"To": 2015,
+			"Overall percentage": 70
+		}],
+
+		"Skills": [{
+			"primary": "c++",
+			"secondary": "c",
+			"secondary": "java"
+		}, {
+			"primary": "jquery",
+			"secondary": "javascript",
+			"primary": "angular"
+		}],
+		"Work Experiance": [{
+			"Organisation": "Infy",
+			"Designation": "Senior software eng",
+			"Joining Date": "20/12/2014",
+			"Leaving date": "23/11/2016",
+			"Projects": "Loyd Bank",
+			"Location": "Bangalore"
+		}, {
+			"Organisation": "TCS",
+			"Designation": "Senior software eng",
+			"Joining Date": "23/11/2016",
+			"Leaving date": "10/10/2018",
+			"Projects": "Passport ",
+			"Location": "Bangalore"
+		}, {
+			"Organisation": "Google",
+			"Designation": "Senior software eng",
+			"Joining Date": "10/10/2018",
+			"Leaving date": "20/10/2020",
+			"Projects": "Material ui",
+			"Location": "Bangalore"
+		}],
+		"Projects": [{}],
+		"Certification": [{}]
+	}]
+}

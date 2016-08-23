@@ -1,0 +1,22 @@
+<div layout="column" layout-align="center center" class="signup-screen">
+    <div>
+        <h3>SIGN IN</h3>
+        <md-input-container class="md-icon-float ">
+            <label>Mobile Number</label>
+            <input type="tel" pattern="^\d{4}-\d{3}-\d{4}$" required>
+        </md-input-container>
+    </div>
+    <div>
+        <md-input-container class="md-icon-float ">
+            <label>Password</label>
+            <input type="password" ng-required="true">
+        </md-input-container>
+    </div>
+    <div>
+        <a ui-sref="skillprofile.skillhome">
+            <md-button class="md-primary md-raised">Sign-In</md-button>
+        </a>
+    </div>
+    <div> <a ui-sref="skillprofile.signup">New User?</a>
+    </div>
+</div>

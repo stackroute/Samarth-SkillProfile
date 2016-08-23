@@ -1,4 +1,4 @@
-# Logs
+#log
 logs
 *.log
 
@@ -34,3 +34,4 @@ node_modules
 
 # Bower modules are not needed to be in Git
 bower_modules
+bower_components

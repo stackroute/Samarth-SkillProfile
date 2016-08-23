@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(cookieParser());
 
-app.use(express.static(path.join(__dirname, 'bower_modules')));
+app.use(express.static(path.join(__dirname, 'bower_components')));
 app.use(express.static(path.join(__dirname, 'webapp')));
 
 app.use(function(req, res, next) {

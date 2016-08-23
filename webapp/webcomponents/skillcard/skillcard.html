@@ -1,0 +1,32 @@
+<md-card md-theme="default" md-theme-watch style="margin-top:57px">
+    <div class="experience" style="background-color:{{$ctrl.exp($ctrl.details.experience)}};">
+        <br>
+    </div>
+
+    <md-card-header>
+        <md-card-avatar>
+            <img class="md-user-avatar" src="{{$ctrl.details.image}}">
+        </md-card-avatar>
+        <md-card-header-text>
+            <span class="md-headline">{{$ctrl.details.name}}</span>
+            <span class=" md-subhead" ng-model=skill>{{$ctrl.details.skill}}</span>
+            <br>
+            <!-- <span class="md-subhead">JAVA DEVELOPER</span> -->
+        </md-card-header-text>
+    </md-card-header>
+
+    <md-card-title style="padding-top:0px;padding-bottom:0px;">
+    
+        <md-card-title-text layout-align="center start">
+            <span class="md-subhead"><md-icon class="material-icons">phone</md-icon>&nbsp{{$ctrl.details.contact}}</span>
+            <span class="md-subhead"><md-icon class="material-icons">room</md-icon>&nbsp{{$ctrl.details.location}}</span>
+            <span class="md-subhead"><md-icon class="material-icons">mail outline</md-icon>&nbsp{{$ctrl.details.email}}</span>
+        </md-card-title-text>
+    </md-card-title>
+    <md-card-actions layout="row" layout-align="center center">
+        <md-button class="md-raised md-icon-button" ng-click="$ctrl.shareCard()">
+            <md-icon class="material-icons">send</md-icon>
+        </md-button>
+    </md-card-actions>
+</md-card>
+

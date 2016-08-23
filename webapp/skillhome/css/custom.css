@@ -1,0 +1,28 @@
+#home {
+ color: white;
+}
+
+#sections {
+ color: white;
+}
+
+my-infosection {
+ width: 80%;
+ height: inherit;
+}
+
+my-skillcard {
+ margin-top: -56px;
+}
+
+#skillCard {
+ font-style: italic;
+}
+
+.heading {
+ margin-left: 35px;
+}
+
+.subheading {
+ margin-left: 10px;
+}
