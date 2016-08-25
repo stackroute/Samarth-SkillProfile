@@ -6,7 +6,8 @@
  color: white;
 }
 
-my-infosection {
+my-profilesection {
+ 
  width: 80%;
  height: inherit;
 }
@@ -25,4 +26,36 @@ my-skillcard {
 
 .subheading {
  margin-left: 10px;
+}
+#questionbox{
+border:1px solid black; 
+padding: 10px 10px;
+background-color: #D2D4C8;
+ height: 267px; 
+/*padding: 50px;*/
+}
+#q1{
+	 background-color:transparent;
+    border:0;
+    width: 85%;
+    height: 100px;
+
+	
+}
+.wrapper {
+	/*padding-left: 170px;*/
+	width: 100%;
+    border:1px solid #000;
+    display:inline-block;
+    background-color: white;
+     height: 100px;
+     margin-bottom: 10px;
+}
+
+
+button {
+    background-color:#D8CBC7;
+    border:0;
+    height: inherit;
+    width: 62px;
 }
