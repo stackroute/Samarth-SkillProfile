@@ -1,0 +1,18 @@
+<div ng-controller="questionboxCtrl">
+	<div layout="column" id="questionbox" >
+		<h3><label for="q1" ng-model="currentQuestionIndex">{{questionArray[currentQuestionIndex]}}</label></h3>
+		<div ng-hide="display">
+		<div class="wrapper">
+        <input id="q1" name="q1" type="text" value="" />
+        <button ng-click="increaseIndex()"><span><md-icon class="material-icons">forward</md-icon></span></button>
+	    </div>
+	    <div>
+	    	<md-progress-linear md-mode="determinate" value="{{val}}"></md-progress-linear>
+	    </div>
+	    <div flex-offset="90">
+	    	<span>{{currentQuestionIndex}}/{{questionArray.length}}</span>
+	    </div>
+	    </div>
+	    <div ng-show="display"><h3>Thank you for your time. <br> We will be back ! </h3></div>
+	</div>
+</div>
