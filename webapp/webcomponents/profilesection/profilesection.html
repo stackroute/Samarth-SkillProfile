@@ -1,4 +1,4 @@
-<div class="md-accordion" ng-repeat=" (key,data) in $ctrl.profile  ">
+<!-- <div class="md-accordion" ng-repeat=" (key,data) in $ctrl.profile  ">
     <md-toolbar class="md-hue-3" ng-init="data.expanded = false" ng-click="$ctrl.collapseAll(data)">
         <div class="md-toolbar-tools">
             <h2>
@@ -21,4 +21,26 @@
         {{key}} filled {{$ctrl.value}} %
         <br>
     </md-content>
-</div>
+</div> -->
+
+<md-content id="card" ng-repeat=" (key,data) in $ctrl.profile" layout="column" flex ng-model="collapsed" ng-click="collapsed=!collapsed">
+      <md-list layout="column" >
+      <div layout="row">
+        <md-header flex="100" class="md-no-sticky">{{key}}</md-header>
+        <md-icon class="material-icons" ng-hide="collapsed"  >arrow_downward</md-icon>
+            <md-icon class="material-icons" ng-show="collapsed" >arrow_upward</md-icon>
+            </div>
+            <div id="item" ng-show="collapsed" layout="column">
+        <md-list-item class="md-2-line" ng-repeat=" (k,v) in data"   layout="column" layout-align="center center">
+          <div class="md-list-item-text" ng-repeat="(k1, v1) in v" > 
+            {{k1}} :{{v1}}
+          </div>
+        </md-list-item>
+        <md-button id="btnadd" class="md-raised">Add</md-button>
+      </div>
+        
+        </md-list>
+        <md-progress-linear  md-theme-watch md-mode="determinate" value="{{$ctrl.value}}"></md-progress-linear>
+        {{key}} filled {{$ctrl.value}} %
+
+   </md-content>
