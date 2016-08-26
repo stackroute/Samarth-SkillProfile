@@ -1,0 +1,15 @@
+{
+	"user": [{
+
+		"name":"Diamond Khanna",
+		"age":"22",
+		"profilepicture":"dk.PNG",
+		"professionpicture":"profession.png",
+		"currentdesignation":"Senior Project Engineer",
+		"profession":"Angular Developer",
+		"DOB":"24 Feburary 1994",
+		"contact":"9023650041",
+		"location":"Bangalore",
+		"email":"dk24@gmail.com"
+	}]
+}
