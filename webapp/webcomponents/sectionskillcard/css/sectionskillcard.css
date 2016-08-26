@@ -1,0 +1,38 @@
+#card{
+  
+  margin: 20px 0px; 
+ 
+  /*background-color: #588FB1 ;*/
+}
+#item>md-list-item>div{
+    
+}
+table,th,td{
+  border:1px solid black;
+}
+#head > md-progress-linear{
+  width: 20%;
+  margin :10px 0px 0px 10px; 
+}
+#card>md-list>div>md-icon{
+  margin-right: 10px;
+  font-size: 20px;
+  
+}
+#card>md-list>div>md-header{
+  font-size: larger;
+    
+  margin-left: 20px;
+}
+
+#btnadd {
+  background-color: rgb(6, 119, 31);
+  color: #F4F6F7;
+  width: 50px;
+  margin: auto;
+}
+#card>md-list>#item>md-list-item{
+background-color: #ffffff  ;
+color: black;
+margin: 5px 0px;
+}

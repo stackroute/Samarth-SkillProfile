@@ -1,0 +1,60 @@
+<!-- <md-content id="card" ng-repeat="(key, value) in $ctrl.skill" layout="column" flex ng-model="collapsed" ng-click="collapsed=!collapsed">
+    <md-list layout="column">
+        <div layout="row" id="head">
+            <md-header class="md-no-sticky">{{key}} </md-header>
+            <md-progress-linear md-theme-watch md-mode="determinate" value="{{$ctrl.value}}"></md-progress-linear>
+            {{$ctrl.value}} %
+            <md-icon class="material-icons" ng-hide="collapsed">arrow_downward</md-icon>
+            <md-icon class="material-icons" ng-show="collapsed">arrow_upward</md-icon>
+        </div>
+        <div ng-show="collapsed">
+            <div layout="row" layout-xs="column" layout-align="center center" layout-wrap>
+                <md-card ng-repeat=" (k,v) in value" layout="column" flex="40" layout-align="center center">
+                        <md-card-content ng-repeat=" (k1,v1) in v">
+                            {{k1}} : {{v1}}
+                         </md-card-content>
+                       Name:  {{v.Name}}   Experience : {{v.Experience}}   SkillScore : {{v.SkillScore}}
+                        <md-card-actions layout="row" layout-align="end center">
+                            <md-button>Action 1</md-button>
+                            
+                        </md-card-actions>
+                </md-card>
+                
+            </div>
+            <div layout="row" flex="" layout-align="center center">
+                <md-button id="btnadd" class="md-raised">Add</md-button>
+            </div>
+        </div>
+    </md-list>
+</md-content> --> 
+<!-- <table id="t">
+                                <thead>
+                                    <tr>
+                                        <th ng-repeat="(k1, v1) in v">
+                                            {{k1}}
+                                        </th>
+                                    </tr>
+                                </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td ng-repeat="(k1, v1) in v">
+                                                {{v1}}
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                            </table>-->
+<md-card ng-repeat="(key, value) in $ctrl.skill" layout="column">
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">{{key}}</span>
+            <!-- <span class="md-subhead"></span> -->
+          </md-card-title-text>
+        </md-card-title>
+        <md-content layout-padding layout-wrap>
+            Lorem ipsum dolor sit amet, ne quod novum mei
+        </md-content>
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button>Action 1</md-button>
+          <md-button>Action 2</md-button>
+        </md-card-actions>
+</md-card>

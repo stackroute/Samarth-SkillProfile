@@ -1,21 +1,20 @@
-#card{
-    /*width: 80%;*/
-  /*color:#ffffff; */
+/*#card{
+  
   margin: 10px 0px; 
-  /*margin-right: 20px;*/
+ 
   background-color: #88939a   ;
 }
 #item>md-list-item>div{
-    /*margin-top:-20px */
+    
 }
 #card>md-list>div>md-icon{
   margin-right: 10px;
   font-size: 20px;
-  /*color: #ffffff;*/
+  
 }
 #card>md-list>div>md-header{
   font-size: larger;
-    /*font-weight: bolder;*/
+    
   margin-left: 20px;
 }
 
@@ -29,7 +28,7 @@
 background-color: #ffffff  ;
 color: black;
 margin: 5px 0px;
-}
+}*/
 /*<style> .md-accordion .expandCollapse {
     width: 30px;
     height: 30px;

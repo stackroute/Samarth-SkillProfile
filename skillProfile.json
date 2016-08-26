@@ -34,13 +34,88 @@
 		}],
 
 		"Skills": [{
-			"primary": "c++",
-			"secondary": "c",
-			"secondary": "java"
+			"Type":"Primary",
+			"Name": "Angular js",
+			"Expertise":"begginner",
+			"Experience": "4"
 		}, {
-			"primary": "jquery",
-			"secondary": "javascript",
-			"primary": "angular"
+			"Type":"Secondary",
+			"Name": "Mongo",
+			"Expertise":"begginner",
+			"Experience": "1"
+		},
+		{
+			"Type":"Primary",
+			"Name": "C++",
+			"Expertise":"begginner",
+			"Experience": "2"
+		},{
+			"Type":"Secondary",
+			"Name": "Mongo",
+			"Expertise":"skilled",
+			"Experience": "1"
+		},
+		{
+			"Type":"Primary",
+			"Name": "C++",
+			"Expertise":"proficient",
+			"Experience": "2"
+		},{
+			"Type":"Secondary",
+			"Name": "Angular js",
+			"Expertise":"skilled",
+			"Experience": "4",
+			"description":"front end technology"
+		}, {
+			"Type":"Secondary",
+			"Name": "Mongo",
+			"Expertise":"proficient",
+			"Experience": "1"
+		},
+		{
+			"Type":"Primary",
+			"Name": "C++",
+			"Expertise":"proficient",
+			"Experience": "2"
+		},{
+			"Type":"Secondary",
+			"Name": "Mongo",
+			"Expertise":"skilled",
+			"Experience": "1"
+		},
+		{
+			"Type":"Secondary",
+			"Name": "C++",
+			"Expertise":"skilled",
+			"Experience": "2"
+		},{
+			"Type":"Primary",
+			"Name": "Angular js",
+			"Expertise":"begginner",
+			"Experience": "4",
+			"description":"front end technology"
+		}, {
+			"Type":"Primary",
+			"Name": "Mongo",
+			"Expertise":"expert",
+			"Experience": "1"
+		},
+		{
+			"Type":"Primary",
+			"Name": "C++",
+			"Expertise":"expert",
+			"Experience": "2"
+		},{
+			"Type":"Secondary",
+			"Name": "Mongo",
+			"Expertise":"skilled",
+			"Experience": "1"
+		},
+		{
+			"Type":"Secondary",
+			"Name": "C++",
+			"Expertise":"skilled",
+			"Experience": "2"
 		}],
 		"Work Experiance": [{
 			"Organisation": "Wipro",
