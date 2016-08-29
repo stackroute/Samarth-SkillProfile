@@ -15,7 +15,7 @@ function projectsectioncardCtrl($http) {
     }).then(function successCallback(response) {
         for (var prop in response.data)  {
             if (prop != "id" && prop != "UserName" && prop != "Personalinfo"&& prop != "Education"
-                && prop != "Skills" && prop != "Work Experiance") { 
+                && prop != "Skills" && prop != "Work Experiance"&& prop != "Certification") { 
                 ctrl.profile[prop] = response.data[prop]; 
             }
         }
