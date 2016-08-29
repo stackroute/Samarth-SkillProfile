@@ -15,7 +15,7 @@ function sectionskillcardctrl($http,sectionskillcard,$mdDialog) {
     
     sectionskillcard.getjson().then(function(res){
     	ctrl.skill=res;
-    	// console.log("inside control",ctrl.skill);
+    	 console.log("skill object",ctrl.skill);
 
     	for(var prop in ctrl.skill)
     	{
