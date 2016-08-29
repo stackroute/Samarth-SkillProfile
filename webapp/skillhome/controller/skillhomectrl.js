@@ -1,6 +1,6 @@
 angular.module('sm-skillprofile')
     .controller('skillhomectrl', ['$scope','$http' ,function($scope,$http) {
-    		$scope.carddata={};
+    	$scope.carddata={};
 			$http({
   				method: 'GET',
   				url: 'http://localhost:8083/user',

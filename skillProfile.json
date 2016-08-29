@@ -11,26 +11,66 @@
 			"Address": "jp nagar"
 		}],
 		"Education": [{
-			"Type": "School",
-			"School": "St teresa's school",
-			"Board": "ICSE",
+			"Type": "school",
+			"Standard":"7",
+			"Name": "St teresa's school",
+			"Affiliation": "ICSE",
 			"From": 1998,
-			"To": 2009,
+			"To": 2007,
+			"Location":"Bangalore",
 			"Overall %": 89
 		}, {
-			"Type": "School",
-			"School": "Desouza school",
-			"Board": "ICSE",
+			"Type": "school",
+			"Standard":"10",
+			"Name": "Desouza school",
+			"Affiliation": "ICSE",
 			"From": 2009,
-			"To": 2011,
+			"To": 2010,
+			"Location":"Kolkata",
 			"Overall %": 70
-		}, {
-			"Type": "College",
-			"College": "Silicon Institute of Technology",
-			"Board": "BPUT",
-			"From": 2011,
-			"To": 2015,
-			"Overall percentage": 70
+		},
+		{
+			"Type": "school",
+			"Standard":"7",
+			"Name": "St teresa's school",
+			"Affiliation": "ICSE",
+			"From": 1998,
+			"To": 2007,
+			"Location":"Bangalore",
+			"Overall %": 89
+		},
+	{
+			"Type": "work",
+			"Course":"CSE",
+			"Degree":"B.TECH",
+			"Name": "Chandigarh Group Of College",
+			"Affiliation": "Chandigarh University",
+			"From": 1998,
+			"To": 2016,
+			"Location":"Jhanjeri",
+			"Overall %": 89
+		},
+	{
+			"Type": "work",
+			"Course":"CSE",
+			"Degree":"B.TECH",
+			"Name": "Chandigarh Group Of College",
+			"Affiliation": "Chandigarh University",
+			"From": 1998,
+			"To": 2016,
+			"Location":"Jhanjeri",
+			"Overall %": 89
+		},
+	{
+			"Type": "work",
+			"Course":"CSE",
+			"Degree":"B.TECH",
+			"Name": "Chandigarh Group Of College",
+			"Affiliation": "Chandigarh University",
+			"From": 1998,
+			"To": 2016,
+			"Location":"Jhanjeri",
+			"Overall %": 89
 		}],
 
 		"Skills": [{
