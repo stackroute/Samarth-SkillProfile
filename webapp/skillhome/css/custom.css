@@ -6,9 +6,16 @@
  color: white;
 }
 
+
+mysection-skill-card{ 
+ width: 80%;
+ height: inherit;
+}
+
 my-skillcard {
  margin-top: -56px;
 }
+
 #skillCard {
  font-style: italic;
 }
@@ -20,9 +27,7 @@ my-skillcard {
 .subheading {
  margin-left: 10px;
 }
+
 my-projectsectioncard {
  width: 80%;
 }
-
-
-
