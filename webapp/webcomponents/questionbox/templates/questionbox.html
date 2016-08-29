@@ -1,0 +1,25 @@
+<div  layout="column"  ng-model="$ctrl.displayInputBox" ng-hide="$ctrl.displayInputBox" ng-init="$ctrl.startInpuBox()">
+	<div flex id="questionArea">
+		<label for="ques1" ng-model="$ctrl.currentQuestionIndex">{{$ctrl.questionArray[$ctrl.currentQuestionIndex]}}</label>
+	</div>
+	<div flex layout="row"  layout-wrap>
+		 <div flex="80">
+		 	<input id="ques1" name="ques1" type="text" value="" ng-model="$ctrl.clear" ng-keyup="$event.keyCode == 13 ? $ctrl.increaseIndex() : null"/>
+		 </div>
+		 <div  flex="20">
+		 	<button id="forward" ng-click="$ctrl.increaseIndex()"><md-icon id="forwardIcon">arrow_forward</md-icon>
+           </button>
+		 </div>
+	</div>
+    <div flex>
+		 	<md-progress-linear md-mode="determinate" value="{{$ctrl.val}}"></md-progress-linear>
+    </div>
+    <div flex flex-offset="90">
+		 	{{$ctrl.currentQuestionIndex}}/{{$ctrl.questionArray.length}}
+    </div>
+</div>
+<div   ng-show="$ctrl.displayAnswerdBox" id="thankuBox">
+	Thank you! We'll be in touch.
+</div>
+
+
