@@ -6,30 +6,20 @@
             </md-card-title-text>
         </md-card-title>
         <md-content layout-padding layout-wrap layout="row" layout-xs="column">
-            <!-- <div class="padded" md-whiteframe flex="50" flext-xs="100" ng-repeat="value in data">
-                <span id="changeProjectNameFont">{{value.Project}}</span>
-                <br>
-                <span id="changeProjectDurationFont">{{value.Duration}}</span>,
-                <span id="changeProjectLocationFont">{{value.Location}}</span><br>
-                <span id="changeProjectClientFont">{{value.Client}}</span>,
-                <span id="changeProjectTeamsizeFont">{{value.TeamSize}}</span><br>
-                <span id="changeProjectSalaryFont">{{value.Salary}}</span>
-            </div> -->
             <div flex="50" flext-xs="100" ng-repeat="value in data" >
-                <span id="changeProjectNameFont">{{value.Project}}</span>
+                <li ng-click="$ctrl.addProject($event,value,'Add Project')"><span id="changeProjectNameFont">{{value.Project}}</span>
                 <br>
                 <span id="changeProjectDurationFont">{{value.Duration}}</span>,
                 <span id="changeProjectLocationFont">{{value.Location}}</span><br>
                 <span id="changeProjectClientFont">{{value.Client}}</span>,
                 <span id="changeProjectTeamsizeFont">{{value.TeamSize}}</span><br>
                 <span id="changeProjectSalaryFont">{{value.Salary}}</span>
-                <md-divider direction="vertical"></md-divider>
-            <md-divider layout-xs="100"></md-divider>
+                </li>
+                <span hide-gt-xs> <md-divider></md-divider></span>
             </div>
-            <!-- <md-divider vertical></md-divider> -->
         </md-content>
         <md-card-actions layout="row" layout-align="end center">
-            <md-button>
+            <md-button ng-click="$ctrl.addProject($event,'','Add Project')">
                 <md-icon class="material-icons">add_circle_outline</md-icon>
             </md-button>
         </md-card-actions>
