@@ -6,9 +6,15 @@
  color: white;
 }
 
+mysection-skill-card{ 
+ width: 80%;
+ height: inherit;
+}
+
 my-skillcard {
  margin-top: -56px;
 }
+
 #skillCard {
  font-style: italic;
 }
@@ -20,10 +26,35 @@ my-skillcard {
 .subheading {
  margin-left: 10px;
 }
-
-mysection-skill-card {
- 
- width: 80%;
- height: inherit;
+#ques1{
+   width: 100%;
+    background-color:#f1eded ;
+   font-size: 28px;
+   height: 100px;
+   border:0;
+   padding-left: 4px;
+}
+#forward{
+   height: 100px;
+   background-color:#d9d9d9 ;
+   border:0;
+   width:100%;
 }
 
+input:focus,#forward:focus{
+   outline: none;
+}
+#questionArea{
+  color:#868686 ;
+  font-size: 26px;  
+  background-color:#e6e6e6 ;
+  padding:10px;
+}
+#forwardIcon{
+   font-size: 50px;
+}
+#thankuBox{
+   text-align: center;
+   color:#868686 ;
+   font-size: 26px;
+}

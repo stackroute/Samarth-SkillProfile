@@ -64,8 +64,8 @@
 			"Type":"Secondary",
 			"Name": "Angular js",
 			"Expertise":"skilled",
-			"Experience": "4",
-			"description":"front end technology"
+			"Experience": "4"
+			
 		}, {
 			"Type":"Secondary",
 			"Name": "Mongo",
@@ -75,7 +75,7 @@
 		{
 			"Type":"Primary",
 			"Name": "C++",
-			"Expertise":"proficient",
+			"Expertise":"skilled",
 			"Experience": "2"
 		},{
 			"Type":"Secondary",
@@ -92,8 +92,174 @@
 			"Type":"Primary",
 			"Name": "Angular js",
 			"Expertise":"begginner",
-			"Experience": "4",
-			"description":"front end technology"
+			"Experience": "4"
+			
+		}, {
+			"Type":"Primary",
+			"Name": "Mongo",
+			"Expertise":"expert",
+			"Experience": "1"
+		},
+		{
+			"Type":"Primary",
+			"Name": "C++",
+			"Expertise":"expert",
+			"Experience": "2"
+		},{
+			"Type":"Secondary",
+			"Name": "Mongo",
+			"Expertise":"skilled",
+			"Experience": "1"
+		},
+		{
+			"Type":"Secondary",
+			"Name": "C++",
+			"Expertise":"skilled",
+			"Experience": "2"
+		},{
+			"Type":"Primary",
+			"Name": "Angular js",
+			"Expertise":"begginner",
+			"Experience": "4"
+		}, {
+			"Type":"Secondary",
+			"Name": "Mongo",
+			"Expertise":"begginner",
+			"Experience": "1"
+		},
+		{
+			"Type":"Primary",
+			"Name": "C++",
+			"Expertise":"begginner",
+			"Experience": "2"
+		},{
+			"Type":"Secondary",
+			"Name": "Mongo",
+			"Expertise":"skilled",
+			"Experience": "1"
+		},
+		{
+			"Type":"Primary",
+			"Name": "C++",
+			"Expertise":"proficient",
+			"Experience": "2"
+		},{
+			"Type":"Secondary",
+			"Name": "Angular js",
+			"Expertise":"skilled",
+			"Experience": "4"
+			
+		}, {
+			"Type":"Secondary",
+			"Name": "Mongo",
+			"Expertise":"proficient",
+			"Experience": "1"
+		},
+		{
+			"Type":"Primary",
+			"Name": "C++",
+			"Expertise":"skilled",
+			"Experience": "2"
+		},{
+			"Type":"Secondary",
+			"Name": "Mongo",
+			"Expertise":"skilled",
+			"Experience": "1"
+		},
+		{
+			"Type":"Secondary",
+			"Name": "C++",
+			"Expertise":"skilled",
+			"Experience": "2"
+		},{
+			"Type":"Primary",
+			"Name": "Angular js",
+			"Expertise":"begginner",
+			"Experience": "4"
+			
+		}, {
+			"Type":"Primary",
+			"Name": "Mongo",
+			"Expertise":"expert",
+			"Experience": "1"
+		},
+		{
+			"Type":"Primary",
+			"Name": "C++",
+			"Expertise":"expert",
+			"Experience": "2"
+		},{
+			"Type":"Secondary",
+			"Name": "Mongo",
+			"Expertise":"skilled",
+			"Experience": "1"
+		},
+		{
+			"Type":"Secondary",
+			"Name": "C++",
+			"Expertise":"skilled",
+			"Experience": "2"
+		},{
+			"Type":"Primary",
+			"Name": "Angular js",
+			"Expertise":"begginner",
+			"Experience": "4"
+		}, {
+			"Type":"Secondary",
+			"Name": "Mongo",
+			"Expertise":"begginner",
+			"Experience": "1"
+		},
+		{
+			"Type":"Primary",
+			"Name": "C++",
+			"Expertise":"begginner",
+			"Experience": "2"
+		},{
+			"Type":"Secondary",
+			"Name": "Mongo",
+			"Expertise":"skilled",
+			"Experience": "1"
+		},
+		{
+			"Type":"Primary",
+			"Name": "C++",
+			"Expertise":"proficient",
+			"Experience": "2"
+		},{
+			"Type":"Secondary",
+			"Name": "Angular js",
+			"Expertise":"skilled",
+			"Experience": "4"
+			
+		}, {
+			"Type":"Secondary",
+			"Name": "Mongo",
+			"Expertise":"proficient",
+			"Experience": "1"
+		},
+		{
+			"Type":"Primary",
+			"Name": "C++",
+			"Expertise":"skilled",
+			"Experience": "2"
+		},{
+			"Type":"Secondary",
+			"Name": "Mongo",
+			"Expertise":"skilled",
+			"Experience": "1"
+		},
+		{
+			"Type":"Secondary",
+			"Name": "C++",
+			"Expertise":"skilled",
+			"Experience": "2"
+		},{
+			"Type":"Primary",
+			"Name": "Angular js",
+			"Expertise":"begginner",
+			"Experience": "4"
+			
 		}, {
 			"Type":"Primary",
 			"Name": "Mongo",
