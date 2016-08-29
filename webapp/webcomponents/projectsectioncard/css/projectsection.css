@@ -1,0 +1,50 @@
+#projectTitle {
+    background-color: #e6e6e6;
+}
+
+.whiteframedemoDirectiveInterpolation {
+    /* For breakpoint `-xs` */
+    /* For breakpoint `-sm` */
+    /* For breakpoint `-md` */
+    /* For breakpoint `-gt-md` */
+}
+
+.whiteframedemoDirectiveInterpolation md-whiteframe,
+.whiteframedemoDirectiveInterpolation div.padded {
+    background: #fff;
+    height: inherit;
+}
+
+.whiteframedemoDirectiveInterpolation md-whiteframe:focus,
+.whiteframedemoDirectiveInterpolation div.padded:focus {
+    outline: none;
+}
+
+.whiteframedemoDirectiveInterpolation .layout-margin div.padded {
+    margin: 16px 8px;
+}
+
+.changeProjectNameFont{
+	font-size: 32px;
+	color:#868686;
+}
+.changeProjectDurationFont{
+	font-size: 25px;
+	color: green;
+}
+.changeProjectLocationFont{
+	font-size: 32px;
+	color: green;
+}
+.changeProjectClientFont{
+	font-size: 32px;
+	color: green;
+}
+.changeProjectTeamsizeFont{
+	font-size: 32px;
+	color: green;
+}
+.changeProjectSalaryFont{
+	font-size: 32px;
+	color: green;
+}

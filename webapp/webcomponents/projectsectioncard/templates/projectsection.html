@@ -1,0 +1,21 @@
+<div ng-repeat=" (key,data) in $ctrl.profile">
+<md-card>
+    <md-card-title id="projectTitle">
+        <md-card-title-text>
+            <span class="md-headline">{{key}}</span>
+        </md-card-title-text>
+    </md-card-title>
+    <md-content layout-padding layout-wrap layout="column">
+             <div class="padded" md-whiteframe flex="50" flext-xs="100" ng-repeat="value in data">
+            <div ng-repeat="(key, val) in value">
+              <div  ng-class="$ctrl.changeFont" >
+                 {{val}}
+              </div>
+            </div>
+            </div> 
+    </md-content>
+    <md-card-actions layout="row" layout-align="end center" >
+       <md-button><md-icon class="material-icons">add_circle_outline</md-icon></md-button>
+    </md-card-actions>
+</md-card>
+</div>
