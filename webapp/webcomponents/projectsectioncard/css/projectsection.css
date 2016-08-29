@@ -24,27 +24,28 @@
     margin: 16px 8px;
 }
 
-.changeProjectNameFont{
-	font-size: 32px;
+#changeProjectNameFont{
+	font-size: 24px;
 	color:#868686;
 }
-.changeProjectDurationFont{
-	font-size: 25px;
-	color: green;
+#changeProjectDurationFont{
+	font-size: 19px;
+	color:#868686;
 }
-.changeProjectLocationFont{
-	font-size: 32px;
-	color: green;
+#changeProjectLocationFont{
+	font-size: 20px;
+	color:#868686;
 }
-.changeProjectClientFont{
-	font-size: 32px;
-	color: green;
+#changeProjectClientFont{
+	font-size: 18px;
+	color:#868686;
 }
-.changeProjectTeamsizeFont{
-	font-size: 32px;
-	color: green;
+#changeProjectTeamsizeFont{
+	font-size: 18px;
+	color:#868686;
 }
-.changeProjectSalaryFont{
-	font-size: 32px;
-	color: green;
+#changeProjectSalaryFont{
+	font-size: 17px;
+	color:#868686;
 }
+
