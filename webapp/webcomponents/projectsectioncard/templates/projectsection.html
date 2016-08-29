@@ -1,0 +1,27 @@
+<div ng-repeat=" (key,data) in $ctrl.profile">
+    <md-card>
+        <md-card-title id="projectTitle">
+            <md-card-title-text>
+                <span class="md-headline">{{key}}</span>
+            </md-card-title-text>
+        </md-card-title>
+        <md-content layout-padding layout-wrap layout="row" layout-xs="column">
+            <div flex="50" flext-xs="100" ng-repeat="value in data" >
+                <li ng-click="$ctrl.addProject($event,value,'Add Project')"><span id="changeProjectNameFont">{{value.Project}}</span>
+                <br>
+                <span id="changeProjectDurationFont">{{value.Duration}}</span>,
+                <span id="changeProjectLocationFont">{{value.Location}}</span><br>
+                <span id="changeProjectClientFont">{{value.Client}}</span>,
+                <span id="changeProjectTeamsizeFont">{{value.TeamSize}}</span><br>
+                <span id="changeProjectSalaryFont">{{value.Salary}}</span>
+                </li>
+                <span hide-gt-xs> <md-divider></md-divider></span>
+            </div>
+        </md-content>
+        <md-card-actions layout="row" layout-align="end center">
+            <md-button ng-click="$ctrl.addProject($event,'','Add Project')">
+                <md-icon class="material-icons">add_circle_outline</md-icon>
+            </md-button>
+        </md-card-actions>
+    </md-card>
+</div>

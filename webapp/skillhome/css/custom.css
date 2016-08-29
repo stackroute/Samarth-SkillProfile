@@ -6,7 +6,8 @@
  color: white;
 }
 
-my-infosection {
+
+mysection-skill-card{ 
  width: 80%;
  height: inherit;
 }
@@ -25,4 +26,11 @@ my-skillcard {
 
 .subheading {
  margin-left: 10px;
+}
+
+my-projectsectioncard {
+ width: 80%;
+}
+my-educationcard{
+  width: 80%;
 }

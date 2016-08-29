@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-
+ 
 <head>
     <title>Samarth - SkillProfile | NIIT Foundation</title>
     <base href="/" />
@@ -12,16 +12,31 @@
     <link rel="stylesheet" href="/google-material-icons/dist/material-icons-font.css">
 
     <link rel="stylesheet" href="/assets/css/smskillprofile.css">
-    <link rel="stylesheet" href="/webcomponents/profilesection/css/profilesections.css">
-    <link rel="stylesheet" href="/skillhome/css/custom.css">
+    <link rel="stylesheet" href="/webcomponents/skillcard/css/skillcard.css">
+
+    <link rel="stylesheet" href="/webcomponents/questionbox/css/questionbox.css">
+    <link rel="stylesheet" href="/webcomponents/projectsectioncard/css/projectsection.css">
+    <link rel="stylesheet" href="/webcomponents/sectionskillcard/css/sectionskillcard.css">
+
+    <link rel="stylesheet" href="/webcomponents/sectionseducationcard/css/sectionseducationcard.css">
+
+    
+
+    <link rel="stylesheet" href="/skillhome/css/custom.css"> 
     <link rel="stylesheet" href="/skillsearch/css/searchstyle.css">
     <link rel="stylesheet" href="/auth/css/auth.css">
 </head>
 
+
 <body ng-app="sm-skillprofile" ng-controller="skillprofilectrl" ng-cloak>
+
+<body ng-app="sm-skillprofile" ng-controller="sm-skillprofilectrl">
+
+
     <div ui-view="navbar"></div>
     <div class='maincontent' ui-view="content"></div>
     <div ui-view="footer"></div>
+
 </body>
     <script src="/angular/angular.js"></script>
     <script src="/angular-animate/angular-animate.js"></script>
@@ -39,8 +54,16 @@
     <script src="/skillhome/skillhomemodule.js"></script>
     <script src="/skillhome/controller/skillhomectrl.js"></script>
     
-    <script src="/webcomponents/profilesection/profilesections.js"></script>
     <script src="/webcomponents/skillcard/skillcard.js"></script>
+    <script src="/webcomponents/sectionseducationcard/sectionseducationcard.js"></script>
+
+    <script src="/webcomponents/questionbox/component/questionbox.js"></script>
+    <script src="/webcomponents/questionbox/services/questionboxService.js"></script>
+    <script src="/webcomponents/projectsectioncard/component/projectsectioncard.js"></script>
+
+     <script src="/webcomponents/sectionskillcard/sectionskillcard.js"></script>
+     <script src="/webcomponents/sectionskillcard/services/sectionskillservices.js"></script>
+
     
     <script src="/skillsearch/skillsearchmodule.js"></script>
     <script src="/skillsearch/controller/skillsearchctrl.js"></script>
