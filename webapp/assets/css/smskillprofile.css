@@ -12,10 +12,18 @@ body {
 }
 
 .maincontent {
-	margin: 70px 10px 5px 10px;
+  /* background-color: #EAD7D7; */
+	margin-top: 60px;
+  margin-right: 150px;
 	min-height: 100vh;
+  width: 100%;
 }
-
+.sidenav{
+  margin-top: 60px;
+  margin-left: 150px;
+  width:20%;
+  text-align: center;
+}
 .appfooter {
 	background: #545454;
 	color: #919191;

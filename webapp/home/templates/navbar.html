@@ -3,13 +3,25 @@
         <md-content>
             <md-toolbar class="md-hue-2" style="position:fixed">
                 <div class="md-toolbar-tools">
-                    <md-button class="md-icon-button" aria-label="Settings" ng-click="togglemenu()">
+                    <md-button hide-gt-sm show-sm show-xs class="md-icon-button" aria-label="Settings" ng-click="togglemenu()">
                         <md-icon>menu</md-icon>
                     </md-button>
                     <h2>
+<<<<<<< HEAD
               <span>Samarth - Skills</span>
               
               
+=======
+              <span>Samarth - SkillProfile | NIIT Foundation</span>
+              <md-input-container>
+          <label>State</label>
+          <md-select ng-model="selectlang">
+            <md-option ng-repeat="lang in language" ng-value="lang">
+              {{lang}}
+            </md-option>
+          </md-select>
+        </md-input-container>
+>>>>>>> e75a27be0b3d5c32cd5dfaf791a82929d841f713
               </h2>
                     <div flex="65"></div>
                     <md-input-container>
@@ -36,17 +48,19 @@
                 </div>
             </md-toolbar>
             <md-list>
-                <md-item ng-repeat="item in menu">
-                    <md-item-content layout="row" layout-align="start center">
-                        <div class="inset">
+                <div ng-controller="sidenavCtrl">
+                    <md-item ng-repeat="item in items">
+                        <md-item-content layout="row" layout-align="start center">
+                            <!-- <div class="inset">
                             <ng-md-icon icon="{{item.icon}}"></ng-md-icon>
-                        </div>
-                        <div class="inset">
-                            <a ui-sref="{{item.state}}" ng-click="togglemenu()">{{item.title}}</a>
-                        </div>
-                    </md-item-content>
-                </md-item>
-                <md-divider></md-divider>
+                        </div> -->
+                            <div class="inset">
+                                <a ui-sref="{{item.state}}" ng-click="togglemenu()">{{item.title}}</a>
+                            </div>
+                        </md-item-content>
+                    </md-item>
+                    <md-divider></md-divider>
+                </div>
             </md-list>
         </md-sidenav>
     </div>
