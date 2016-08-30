@@ -23,9 +23,16 @@
 
 <body ng-app="sm-skillprofile" ng-controller="sm-skillprofilectrl">
     <div ui-view="navbar"></div>
+
     <div layout="row">
         <div ui-view="sidebar" class="sidenav" hide-xs hide-sm></div>
         <div ui-view="content@" class='maincontent'></div>
+
+
+    <div layout="row" class='maincontent'>
+        <div ui-view="sidebar"></div>
+        <div ui-view="content"></div>
+
     </div>
     <div ui-view="footer"></div>
 </body>
