@@ -1,7 +1,7 @@
  angular.module("sm-skillprofile")
      .controller('navCtrl', ['$scope', '$mdSidenav',
          function($scope, $mdSidenav) {
-
+             $scope.hidenav=true;
              $scope.togglemenu = buildToggler('left');
 
              function buildToggler(navID) {

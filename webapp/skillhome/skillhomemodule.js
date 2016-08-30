@@ -16,7 +16,7 @@ angular.module('sm-skillprofile')
                     }
                 })
                 .state('skillprofile.workexperience', {
-                    url: '/skillhome',
+                    url: '/workexperiance',
                     views: {
                         "content@": {
                             templateUrl: '/skillhome/templates/workexperience.html'
@@ -31,14 +31,14 @@ angular.module('sm-skillprofile')
                         }
                     }
                 }).state('skillprofile.skills', {
-                    url: '/skillhome',
+                    url: '/skills',
                     views: {
                         "content@": {
                             template: "<mysection-skill-card></mysection-skill-card>"
                         }
                     }
                 }).state('skillprofile.education', {
-                    url: '/skillhome',
+                    url: '/education',
                     views: {
                         "content@": {
                             template:  "<my-educationcard></my-educationcard>"
