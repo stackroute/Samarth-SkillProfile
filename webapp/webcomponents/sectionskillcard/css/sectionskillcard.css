@@ -1,15 +1,29 @@
  #card  >div > md-whiteframe{
- 	margin:5px 5px; 
+ 	margin:5px 9px; 
  	
  }
+ #card  >div > md-whiteframe>span>md-icon{
+ 	/*margin-left: 50px;*/
+ 	    position: absolute;
+    margin-left: 130px;
+    margin-top: -20px;
+ 	font-size: small;
+ }
+  #card  >div > md-whiteframe>span{
+  	margin-left:0.5em; 
+  	font-size: small;
+  }
+ #names{
+ 	margin-left:0.5em; 
+ 	font-weight: bold;
+ }
+
  #card >div >a
  {
  	cursor: pointer;
  }
- #card >div > md-whiteframe:hover{
- /*	color: white;
- 	background-color: black;*/ 
- 	font-weight: bold;
+ #items{
+ 	/*margin:30px;*/
  }
  #no{
  	font-size: small;
@@ -39,23 +53,23 @@
  	background-color: #ECF2F6;
  }
 #proficient{
-	background: linear-gradient(to right, #63EB6C 10%,white 0%);
+	background: linear-gradient(to right, #63EB6C 3%,white 0%);
 /*background-color: #DAF9D6     ;*/
 }
 #begginner{
 /*background-color: #F0CACA  ;*/
 /*background-color: red  ;*/
-    background: linear-gradient(to right, #EC4C39  10%,white 0%);
+    background: linear-gradient(to right, #EC4C39  3%,white 0%);
 
 
 }
 #expert{
-		background: linear-gradient(to right, #587DE6 10%,white 0%);
+		background: linear-gradient(to right, #587DE6 3%,white 0%);
 
 /*background-color: #E6FBFC     ;*/
 }
 #skilled{
-		background: linear-gradient(to right, #E5EA5C 10%,white 0%);
+		background: linear-gradient(to right, #E5EA5C 3%,white 0%);
 
 /*background-color: #F8F4D2   ;*/
 }

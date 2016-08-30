@@ -1,7 +1,7 @@
 <md-card id="card" ng-repeat="(key, value) in $ctrl.skill" layout="column">
     <md-card-title>
         <md-card-title-text layout="row">
-            <div class="md-headline" flex="95">{{key}}</div> <div flex="5">({{$ctrl.prim.length+$ctrl.secd.length}})</div>
+            <div class="md-headline" flex="90">{{key}}</div> <div flex="10">({{$ctrl.prim.length+$ctrl.secd.length}})</div>
         
             <!-- <span class="md-subhead"></span> -->
         </md-card-title-text>
@@ -12,17 +12,20 @@
         <!-- <div layout="row">
          
         </div> -->
-        <div layout="row" layout-wrap layout-padding>
+        <div layout="row" id="items" layout-wrap layout-padding>
             
-            <md-whiteframe class="md-whiteframe-1dp" flex="15" flex-xs="80" ng-repeat="value in $ctrl.prim" layout="column" layout-align="center center" id="{{value.Expertise}}" ng-click="$ctrl.showAdvanced($event,value,'Edit Skill')" ng-if="$index < 12">
-                <span>{{value.Name}}</span>
-                <span>{{value.Experience}} yrs</span>
+            <md-whiteframe class="md-whiteframe-1dp" flex="15" flex-xs="100" ng-repeat="value in $ctrl.prim" layout="column" layout-align="start start" id="{{value.Expertise}}"  ng-if="$index < 6">
+                <span id="names">{{value.Name}}</span>
+                <span >{{value.Experience}} yrs <md-icon ng-click="$ctrl.showAdvanced($event,value,'Edit Skill')" >mode_edit</md-icon></span>  
+                
+
                 <!-- <md-button><md-icon class="material-icons">close</md-icon></md-button> -->
+                <!-- <div layout="row"></div> -->
             </md-whiteframe>
 
-            <md-whiteframe class="md-whiteframe-1dp" flex="15" flex-xs="80" ng-repeat="value in $ctrl.prim" layout="column" layout-align="center center" id="{{value.Expertise}}" ng-click="$ctrl.showAdvanced($event,value,'Edit Skill')" ng-if="$index > 12" ng-show="collapsed">
-                <span>{{value.Name}}</span>
-                <span>{{value.Experience}} yrs</span>
+            <md-whiteframe class="md-whiteframe-1dp" flex="15" flex-xs="100" ng-repeat="value in $ctrl.prim" layout="column" layout-align="start start" id="{{value.Expertise}}"  ng-if="$index > 6" ng-show="collapsed">
+                <span id="names"> {{value.Name}}</span>
+                <span>{{value.Experience}} yrs <md-icon ng-click="$ctrl.showAdvanced($event,value,'Edit Skill')" >mode_edit</md-icon></span>
                 <!-- <md-button><md-icon class="material-icons">close</md-icon></md-button> -->
             </md-whiteframe>
             <div layout="row" flex="85"></div>
@@ -36,16 +39,22 @@
             </div>
             <!-- {{value}} -->
         </div>
+
         <h2 class="md-title">Others <span id="no">({{$ctrl.secd.length}})</span></h2>
-        <div layout="row" layout-wrap layout-padding>
-           <md-whiteframe class="md-whiteframe-1dp" flex="15" flex-xs="80" ng-repeat="value in $ctrl.secd" layout="column" layout-align="center center"  ng-click="$ctrl.showAdvanced($event,value,'Edit Skill')" ng-if="$index < 12">
-               <span>{{value.Name}}</span>
-                <span>{{value.Experience}} yrs</span>
+        
+        <div layout="row" id="items" layout-wrap layout-padding>
+            <md-whiteframe class="md-whiteframe-1dp" flex="15" flex-xs="100" ng-repeat="value in $ctrl.secd" layout="column" layout-align="start start" id="{{value.Expertise}}"  ng-if="$index < 6">
+                <span id="names">{{value.Name}}</span>
+                <span >{{value.Experience}} yrs <md-icon ng-click="$ctrl.showAdvanced($event,value,'Edit Skill')" >mode_edit</md-icon></span>  
+                
+
                 <!-- <md-button><md-icon class="material-icons">close</md-icon></md-button> -->
+                <!-- <div layout="row"></div> -->
             </md-whiteframe>
-            <md-whiteframe class="md-whiteframe-1dp" flex="15" flex-xs="80" ng-repeat="value in $ctrl.secd" layout="column" layout-align="center center"  ng-click="$ctrl.showAdvanced($event,value,'Edit Skill')" ng-if="$index > 12" ng-show="collapsed1">
-                <span>{{value.Name}}</span>
-                <span>{{value.Experience}} yrs</span>
+
+            <md-whiteframe class="md-whiteframe-1dp" flex="15" flex-xs="100" ng-repeat="value in $ctrl.secd" layout="column" layout-align="start start" id="{{value.Expertise}}"  ng-if="$index > 6" ng-show="collapsed1">
+                <span id="names"> {{value.Name}}</span>
+                <span>{{value.Experience}} yrs <md-icon ng-click="$ctrl.showAdvanced($event,value,'Edit Skill')" >mode_edit</md-icon></span>
                 <!-- <md-button><md-icon class="material-icons">close</md-icon></md-button> -->
             </md-whiteframe>
             <div layout="row" flex="85"></div>

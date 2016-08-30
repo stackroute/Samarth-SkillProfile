@@ -13,6 +13,12 @@
              }
              $scope.selectlang="English";
             $scope.language=['English','Hindi','Telgu','Tamil','Punjabi','Gujrati'];
+
+            $scope.$watch('selectlang', function(lang) 
+            {
+                alert(lang+" content will change..  under construction"); 
+            });
+
             console.log("lang"+$scope.selectlang);
              $scope.menu = [{
                  state: 'skillprofile.skillhome',
