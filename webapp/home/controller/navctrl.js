@@ -1,7 +1,7 @@
  angular.module("sm-skillprofile")
      .controller('navCtrl', ['$scope', '$mdSidenav',
          function($scope, $mdSidenav) {
-
+           
              $scope.togglemenu = buildToggler('left');
 
              function buildToggler(navID) {
@@ -12,29 +12,7 @@
                  }
              }
 
-             $scope.menu = [{
-                 state: 'skillprofile.skillhome',
-                 title: 'Home',
-                 icon: 'dashboard'
-             }, {
-                 state: 'skillprofile.skillsearch',
-                 title: 'Search Skill',
-                 icon: 'search'
-             }, {
-                 state: 'skillprofile.jobsearch',
-                 title: 'Search Jobs',
-                 icon: 'search'
-             }, {
-                 state: 'skillprofile.messages',
-                 title: 'Messages',
-                 icon: 'message'
-             }, {
-                 state: 'skillprofile.notifications',
-                 title: 'Notifications',
-                 icon: 'notification'
-             }];
-         }
-     ])
+         
      // .directive('userAvatar', function() {
      //     return {
      //         replace: true,

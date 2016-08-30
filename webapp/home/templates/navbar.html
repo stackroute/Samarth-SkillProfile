@@ -7,35 +7,27 @@
                     <md-icon>menu</md-icon>
                 </md-button>
                 <h2>
-			  <span>Samarth - Skills</span>
+			  <span>Samarth</span>
 		  </h2>
             </div>
         </md-toolbar>
     </md-content>
 </div>
-<div>
-    <md-sidenav class="md-sidenav-left md-whiteframe-4dp" md-component-id="left">
-        <md-toolbar class="md-tall md-hue-4">
-            <div layout="column" class="md-toolbar-tools-bottom inset">
-                <user-avatar></user-avatar>
-                <span></span>
-                <div>Firstname Lastname</div>
-                <div>email@domainname.com</div>
-            </div>
-        </md-toolbar>
-        <md-list>
-            <md-item ng-repeat="item in menu">
-                    <md-item-content layout="row" layout-align="start center">
-                        <div class="inset">
-                            <ng-md-icon icon="{{item.icon}}"></ng-md-icon>
-                        </div>
-                        <div class="inset">
-                            <a ui-sref="{{item.state}}" ng-click="togglemenu()">{{item.title}}</a>
-                        </div>
-                    </md-item-content>
-            </md-item>
-            <md-divider></md-divider>
-        </md-list>
-    </md-sidenav>
-</div>
+
+   <md-sidenav class="md-sidenav-left " md-component-id="left" layout="column">
+       
+      
+       <div layout="row" flex="70">
+           <md-list>
+           <div ng-controller="sidenavCtrl">
+               <md-list-item ng-repeat="item in items ">
+                   
+                       <a ui-sref='{{item.state}}' ng-click="toggleLeft('left')">
+                       {{item.title}}
+                       </a>
+                        <md-divider></md-divider>
+                   </div>
+               </md-list-item>
+           </md-list>
+    
 <hr>
