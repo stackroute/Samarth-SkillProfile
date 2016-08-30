@@ -8,15 +8,19 @@
                     </md-button>
                     <h2>
               <span>Samarth - Skills</span>
-              <md-input-container>
-          <label>State</label>
-          <md-select ng-model="selectlang">
-            <md-option ng-repeat="lang in language" ng-value="lang">
-              {{lang}}
-            </md-option>
-          </md-select>
-        </md-input-container>
+              
+              
               </h2>
+                    <div flex="65"></div>
+                    <md-input-container>
+                        <!-- <label>Language</label> -->
+                        <md-select ng-model="selectlang">
+                            <md-option ng-repeat="lang in language" ng-value="lang">
+                                {{lang}}
+                            </md-option>
+                        </md-select>
+                    </md-input-container>
+                    <a ui-sref="#">Signout</a>
                 </div>
             </md-toolbar>
         </md-content>
