@@ -304,6 +304,42 @@
           "TeamSize": "20",
           "Salary": "32000"
         }
+        ,
+        {
+          "Project": "Automation of Mechanical gear",
+          "Duration": "6 months",
+          "Location": "Bangalore",
+          "Client": "Wipro",
+          "TeamSize": "20",
+          "Salary": "32000"
+        }
+        ,
+        {
+          "Project": "Automation of Mechanical gear",
+          "Duration": "6 months",
+          "Location": "Bangalore",
+          "Client": "Wipro",
+          "TeamSize": "20",
+          "Salary": "32000"
+        }
+        ,
+        {
+          "Project": "Automation of Mechanical gear",
+          "Duration": "6 months",
+          "Location": "Bangalore",
+          "Client": "Wipro",
+          "TeamSize": "20",
+          "Salary": "32000"
+        }
+        ,
+        {
+          "Project": "Automation of Mechanical gear",
+          "Duration": "6 months",
+          "Location": "Bangalore",
+          "Client": "Wipro",
+          "TeamSize": "20",
+          "Salary": "32000"
+        }
       ],
 		"Certification": [{}]
 	}, {

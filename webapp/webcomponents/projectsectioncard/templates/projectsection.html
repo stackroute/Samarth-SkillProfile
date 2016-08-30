@@ -6,7 +6,7 @@
             </md-card-title-text>
         </md-card-title>
         <md-content layout-padding layout-wrap layout="row" layout-xs="column">
-            <div flex="50" flext-xs="100" ng-repeat="value in data" >
+            <div flex="50" flext-xs="100" ng-repeat="value in data" ng-init="myvar=$index">
                 <li ng-click="$ctrl.addProject($event,value,'Add Project')"><span id="changeProjectNameFont">{{value.Project}}</span>
                 <br>
                 <span id="changeProjectDurationFont">{{value.Duration}}</span>,
@@ -17,6 +17,18 @@
                 </li>
                 <span hide-gt-xs> <md-divider></md-divider></span>
             </div>
+
+            <!-- <div flex="50" flext-xs="100" ng-repeat="value in data" ng-init="myvar=$index">
+                <li ng-click="$ctrl.addProject($event,value,'Add Project')"><md-icon>work</md-icon><span id="changeProjectNameFont">{{value.Project}}</span>{{myvar}}
+                <br>
+                <span id="changeProjectDurationFont">{{value.Duration}}</span>,
+                <span id="changeProjectLocationFont">{{value.Location}}</span><br>
+                <span id="changeProjectClientFont">{{value.Client}}</span>,
+                <span id="changeProjectTeamsizeFont">{{value.TeamSize}}</span><br>
+                <span id="changeProjectSalaryFont">{{value.Salary}}</span>
+                </li>
+                <span hide-gt-xs> <md-divider></md-divider></span>
+            </div> -->
         </md-content>
         <md-card-actions layout="row" layout-align="end center">
             <md-button ng-click="$ctrl.addProject($event,'','Add Project')">
