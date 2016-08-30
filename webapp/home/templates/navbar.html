@@ -24,14 +24,11 @@
 </div>
 <div>
     <md-sidenav class="md-sidenav-left md-whiteframe-4dp" md-component-id="left">
-       
+       <md-toolbar>
             <div layout="column" class="md-toolbar-tools-bottom inset">
-                <user-avatar></user-avatar>
-               
-                
-                
-            </div>
-      
+                <div back-img="webcomponents/download.png"></div>
+        </div>
+      </md-toolbar>
         <md-list>
             <div ng-controller="sidenavCtrl">
                 <md-item ng-repeat="item in items">
@@ -43,6 +40,7 @@
                             <a ui-sref="{{item.state}}" ng-click="togglemenu()">{{item.title}}</a>
                         </div>
                     </md-item-content>
+                    <md-divider></md-divider>
                 </md-item>
                 <md-divider></md-divider>
             </div>

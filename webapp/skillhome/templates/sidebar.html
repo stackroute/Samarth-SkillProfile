@@ -1,21 +1,23 @@
+<div layout="column">
 
-
- <md-list>
-  
+<div>
+<md-list>
     <div ng-controller="sidenavCtrl">
-    <div class="container">
-
+        <div class="container">
             <md-item ng-repeat="item in items">
-
-            <md-item-content layout="row" layout-align="start center">
-
-                <div class="inset">
-                    <a ui-sref="{{item.state}}">{{item.title}}</a>
-                </div>
-                <
-            </md-item-content>
-            <md-divider></md-divider>
-        </md-item>
+                <md-item-content layout="row">
+                    <div class="inset">
+                        <a ui-sref="{{item.state}}">{{item.title}}</a>
+                    </div>
+                </md-item-content>
+                <md-divider></md-divider>
+            </md-item>
         </div>
     </div>
-    </md-list>
+</md-list>
+</div>
+</div>
+
+
+
+

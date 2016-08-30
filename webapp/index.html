@@ -6,6 +6,7 @@
     <base href="/" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/angular-material/angular-material.css">
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css">
     <link rel="stylesheet" href="/google-material-icons/dist/material-icons-font.css">
     <link rel="stylesheet" href="/assets/css/smskillhome.css">
@@ -26,13 +27,22 @@
 </head>
 
 <body ng-app="sm-skillprofile" ng-controller="sm-skillprofilectrl">
-   <div ui-view="navbar"></div> 
+   <div ui-view="navbar"></div>
+  <div layout="row" flex>
 
-    <div layout="row">
-        <div ui-view="sidebar" class="sidenav" hide-xs hide-sm></div>
-        <div ui-view="content@" class='maincontent'></div>
+    <div layout="column">
+        <div ui-view="sidebar" class="sidenav" flex="30" hide-xs hide-sm>
+            </div>
+       
+ 
+        <div ui-view="content@" class='maincontent' flex="50"> </div>
+   
      </div>
+     </div>
+    
+    
     <div ui-view="footer"></div>
+<div back-img="webcomponents/download.png"></div>
 </body>
 <script src="/angular/angular.js"></script>
 <script src="/angular-animate/angular-animate.js"></script>
@@ -45,6 +55,9 @@
 <script src="/skillhome/skillhomemodule.js"></script>
 <script src="/skillhome/controller/skillhomectrl.js"></script>
 <script src="/skillhome/controller/skillhomenav.js"></script>
+<script src="/skillhome/directives/avatar.js"></script>
+<script src="/skillhome/directives/image.js"></script>
+
 <script src="/skillhome/services/sidenavfactory.js"></script>
 <script src="/webcomponents/skillcard/skillcard.js"></script>
 <script src="/webcomponents/sectionseducationcard/sectionseducationcard.js"></script>
