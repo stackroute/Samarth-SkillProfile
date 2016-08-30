@@ -1,22 +1,35 @@
- #card > md-content >div > md-whiteframe{
+ #card  >div > md-whiteframe{
  	margin:5px 5px; 
  	
  }
- #card > md-content >div >a{
+ #card >div >a
+ {
  	cursor: pointer;
  }
- #card > md-content >div > md-whiteframe:hover{
+ #card >div > md-whiteframe:hover{
  /*	color: white;
  	background-color: black;*/ 
  	font-weight: bold;
  }
-
-
+ #no{
+ 	font-size: small;
+ }
+#card >md-card-actions>button{
+	background-color: white;
+	border-style: none;
+	font-size: larger;
+    margin-right: 10px;
+}
+#card >md-card-actions>button:hover{
+	border-style: solid black;
+	color: white;
+ 	background-color: black;
+}
  #card> md-card-title{
  		/*background-color: #e3e3e3;*/
  		    background-color: #D9D9D9;
  }
- #card > md-content > .md-title{
+ #card  > .md-title{
  	margin: 10px 10px; 
  }
 .md-dialog-content>md-input-container>input{
@@ -26,23 +39,23 @@
  	background-color: #ECF2F6;
  }
 #proficient{
-	background: linear-gradient(to right, #DAF9D6 10%,white 0%);
+	background: linear-gradient(to right, #63EB6C 10%,white 0%);
 /*background-color: #DAF9D6     ;*/
 }
 #begginner{
 /*background-color: #F0CACA  ;*/
 /*background-color: red  ;*/
-    background: linear-gradient(to right, #F0CACA 10%,white 0%);
+    background: linear-gradient(to right, #EC4C39  10%,white 0%);
 
 
 }
 #expert{
-		background: linear-gradient(to right, #E6FBFC 10%,white 0%);
+		background: linear-gradient(to right, #587DE6 10%,white 0%);
 
 /*background-color: #E6FBFC     ;*/
 }
 #skilled{
-		background: linear-gradient(to right, #F8F4D2 10%,white 0%);
+		background: linear-gradient(to right, #E5EA5C 10%,white 0%);
 
 /*background-color: #F8F4D2   ;*/
 }

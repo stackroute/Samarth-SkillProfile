@@ -11,7 +11,9 @@
                          .then(function() {});
                  }
              }
-
+             $scope.selectlang="English";
+            $scope.language=['English','Hindi','Telgu','Tamil','Punjabi','Gujrati'];
+            console.log("lang"+$scope.selectlang);
              $scope.menu = [{
                  state: 'skillprofile.skillhome',
                  title: 'Home',

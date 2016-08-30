@@ -37,7 +37,7 @@ function sectionskillcardctrl($http,sectionskillcard,$mdDialog) {
     			}
     		}
     	}
-    	  console.log(ctrl.prim);
+    	  
     	
     });
 
