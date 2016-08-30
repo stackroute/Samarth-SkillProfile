@@ -1,0 +1,13 @@
+.md-toolbar-tools>md-input-container>md-select:after{
+	color: #ffffff;
+}
+.md-toolbar-tools>a{
+	cursor: pointer;
+	font-size: small;
+	margin-left: 50px;
+}
+.md-toolbar-tools>a:hover{
+	cursor: pointer;
+	text-decoration: underline;
+	color: #ffffff;
+}

@@ -1,33 +1,52 @@
-<div ng-cloak>
 <div>
     <md-content>
         <md-toolbar class="md-hue-2" style="position:fixed">
             <div class="md-toolbar-tools">
-                <md-button class="md-icon-button" aria-label="Settings" ng-click="togglemenu()">
+                <md-button hide-gt-sm show-sm show-xs class="md-icon-button" aria-label="Settings" ng-click="togglemenu()">
                     <md-icon>menu</md-icon>
                 </md-button>
                 <h2>
-			  <span>Samarth</span>
-		  </h2>
+                <span>Samarth-SkillProfile</span>
+               </h2>
+                <div flex="65"></div>
+                <md-input-container>
+                    <!-- <label>Language</label> -->
+                    <md-select ng-model="selectlang">
+                        <md-option ng-repeat="lang in language" ng-value="lang">
+                            {{lang}}
+                        </md-option>
+                    </md-select>
+                </md-input-container>
+                <a ui-sref="#">Signout</a>
             </div>
         </md-toolbar>
     </md-content>
 </div>
-
-   <md-sidenav class="md-sidenav-left " md-component-id="left" layout="column">
-       
-      
-       <div layout="row" flex="70">
-           <md-list>
-           <div ng-controller="sidenavCtrl">
-               <md-list-item ng-repeat="item in items ">
-                   
-                       <a ui-sref='{{item.state}}' ng-click="toggleLeft('left')">
-                       {{item.title}}
-                       </a>
-                        <md-divider></md-divider>
-                   </div>
-               </md-list-item>
-           </md-list>
-    
+<div>
+    <md-sidenav class="md-sidenav-left md-whiteframe-4dp" md-component-id="left">
+        <md-toolbar class="md-tall md-hue-4">
+            <div layout="column" class="md-toolbar-tools-bottom inset">
+                <user-avatar></user-avatar>
+                <span></span>
+                <div>Firstname Lastname</div>
+                <div>email@domainname.com</div>
+            </div>
+        </md-toolbar>
+        <md-list>
+            <div ng-controller="sidenavCtrl">
+                <md-item ng-repeat="item in items">
+                    <md-item-content layout="row" layout-align="start center">
+                        <!-- <div class="inset">
+                            <ng-md-icon icon="{{item.icon}}"></ng-md-icon>
+                        </div> -->
+                        <div class="inset">
+                            <a ui-sref="{{item.state}}" ng-click="togglemenu()">{{item.title}}</a>
+                        </div>
+                    </md-item-content>
+                </md-item>
+                <md-divider></md-divider>
+            </div>
+        </md-list>
+    </md-sidenav>
+</div>
 <hr>
