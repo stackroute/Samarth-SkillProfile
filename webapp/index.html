@@ -1,40 +1,34 @@
 <!DOCTYPE html>
 <html>
- 
+
 <head>
     <title>Samarth - SkillProfile | NIIT Foundation</title>
     <base href="/" />
-    
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <link rel="stylesheet" href="/angular-material/angular-material.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css">
     <link rel="stylesheet" href="/google-material-icons/dist/material-icons-font.css">
-    
-      <link rel="stylesheet" href="/assets/css/smskillhome.css">
+    <link rel="stylesheet" href="/assets/css/smskillhome.css">
     <link rel="stylesheet" href="/assets/css/smskillprofile.css">
     <link rel="stylesheet" href="/webcomponents/skillcard/css/skillcard.css">
-
     <link rel="stylesheet" href="/webcomponents/questionbox/css/questionbox.css">
     <link rel="stylesheet" href="/webcomponents/projectsectioncard/css/projectsection.css">
     <link rel="stylesheet" href="/webcomponents/sectionskillcard/css/sectionskillcard.css">
-
     <link rel="stylesheet" href="/webcomponents/sectionseducationcard/css/sectionseducationcard.css">
-
-    
-
-    <link rel="stylesheet" href="/skillhome/css/custom.css"> 
+    <link rel="stylesheet" href="/skillhome/css/custom.css">
     <link rel="stylesheet" href="/skillsearch/css/searchstyle.css">
     <link rel="stylesheet" href="/auth/css/auth.css">
 </head>
 
 <body ng-app="sm-skillprofile" ng-controller="sm-skillprofilectrl">
-
     <div ui-view="navbar"></div>
-    <div class='maincontent' ui-view="content"></div>
+    <div layout="row" class='maincontent'>
+        <div ui-view="sidebar"></div>
+        <div ui-view="content"></div>
+    </div>
     <div ui-view="footer"></div>
-
 </body>
+
     <script src="/angular/angular.js"></script>
     <script src="/angular-animate/angular-animate.js"></script>
     <script src="/angular-aria/angular-aria.js"></script>
