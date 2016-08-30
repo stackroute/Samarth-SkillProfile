@@ -1,0 +1,33 @@
+
+
+{
+    "sidenav": [{
+            "state": "skillprofile.skillhome",
+            "title": "Profile"
+           
+        }, {
+            "state": "skillprofile.skillsearch",
+            "title": "Education"
+           
+        }, {
+            "state": "skillprofile.messages",
+            "title": "Skills"
+            
+        },
+        {
+            "state": "skillprofile.messages",
+            "title": "WorkEperience"
+        }, 
+        	{
+            "state": "skillprofile.messages",
+            "title": "Projects"
+           
+        },{
+               "state": "skillprofile.notifications",
+               "title": "Showcase"
+              
+           }
+    ]
+}
+		 	
+

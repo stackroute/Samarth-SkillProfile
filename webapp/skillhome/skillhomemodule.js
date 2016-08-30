@@ -1,5 +1,5 @@
 angular.module('sm-skillprofile')
-    .config(['$stateProvider', '$urlMatcherFactoryProvider', '$urlRouterProvider',
+    .config(['$stateProvider', '$urlMatcherFactoryProvider','$urlRouterProvider',
         function($stateProvider, $urlMatcherFactoryProvider, $urlRouterProvider) {
 
             $urlMatcherFactoryProvider.caseInsensitive(true);

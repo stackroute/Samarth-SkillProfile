@@ -1,3 +1,69 @@
+
+<!--  <md-sidenav class="md-sidenav-left md-whiteframe-4dp" md-component-id="left">  
+  -->
+        <!-- <md-toolbar class="md-tall md-hue-4">
+           <div layout="column" class="md-toolbar-tools-bottom inset">
+               <user-avatar></user-avatar>
+               <span></span>
+               <div>Firstname Lastname</div>
+               <div>email@domainname.com</div>
+           </div>
+       </md-toolbar>  --> 
+
+       <md-list>
+      <div ng-controller="sidenavCtrl"> 
+           <md-item ng-repeat="item in items">
+                   <md-item-content layout="row" layout-align="start center">
+                       
+                       <div class="inset">
+                           <a ui-sref="{{item.state}}">{{item.title}}</a>
+                       </div>
+                   </md-item-content>
+                     <md-divider></md-divider>
+           </md-item>
+          </div> 
+       </md-list> 
+
+       
+
+ <!-- <div ng-controller="sidenavCtrl">
+   <md-sidemenu>
+  <md-sidemenu-group>
+    <md-subheader class="md-no-sticky">Overview</md-subheader>
+ 
+    <md-sidemenu-content ng-repeat="item in items">
+      <md-sidemenu href="#">{{item.title}}</md-sidemenu>
+     <md-divider></md-divider>
+    </md-sidemenu-content>
+  </md-sidemenu-group>
+</md-sidemenu>-->
+<!-- <md-button class="md-button-toggle" ng-click="toggle()" 
+           aria-controls="side-menu-{{section.name | nospace}}" flex layout="row" aria-expanded="{{isOpen()}}">{{section.name}}
+     <span aria-hidden="true" class="pull-right fa fa-chevron-down md-toggle-icon" ng-class="{\'toggled\' : isOpen()}"></span>
+</md-button>
+<ul ng-show="isOpen()" id="side-menu-{{section.name | nospace}}" class="menu-toggle-list">
+    <li ng-repeat="page in section.pages">
+        <menu-link section="page"></menu-link>
+    </li>
+</ul> -->
+
+ <!--  <table ng-controller="sidenavCtrl">
+    <thead>
+      <tr><th colspan="4">{{item.title}}</th></tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="item in items">
+       
+        <td>
+          
+         < {{item.state}} -->
+     <!--    </td>
+        
+      </tr>
+    </tbody>
+  </table>
+</body> -->
+=======
 <div layout="row" layout-xs="column" layout-align="center center">
     <div layout="column" flex-gt-xs="40" flex-xs="100" layout-wrap">
             <my-skillcard data='carddata[0]'></my-skillcard>
@@ -6,8 +72,14 @@
                  <my-questionbox></my-questionbox>
        </div>
    </div>
+     
    <div layout="column" layout-align="center center">
+
+      <my-educationcard></my-educationcard>
+
       <mysection-skill-card></mysection-skill-card>
 
       <my-projectsectioncard></my-projectsectioncard>
+
    </div>
+>>>>>>> 4636a238ac7d0e4008a48e9dfd73576127e3c3fa

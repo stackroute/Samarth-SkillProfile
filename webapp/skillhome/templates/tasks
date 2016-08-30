@@ -1,0 +1,25 @@
+- Each of you have to rework your respective UI 
+	- Skill Card - DK
+	- Section-Skill Card - VG
+	- Section-Project Card - AY
+	- Section-Education Card - DK
+
+- AppBar (NavBar) should have language drop down - VG
+
+- AppBar SideNav Panel should be visible for xs, gt-xs, sm, 
+
+- AppBar User signout - VG
+
+- Rework on Side-Nav Panel - SV
+
+- Question Box should become responsive for great width too & question title has to be self adjusting to two lines along font size - AY
+
+- Theme has to be either NIIT-Foundation or some new color scheme - SR
+
+- App Landing Page with Sign-up & Sign-In form width adjusted - AF
+
+- Skill Home new layout - SV, AY, VG
+
+- Conversation statement UI to be matching with NLUI - DK
+	
+- Skill Search page - SR
