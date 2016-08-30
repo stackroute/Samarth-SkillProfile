@@ -19,5 +19,6 @@ angular.module('sm-skillprofile')
                         }
                     }
                 })
+                
         }
     ])
