@@ -3,26 +3,31 @@
 {
     "sidenav": [{
             "state": "skillprofile.skillhome",
-            "title": "Profile"
+            "title": "Portfolio"
            
         }, {
-            "state": "skillprofile.skillsearch",
-            "title": "Education"
+            "state": "skillprofile.workexperience",
+            "title": "Work Experience"
            
         }, {
-            "state": "skillprofile.messages",
-            "title": "Skills"
+            "state": "skillprofile.projects",
+            "title": "Projects"
             
         },
         {
-            "state": "skillprofile.messages",
-            "title": "WorkEperience"
+            "state": "skillprofile.skills",
+            "title": "Skills"
         }, 
         	{
-            "state": "skillprofile.messages",
-            "title": "Projects"
+            "state": "skillprofile.education",
+            "title": "Education"
            
         },{
+               "state": "skillprofile.notifications",
+               "title": "Personal info"
+              
+           },
+           {
                "state": "skillprofile.notifications",
                "title": "Showcase"
               
