@@ -1,5 +1,5 @@
 
-#ques1{
+.ques1{
     width: 100%;
      background-color:#f1eded;
     font-size: 42px;
@@ -7,66 +7,27 @@
     border:0;
     padding-left: 10px;
 }
-#forward{
+.forward{
     height: 102px;
     background-color:#d9d9d9;
     border:0;
     width:100%;
 }
 
- input:focus,#forward:focus{
+ input:focus,.forward:focus{
     outline: none;
 }
-#questionArea{
+.questionArea{
    color:#868686;
    font-size: 26px;  
    background-color:#e6e6e6;
    padding:10px;
 }
-#forwardIcon{
+.forwardIcon{
     font-size: 50px;
 }
-#thankuBox{
+.thankuBox{
     text-align: center;
     color:#868686;
     font-size: 26px;
-
-#ques1{
-    width: 100%;
-     background-color:#f1eded;
-    font-size: 42px;
-    height: 100px;
-    border:0;
-    padding-left: 10px;
-}
-#forward{
-    height: 102px;
-    background-color:#d9d9d9;
-    border:0;
-    width:100%;
-}
-
- input:focus,#forward:focus{
-    outline: none;
-}
-#questionArea{
-   color:#868686;
-   font-size: 26px;  
-   background-color:#e6e6e6;
-   padding:10px;
-}
-#forwardIcon{
-    font-size: 50px;
-}
-#thankuBox{
-    text-align: center;
-    color:#868686;
-    font-size: 26px;
-}
-#questionbox{
-  
-  width: 100%;
-  margin:auto;
-
-
 }

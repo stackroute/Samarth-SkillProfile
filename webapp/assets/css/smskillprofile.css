@@ -6,24 +6,10 @@
 }
 
 body {
-  /*margin: 70px 10px 5px 10px;*/
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", "Verdana", "sans-serif";
   font-size: auto;
   margin: auto;
 }
-
-/*.maincontent {
-	margin: 70px 10px 5px 10px;
-  font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", "Verdana", "sans-serif";
-  font-size: auto;
-  margin: auto;
-}
-
-.maincontent {
-	min-height: 100vh;
-  width: 100%;
-}
-*/
 
 .radiusCircle {
   border-radius: 50%;
@@ -31,27 +17,22 @@ body {
 
 .sidenav{
   text-align: center;
-  /* min-height: 100vh; */
 }
 
-#maincontent {
+.maincontent {
   margin: 70px 10px 40px 10px;
-	/*margin-top: 60px;*/
 	min-height: 100vh;
   width: 100%;
 }
-#sidebarcss{
+.sidebarcss{
   margin-top: 60px;
-  /*border-right: 1px solid #CCCC99;*/
   border-right: 1px solid rgba(0,0,0,0.12);
-  /*border-left: 1px solid #CCCC99;*/
     line-height: 50px;
    min-height: 100vh;
 }
 .appfooter {
 	background: #545454;
 	color: #919191;
-	/*margin: 0px 0px 0px 0px;*/
 	padding: 5px;
 }
 a:hover{
@@ -69,6 +50,3 @@ color:black;
   color: #717171;
 }
 
-.active:hover{
-  /*background-color:#CCCC99;*/
-}

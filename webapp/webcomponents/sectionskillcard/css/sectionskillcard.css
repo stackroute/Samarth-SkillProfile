@@ -1,40 +1,41 @@
 
- #card  >div > md-whiteframe{
+ .card  >div > md-whiteframe{
  	margin:5px 5px; 
  	
  }
- #card  >div > md-whiteframe>span>md-icon{
+ .card  >div > md-whiteframe>span>md-icon{
  	/*margin-left: 50px;*/
  	    position: absolute;
     margin-left: 60px;
     margin-top: -20px;
  	font-size: small;
+  cursor:pointer;
  }
-  #card  >div > md-whiteframe>span{
+  .card  >div > md-whiteframe>span{
   	margin-left:0.5em; 
   	font-size: small;
   }
- #names{
+ .names{
  	margin-left:0.5em; 
  	font-weight: bold;
  }
 
- #card >div >a
+ .card >div >a
  {
  	cursor: pointer;
  }
- #items{
+ .items{
  	/*margin:30px;*/
  }
- #no{
+ .numbers{
  	font-size: small;
  }
 
- #card> md-card-title{
+ .card> md-card-title{
  		/*background-color: #e3e3e3;*/
  		    background-color: #D9D9D9;
  }
- #card  > .md-title{
+ .card  > .md-title{
  	margin: 10px 10px; 
  }
 .md-dialog-content>md-input-container>input{

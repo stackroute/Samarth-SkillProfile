@@ -1,34 +1,28 @@
 
- #projectTitle {
+ .projectTitle {
      background-color: #e6e6e6;
  }
  
- #changeProjectNameFont {
+ .changeProjectNameFont {
     font-size: 16px; 
 }
 
-#changeProjectDurationFont {
+.changeProjectDurationFont {
     font-size: 14px;
 }
 
-#changeProjectLocationFont {
+.changeProjectLocationFont {
     font-size: 12px;
 }
 
-#changeProjectClientFont {
+.changeProjectClientFont {
     font-size: 12px;
 }
 
-#changeProjectSalaryFont {
+.changeProjectSalaryFont {
     font-size: 14px;
 }
- /*.vertical-divider {
-  border-top-width: 0;
-  border-right-width: 1px;
-  border-right-style: solid;
-  height:100px;
-}*/
-#pointCursor{
+.pointCursor{
   cursor: pointer;
 }
 

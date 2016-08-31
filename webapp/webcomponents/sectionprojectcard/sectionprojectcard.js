@@ -9,7 +9,7 @@ function projectsectioncardCtrl($http, $mdDialog) {
     var ctrl = this;  
     ctrl.changeFont = 'changeProjectNameFont';
     ctrl.profile = {}; 
-
+    ctrl.totalProjects=0;
     $http({
         method: 'GET',
         url: 'http://localhost:8081/profiles/01',
@@ -17,7 +17,7 @@ function projectsectioncardCtrl($http, $mdDialog) {
         for (var prop in response.data)  {
             if (prop != "id" && prop != "UserName" && prop != "Personalinfo" && prop != "Education" && prop != "Skills" && prop != "Work Experiance" && prop != "Certification") { 
                 ctrl.profile[prop] = response.data[prop]; 
-                console.log(ctrl.profile[prop][0].Project)
+                ctrl.totalProjects=ctrl.profile[prop].length;
             }
         }
     }, function errorCallback(response) {

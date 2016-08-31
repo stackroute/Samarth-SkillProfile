@@ -1,14 +1,14 @@
-.md-toolbar-tools>div>md-input-container{
-	font-size: small;
-	/*margin-left: 100px;*/
+.md-toolbar-tools>div>md-input-container {
+    font-size: small;
 }
-.md-toolbar-tools>div>a{
-	cursor: pointer;
-	font-size: small;
-	/*margin-left: 30px;*/
+
+.md-toolbar-tools>div>a {
+    cursor: pointer;
+    font-size: small;
 }
-.md-toolbar-tools>a:hover{
-	cursor: pointer;
-	text-decoration: underline;
-	color: #ffffff;
+
+.md-toolbar-tools>a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #ffffff;
 }
