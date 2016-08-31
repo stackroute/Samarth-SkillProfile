@@ -34,11 +34,12 @@
         <md-list>
             <div ng-controller="sidenavCtrl">
                 <md-item ng-repeat="item in items">
-                    <md-item-content layout="row" layout-align="start center">
-                         <div  id="active">
-                           <md-icon id="icon" flex="10" class="material-icons">{{item.icon}}</md-icon>
-                        </div>
+                    <md-item-content layout="row" layout-align="start center" class="active">
+                       
+                           
+                        
                         <div class="inset">
+                        <md-icon id="icon" flex="10" class="material-icons">{{item.icon}}</md-icon>
                             <a ui-sref="{{item.state}}" ng-click="togglemenu()">{{item.title}}</a>
                         </div>
                     </md-item-content>
