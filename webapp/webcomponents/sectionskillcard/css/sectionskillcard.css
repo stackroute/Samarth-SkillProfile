@@ -1,3 +1,4 @@
+
  #card  >div > md-whiteframe{
  	margin:5px 5px; 
  	
@@ -5,7 +6,7 @@
  #card  >div > md-whiteframe>span>md-icon{
  	/*margin-left: 50px;*/
  	    position: absolute;
-    margin-left: 80px;
+    margin-left: 60px;
     margin-top: -20px;
  	font-size: small;
  }
@@ -72,4 +73,5 @@
 		background: linear-gradient(to right, #E5EA5C 3%,white 0%);
 
 /*background-color: #F8F4D2   ;*/
+
 }

@@ -1,3 +1,4 @@
+
 angular.module('sm-skillprofile')
     .component('mysectionSkillCard', {
         templateUrl: 'webcomponents/sectionskillcard/templates/sectionskillcard.html',
@@ -37,7 +38,7 @@ function sectionskillcardctrl($http,sectionskillcard,$mdDialog) {
     			}
     		}
     	}
-    	  
+    	  console.log(ctrl.prim);
     	
     });
 
@@ -47,7 +48,7 @@ function sectionskillcardctrl($http,sectionskillcard,$mdDialog) {
      {
     $mdDialog.show({
       controller: DialogController,
-      templateUrl: '/webcomponents/sectionskillcard/templates/dialog1.tmpl.html',
+      templateUrl: '/webcomponents/sectionskillcard/templates/sectionskillstory.html',
       parent: angular.element(document.body),
       targetEvent: ev,
       clickOutsideToClose:true,
@@ -82,3 +83,4 @@ function sectionskillcardctrl($http,sectionskillcard,$mdDialog) {
   }
 
 }
+

@@ -6,9 +6,6 @@
     <base href="/" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/angular-material/angular-material.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css">
-
     <link rel="stylesheet" href="/google-material-icons/dist/material-icons-font.css">
     <link rel="stylesheet" href="/assets/css/smskillhome.css">
     <link rel="stylesheet" href="/assets/css/smskillprofile.css">
@@ -20,37 +17,28 @@
     <link rel="stylesheet" href="/skillhome/css/custom.css">
     <link rel="stylesheet" href="/skillsearch/css/searchstyle.css">
     <link rel="stylesheet" href="/auth/css/auth.css">
-
-
     <link rel="stylesheet" type="text/css" href="/home/css/navbar.css">
-
     <link rel="stylesheet" href="/home/css/sidebar.css">
-
-
 </head>
 
-<body ng-app="sm-skillprofile" ng-controller="sm-skillprofilectrl">
-   <div ui-view="navbar"></div>
-  <div layout="row" flex>
-       <div ui-view="sidebar" id="sidebarcss" flex-offset="10" flex="20" hide-xs hide-sm></div>
-        <div ui-view="content@" id="maincontent" flex="60" flex-sm="100" flex-xs="100"></div>
-     </div>
-
+<body ng-app="sm-skillprofile" ng-controller="sm-skillprofilectrl" ng-cloak>
+    <div ui-view="navbar"></div>
+    <div layout="row" flex>
+        <div ui-view="sidebar" id="sidebarcss" flex-offset="15" flex="20" hide-xs hide-sm></div>
+        <div ui-view="content@" id="maincontent" flex="50" flex-sm="100" flex-xs="100"></div>
+    </div>
     <div ui-view="footer"></div>
-
 </body>
 <script src="/angular/angular.js"></script>
 <script src="/angular-animate/angular-animate.js"></script>
 <script src="/angular-aria/angular-aria.js"></script>
 <script src="/angular-material/angular-material.js"></script>
 <script src="/angular-messages/angular-messages.js"></script>
-<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.7.1/angular-material-icons.min.js"></script>  -->
 <script src="/angular-ui-router/release/angular-ui-router.js"></script>
 <script src="smskillprofileapp.js"></script>
 <script src="/skillhome/skillhomemodule.js"></script>
 <script src="/skillhome/controller/skillhomectrl.js"></script>
 <script src="/skillhome/controller/skillhomenav.js"></script>
-
 <script src="/skillhome/services/sidenavfactory.js"></script>
 <script src="/webcomponents/skillcard/skillcard.js"></script>
 <script src="/webcomponents/sectionseducationcard/sectionseducationcard.js"></script>

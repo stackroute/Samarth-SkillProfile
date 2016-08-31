@@ -1,15 +1,15 @@
 var app=angular
-		.module('sm-skillprofile')
-		.component('myEducationcard',
-		{
-			templateUrl:'/webcomponents/sectionseducationcard/templates/sectionseducationcard.html',
-			controller:educationCardController
+    .module('sm-skillprofile')
+    .component('myEducationcard',
+    {
+      templateUrl:'/webcomponents/sectionseducationcard/templates/sectionseducationcard.html',
+      controller:educationCardController
 
-		});
+    });
 
 function educationCardController($mdDialog,$http)
 {
-	var ctrl=this;
+  var ctrl=this;
   ctrl.school="";
   ctrl.location="";
   ctrl.board="";
@@ -48,7 +48,7 @@ function educationCardController($mdDialog,$http)
             }
           });
 
-	ctrl.showAdvanced = function(ev,header,object) {
+  ctrl.showAdvanced = function(ev,header,object) {
       $mdDialog.show({
                       controller: DialogController,
                       templateUrl: '/webcomponents/sectionseducationcard/templates/educationconversation.html',

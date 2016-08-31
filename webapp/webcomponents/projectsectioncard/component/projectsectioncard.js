@@ -1,3 +1,4 @@
+
 angular.module('sm-skillprofile')
     .component('myProjectsectioncard', {            
         templateUrl: 'webcomponents/projectsectioncard/templates/projectsection.html',
@@ -5,9 +6,7 @@ angular.module('sm-skillprofile')
     });
 
 function projectsectioncardCtrl($http, $mdDialog) {
-    var ctrl = this; 
-        ctrl.collapsed=false; 
-        ctrl.totalProjects=0;
+    var ctrl = this;  
     ctrl.changeFont = 'changeProjectNameFont';
     ctrl.profile = {}; 
 
@@ -18,7 +17,7 @@ function projectsectioncardCtrl($http, $mdDialog) {
         for (var prop in response.data)  {
             if (prop != "id" && prop != "UserName" && prop != "Personalinfo" && prop != "Education" && prop != "Skills" && prop != "Work Experiance" && prop != "Certification") { 
                 ctrl.profile[prop] = response.data[prop]; 
-                ctrl.totalProjects=ctrl.profile[prop].length;
+                console.log(ctrl.profile[prop][0].Project)
             }
         }
     }, function errorCallback(response) {
@@ -56,9 +55,10 @@ function projectsectioncardCtrl($http, $mdDialog) {
         $scope.cancel = function() {
             $mdDialog.cancel();
         };
-        $scope.save = function(project, duration, location, client,salary) {
-            console.log("after save", project, duration, location, client,salary);
+        $scope.save = function(project, duration, location, client, teamsize, salary) {
+            console.log("after save", project, duration, location, client, teamsize, salary);
             $mdDialog.hide();
         };
     }        
 }
+

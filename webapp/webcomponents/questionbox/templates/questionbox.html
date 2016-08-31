@@ -1,4 +1,5 @@
-<div id="questionbox" layout="column"  ng-model="$ctrl.displayInputBox" ng-hide="$ctrl.displayInputBox" ng-init="$ctrl.startInpuBox()">
+
+<div  layout="column"  ng-model="$ctrl.displayInputBox" ng-hide="$ctrl.displayInputBox" ng-init="$ctrl.startInpuBox()">
 	<div flex id="questionArea">
 		<label for="ques1" ng-model="$ctrl.currentQuestionIndex">{{$ctrl.questionArray[$ctrl.currentQuestionIndex]}}</label>
 	</div>
@@ -21,5 +22,3 @@
 <div   ng-show="$ctrl.displayAnswerdBox" id="thankuBox">
 	Thank you! We'll be in touch.
 </div>
-
-

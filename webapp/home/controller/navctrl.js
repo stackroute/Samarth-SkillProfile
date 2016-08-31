@@ -2,6 +2,13 @@
      .controller('navCtrl', ['$scope', '$mdSidenav',
          function($scope, $mdSidenav) {
 
+            $scope.user = {
+                name: 'Chandra Kumar Pratap'
+            }
+
+            $scope.portfolio = {
+                completion: "40"
+            };
 
              $scope.togglemenu = buildToggler('left');
 

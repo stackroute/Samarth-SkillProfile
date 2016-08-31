@@ -6,71 +6,58 @@
 }
 
 body {
-
-  font-family: "Lato", "Open Sans", "Helvetica Neue", "Helvetica", "Arial", "Verdana", "sans-serif";
+  /*margin: 70px 10px 5px 10px;*/
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", "Verdana", "sans-serif";
   font-size: auto;
   margin: auto;
 }
 
-.maincontent {
+/*.maincontent {
 	margin: 70px 10px 5px 10px;
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", "Verdana", "sans-serif";
   font-size: auto;
   margin: auto;
-
-  
 }
 
 .maincontent {
-  /* background-color: #EAD7D7; */
-	
- 
 	min-height: 100vh;
   width: 100%;
 }
+*/
+
+.radiusCircle {
+  border-radius: 50%;
+}
+
 .sidenav{
-
-
   text-align: center;
-
   /* min-height: 100vh; */
 }
+
 #maincontent {
-	margin-top: 60px;
-
-
+  margin: 70px 10px 40px 10px;
+	/*margin-top: 60px;*/
 	min-height: 100vh;
   width: 100%;
-
-  /*width: 100%;*/
-
 }
 #sidebarcss{
-  /* margin-top: -800px; */
   margin-top: 60px;
-  /*border: 1px solid #EAD7D7;*/
-  border-right:#CCCC99;
-  border-left:#CCCC99;
+  /*border-right: 1px solid #CCCC99;*/
+  border-right: 1px solid rgba(0,0,0,0.12);
+  /*border-left: 1px solid #CCCC99;*/
     line-height: 50px;
    min-height: 100vh;
-
-    box-shadow:  3px 3px 3px 3px #888888;
-
 }
 .appfooter {
 	background: #545454;
 	color: #919191;
-	margin: 10px 0px 0px 0px;
+	/*margin: 0px 0px 0px 0px;*/
 	padding: 5px;
 }
 a:hover{
 color:black;
 }
-#img{
-  margin-top: 10px;
- margin-left:75px;
 
-}
 #name{
   text-align: center;
 }
@@ -80,8 +67,8 @@ color:black;
 
 .app-sidebar a {
   color: #717171;
-
 }
+
 .active:hover{
-  background-color:#CCCC99;
+  /*background-color:#CCCC99;*/
 }

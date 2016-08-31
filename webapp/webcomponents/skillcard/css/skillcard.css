@@ -1,3 +1,27 @@
+
+#content
+{
+	margin-top:30px;
+}
+
+#headersection
+{
+	background-color: #D9D9D9;
+}
+
+#avatar
+{
+	height:60px;
+	width:56px;
+}
+
+#professionimage
+{
+	height: 30px;
+	width: 30px;
+}
+
+
 #content
 {
 	margin-top:30px;
@@ -45,3 +69,4 @@
 {
 	margin-bottom:5px;
 }
+

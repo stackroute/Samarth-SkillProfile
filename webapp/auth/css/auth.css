@@ -1,3 +1,37 @@
+
+
+ .maincontent{
+  /*background-image: url(../images/backgroundImg.jpg) ;*/
+  /*background-repeat: no-repeat;*/
+  /*background-size: 90% 80%;*/
+  /*background-position:center; */
+  /*background-attachment: fixed;*/
+  /*background-color:#FAECE4    ;  */
+ }
+
+   #form1>div>md-input-container>label{
+    /*padding: 25px 15px 10px 60px;
+    font-size: 24px;
+    font-weight: bold;*/
+    /*background-color:#93A9F6 ;*/
+    /*opacity:0.8 ;*/
+    /*color:black;*/
+   }
+   /*#form1{
+    background-color:#93A9F6 ;
+    opacity:0.8 ;
+    color:#000;
+   }*/
+  /* body{
+    background-color:#E5DBD4;
+   }*/
+   .loginbtn{
+    margin-top:250px;
+    color:white;
+    width:50%;
+    margin-left: 20%;
+   }
+
 .signin {
     margin-right: 100px;
     margin-left: 100px;
@@ -52,3 +86,4 @@ h3 {
 .link {
     margin: auto;
 }
+
