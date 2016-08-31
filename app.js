@@ -4,6 +4,7 @@ var favicon = require('serve-favicon');
 var morgan = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var jsonServer = require('json-server')
 
 //Express App created
 var app = express();
@@ -22,7 +23,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'bower_components')));
 app.use(express.static(path.join(__dirname, 'webapp')));
 
-var jsonServer = require('json-server')
 var skillHomeServer = jsonServer.create()
 var skillCardServer = jsonServer.create()
 var skillProfileServer = jsonServer.create()
