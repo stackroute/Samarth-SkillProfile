@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  #projectTitle {
     background-color: #e6e6e6;
  }
@@ -32,3 +33,42 @@
   height:100px;
 }*/
 
+=======
+ #projectTitle {
+     background-color: #e6e6e6;
+ }
+ 
+ #changeProjectNameFont {
+     font-size: 24px; 
+ }
+ 
+ #changeProjectDurationFont {
+     font-size: 19px;
+ }
+ 
+ #changeProjectLocationFont {
+     font-size: 20px;
+ }
+ 
+ #changeProjectClientFont {
+     font-size: 18px;
+ }
+ 
+ #changeProjectTeamsizeFont {
+     font-size: 18px;
+ }
+ 
+ #changeProjectSalaryFont {
+     font-size: 17px;
+ }
+ /*.vertical-divider {
+  border-top-width: 0;
+  border-right-width: 1px;
+  border-right-style: solid;
+  height:100px;
+}*/
+#pointCursor{
+  cursor: pointer;
+}
+
+>>>>>>> 7bc1f88fd1e361d55b60d6a6ce10cb744a537994

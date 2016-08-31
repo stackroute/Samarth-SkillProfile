@@ -1,0 +1,15 @@
+<div id="sidebar">
+  <md-list>
+      <div ng-controller="sidenavCtrl"> 
+           <md-item ng-repeat="item in items">
+                   <md-item-content layout="row" layout-align="start center">
+                       
+                       <div class="inset">
+                           <a ui-sref="{{item.state}}">{{item.title}}</a>
+                       </div>
+                   </md-item-content>
+                     <md-divider></md-divider>
+           </md-item>
+          </div> 
+       </md-list> 
+</div>

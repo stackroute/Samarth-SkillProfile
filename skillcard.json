@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
 	"user": [{
 
@@ -13,4 +14,22 @@
 		"email":"dk24@gmail.com",
 		"gender":"male"
 	}]
+=======
+{
+	"user": [{
+
+		"name":"Diamond Khanna",
+		"age":"22",
+		"profilepicture":"dk.PNG",
+		"professionpicture":"profession.png",
+		"currentdesignation":"Senior Project Engineer",
+		"profession":"Angular Developer",
+		"DOB":"Feb 24 1994",
+		"contact":"9023650041",
+		"location":"Bangalore",
+		"email":"diamond1994@gmail.com",
+		"gender":"Male",
+		"maritalstatus":"Unmarried"
+	}]
+>>>>>>> 7bc1f88fd1e361d55b60d6a6ce10cb744a537994
 }

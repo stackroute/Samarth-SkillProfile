@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 angular.module('sm-skillprofile')
     .component('myProjectsectioncard', {            
         templateUrl: 'webcomponents/projectsectioncard/templates/projectsection.html',
@@ -60,3 +61,69 @@ function projectsectioncardCtrl($http, $mdDialog) {
         };
     }        
 }
+=======
+angular.module('sm-skillprofile')
+    .component('myProjectsectioncard', {            
+        templateUrl: 'webcomponents/projectsectioncard/templates/projectsection.html',
+        controller: projectsectioncardCtrl          
+    });
+
+function projectsectioncardCtrl($http, $mdDialog) {
+    var ctrl = this; 
+        ctrl.collapsed=false; 
+        ctrl.totalProjects=0;
+    ctrl.changeFont = 'changeProjectNameFont';
+    ctrl.profile = {}; 
+
+    $http({
+        method: 'GET',
+        url: 'http://localhost:8081/profiles/01',
+    }).then(function successCallback(response) {
+        for (var prop in response.data)  {
+            if (prop != "id" && prop != "UserName" && prop != "Personalinfo" && prop != "Education" && prop != "Skills" && prop != "Work Experiance" && prop != "Certification") { 
+                ctrl.profile[prop] = response.data[prop]; 
+                ctrl.totalProjects=ctrl.profile[prop].length;
+            }
+        }
+    }, function errorCallback(response) {
+        console.log('Error accord during Project Section')
+    });  
+
+    ctrl.status = '  ';
+    ctrl.customFullscreen = false;
+    ctrl.addProject = function(ev, value, title) {
+        $mdDialog.show({
+                controller: DialogController,
+                templateUrl: '/webcomponents/projectsectioncard/templates/addProjectDialog.html',
+                parent: angular.element(document.body),
+                targetEvent: ev,
+                clickOutsideToClose: true,
+                locals: {
+                    val: value,
+                    header: title
+                },
+                fullscreen: ctrl.customFullscreen
+            })
+            .then(function(answer) {
+                ctrl.status = 'You said the information was "' + answer + '".';
+            }, function() {
+                ctrl.status = 'You cancelled the dialog.';
+            });
+    };
+
+    function DialogController($scope, $mdDialog, val, header) {
+        $scope.projectObject = val;
+        $scope.header = header;
+        $scope.hide = function() {
+            $mdDialog.hide();
+        };
+        $scope.cancel = function() {
+            $mdDialog.cancel();
+        };
+        $scope.save = function(project, duration, location, client,salary) {
+            console.log("after save", project, duration, location, client,salary);
+            $mdDialog.hide();
+        };
+    }        
+}
+>>>>>>> 7bc1f88fd1e361d55b60d6a6ce10cb744a537994
