@@ -11,7 +11,7 @@ angular.module('sm-skillprofile')
                         "content@": {
                             templateUrl: '/skillhome/templates/skillhome.html',
                             controller: 'skillhomectrl',
-                            controllerAs: 'sklCtrl'
+                            controllerAs: 'skillCtrl'
                         }
                     }
                 })

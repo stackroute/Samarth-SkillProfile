@@ -11,27 +11,22 @@
     <link rel="stylesheet" href="/assets/css/smskillprofile.css">
     <link rel="stylesheet" href="/webcomponents/skillcard/css/skillcard.css">
     <link rel="stylesheet" href="/webcomponents/questionbox/css/questionbox.css">
-    <link rel="stylesheet" href="/webcomponents/projectsectioncard/css/projectsection.css">
+    <link rel="stylesheet" href="/webcomponents/sectionprojectcard/css/sectionprojectcard.css">
     <link rel="stylesheet" href="/webcomponents/sectionskillcard/css/sectionskillcard.css">
     <link rel="stylesheet" href="/webcomponents/sectionseducationcard/css/sectionseducationcard.css">
-    <link rel="stylesheet" href="/skillhome/css/custom.css">
-    <link rel="stylesheet" href="/skillsearch/css/searchstyle.css">
+    <link rel="stylesheet" href="/skillhome/css/skillhome.css">
+    <link rel="stylesheet" href="/skillsearch/css/skillsearch.css">
     <link rel="stylesheet" href="/auth/css/auth.css">
-
-
     <link rel="stylesheet" type="text/css" href="/home/css/navbar.css">
-
 
 </head>
 
-<body ng-app="sm-skillprofile" ng-controller="sm-skillprofilectrl">
+<body ng-app="sm-skillprofile" ng-controller="sm-skillprofilectrl" ng-cloak>
     <div ui-view="navbar"></div>
-
     <div layout="row" flex>
-        <div ui-view="sidebar" id="sidebarcss" flex-offset="15" flex="20" hide-xs hide-sm></div>
-        <div ui-view="content@" id="maincontent" flex="50" flex-sm="100" flex-xs="100"></div>
-     </div>
-
+        <div ui-view="sidebar" class="sidebarcss" flex-offset="15" flex="20" hide-xs hide-sm></div>
+        <div ui-view="content@" class="maincontent" flex="50" flex-sm="100" flex-xs="100"></div>
+    </div>
     <div ui-view="footer"></div>
 </body>
 <script src="/angular/angular.js"></script>
@@ -40,21 +35,22 @@
 <script src="/angular-material/angular-material.js"></script>
 <script src="/angular-messages/angular-messages.js"></script>
 <script src="/angular-ui-router/release/angular-ui-router.js"></script>
+<script type="text/javascript" src="/webcomponents/skillcard/Blob.js"></script>
 <script src="smskillprofileapp.js"></script>
 <script src="/skillhome/skillhomemodule.js"></script>
 <script src="/skillhome/controller/skillhomectrl.js"></script>
-<script src="/skillhome/controller/skillhomenav.js"></script>
-<script src="/skillhome/services/sidenavfactory.js"></script>
+<script src="/skillhome/controller/skillhomenavctrl.js"></script>
+<script src="/skillhome/services/sidenavservice.js"></script>
 <script src="/webcomponents/skillcard/skillcard.js"></script>
 <script src="/webcomponents/sectionseducationcard/sectionseducationcard.js"></script>
-<script src="/webcomponents/questionbox/component/questionbox.js"></script>
-<script src="/webcomponents/questionbox/services/questionboxService.js"></script>
-<script src="/webcomponents/projectsectioncard/component/projectsectioncard.js"></script>
+<script src="/webcomponents/questionbox/questionbox.js"></script>
+<script src="/webcomponents/questionbox/services/questionboxservice.js"></script>
+<script src="/webcomponents/sectionprojectcard/sectionprojectcard.js"></script>
 <script src="/webcomponents/sectionskillcard/sectionskillcard.js"></script>
 <script src="/webcomponents/sectionskillcard/services/sectionskillservices.js"></script>
 <script src="/skillsearch/skillsearchmodule.js"></script>
 <script src="/skillsearch/controller/skillsearchctrl.js"></script>
-<script src="/skillsearch/ngcomponents/mysearch.js"></script>
+<script src="/skillsearch/ngcomponents/skillsearch.js"></script>
 <script src="/skillsearch/ngcomponents/skillsearchresultsctrl.js"></script>
 <script src="/jobsearch/jobsearchmodule.js"></script>
 <script src="/jobsearch/controller/jobsearchctrl.js"></script>
@@ -64,6 +60,7 @@
 <script src="/messages/controller/messagesctrl.js"></script>
 <script src="/auth/controllers/signinctrl.js"></script>
 <script src="/auth/controllers/signupctrl.js"></script>
+
 <script src="/auth/authmodule.js"></script>
 <script src="/home/controller/navctrl.js"></script>
 <script src="/home/homemodule.js"></script>

@@ -1,16 +1,17 @@
 angular.module('sm-skillprofile')
-    .config(['$stateProvider', '$urlMatcherFactoryProvider', '$urlRouterProvider',
-        function($stateProvider, $urlMatcherFactoryProvider, $urlRouterProvider) {
+    .config(['$stateProvider', '$urlMatcherFactoryProvider', '$urlRouterProvider','$compileProvider',
+        function($stateProvider, $urlMatcherFactoryProvider, $urlRouterProvider,$compileProvider) {
             $urlMatcherFactoryProvider.caseInsensitive(true);
 
-            $urlRouterProvider.otherwise('home')
+            $urlRouterProvider.otherwise('/home/skillhome');
 
             $stateProvider
                 .state('skillprofile', {
                     url: '/home',
                     views: {
                         "content@": {
-                            templateUrl: '/auth/templates/signinpage.html'
+                            // templateUrl: '/auth/templates/signinpage.html'
+                            templateUrl: '/skillhome/templates/skillhome.html'
                         },
                         "navbar": {
                             templateUrl: '/home/templates/navbar.html',
@@ -20,9 +21,13 @@ angular.module('sm-skillprofile')
                             templateUrl: '/home/templates/footer.html'
                         },
                         "sidebar": {
-                            templateUrl: '/home/templates/sidebar.html'
+                            templateUrl: '/home/templates/sidebar.html',
+                            controller: 'navCtrl'
                         }
                     }
                 })
+
+            $compileProvider.aHrefSanitizationWhitelist(/^\s*(|blob|):/);
         }
     ])
+

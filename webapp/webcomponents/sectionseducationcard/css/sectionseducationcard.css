@@ -1,4 +1,6 @@
-#header , #footer
+<<<<<<< HEAD
+
+/*#header , #footer
 {
 	background-color: rgb(63,81,181);
 }
@@ -12,5 +14,209 @@
 	margin-top:0px;
 }
 
+*/
 
+#header , #footer
+{
+	background-color: #d9d9d9;
+}
+
+
+#icon
+{
+	margin-top:0px;
+}
+
+.conversationDialog,#conversationDialogtoolbar
+{
+	background: white;
+}
+#conversationDialogcontent
+{
+	min-width: 600px;
+	min-height:250px;
+	/*font-size: 30px;*/
+	font-size:3vw;
+	color: grey;
+}
+#headingtext
+{
+	color: grey;
+}
+.fields
+{
+	color: blue;
+	/*font-size: 36px;*/
+	font-size: 3vw;
+}
+
+.fields:hover
+{
+	color: black;
+}
+
+#conversationDialogActionButton
+{
+	font-size:26px;
+	color:grey;
+	background:#f1eded;
+}
+#fwdicon
+{
+	background:#d9d9d9;
+	margin: 0px;
+	padding: 0px;
+	height:34px;
+	font-size: 35px;
+}
+#fwdicon:focus
+{
+	outline: none;
+}
+
+.textboxes
+{
+	outline:none;
+	border-style: none;
+	/*width: 20vw;*/
+	padding:0px;
+}
+
+.textboxes:focus
+{
+	outline:none;
+	border-style: none;
+	background-color: cyan;
+	filter: blur(10px);
+}
+
+#educardcontent:focus
+{
+	outline: none;
+}
+
+/* -------------- */
+.nlui-conv-form {
+	font-size: 2.5em;
+	line-height: 1.5;	
+	color: #a2a2a2; /*#808080;*/
+}
+
+.nlui-inline-input {
+	display: inline-block;
+	border-style: none;
+	border-bottom: 1px dashed #000000;
+	color: #0000ff;
+
+=======
+
+/*#header , #footer
+{
+	background-color: rgb(63,81,181);
+}
+
+#heading
+{
+	color:white;
+}
+#icon
+{
+	margin-top:0px;
+}
+
+*/
+
+#header , #footer
+{
+	background-color: #d9d9d9;
+}
+
+
+#icon
+{
+	margin-top:0px;
+}
+
+.conversationDialog,#conversationDialogtoolbar
+{
+	background: white;
+}
+#conversationDialogcontent
+{
+	min-width: 600px;
+	min-height:250px;
+	/*font-size: 30px;*/
+	font-size:3vw;
+	color: grey;
+}
+#headingtext
+{
+	color: grey;
+}
+.fields
+{
+	color: blue;
+	/*font-size: 36px;*/
+	font-size: 3vw;
+}
+
+.fields:hover
+{
+	color: black;
+}
+
+#conversationDialogActionButton
+{
+	font-size:26px;
+	color:grey;
+	background:#f1eded;
+}
+#fwdicon
+{
+	background:#d9d9d9;
+	margin: 0px;
+	padding: 0px;
+	height:34px;
+	font-size: 35px;
+}
+#fwdicon:focus
+{
+	outline: none;
+}
+
+.textboxes
+{
+	outline:none;
+	border-style: none;
+	/*width: 20vw;*/
+	padding:0px;
+}
+
+.textboxes:focus
+{
+	outline:none;
+	border-style: none;
+	background-color: cyan;
+	filter: blur(10px);
+}
+
+#educardcontent:focus
+{
+	outline: none;
+}
+
+/* -------------- */
+.nlui-conv-form {
+	font-size: 2.5em;
+	line-height: 1.5;	
+	color: #a2a2a2; /*#808080;*/
+}
+
+.nlui-inline-input {
+	display: inline-block;
+	border-style: none;
+	border-bottom: 1px dashed #000000;
+	color: #0000ff;
+
+>>>>>>> ca1cd9d72ec3916dc23d28b3a4130634e9c7e4c1
 }
