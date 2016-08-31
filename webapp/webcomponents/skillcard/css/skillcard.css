@@ -1,3 +1,4 @@
+
 #content
 {
 	margin-top:30px;
@@ -5,7 +6,21 @@
 	/*margin-top:30px;*/
 	width: 100%;
 	margin:auto;
+	line-height: 1;
 }
+#totalcardarea md-card-content
+{
+	padding: 0px;
+}
+#totalcardarea md-card-content div
+{
+	padding:2px;
+}
+#totalcardarea md-card-content p
+{
+	margin:0px;
+}
+
 #totalcardarea
 {
 	padding:0px;
@@ -16,6 +31,10 @@
 	/*background-color: #D9D9D9;*/
 	background-color:#f9f9f9;
 }
+#blankarea
+{
+	height:2px;
+}
 
 #avatar
 {
@@ -25,6 +44,7 @@
 
 #professionimage
 {
+	padding-top: 10px;
 	height: 30px;
 	width: 30px;
 }

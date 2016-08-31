@@ -12,15 +12,6 @@
 		}],
 		"Education": [{
 			"Type": "school",
-			"Titleofeducation":"7th",
-			"Name": "St teresa's school",
-			"Affiliation": "ICSE",
-			"From": 1998,
-			"Completionyear": 2007,
-			"Location":"Bangalore",
-			"Percentage": "87%"
-		}, {
-			"Type": "school",
 			"Titleofeducation":"10th",
 			"Name": "Desouza school",
 			"Affiliation": "ICSE",
@@ -43,7 +34,7 @@
 			"Type": "work",
 			"Titleofeducation":"B.TECH",
 			"Name": "CGC College",
-			"Affiliation": "Chandigarh University",
+			"Affiliation": "Punjab University",
 			"From": 1998,
 			"Completionyear": 2016,
 			"Location":"Jhanjeri",

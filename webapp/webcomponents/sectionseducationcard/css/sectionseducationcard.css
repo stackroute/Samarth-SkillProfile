@@ -77,6 +77,19 @@
 	outline: none;
 }
 
+#savebtnicon
+{
+	font-size: 1.5em;
+}
+#convosavebtn
+{
+	width:20%;
+	height:50px;
+	font-size: .8em;
+}
+
+
+
 /* -------------- */
 .nlui-conv-form {
 	font-size: 2.5em;
@@ -89,4 +102,10 @@
 	border-style: none;
 	border-bottom: 1px dashed #000000;
 	color: #0000ff;
+}
+
+.nlui-conv-form textarea:focus
+{
+	outline:none;
+	resize:all;
 }

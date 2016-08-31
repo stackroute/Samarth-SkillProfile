@@ -17,11 +17,11 @@
 
         <p class="">
           I have done 
-          <textarea rows="1" cols="6" ng-model="Titleofeducation" class='nlui-inline-input'></textarea> 
+          <textarea rows="1" cols="8" ng-model="Titleofeducation" class='nlui-inline-input'></textarea> 
           in 
           <textarea rows="1" cols="4" type="text" ng-model="Completionyear" class='nlui-inline-input'></textarea>
           with marks 
-          <textarea rows="1" cols="3" type="text" ng-model="Percentage" class='nlui-inline-input'></textarea>
+          <textarea rows="1" cols="4" type="text" ng-model="Percentage" class='nlui-inline-input'></textarea>
           from 
           <textarea rows="1" cols="15" type="text" ng-model="Name" class='nlui-inline-input'></textarea>
           located at 
@@ -33,9 +33,9 @@
       </div>
     </md-dialog-content>
   
-    <md-dialog-actions layout="row">
-      <md-button ng-click="hide()">
-        <md-icon>arrow_forward</md-icon>  
+    <md-dialog-actions layout="row" layout-align="center center">
+      <md-button id="convosavebtn" ng-click="hide()">SAVE
+        <md-icon id="savebtnicon">arrow_forward</md-icon>  
       </md-button>
     </md-dialog-actions>
   

@@ -46,7 +46,7 @@
             </div> -->
 
           </div>
-          <div hide-sm hide-xs hide-md>
+          <div id="blankarea" hide-sm hide-xs hide-md>
             <br>
           </div>
           <md-divider id="divider1" hide-xs hide-sm hide-md></md-divider>
@@ -54,13 +54,13 @@
             <p align="center">DOB:{{$ctrl.data.DOB}} ({{$ctrl.data.age}} years)</p>
             <hr>
           </div> -->
-          <div hide-sm hide-xs hide-md>
+          <div id="blankarea" hide-sm hide-xs hide-md>
               <br>
             </div>
           <div id="section3" layout="row" layout-xs="column" layout-sm="column" layout-md="column" flex>
-            <div hide-sm hide-xs hide-md>
+            <!-- <div hide-sm hide-xs hide-md hide-lg>
               <br>
-            </div>
+            </div> -->
             <div flex layout="column">
             <p>
               <md-icon class="material-icons">phone</md-icon>
@@ -94,9 +94,9 @@
         </div>
       </md-card-content>
       <md-card-actions id="skillcardtoolbar" layout="row" layout-align="end center" ng-transclude>
-        <md-button><md-icon class="material-icons">share</md-icon></md-button>
+        <a ng-href="{{ $ctrl.fileUrl }}" download="Scard.json"><md-icon class="material-icons">share</md-icon></a>
         <md-button><md-icon class="material-icons">cloud download</md-icon></md-button>
       </md-card-actions>
     </md-card>
   </div>
-<!-- </div> -->
+<!-- </div>
