@@ -84,38 +84,38 @@
 			"Experience": "1"
 		}, {
 			"Type": "Primary",
-			"Name": "C++",
+			"Name": "Carpenter",
 			"Expertise": "begginner",
 			"Experience": "2"
 		}, {
 			"Type": "Secondary",
-			"Name": "Mongo",
+			"Name": "Lathe worker",
 			"Expertise": "skilled",
 			"Experience": "1"
 		}, {
 			"Type": "Primary",
-			"Name": "C++",
+			"Name": "Event Manager",
 			"Expertise": "proficient",
 			"Experience": "2"
 		}, {
 			"Type": "Secondary",
 			"Name": "Angular js",
-			"Expertise": "skilled",
+			"Expertise": "proficient",
 			"Experience": "4"
 
 		}, {
 			"Type": "Secondary",
-			"Name": "Mongo",
+			"Name": "Hair stylist",
 			"Expertise": "proficient",
 			"Experience": "1"
 		}, {
 			"Type": "Primary",
-			"Name": "C++",
+			"Name": "Batting Coach",
 			"Expertise": "skilled",
 			"Experience": "2"
 		}, {
 			"Type": "Secondary",
-			"Name": "Mongo",
+			"Name": "Driver",
 			"Expertise": "skilled",
 			"Experience": "1"
 		}, {

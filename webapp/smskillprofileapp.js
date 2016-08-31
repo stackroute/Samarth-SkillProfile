@@ -1,7 +1,9 @@
 var myApp = angular.module("sm-skillprofile", ['ngMaterial',
         'ngAnimate',
         'ngMessages',
-        'ui.router'
+        'ui.router',
+       
+
     ])
     .config(['$urlMatcherFactoryProvider',
         function($urlMatcherFactoryProvider) {

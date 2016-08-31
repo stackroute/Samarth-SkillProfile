@@ -24,13 +24,17 @@ body {
 
 
   text-align: center;
-=======
+
   /* min-height: 100vh; */
 }
 #maincontent {
 	margin-top: 60px;
-	 min-height: 100vh; 
+
+	min-height: 100vh;
+  width: 100%;
+
   /*width: 100%;*/
+
 }
 #sidebarcss{
   /* margin-top: -800px; */
@@ -64,4 +68,5 @@ color:black;
 
 .app-sidebar a {
   color: #717171;
+
 }

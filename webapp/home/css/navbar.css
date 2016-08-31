@@ -1,5 +1,5 @@
-.md-toolbar-tools>md-input-container>md-select:after{
-	color: #ffffff;
+.md-toolbar-tools>md-input-container{
+	font-size: small;
 }
 .md-toolbar-tools>a{
 	cursor: pointer;

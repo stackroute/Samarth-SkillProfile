@@ -5,33 +5,33 @@
            
             "state": "skillprofile.skillhome",
             "title": "Portfolio",
-            "icon":"dashboard"
+          "icon":"person_outline"
            
         }, {
             "state": "skillprofile.workexperience",
             "title": "Work Experience",
-            "icon":"dashboard"
+            "icon":"work"
            
         }, {
             "state": "skillprofile.projects",
             "title": "Projects",
-            "icon":"dashboard"
+            "icon":"domain"
             
         },
         {
             "state": "skillprofile.skills",
             "title": "Skills",
-            "icon":"dashboard"
+            "icon":"build"
         }, 
         	{
             "state": "skillprofile.education",
             "title": "Education",
-            "icon":"dashboard"
+            "icon":"school"
            
         },{
                "state": "skillprofile.notifications",
                "title": "Personal info",
-               "icon":"dashboard"
+               "icon":"person"
               
            },
            {

@@ -6,6 +6,9 @@
         <div class="container">
             <md-item ng-repeat="item in items">
                 <md-item-content layout="row">
+                <div class="inset">
+                        <ng-md-icon icon="{{item.icon}}"></ng-md-icon>
+                    </div>
                     <div class="inset">
                         <a ui-sref="{{item.state}}">{{item.title}}</a>
                     </div>
