@@ -1,4 +1,13 @@
-<div id="sidebar">
+<div layout="column">
+
+<div>
+   <img img class="img-circle" id="img" ng-src="webcomponents/download.png">
+
+</div>
+<div id="name">Saranya</div>
+<div flex>
+      <md-progress-linear md-mode="determinate"></md-progress-linear>
+    </div><div id="sidebar" class='app-sidebar'>
   <md-list>
       <div ng-controller="sidenavCtrl"> 
            <md-item ng-repeat="item in items">
@@ -12,4 +21,5 @@
            </md-item>
           </div> 
        </md-list> 
+</div>
 </div>

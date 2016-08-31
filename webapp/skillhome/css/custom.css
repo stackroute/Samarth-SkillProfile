@@ -17,6 +17,7 @@
 
 #skillCard {
  font-style: italic;
+ width: 100%;
 }
 
 .heading {
@@ -32,6 +33,6 @@
  margin: 0px;
 }
 my-educationcard{
-  width: 80%;
+  width: 100%;
   margin: 0px;
 } 

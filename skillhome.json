@@ -4,33 +4,40 @@
     "sidenav": [{
            
             "state": "skillprofile.skillhome",
-            "title": "Portfolio"
+            "title": "Portfolio",
+            "icon":"dashboard"
            
         }, {
             "state": "skillprofile.workexperience",
-            "title": "Work Experience"
+            "title": "Work Experience",
+            "icon":"dashboard"
            
         }, {
             "state": "skillprofile.projects",
-            "title": "Projects"
+            "title": "Projects",
+            "icon":"dashboard"
             
         },
         {
             "state": "skillprofile.skills",
-            "title": "Skills"
+            "title": "Skills",
+            "icon":"dashboard"
         }, 
         	{
             "state": "skillprofile.education",
-            "title": "Education"
+            "title": "Education",
+            "icon":"dashboard"
            
         },{
                "state": "skillprofile.notifications",
-               "title": "Personal info"
+               "title": "Personal info",
+               "icon":"dashboard"
               
            },
            {
                "state": "skillprofile.notifications",
-               "title": "Showcase"
+               "title": "Showcase",
+               "icon":"dashboard"
               
            }
     ]

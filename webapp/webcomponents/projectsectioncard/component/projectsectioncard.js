@@ -5,7 +5,9 @@ angular.module('sm-skillprofile')
     });
 
 function projectsectioncardCtrl($http, $mdDialog) {
-    var ctrl = this;  
+    var ctrl = this; 
+        ctrl.collapsed=false; 
+        ctrl.totalProjects=0;
     ctrl.changeFont = 'changeProjectNameFont';
     ctrl.profile = {}; 
 
@@ -16,7 +18,7 @@ function projectsectioncardCtrl($http, $mdDialog) {
         for (var prop in response.data)  {
             if (prop != "id" && prop != "UserName" && prop != "Personalinfo" && prop != "Education" && prop != "Skills" && prop != "Work Experiance" && prop != "Certification") { 
                 ctrl.profile[prop] = response.data[prop]; 
-                console.log(ctrl.profile[prop][0].Project)
+                ctrl.totalProjects=ctrl.profile[prop].length;
             }
         }
     }, function errorCallback(response) {
@@ -54,8 +56,8 @@ function projectsectioncardCtrl($http, $mdDialog) {
         $scope.cancel = function() {
             $mdDialog.cancel();
         };
-        $scope.save = function(project, duration, location, client, teamsize, salary) {
-            console.log("after save", project, duration, location, client, teamsize, salary);
+        $scope.save = function(project, duration, location, client,salary) {
+            console.log("after save", project, duration, location, client,salary);
             $mdDialog.hide();
         };
     }        
