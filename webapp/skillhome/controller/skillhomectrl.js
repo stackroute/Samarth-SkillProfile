@@ -4,7 +4,7 @@ angular.module('sm-skillprofile')
     	$scope.carddata={};
 			$http({
   				method: 'GET',
-  				url: 'http://localhost:8083/user',
+  				url: 'api/user',
           type:'JSON'
 				})
 			.then(function successCallback(response) {

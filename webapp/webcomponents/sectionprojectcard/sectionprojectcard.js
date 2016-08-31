@@ -12,7 +12,7 @@ function projectsectioncardCtrl($http, $mdDialog) {
     ctrl.totalProjects=0;
     $http({
         method: 'GET',
-        url: 'http://localhost:8081/profiles/01',
+        url: 'api/profiles/01',
     }).then(function successCallback(response) {
         for (var prop in response.data)  {
             if (prop != "id" && prop != "UserName" && prop != "Personalinfo" && prop != "Education" && prop != "Skills" && prop != "Work Experiance" && prop != "Certification") { 

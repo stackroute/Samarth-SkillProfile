@@ -20,7 +20,7 @@ function educationCardController($mdDialog,$http)
   ctrl.schools=[];
   ctrl.colleges=[];
 
-  $http.get('http://localhost:8081/profiles/01').then(function(response) 
+  $http.get('api/profiles/01').then(function(response) 
           {
             for(var prop in response.data)
             {

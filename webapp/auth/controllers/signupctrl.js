@@ -16,7 +16,7 @@ angular.module('sm-skillprofile')
                 }
                 $http({
                         method: "POST",
-                        url: 'http://localhost:8081/users1',
+                        url: 'http://localhost:8081/user',
                         data: $scope.user,
                         dataType: "json",
                         'Content-Type': 'application/json'
