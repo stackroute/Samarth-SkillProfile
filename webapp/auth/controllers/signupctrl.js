@@ -28,4 +28,3 @@ angular.module('sm-skillprofile')
             };
         }
     ]);
-    

@@ -1,24 +1,40 @@
-<div layout="column" layout-align="center center" class="signup-screen">
-<form name="signinForm">
-    <h3>SIGN IN</h3>
-    <div>
-        <md-input-container class="md-icon-float ">
-            <label>Mobile Number</label>
-            <input type="tel" pattern="^\d{4}-\d{3}-\d{4}$" required>
-        </md-input-container>
-    </div>
-    <div>
-        <md-input-container class="md-icon-float ">
-            <label>Password</label>
-            <input type="password" ng-required="true">
-        </md-input-container>
-    </div>
-    <div>
+<div layout="column" layout-align="center center" md-whiteframe="md-whiteframe-1dp" class="md-padding">
+    <form name="signinForm" id="form1" >
+        <div layout="row" layout-align="center center">
+            <h3 class="md-title">Sign In</h3>
+        </div>
+        <div layout="row" layout-align="start center">
+            <md-input-container class="md-icon-float md-block">
+                <label>Mobile Number</label>
+                <md-icon class="material-icons">phone</md-icon>
+                <input type="tel" ng-model="phonenumber" name="number" required md-no-asterisk ng-pattern="/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/">
+                <div ng-messages="signinForm.number.$error">
+                    <div ng-message="required">Should be a 10 digit number</div>
+                </div>
+            </md-input-container>
+        </div>
+        <div layout="row" layout-align="start center">
+            <md-input-container class="md-icon-float md-block">
+                <label>Password</label>
+                <md-icon class="material-icons">lock</md-icon>
+                <input type="password" name="password" required md-no-asterisk ng-model="password">
+                <div ng-messages="signinForm.password.$error">
+                    <div ng-message="required">Password is required.</div>
+                </div>
+            </md-input-container>
+        </div>
+        <div layout="row" layout-align="start center">
         <a ui-sref="skillprofile.skillhome">
-            <md-button class="md-primary md-raised snbtn">Sign-In</md-button>
-        </a>
-    </div>
-    <div> <a  ui-sref="skillprofile.signup">New User?</a>
-    </div>
-</form>
+            <md-button class="md-raised md-primary">
+                Sign-In
+            </md-button>
+            </a>
+        </div>
+        <div layout="row" layout-align="start center">
+
+            <a ui-sref="skillprofile.signup" class="md-subhead md-padding" >Create A New Account</a>
+        </div>
+    </form>
 </div>
+
+
