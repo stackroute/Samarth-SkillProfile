@@ -22,7 +22,7 @@
         {
             "state": "skillprofile.skills",
             "title": "Skills",
-            "icon":"build",
+            "icon":"settings",
            "seq": 2
         }, 
         	{

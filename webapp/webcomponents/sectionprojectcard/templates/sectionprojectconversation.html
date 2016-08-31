@@ -1,0 +1,44 @@
+
+<md-dialog>
+  <form ng-cloak>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>{{header}}</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon>close</md-icon>.
+        </md-button>
+      </div>
+    </md-toolbar>
+    <md-dialog-content>
+      <div class="md-dialog-content">
+      I have done <md-input-container>
+        <input ng-model="projectObject.Project">
+      </md-input-container>
+       Project with duration <md-input-container>
+        <input ng-model="projectObject.Duration">
+      </md-input-container>
+       months in  
+       <md-input-container>
+        <input ng-model="projectObject.Location">
+      </md-input-container>
+       Location at
+       <md-input-container>
+        <input ng-model="projectObject.Client">
+      </md-input-container>
+      and Salary was
+      <md-input-container>
+        <input ng-model="projectObject.Salary">
+      </md-input-container>
+      </div>
+    </md-dialog-content>
+    <md-dialog-actions layout="row">
+      <span flex></span>
+      <md-button ng-click="save(projectObject.Project,projectObject.Duration,projectObject.Location,
+          projectObject.Client,projectObject.Salary)">
+       Save
+      </md-button>
+    </md-dialog-actions>
+  </form>
+
+</md-dialog>

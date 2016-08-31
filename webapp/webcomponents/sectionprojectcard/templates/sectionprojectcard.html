@@ -1,0 +1,55 @@
+<div ng-repeat=" (key,data) in $ctrl.profile">
+    <md-card>
+        <md-card-title id="projectTitle">
+            <md-card-title-text layout="row">
+                <div class="md-headline" flex="95">{{key}}</div>
+                <div flex="5">({{$ctrl.totalProjects}})</div>
+            </md-card-title-text>
+        </md-card-title>
+        <div layout-padding layout-wrap layout="row" layout-xs="column">
+            <div flex="50" flext-xs="100" ng-repeat="value in data" ng-if="$index < 4">
+                <li><span id="changeProjectNameFont">{{value.Project}}</span></li>
+                    <br>
+                    <md-icon>schedule</md-icon><span id="changeProjectDurationFont">{{value.Duration}}</span>,
+                    <md-icon>attach_money</md-icon>
+                    <span id="changeProjectSalaryFont">{{value.Salary}}</span>
+                    <br>
+                    <md-icon>work</md-icon>
+                    <span id="changeProjectClientFont">{{value.Client}}</span>,
+                    <md-icon>location_on</md-icon>
+                    <span id="changeProjectLocationFont">{{value.Location}}</span></span>
+                
+                <md-divider></md-divider>
+            </div>
+            <div flex="50" flext-xs="100" ng-repeat="value in data" ng-if="$index >4" ng-show="$ctrl.collapsed">
+                <li><span id="changeProjectNameFont">{{value.Project}}</span>
+                    <br>
+                    <md-icon>schedule</md-icon><span id="changeProjectDurationFont">{{value.Duration}}</span>,
+                    <md-icon>attach_money</md-icon>
+                    <span id="changeProjectSalaryFont">{{value.Salary}}</span>
+                    <br>
+                    <md-icon>work</md-icon>
+                    <span id="changeProjectClientFont">{{value.Client}}</span>,
+                    <md-icon>location_on</md-icon>
+                    <span id="changeProjectLocationFont">{{value.Location}}</span></span>
+                </li>
+                <md-divider></md-divider>
+            </div>
+            <div layout="row" flex="85"></div>
+            <div layout="row" flex="15" layout-align="center center">
+                <a ng-model="$ctrl.collapsed" ng-hide="$ctrl.collapsed" ng-click="$ctrl.collapsed=!$ctrl.collapsed" id="pointCursor">more
+              <md-icon class="material-icons" ng-hide="$ctrl.collapsed">arrow_drop_down</md-icon>
+            </a>
+                <a ng-model="$ctrl.collapsed" ng-show="$ctrl.collapsed" ng-click="$ctrl.collapsed=!$ctrl.collapsed" id="pointCursor">less
+            <md-icon class="material-icons" ng-show="$ctrl.collapsed">arrow_drop_up</md-icon>
+            </a>
+            </div>
+        </div>
+        <md-card-actions layout="row" layout-align="end center">
+            <md-button ng-click="$ctrl.addProject($event,'','Add Project')">
+                ADD
+            </md-button>
+        </md-card-actions>
+    </md-card>
+</div>
+

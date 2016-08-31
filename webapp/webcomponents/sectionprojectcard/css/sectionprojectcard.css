@@ -1,0 +1,35 @@
+
+ #projectTitle {
+     background-color: #e6e6e6;
+ }
+ 
+ #changeProjectNameFont {
+    font-size: 16px; 
+}
+
+#changeProjectDurationFont {
+    font-size: 14px;
+}
+
+#changeProjectLocationFont {
+    font-size: 12px;
+}
+
+#changeProjectClientFont {
+    font-size: 12px;
+}
+
+#changeProjectSalaryFont {
+    font-size: 14px;
+}
+ /*.vertical-divider {
+  border-top-width: 0;
+  border-right-width: 1px;
+  border-right-style: solid;
+  height:100px;
+}*/
+#pointCursor{
+  cursor: pointer;
+}
+
+

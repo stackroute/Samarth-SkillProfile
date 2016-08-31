@@ -1,15 +1,18 @@
 
 <div>
     <md-content>
-        <md-toolbar class="md-hue-2" style="position:fixed">
-            <div class="md-toolbar-tools">
+        <md-toolbar style="position:fixed">
+            <div class="md-toolbar-tools" layout="row">
+                <div layout="row" layout-align="start center" flex="50">
                 <md-button hide-gt-sm show-sm show-xs class="md-icon-button" aria-label="Settings" ng-click="togglemenu()">
                     <md-icon>menu</md-icon>
                 </md-button>
+
                 <h2>
                 <span>Samarth-SkillProfile</span>
                </h2>
-                <div flex="65"></div>
+               </div>
+                <div layout="row" layout-align="end center" flex="50">
                 <md-input-container>
                     <!-- <label>Language</label> -->
                     <md-select ng-model="selectlang">
@@ -19,6 +22,7 @@
                     </md-select>
                 </md-input-container>
                 <a ui-sref="#">Signout</a>
+                </div>
             </div>
         </md-toolbar>
     </md-content>
@@ -26,11 +30,16 @@
 <div>
     <md-sidenav class="md-sidenav-left md-whiteframe-4dp" md-component-id="left">
        <md-toolbar>
-           <div>
-   <img img class="img-circle" id="img" ng-src="webcomponents/download.png">
+     
+    <div layout layout-align="center center" class="md-padding">
+        <img class="radiusCircle" ng-src="webcomponents/download.png">
+    </div>
 
-</div>
-<div id="name">Saranya</div>
+    <div layout='column' layout-align="center center">
+        <h4 class='md-title'>{{user.name}}</h4>
+        <md-progress-linear md-mode="determinate" ng-value='portfolio.completion'></md-progress-linear>
+        <p class="md-caption" style='margin: auto 5px 0px auto;' layout layout-align="end center">{{portfolio.completion}}%</p>
+    </div>
       </md-toolbar>
         <md-list>
             <div ng-controller="sidenavCtrl">
@@ -41,7 +50,7 @@
                         
                         <div class="inset">
                         <md-icon id="icon" flex="10" class="material-icons">{{item.icon}}</md-icon>
-                            <a ui-sref="{{item.state}}" ng-click="togglemenu()">{{item.title}}</a>
+                            <a ui-sref="{{item.state}}">{{item.title}}</a>
                         </div>
                     </md-item-content>
                     <md-divider></md-divider>

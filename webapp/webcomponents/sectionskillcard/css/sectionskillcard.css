@@ -29,17 +29,7 @@
  #no{
  	font-size: small;
  }
-#card >md-card-actions>button{
-	background-color: white;
-	border-style: none;
-	font-size: larger;
-    margin-right: 10px;
-}
-#card >md-card-actions>button:hover{
-	border-style: solid black;
-	color: white;
- 	background-color: black;
-}
+
  #card> md-card-title{
  		/*background-color: #e3e3e3;*/
  		    background-color: #D9D9D9;

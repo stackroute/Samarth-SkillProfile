@@ -48,7 +48,7 @@ function sectionskillcardctrl($http,sectionskillcard,$mdDialog) {
      {
     $mdDialog.show({
       controller: DialogController,
-      templateUrl: '/webcomponents/sectionskillcard/templates/sectionskillstory.html',
+      templateUrl: '/webcomponents/sectionskillcard/templates/sectionskillconversation.html',
       parent: angular.element(document.body),
       targetEvent: ev,
       clickOutsideToClose:true,

@@ -1,6 +1,6 @@
 angular.module('sm-skillprofile')
-    .config(['$stateProvider', '$urlMatcherFactoryProvider', '$urlRouterProvider',
-        function($stateProvider, $urlMatcherFactoryProvider, $urlRouterProvider) {
+    .config(['$stateProvider', '$urlMatcherFactoryProvider', '$urlRouterProvider','$compileProvider',
+        function($stateProvider, $urlMatcherFactoryProvider, $urlRouterProvider,$compileProvider) {
             $urlMatcherFactoryProvider.caseInsensitive(true);
 
             $urlRouterProvider.otherwise('/home/skillhome');
@@ -26,5 +26,8 @@ angular.module('sm-skillprofile')
                         }
                     }
                 })
+
+            $compileProvider.aHrefSanitizationWhitelist(/^\s*(|blob|):/);
         }
     ])
+

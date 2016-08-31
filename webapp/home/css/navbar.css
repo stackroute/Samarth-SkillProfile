@@ -1,10 +1,11 @@
-.md-toolbar-tools>md-input-container{
+.md-toolbar-tools>div>md-input-container{
 	font-size: small;
+	/*margin-left: 100px;*/
 }
-.md-toolbar-tools>a{
+.md-toolbar-tools>div>a{
 	cursor: pointer;
 	font-size: small;
-	margin-left: 50px;
+	/*margin-left: 30px;*/
 }
 .md-toolbar-tools>a:hover{
 	cursor: pointer;
