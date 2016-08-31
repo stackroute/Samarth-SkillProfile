@@ -71,38 +71,38 @@
 			"Experience": "1"
 		}, {
 			"Type": "Primary",
-			"Name": "C++",
+			"Name": "Carpenter",
 			"Expertise": "begginner",
 			"Experience": "2"
 		}, {
 			"Type": "Secondary",
-			"Name": "Mongo",
+			"Name": "Lathe worker",
 			"Expertise": "skilled",
 			"Experience": "1"
 		}, {
 			"Type": "Primary",
-			"Name": "C++",
+			"Name": "Event Manager",
 			"Expertise": "proficient",
 			"Experience": "2"
 		}, {
 			"Type": "Secondary",
 			"Name": "Angular js",
-			"Expertise": "skilled",
+			"Expertise": "proficient",
 			"Experience": "4"
 
 		}, {
 			"Type": "Secondary",
-			"Name": "Mongo",
+			"Name": "Hair stylist",
 			"Expertise": "proficient",
 			"Experience": "1"
 		}, {
 			"Type": "Primary",
-			"Name": "C++",
+			"Name": "Batting Coach",
 			"Expertise": "skilled",
 			"Experience": "2"
 		}, {
 			"Type": "Secondary",
-			"Name": "Mongo",
+			"Name": "Driver",
 			"Expertise": "skilled",
 			"Experience": "1"
 		}, {
@@ -315,6 +315,46 @@
 		}],
 		"Projects": [
         {
+          "Project": "Automation of Mechanical gear and Linear Motion Slides and Actuators ",
+          "Duration": "06 months",
+          "Location": "Bangalore",
+          "Client": "Bosch",
+          "Salary": "32000"
+        },
+        {
+          "Project": "General Purpose Cast Iron Worm Gearboxes and Automation of Mechanical gear",
+          "Duration": "02 months",
+          "Location": "Chennai",
+          "Client": "JP Morgan",
+          "Salary": "56000"
+        }
+        ,
+        {
+          "Project": "Precision Gearboxes for Small NEMA Motors and Automation of Mechanical gear",
+          "Duration": "08 months",
+          "Location": "Lucknow",
+          "Client": "Bosch",
+          "Salary": "45000"
+        }
+        ,
+        {
+          "Project": "SureMotion Synchronous Drive Timing Toothed Belts  and Automation of Mechanical gear",
+          "Duration": "03 months",
+          "Location": "Hyderabad",
+          "Client": "Ericson",
+          "Salary": "43000"
+        }
+        ,
+        {
+          "Project": "Automation of Mechanical gear",
+          "Duration": "6 months",
+          "Location": "Bangalore",
+          "Client": "Wipro",
+          "TeamSize": "20",
+          "Salary": "32000"
+        }
+        ,
+        {
           "Project": "Automation of Mechanical gear",
           "Duration": "6 months",
           "Location": "Bangalore",
@@ -323,12 +363,27 @@
           "Salary": "32000"
         },
         {
-          "Project": "Automation of Mechanical gear",
-          "Duration": "6 months",
-          "Location": "Bangalore",
-          "Client": "Wipro",
-          "TeamSize": "20",
-          "Salary": "32000"
+          "Project": "General Purpose Cast Iron Worm Gearboxes and Automation of Mechanical gear",
+          "Duration": "02 months",
+          "Location": "Chennai",
+          "Client": "JP Morgan",
+          "Salary": "56000"
+        }
+        ,
+        {
+          "Project": "Precision Gearboxes for Small NEMA Motors and Automation of Mechanical gear",
+          "Duration": "08 months",
+          "Location": "Lucknow",
+          "Client": "Bosch",
+          "Salary": "45000"
+        }
+        ,
+        {
+          "Project": "SureMotion Synchronous Drive Timing Toothed Belts and Automation of Mechanical gear",
+          "Duration": "03 months",
+          "Location": "Hyderabad",
+          "Client": "Ericson",
+          "Salary": "43000"
         }
         ,
         {
@@ -347,6 +402,70 @@
           "Client": "Wipro",
           "TeamSize": "20",
           "Salary": "32000"
+        },
+        {
+          "Project": "General Purpose Cast Iron Worm Gearboxes and Automation of Mechanical gear",
+          "Duration": "02 months",
+          "Location": "Chennai",
+          "Client": "JP Morgan",
+          "Salary": "56000"
+        }
+        ,
+        {
+          "Project": "Precision Gearboxes for Small NEMA Motors and Automation of Mechanical gear",
+          "Duration": "08 months",
+          "Location": "Lucknow",
+          "Client": "Bosch",
+          "Salary": "45000"
+        }
+        ,
+        {
+          "Project": "SureMotion Synchronous Drive Timing Toothed Belts and Automation of Mechanical gear",
+          "Duration": "03 months",
+          "Location": "Hyderabad",
+          "Client": "Ericson",
+          "Salary": "43000"
+        }
+        ,
+        {
+          "Project": "Automation of Mechanical gear",
+          "Duration": "6 months",
+          "Location": "Bangalore",
+          "Client": "Wipro",
+          "TeamSize": "20",
+          "Salary": "32000"
+        }
+        ,
+        {
+          "Project": "Automation of Mechanical gear",
+          "Duration": "6 months",
+          "Location": "Bangalore",
+          "Client": "Wipro",
+          "TeamSize": "20",
+          "Salary": "32000"
+        },
+        {
+          "Project": "General Purpose Cast Iron Worm Gearboxes and Automation of Mechanical gear",
+          "Duration": "02 months",
+          "Location": "Chennai",
+          "Client": "JP Morgan",
+          "Salary": "56000"
+        }
+        ,
+        {
+          "Project": "Precision Gearboxes for Small NEMA Motors and Automation of Mechanical gear",
+          "Duration": "08 months",
+          "Location": "Lucknow",
+          "Client": "Bosch",
+          "Salary": "45000"
+        }
+        ,
+        {
+          "Project": "SureMotion Synchronous Drive Timing Toothed Belts and Automation of Mechanical gear",
+          "Duration": "03 months",
+          "Location": "Hyderabad",
+          "Client": "Ericson",
+          "Salary": "43000"
         }
         ,
         {

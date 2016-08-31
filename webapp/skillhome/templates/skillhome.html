@@ -1,18 +1,10 @@
-<div layout="row" layout-xs="column" layout-align="center center">
-    <div layout="column" flex-gt-xs="40" flex-xs="100" layout-wrap">
-            <my-skillcard data='carddata[0]'></my-skillcard>
-       </div>
-       <div layout="column " flex-gt-xs="30 " flex-xs="100 " layout-fill>
-                 <my-questionbox></my-questionbox>
-       </div>
-   </div>
-     
-   <div layout="column" layout-align="center center">
-
-      <my-educationcard></my-educationcard>
-
-      <mysection-skill-card></mysection-skill-card>
-
-      <my-projectsectioncard></my-projectsectioncard>
-
-   </div>
+<my-questionbox>
+</my-questionbox>
+<div flex layout="row" layout-align="end end">
+	<my-skillcard data='carddata[0]'></my-skillcard>
+</div>
+<div layout="column" layout-align="center center">
+    <my-educationcard></my-educationcard>
+    <mysection-skill-card></mysection-skill-card>
+    <my-projectsectioncard></my-projectsectioncard>
+</div>

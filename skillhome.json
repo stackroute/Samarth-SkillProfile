@@ -1,0 +1,38 @@
+
+
+{
+    "sidenav": [{
+            "state": "skillprofile.skillhome",
+            "title": "Portfolio"
+           
+        }, {
+            "state": "skillprofile.workexperience",
+            "title": "Work Experience"
+           
+        }, {
+            "state": "skillprofile.projects",
+            "title": "Projects"
+            
+        },
+        {
+            "state": "skillprofile.skills",
+            "title": "Skills"
+        }, 
+        	{
+            "state": "skillprofile.education",
+            "title": "Education"
+           
+        },{
+               "state": "skillprofile.notifications",
+               "title": "Personal info"
+              
+           },
+           {
+               "state": "skillprofile.notifications",
+               "title": "Showcase"
+              
+           }
+    ]
+}
+		 	
+

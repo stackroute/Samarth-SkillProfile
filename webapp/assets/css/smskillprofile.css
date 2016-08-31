@@ -6,6 +6,7 @@
 }
 
 body {
+<<<<<<< HEAD
   font-family: "Lato", "Open Sans", "Helvetica Neue", "Helvetica", "Arial", "Verdana", "sans-serif";
   font-size: auto;
   margin: auto;
@@ -13,9 +14,30 @@ body {
 
 .maincontent {
 	margin: 70px 10px 5px 10px;
-	min-height: 100vh;
+=======
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", "Verdana", "sans-serif";
+  font-size: auto;
+  margin: auto;
+  /* min-height: 100vh; */
 }
+#maincontent {
+	margin-top: 60px;
 
+>>>>>>> 5fa59c34c1c5c1e79ab1550f9f90b46d740656eb
+	min-height: 100vh;
+  width: 100%;
+
+  /*width: 100%;*/
+
+}
+#sidebarcss{
+  /* margin-top: -800px; */
+  margin-top: 60px;
+  border: 1px solid #EAD7D7;
+    line-height: 50px;
+   min-height: 100vh;
+
+}
 .appfooter {
 	background: #545454;
 	color: #919191;

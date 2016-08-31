@@ -7,17 +7,17 @@
 }
 
 
-mysection-skill-card{ 
- width: 80%;
+ mysection-skill-card{ 
+ width: 100%;
+ margin: 0px;
  height: inherit;
 }
 
-my-skillcard {
- margin-top: -56px;
-}
+
 
 #skillCard {
  font-style: italic;
+ width: 100%;
 }
 
 .heading {
@@ -28,9 +28,14 @@ my-skillcard {
  margin-left: 10px;
 }
 
-my-projectsectioncard {
- width: 80%;
+ my-projectsectioncard {
+ width: 100%;
+ margin: 0px;
 }
 my-educationcard{
-  width: 80%;
+  width: 100%;
+  margin: 0px;
+} 
+my-skillcard{
+	width: 70%;
 }

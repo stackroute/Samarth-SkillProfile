@@ -18,6 +18,9 @@ angular.module('sm-skillprofile')
                         },
                         "footer": {
                             templateUrl: '/home/templates/footer.html'
+                        },
+                        "sidebar": {
+                            templateUrl: '/home/templates/sidebar.html'
                         }
                     }
                 })

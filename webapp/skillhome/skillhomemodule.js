@@ -15,5 +15,35 @@ angular.module('sm-skillprofile')
                         }
                     }
                 })
+                .state('skillprofile.workexperience', {
+                    url: '/workexperience',
+                    views: {
+                        "content@": {
+                            templateUrl: '/skillhome/templates/workexperience.html'
+                        }
+                    }
+                }).state('skillprofile.projects', {
+                    url: '/projects',
+                    views: {
+                        "content@": {
+                            template:"<my-projectsectioncard></my-projectsectioncard>"
+            
+                        }
+                    }
+                }).state('skillprofile.skills', {
+                    url: '/skills',
+                    views: {
+                        "content@": {
+                            template: "<mysection-skill-card></mysection-skill-card>"
+                        }
+                    }
+                }).state('skillprofile.education', {
+                    url: '/education',
+                    views: {
+                        "content@": {
+                            template:  "<my-educationcard></my-educationcard>"
+                        }
+                    }
+                })
         }
     ])
