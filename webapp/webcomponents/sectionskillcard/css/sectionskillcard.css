@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
  #card > md-content >div > md-whiteframe{
  	margin:5px 5px; 
  	
@@ -46,7 +46,7 @@
 		background: linear-gradient(to right, #F8F4D2 10%,white 0%);
 
 /*background-color: #F8F4D2   ;*/
-=======
+
  #card  >div > md-whiteframe{
  	margin:5px 5px; 
  	
@@ -121,5 +121,5 @@
 		background: linear-gradient(to right, #E5EA5C 3%,white 0%);
 
 /*background-color: #F8F4D2   ;*/
->>>>>>> 7bc1f88fd1e361d55b60d6a6ce10cb744a537994
+
 }

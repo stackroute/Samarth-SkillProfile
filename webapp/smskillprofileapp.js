@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 var app = angular.module("sm-skillprofile", ['ngMaterial',
     'ngAnimate',
     'ngMessages',
@@ -17,7 +17,7 @@ app.controller('skillprofilectrl', ['$scope',
         $scope.app = "Samarth-SkillProfile";
     }
 ]);
-=======
+
 var myApp = angular.module("sm-skillprofile", ['ngMaterial',
         'ngAnimate',
         'ngMessages',
@@ -33,4 +33,4 @@ var myApp = angular.module("sm-skillprofile", ['ngMaterial',
             //TBD
         }
     ]);
->>>>>>> 7bc1f88fd1e361d55b60d6a6ce10cb744a537994
+

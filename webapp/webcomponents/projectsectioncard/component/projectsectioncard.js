@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 angular.module('sm-skillprofile')
     .component('myProjectsectioncard', {            
         templateUrl: 'webcomponents/projectsectioncard/templates/projectsection.html',
@@ -61,7 +61,7 @@ function projectsectioncardCtrl($http, $mdDialog) {
         };
     }        
 }
-=======
+
 angular.module('sm-skillprofile')
     .component('myProjectsectioncard', {            
         templateUrl: 'webcomponents/projectsectioncard/templates/projectsection.html',
@@ -126,4 +126,4 @@ function projectsectioncardCtrl($http, $mdDialog) {
         };
     }        
 }
->>>>>>> 7bc1f88fd1e361d55b60d6a6ce10cb744a537994
+

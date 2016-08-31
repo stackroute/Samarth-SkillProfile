@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 var app=angular
 		.module('sm-skillprofile')
 		.component('myEducationcard',
@@ -107,7 +107,7 @@ function educationCardController($mdDialog,$http)
   }
   }
 
-=======
+
 var app=angular
 		.module('sm-skillprofile')
 		.component('myEducationcard',
@@ -255,5 +255,5 @@ function educationCardController($mdDialog,$http)
   }
   }
 
->>>>>>> 7bc1f88fd1e361d55b60d6a6ce10cb744a537994
+
 }
