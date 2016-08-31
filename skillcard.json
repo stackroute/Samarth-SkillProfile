@@ -11,6 +11,22 @@
 		"contact":"9023650041",
 		"location":"Bangalore",
 		"email":"dk24@gmail.com",
-		"gender":"male"
+		"gender":"male",
+		"maritalstatus":"unmarried"
+	}],
+	"userhindi": [{
+
+		"name":"डाइमंड खन्ना",
+		"age":"२२",
+		"profilepicture":"dk.PNG",
+		"professionpicture":"profession.png",
+		"currentdesignation":"वरिष्ठ परियोजना अभियंता",
+		"profession":"आंग्युलर डेवलपर",
+		"DOB":"२४ फरवरी १९९४",
+		"contact":"९०२३६५००४१",
+		"location":"बेंगालुरू",
+		"email":"dk24@gmail.com",
+		"gender":"नर",
+		"maritalstatus":"अविवाहित"
 	}]
 }

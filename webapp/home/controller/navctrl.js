@@ -16,7 +16,7 @@
 
             $scope.$watch('selectlang', function(lang) 
             {
-                alert(lang+" content will change..  under construction"); 
+                console.log(lang+" content will change..  under construction"); 
             });
 
             console.log("lang"+$scope.selectlang);
