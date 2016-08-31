@@ -1,65 +1,61 @@
-<div ng-cloak>
-    <div>
-        <md-content>
-            <md-toolbar class="md-hue-2" style="position:fixed">
-                <div class="md-toolbar-tools">
-                    <md-button hide-gt-sm show-sm show-xs class="md-icon-button" aria-label="Settings" ng-click="togglemenu()">
-                        <md-icon>menu</md-icon>
-                    </md-button>
-                    <h2>
+<div>
+    <md-content>
+        <md-toolbar style="position:fixed">
+            <div class="md-toolbar-tools" layout="row">
+                <div layout="row" layout-align="start center" flex="50">
+                <md-button hide-gt-sm show-sm show-xs class="md-icon-button" aria-label="Settings" ng-click="togglemenu()">
+                    <md-icon>menu</md-icon>
+                </md-button>
 
-              
-
-              <span>Samarth - SkillProfile | NIIT Foundation</span>
-              <md-input-container>
-          <label>State</label>
-          <md-select ng-model="selectlang">
-            <md-option ng-repeat="lang in language" ng-value="lang">
-              {{lang}}
-            </md-option>
-          </md-select>
-        </md-input-container>
-
-              </h2>
-                    <div flex="65"></div>
-                    <md-input-container>
-                        <!-- <label>Language</label> -->
-                        <md-select ng-model="selectlang">
-                            <md-option ng-repeat="lang in language" ng-value="lang">
-                                {{lang}}
-                            </md-option>
-                        </md-select>
-                    </md-input-container>
-                    <a ui-sref="#">Signout</a>
+                <h2>
+                <span>Samarth-SkillProfile</span>
+               </h2>
+               </div>
+                <div layout="row" layout-align="end center" flex="50">
+                <md-input-container>
+                    <!-- <label>Language</label> -->
+                    <md-select ng-model="selectlang">
+                        <md-option ng-repeat="lang in language" ng-value="lang">
+                            {{lang}}
+                        </md-option>
+                    </md-select>
+                </md-input-container>
+                <a ui-sref="#">Signout</a>
                 </div>
-            </md-toolbar>
-        </md-content>
+            </div>
+        </md-toolbar>
+    </md-content>
+</div>
+<div>
+    <md-sidenav class="md-sidenav-left md-whiteframe-4dp" md-component-id="left">
+       <md-toolbar>
+     
+    <div layout layout-align="center center" class="md-padding">
+        <img class="radiusCircle" ng-src="webcomponents/download.png">
     </div>
-    <div>
-        <md-sidenav class="md-sidenav-left md-whiteframe-4dp" md-component-id="left">
-            <md-toolbar class="md-tall md-hue-4">
-                <div layout="column" class="md-toolbar-tools-bottom inset">
-                    <user-avatar></user-avatar>
-                    <span></span>
-                    <div>Firstname Lastname</div>
-                    <div>email@domainname.com</div>
-                </div>
-            </md-toolbar>
-            <md-list>
-                <div ng-controller="sidenavCtrl">
-                    <md-item ng-repeat="item in items">
-                        <md-item-content layout="row" layout-align="start center">
-                            <!-- <div class="inset">
-                            <ng-md-icon icon="{{item.icon}}"></ng-md-icon>
-                        </div> -->
-                            <div class="inset">
-                                <a ui-sref="{{item.state}}" ng-click="togglemenu()">{{item.title}}</a>
-                            </div>
-                        </md-item-content>
-                    </md-item>
+
+    <div layout='column' layout-align="center center">
+        <h4 class='md-title'>{{user.name}}</h4>
+        <md-progress-linear md-mode="determinate" ng-value='portfolio.completion'></md-progress-linear>
+        <p class="md-caption" style='margin: auto 5px 0px auto;' layout layout-align="end center">{{portfolio.completion}}%</p>
+    </div>
+      </md-toolbar>
+        <md-list>
+            <div ng-controller="sidenavCtrl">
+                <md-item ng-repeat="item in items">
+                    <md-item-content layout="row" layout-align="start center" class="active">
+                       
+                           
+                        
+                        <div class="inset">
+                        <md-icon id="icon" flex="10" class="material-icons">{{item.icon}}</md-icon>
+                            <a ui-sref="{{item.state}}">{{item.title}}</a>
+                        </div>
+                    </md-item-content>
                     <md-divider></md-divider>
-                </div>
-            </md-list>
-        </md-sidenav>
-    </div>
-    <hr>
+                </md-item>
+               </div>
+    </md-list>
+
+</div>
+<hr>

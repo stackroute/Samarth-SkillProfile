@@ -1,332 +1,312 @@
+
 {
-	"profiles": [{
-		"id": "01",
-		"UserName": "Vicky008",
-		"Personalinfo": [{
-			"Name": "vicky",
-			"Dob": "08/10/92",
-			"Gender": "Male",
-			"Email": "vckksaj@ksj.in",
-			"Mobile": 7749995677,
-			"Address": "jp nagar"
-		}],
-		"Education": [{
-			"Type": "school",
-			"Standard":"7",
-			"Name": "St teresa's school",
-			"Affiliation": "ICSE",
-			"From": 1998,
-			"To": 2007,
-			"Location":"Bangalore",
-			"Overall %": 89
-		}, {
-			"Type": "school",
-			"Standard":"10",
-			"Name": "Desouza school",
-			"Affiliation": "ICSE",
-			"From": 2009,
-			"To": 2010,
-			"Location":"Kolkata",
-			"Overall %": 70
-		},
-		{
-			"Type": "school",
-			"Standard":"7",
-			"Name": "St teresa's school",
-			"Affiliation": "ICSE",
-			"From": 1998,
-			"To": 2007,
-			"Location":"Bangalore",
-			"Overall %": 89
-		},
-	{
-			"Type": "work",
-			"Course":"CSE",
-			"Degree":"B.TECH",
-			"Name": "Chandigarh Group Of College",
-			"Affiliation": "Chandigarh University",
-			"From": 1998,
-			"To": 2016,
-			"Location":"Jhanjeri",
-			"Overall %": 89
-		},
-	{
-			"Type": "work",
-			"Course":"CSE",
-			"Degree":"B.TECH",
-			"Name": "Chandigarh Group Of College",
-			"Affiliation": "Chandigarh University",
-			"From": 1998,
-			"To": 2016,
-			"Location":"Jhanjeri",
-			"Overall %": 89
-		},
-	{
-			"Type": "work",
-			"Course":"CSE",
-			"Degree":"B.TECH",
-			"Name": "Chandigarh Group Of College",
-			"Affiliation": "Chandigarh University",
-			"From": 1998,
-			"To": 2016,
-			"Location":"Jhanjeri",
-			"Overall %": 89
-		}],
-		"Skills": [{
-			"Type": "Primary",
-			"Name": "Angular js",
-			"Expertise": "begginner",
-			"Experience": "4"
-		}, {
-			"Type": "Secondary",
-			"Name": "Mongo",
-			"Expertise": "begginner",
-			"Experience": "1"
-		}, {
-			"Type": "Primary",
-			"Name": "C++",
-			"Expertise": "begginner",
-			"Experience": "2"
-		}, {
-			"Type": "Secondary",
-			"Name": "Mongo",
-			"Expertise": "skilled",
-			"Experience": "1"
-		}, {
-			"Type": "Primary",
-			"Name": "C++",
-			"Expertise": "proficient",
-			"Experience": "2"
-		}, {
-			"Type": "Secondary",
-			"Name": "Angular js",
-			"Expertise": "skilled",
-			"Experience": "4"
+    "profiles": [{
+        "id": "01",
+        "UserName": "Vicky008",
+        "Personalinfo": [{
+            "Name": "vicky",
+            "Dob": "08/10/92",
+            "Gender": "Male",
+            "Email": "vckksaj@ksj.in",
+            "Mobile": 7749995677,
+            "Address": "jp nagar"
+        }],
+        "Education": [{
+            "Type": "school",
+            "Titleofeducation":"10th",
+            "Name": "Desouza school",
+            "Affiliation": "ICSE",
+            "From": 2009,
+            "Completionyear": 2010,
+            "Location":"Kolkata",
+            "Percentage": "70%"
+        },
+        {
+            "Type": "school",
+            "Titleofeducation":"12th",
+            "Name": "St xavier school",
+            "Affiliation": "ICSE",
+            "From": 1998,
+            "Completionyear": 2012,
+            "Location":"Bangalore",
+            "Percentage": "89%"
+        },
+    {
+            "Type": "work",
+            "Titleofeducation":"B.TECH",
+            "Name": "CGC College",
+            "Affiliation": "Punjab University",
+            "From": 1998,
+            "Completionyear": 2016,
+            "Location":"Jhanjeri",
+            "Percentage": "74%"
+        },
+    {
+            "Type": "work",
+            "Titleofeducation":"M.TECH",
+            "Name": "UIET",
+            "Affiliation": "Punjab University",
+            "From": 1998,
+            "Completionyear": 2018,
+            "Location":"Chandigarh",
+            "Percentage": "81%"
+        }],
 
-		}, {
-			"Type": "Secondary",
-			"Name": "Mongo",
-			"Expertise": "proficient",
-			"Experience": "1"
-		}, {
-			"Type": "Primary",
-			"Name": "C++",
-			"Expertise": "skilled",
-			"Experience": "2"
-		}, {
-			"Type": "Secondary",
-			"Name": "Mongo",
-			"Expertise": "skilled",
-			"Experience": "1"
-		}, {
-			"Type": "Secondary",
-			"Name": "C++",
-			"Expertise": "skilled",
-			"Experience": "2"
-		}, {
-			"Type": "Primary",
-			"Name": "Angular js",
-			"Expertise": "begginner",
-			"Experience": "4"
+        "Skills": [{
+            "Type": "Primary",
+            "Name": "Angular js",
+            "Expertise": "begginner",
+            "Experience": "4"
+        }, {
+            "Type": "Secondary",
+            "Name": "Mongo",
+            "Expertise": "begginner",
+            "Experience": "1"
+        }, {
+            "Type": "Primary",
+            "Name": "C++",
+            "Expertise": "begginner",
+            "Experience": "2"
+        }, {
+            "Type": "Secondary",
+            "Name": "Mongo",
+            "Expertise": "skilled",
+            "Experience": "1"
+        }, {
+            "Type": "Primary",
+            "Name": "C++",
+            "Expertise": "proficient",
+            "Experience": "2"
+        }, {
+            "Type": "Secondary",
+            "Name": "Angular js",
+            "Expertise": "skilled",
+            "Experience": "4"
 
-		}, {
-			"Type": "Primary",
-			"Name": "Mongo",
-			"Expertise": "expert",
-			"Experience": "1"
-		}, {
-			"Type": "Primary",
-			"Name": "C++",
-			"Expertise": "expert",
-			"Experience": "2"
-		}, {
-			"Type": "Secondary",
-			"Name": "Mongo",
-			"Expertise": "skilled",
-			"Experience": "1"
-		}, {
-			"Type": "Secondary",
-			"Name": "C++",
-			"Expertise": "skilled",
-			"Experience": "2"
-		}, {
-			"Type": "Primary",
-			"Name": "Angular js",
-			"Expertise": "begginner",
-			"Experience": "4"
-		}, {
-			"Type": "Secondary",
-			"Name": "Mongo",
-			"Expertise": "begginner",
-			"Experience": "1"
-		}, {
-			"Type": "Primary",
-			"Name": "C++",
-			"Expertise": "begginner",
-			"Experience": "2"
-		}, {
-			"Type": "Secondary",
-			"Name": "Mongo",
-			"Expertise": "skilled",
-			"Experience": "1"
-		}, {
-			"Type": "Primary",
-			"Name": "C++",
-			"Expertise": "proficient",
-			"Experience": "2"
-		}, {
-			"Type": "Secondary",
-			"Name": "Angular js",
-			"Expertise": "skilled",
-			"Experience": "4"
+        }, {
+            "Type": "Secondary",
+            "Name": "Mongo",
+            "Expertise": "proficient",
+            "Experience": "1"
+        }, {
+            "Type": "Primary",
+            "Name": "C++",
+            "Expertise": "skilled",
+            "Experience": "2"
+        }, {
+            "Type": "Secondary",
+            "Name": "Mongo",
+            "Expertise": "skilled",
+            "Experience": "1"
+        }, {
+            "Type": "Secondary",
+            "Name": "C++",
+            "Expertise": "skilled",
+            "Experience": "2"
+        }, {
+            "Type": "Primary",
+            "Name": "Angular js",
+            "Expertise": "begginner",
+            "Experience": "4"
 
-		}, {
-			"Type": "Secondary",
-			"Name": "Mongo",
-			"Expertise": "proficient",
-			"Experience": "1"
-		}, {
-			"Type": "Primary",
-			"Name": "C++",
-			"Expertise": "skilled",
-			"Experience": "2"
-		}, {
-			"Type": "Secondary",
-			"Name": "Mongo",
-			"Expertise": "skilled",
-			"Experience": "1"
-		}, {
-			"Type": "Secondary",
-			"Name": "C++",
-			"Expertise": "skilled",
-			"Experience": "2"
-		}, {
-			"Type": "Primary",
-			"Name": "Angular js",
-			"Expertise": "begginner",
-			"Experience": "4"
+        }, {
+            "Type": "Primary",
+            "Name": "Mongo",
+            "Expertise": "expert",
+            "Experience": "1"
+        }, {
+            "Type": "Primary",
+            "Name": "C++",
+            "Expertise": "expert",
+            "Experience": "2"
+        }, {
+            "Type": "Secondary",
+            "Name": "Mongo",
+            "Expertise": "skilled",
+            "Experience": "1"
+        }, {
+            "Type": "Secondary",
+            "Name": "C++",
+            "Expertise": "skilled",
+            "Experience": "2"
+        }, {
+            "Type": "Primary",
+            "Name": "Angular js",
+            "Expertise": "begginner",
+            "Experience": "4"
+        }, {
+            "Type": "Secondary",
+            "Name": "Mongo",
+            "Expertise": "begginner",
+            "Experience": "1"
+        }, {
+            "Type": "Primary",
+            "Name": "C++",
+            "Expertise": "begginner",
+            "Experience": "2"
+        }, {
+            "Type": "Secondary",
+            "Name": "Mongo",
+            "Expertise": "skilled",
+            "Experience": "1"
+        }, {
+            "Type": "Primary",
+            "Name": "C++",
+            "Expertise": "proficient",
+            "Experience": "2"
+        }, {
+            "Type": "Secondary",
+            "Name": "Angular js",
+            "Expertise": "skilled",
+            "Experience": "4"
 
-		}, {
-			"Type": "Primary",
-			"Name": "Mongo",
-			"Expertise": "expert",
-			"Experience": "1"
-		}, {
-			"Type": "Primary",
-			"Name": "C++",
-			"Expertise": "expert",
-			"Experience": "2"
-		}, {
-			"Type": "Secondary",
-			"Name": "Mongo",
-			"Expertise": "skilled",
-			"Experience": "1"
-		}, {
-			"Type": "Secondary",
-			"Name": "C++",
-			"Expertise": "skilled",
-			"Experience": "2"
-		}, {
-			"Type": "Primary",
-			"Name": "Angular js",
-			"Expertise": "begginner",
-			"Experience": "4"
-		}, {
-			"Type": "Secondary",
-			"Name": "Mongo",
-			"Expertise": "begginner",
-			"Experience": "1"
-		}, {
-			"Type": "Primary",
-			"Name": "C++",
-			"Expertise": "begginner",
-			"Experience": "2"
-		}, {
-			"Type": "Secondary",
-			"Name": "Mongo",
-			"Expertise": "skilled",
-			"Experience": "1"
-		}, {
-			"Type": "Primary",
-			"Name": "C++",
-			"Expertise": "proficient",
-			"Experience": "2"
-		}, {
-			"Type": "Secondary",
-			"Name": "Angular js",
-			"Expertise": "skilled",
-			"Experience": "4"
+        }, {
+            "Type": "Secondary",
+            "Name": "Mongo",
+            "Expertise": "proficient",
+            "Experience": "1"
+        }, {
+            "Type": "Primary",
+            "Name": "C++",
+            "Expertise": "skilled",
+            "Experience": "2"
+        }, {
+            "Type": "Secondary",
+            "Name": "Mongo",
+            "Expertise": "skilled",
+            "Experience": "1"
+        }, {
+            "Type": "Secondary",
+            "Name": "C++",
+            "Expertise": "skilled",
+            "Experience": "2"
+        }, {
+            "Type": "Primary",
+            "Name": "Angular js",
+            "Expertise": "begginner",
+            "Experience": "4"
 
-		}, {
-			"Type": "Secondary",
-			"Name": "Mongo",
-			"Expertise": "proficient",
-			"Experience": "1"
-		}, {
-			"Type": "Primary",
-			"Name": "C++",
-			"Expertise": "skilled",
-			"Experience": "2"
-		}, {
-			"Type": "Secondary",
-			"Name": "Mongo",
-			"Expertise": "skilled",
-			"Experience": "1"
-		}, {
-			"Type": "Secondary",
-			"Name": "C++",
-			"Expertise": "skilled",
-			"Experience": "2"
-		}, {
-			"Type": "Primary",
-			"Name": "Angular js",
-			"Expertise": "begginner",
-			"Experience": "4"
+        }, {
+            "Type": "Primary",
+            "Name": "Mongo",
+            "Expertise": "expert",
+            "Experience": "1"
+        }, {
+            "Type": "Primary",
+            "Name": "C++",
+            "Expertise": "expert",
+            "Experience": "2"
+        }, {
+            "Type": "Secondary",
+            "Name": "Mongo",
+            "Expertise": "skilled",
+            "Experience": "1"
+        }, {
+            "Type": "Secondary",
+            "Name": "C++",
+            "Expertise": "skilled",
+            "Experience": "2"
+        }, {
+            "Type": "Primary",
+            "Name": "Angular js",
+            "Expertise": "begginner",
+            "Experience": "4"
+        }, {
+            "Type": "Secondary",
+            "Name": "Mongo",
+            "Expertise": "begginner",
+            "Experience": "1"
+        }, {
+            "Type": "Primary",
+            "Name": "C++",
+            "Expertise": "begginner",
+            "Experience": "2"
+        }, {
+            "Type": "Secondary",
+            "Name": "Mongo",
+            "Expertise": "skilled",
+            "Experience": "1"
+        }, {
+            "Type": "Primary",
+            "Name": "C++",
+            "Expertise": "proficient",
+            "Experience": "2"
+        }, {
+            "Type": "Secondary",
+            "Name": "Angular js",
+            "Expertise": "skilled",
+            "Experience": "4"
 
-		}, {
-			"Type": "Primary",
-			"Name": "Mongo",
-			"Expertise": "expert",
-			"Experience": "1"
-		}, {
-			"Type": "Primary",
-			"Name": "C++",
-			"Expertise": "expert",
-			"Experience": "2"
-		}, {
-			"Type": "Secondary",
-			"Name": "Mongo",
-			"Expertise": "skilled",
-			"Experience": "1"
-		}, {
-			"Type": "Secondary",
-			"Name": "C++",
-			"Expertise": "skilled",
-			"Experience": "2"
-		}],
-		"Work Experiance": [{
-			"Organisation": "Wipro",
-			"Designation": "Senior software eng",
-			"Joining Date": "23/11/2015",
-			"Leaving date": "23/11/2017",
-			"Projects": "Loyd Bank",
-			"Location": "Bangalore"
-		}, {
-			"Organisation": "Philips",
-			"Designation": "Senior software eng",
-			"Joining Date": "23/11/2017",
-			"Leaving date": "20/10/2019",
-			"Projects": "HSBC Bank",
-			"Location": "Bangalore"
-		}, {
-			"Organisation": "Microsoft",
-			"Designation": "Senior software eng",
-			"Joining Date": "20/10/2019",
-			"Leaving date": "20/10/2020",
-			"Projects": "Big Data",
-			"Location": "Bangalore"
-		}],
-		"Projects": [
+        }, {
+            "Type": "Secondary",
+            "Name": "Mongo",
+            "Expertise": "proficient",
+            "Experience": "1"
+        }, {
+            "Type": "Primary",
+            "Name": "C++",
+            "Expertise": "skilled",
+            "Experience": "2"
+        }, {
+            "Type": "Secondary",
+            "Name": "Mongo",
+            "Expertise": "skilled",
+            "Experience": "1"
+        }, {
+            "Type": "Secondary",
+            "Name": "C++",
+            "Expertise": "skilled",
+            "Experience": "2"
+        }, {
+            "Type": "Primary",
+            "Name": "Angular js",
+            "Expertise": "begginner",
+            "Experience": "4"
+
+        }, {
+            "Type": "Primary",
+            "Name": "Mongo",
+            "Expertise": "expert",
+            "Experience": "1"
+        }, {
+            "Type": "Primary",
+            "Name": "C++",
+            "Expertise": "expert",
+            "Experience": "2"
+        }, {
+            "Type": "Secondary",
+            "Name": "Mongo",
+            "Expertise": "skilled",
+            "Experience": "1"
+        }, {
+            "Type": "Secondary",
+            "Name": "C++",
+            "Expertise": "skilled",
+            "Experience": "2"
+        }],
+        "Work Experiance": [{
+            "Organisation": "Wipro",
+            "Designation": "Senior software eng",
+            "Joining Date": "23/11/2015",
+            "Leaving date": "23/11/2017",
+            "Projects": "Loyd Bank",
+            "Location": "Bangalore"
+        }, {
+            "Organisation": "Philips",
+            "Designation": "Senior software eng",
+            "Joining Date": "23/11/2017",
+            "Leaving date": "20/10/2019",
+            "Projects": "HSBC Bank",
+            "Location": "Bangalore"
+        }, {
+            "Organisation": "Microsoft",
+            "Designation": "Senior software eng",
+            "Joining Date": "20/10/2019",
+            "Leaving date": "20/10/2020",
+            "Projects": "Big Data",
+            "Location": "Bangalore"
+        }],
+        "Projects": [
         {
           "Project": "Automation of Mechanical gear and Linear Motion Slides and Actuators ",
           "Duration": "06 months",
@@ -499,90 +479,88 @@
           "Salary": "32000"
         }
       ],
-		"Certification": [{}]
-	}, {
-		"id": "02",
-		"UserName": "Avadhesh",
-		"Personalinfo": {
-			"Name": "Avadesh",
-			"Dob": "01/11/94",
-			"Gender": "Male",
-			"Email": "avadaj@ksj.in",
-			"Mobile": 8899765677,
-			"Address": "Marathalli"
-		},
-		"Education": [{
-			"Type": "School",
-			"School": "St Mary's school",
-			"Board": "ICSE",
-			"From": 1998,
-			"To": 2009,
-			"Overall %": 89
-		}, {
-			"Type": "School",
-			"School": "St pauls school",
-			"Board": "ICSE",
-			"From": 2009,
-			"To": 2011,
-			"Overall %": 70
-		}, {
-			"Type": "College",
-			"College": "CV Raman Institute of Technology",
-			"Board": "BPUT",
-			"From": 2011,
-			"To": 2015,
-			"Overall percentage": 70
-		}],
-
-		"Skills": [{
-			"primary": "c++",
-			"secondary": "c",
-			"secondary": "java"
-		}, {
-			"primary": "jquery",
-			"secondary": "javascript",
-			"primary": "angular"
-		}],
-		"Work Experiance": [{
-			"Organisation": "Infy",
-			"Designation": "Senior software eng",
-			"Joining Date": "20/12/2014",
-			"Leaving date": "23/11/2016",
-			"Projects": "Loyd Bank",
-			"Location": "Bangalore"
-		}, {
-			"Organisation": "TCS",
-			"Designation": "Senior software eng",
-			"Joining Date": "23/11/2016",
-			"Leaving date": "10/10/2018",
-			"Projects": "Passport ",
-			"Location": "Bangalore"
-		}, {
-			"Organisation": "Google",
-			"Designation": "Senior software eng",
-			"Joining Date": "10/10/2018",
-			"Leaving date": "20/10/2020",
-			"Projects": "Material ui",
-			"Location": "Bangalore"
-		}],
-		"Projects": [
-        {
-          "Project": "Automation of Mechanical gear",
-          "Duration": "6 months",
-          "Location": "Bangalore",
-          "Client": "Wipro",
-          "TeamSize": "20",
-          "Salary": "32000"
+        "Certification": [{}]
+    }, {
+        "id": "02",
+        "UserName": "Avadhesh",
+        "Personalinfo": {
+            "Name": "Avadesh",
+            "Dob": "01/11/94",
+            "Gender": "Male",
+            "Email": "avadaj@ksj.in",
+            "Mobile": 8899765677,
+            "Address": "Marathalli"
         },
-        {
-          "Project": "Automation of Mechanical gear",
-          "Duration": "6 months",
-          "Location": "Bangalore",
-          "Client": "Wipro",
-          "TeamSize": "20",
-          "Salary": "32000"
-        }
-      ],
-		"Certification": [{}]
-	}]
+        "Education": [{
+            "Type": "School",
+            "School": "St Mary's school",
+            "Board": "ICSE",
+            "From": 1998,
+            "To": 2009,
+            "Overall %": 89
+        }, {
+            "Type": "School",
+            "School": "St pauls school",
+            "Board": "ICSE",
+            "From": 2009,
+            "To": 2011,
+            "Overall %": 70
+        }, {
+            "Type": "College",
+            "College": "CV Raman Institute of Technology",
+            "Board": "BPUT",
+            "From": 2011,
+            "To": 2015,
+            "Overall percentage": 70
+        }],
+
+        "Skills": [{
+            "primary": "c++",
+            "secondary": "c",
+            "secondary": "java"
+        }, {
+            "primary": "jquery",
+            "secondary": "javascript",
+            "primary": "angular"
+        }],
+        "Work Experiance": [{
+            "Organisation": "Infy",
+            "Designation": "Senior software eng",
+            "Joining Date": "20/12/2014",
+            "Leaving date": "23/11/2016",
+            "Projects": "Loyd Bank",
+            "Location": "Bangalore"
+        }, {
+            "Organisation": "TCS",
+            "Designation": "Senior software eng",
+            "Joining Date": "23/11/2016",
+            "Leaving date": "10/10/2018",
+            "Projects": "Passport ",
+            "Location": "Bangalore"
+        }, {
+            "Organisation": "Google",
+            "Designation": "Senior software eng",
+            "Joining Date": "10/10/2018",
+            "Leaving date": "20/10/2020",
+            "Projects": "Material ui",
+            "Location": "Bangalore"
+        }],
+        "Projects": [{
+            "Project": "Automation of Mechanical gear",
+            "Duration": "6 months",
+            "Location": "Bangalore",
+            "Client": "Wipro",
+            "TeamSize": "20",
+            "Salary": "32000"
+        }, {
+            "Project": "Automation of Mechanical gear",
+            "Duration": "6 months",
+            "Location": "Bangalore",
+            "Client": "Wipro",
+            "TeamSize": "20",
+            "Salary": "32000"
+        }],
+        "Certification": [{}]
+    }]
 }
+

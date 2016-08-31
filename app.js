@@ -22,6 +22,29 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'bower_components')));
 app.use(express.static(path.join(__dirname, 'webapp')));
 
+var jsonServer = require('json-server')
+var skillHomeServer = jsonServer.create()
+var skillCardServer = jsonServer.create()
+var skillProfileServer = jsonServer.create()
+
+var skillHomeRouter = jsonServer.router('skillhome.json');
+var skillCardServerRouter = jsonServer.router('skillcard.json');
+var skillProfileRouter = jsonServer.router('skillProfile.json');
+var middlewares = jsonServer.defaults();
+
+skillHomeServer.use(middlewares);
+skillHomeServer.use(skillHomeRouter);
+
+skillCardServer.use(middlewares);
+skillCardServer.use(skillCardServerRouter);
+
+skillProfileServer.use(middlewares);
+skillProfileServer.use(skillProfileRouter);
+
+skillHomeServer.listen(8082);
+skillCardServer.listen(8083);
+skillProfileServer.listen(8081);
+
 app.use(function(req, res, next) {
   var err = new Error('Resource not found');
   err.status = 404;
