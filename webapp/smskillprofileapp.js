@@ -1,5 +1,3 @@
-
-
 var myApp = angular.module("sm-skillprofile", ['ngMaterial',
        'ngAnimate',
        'ngMessages',

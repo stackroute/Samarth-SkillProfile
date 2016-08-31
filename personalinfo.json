@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
 	"personalinfo": [{
 
@@ -11,4 +12,19 @@
 		"pincode":"524139"
 		
 	}]
+=======
+{
+	"personalinfo": [{
+
+		"name":"Diamond Khanna",
+		"DOB":"24/05/1994",
+		"gender":"male",
+		"maritial status":"unmarried",
+		"contact":"9023650041",
+		"email":"dk24@gmail.com",
+		"address":"7th block,koramangala,bangalore,karnataka",
+		"pincode":"524139"
+		
+	}]
+>>>>>>> ca1cd9d72ec3916dc23d28b3a4130634e9c7e4c1
 }

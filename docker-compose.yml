@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 version: '2'
 services:
   webapp:
@@ -11,3 +12,18 @@ services:
       - 8080
     ports:
     - "8080:8080"
+=======
+version: '2'
+services:
+  webapp:
+    image: samarth/samarth-webapp:v0.1.0
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    network_mode: host
+    restart: always
+    expose:
+      - 8080
+    ports:
+    - "8080:8080"
+>>>>>>> ca1cd9d72ec3916dc23d28b3a4130634e9c7e4c1
