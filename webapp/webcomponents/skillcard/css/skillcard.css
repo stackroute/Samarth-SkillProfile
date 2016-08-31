@@ -1,13 +1,20 @@
 #content
 {
+	margin-top:30px;
+	/*background-color: white;*/
 	/*margin-top:30px;*/
 	width: 100%;
 	margin:auto;
 }
+#totalcardarea
+{
+	padding:0px;
+}
 
 #headersection
 {
-	background-color: #D9D9D9;
+	/*background-color: #D9D9D9;*/
+	background-color:#f9f9f9;
 }
 
 #avatar
@@ -22,3 +29,19 @@
 	width: 30px;
 }
 
+#skillcardtoolbar
+{
+	/*background-color:#d9d9d9;*/
+	background-color:#f9f9f9;
+	margin:0px;
+}
+
+#headerage
+{
+	font-size: 12px;
+}
+
+#header1
+{
+	margin-bottom:5px;
+}

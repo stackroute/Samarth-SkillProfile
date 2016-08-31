@@ -1,45 +1,43 @@
-<md-dialog aria-label="Education">
-  <form ng-cloak>
-    <md-toolbar>
+<md-dialog aria-label="Mango (Fruit)">
+  <form ng-cloak class="nlui-conv-form">
+
+    <md-toolbar style='background-color: #f3efef; color: #747475;'>
       <div class="md-toolbar-tools">
         <h2>{{header}}</h2>
         <span flex></span>
-        <md-button class="md-icon-button" ng-click="cancel()">
+        <md-button class="md-icon-button md-accent" ng-click="cancel()">
           <md-icon>close</md-icon>
         </md-button>
       </div>
     </md-toolbar>
+
+  
     <md-dialog-content>
       <div class="md-dialog-content">
-        <!-- <p>
-          I have done my 
-          <md-input-container>
-            <input type="text">
-          </md-input-container> standard in 
-          <md-input-container>
-            <input type="number">
-          </md-input-container> from 
-          <md-input-container>
-            <input type="text">
-          </md-input-container> located at 
-          <md-input-container>
-            <input type="text" >
-          </md-input-container>, which is of 
-          <md-input-container>
-            <input type="text">
-          </md-input-container> board.
-        </p> -->
-        {{object.Standard}}<br>
-        {{object.Name}}<br>
-        {{object.Affiliation}}<br>
-        {{object.Degree}}<br>
-        {{object.Course}}<br>
-        {{object.Location}}<br>
-        {{object.To}}
+
+        <p class="">
+          I have done 
+          <textarea rows="1" cols="6" ng-model="Titleofeducation" class='nlui-inline-input'></textarea> 
+          in 
+          <textarea rows="1" cols="4" type="text" ng-model="Completionyear" class='nlui-inline-input'></textarea>
+          with marks 
+          <textarea rows="1" cols="3" type="text" ng-model="Percentage" class='nlui-inline-input'></textarea>
+          from 
+          <textarea rows="1" cols="15" type="text" ng-model="Name" class='nlui-inline-input'></textarea>
+          located at 
+          <textarea rows="1" cols="10" type="text" ng-model="Location" class='nlui-inline-input'></textarea>
+          of 
+          <textarea rows="1" cols="20" type="text" ng-model="Affiliation" class='nlui-inline-input'></textarea>
+        </p>
+       
       </div>
     </md-dialog-content>
+  
     <md-dialog-actions layout="row">
-      <md-button class="md-raised">SAVE</md-button>
+      <md-button ng-click="hide()">
+        <md-icon>arrow_forward</md-icon>  
+      </md-button>
     </md-dialog-actions>
+  
   </form>
 </md-dialog>

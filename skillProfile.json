@@ -12,65 +12,52 @@
 		}],
 		"Education": [{
 			"Type": "school",
-			"Standard":"7",
+			"Titleofeducation":"7th",
 			"Name": "St teresa's school",
 			"Affiliation": "ICSE",
 			"From": 1998,
-			"To": 2007,
+			"Completionyear": 2007,
 			"Location":"Bangalore",
-			"Overall %": 89
+			"Percentage": "87%"
 		}, {
 			"Type": "school",
-			"Standard":"10",
+			"Titleofeducation":"10th",
 			"Name": "Desouza school",
 			"Affiliation": "ICSE",
 			"From": 2009,
-			"To": 2010,
+			"Completionyear": 2010,
 			"Location":"Kolkata",
-			"Overall %": 70
+			"Percentage": "70%"
 		},
 		{
 			"Type": "school",
-			"Standard":"7",
-			"Name": "St teresa's school",
+			"Titleofeducation":"12th",
+			"Name": "St xavier school",
 			"Affiliation": "ICSE",
 			"From": 1998,
-			"To": 2007,
+			"Completionyear": 2012,
 			"Location":"Bangalore",
-			"Overall %": 89
+			"Percentage": "89%"
 		},
 	{
 			"Type": "work",
-			"Course":"CSE",
-			"Degree":"B.TECH",
-			"Name": "Chandigarh Group Of College",
+			"Titleofeducation":"B.TECH",
+			"Name": "CGC College",
 			"Affiliation": "Chandigarh University",
 			"From": 1998,
-			"To": 2016,
+			"Completionyear": 2016,
 			"Location":"Jhanjeri",
-			"Overall %": 89
+			"Percentage": "74%"
 		},
 	{
 			"Type": "work",
-			"Course":"CSE",
-			"Degree":"B.TECH",
-			"Name": "Chandigarh Group Of College",
-			"Affiliation": "Chandigarh University",
+			"Titleofeducation":"M.TECH",
+			"Name": "UIET",
+			"Affiliation": "Punjab University",
 			"From": 1998,
-			"To": 2016,
-			"Location":"Jhanjeri",
-			"Overall %": 89
-		},
-	{
-			"Type": "work",
-			"Course":"CSE",
-			"Degree":"B.TECH",
-			"Name": "Chandigarh Group Of College",
-			"Affiliation": "Chandigarh University",
-			"From": 1998,
-			"To": 2016,
-			"Location":"Jhanjeri",
-			"Overall %": 89
+			"Completionyear": 2018,
+			"Location":"Chandigarh",
+			"Percentage": "81%"
 		}],
 		"Skills": [{
 			"Type": "Primary",
