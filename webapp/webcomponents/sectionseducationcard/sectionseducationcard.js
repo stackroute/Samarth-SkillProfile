@@ -69,7 +69,46 @@ function educationCardController($mdDialog,$http)
 
   function DialogController($scope, $mdDialog,$http,header,object) {
     $scope.header=header;
-    $scope.object=object;
+    // console.log(object.Titleofeducation.length);
+    
+    $scope.calculatelength=function(str)
+    {
+      console.log("inside func");
+      console.log(str.length);
+      return str.length;
+    }
+    // $scope.size=$scope.calculatelength(str);
+    
+    if(object!='')
+    {
+      $scope.Titleofeducation=object.Titleofeducation;
+      $scope.Completionyear=object.Completionyear;
+      $scope.Percentage=object.Percentage;
+      $scope.Name=object.Name;
+      $scope.Location=object.Location;
+      $scope.Affiliation=object.Affiliation;
+    }
+    else
+    {
+      $scope.Titleofeducation="my course";
+      $scope.Completionyear="some year";
+      $scope.Percentage="some value";
+      $scope.Name="some college";
+      $scope.Location="at some location";
+      $scope.Affiliation="some controlling body";
+    }
+    
+
+    // $scope.object=object;
+    $scope.object={
+                    "Titleofeducation":$scope.Titleofeducation,
+                    "Completionyear":$scope.Completionyear,
+                    "Percentage":$scope.Percentage,
+                    "Name":$scope.Name,
+                    "Location":$scope.Location,
+                    "Affiliation":$scope.Affiliation
+
+    }
     $scope.hide = function() {
       $mdDialog.hide();
     };

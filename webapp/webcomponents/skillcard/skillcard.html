@@ -3,7 +3,7 @@
     <md-card md-theme='default' md-theme-watch>
       <md-card-header id="headersection">
         <md-card-header-text>
-          <span class="md-headline">{{$ctrl.data.name}}<span hide-lg>({{$ctrl.data.age}} years)</span></span>
+          <span class="md-headline">{{$ctrl.data.name}}<br><span id="headerage" hide-lg>({{$ctrl.data.age}} yrs , {{$ctrl.data.gender}})</span></span>
           <span class="md-subhead">{{$ctrl.data.currentdesignation}}</span>
         </md-card-header-text>
         <md-card-avatar id="avatar">
@@ -14,51 +14,86 @@
         <div layout="column">
           
           <div layout="row" id="section1" flex hide-xs hide-md hide-sm>
-            <div flex id="section1" align="center" layout="column">
+            <div flex id="section1" align="left" layout="column">
+              <div flex>
+               <p>DOB:{{$ctrl.data.DOB}} ({{$ctrl.data.age}} yrs)</p>
+              </div>
+              <!-- <div flex>
+                <p>{{$ctrl.data.gender}}</p>
+              </div> -->
+              <div flex layout>
+                <p>{{$ctrl.data.maritalstatus}}</p> ,
+                <p>{{$ctrl.data.gender}}</p>
+              </div>
+            </div>
+            <md-divider></md-divider>
+            <div flex id="section2" align="center" layout="column" >
               <div flex>
                 <img id="professionimage" src="webcomponents/skillcard/profession.PNG">
               </div>
               <div flex>
                 <p>{{$ctrl.data.profession}}</p>
               </div>
-            </div>
-            <div flex id="section2" align="center">
-              (graph)
-            </div>
-            <div flex id="section3" align="center">
-              <md-icon class="material-icons">star rate</md-icon>
-              <md-icon class="material-icons">star rate</md-icon>
-              <md-icon class="material-icons">star rate</md-icon>
-            </div>
-          </div>
 
-          <div id="section2" flex hide-xs hide-sm>
+            </div>
+            <!-- <div flex id="section2" align="center">
+              (graph)
+            </div> -->
+            <!-- <div flex id="section3" align="center">
+              <md-icon class="material-icons">star rate</md-icon>
+              <md-icon class="material-icons">star rate</md-icon>
+              <md-icon class="material-icons">star rate</md-icon>
+            </div> -->
+
+          </div>
+          <div hide-sm hide-xs hide-md>
+            <br>
+          </div>
+          <md-divider id="divider1" hide-xs hide-sm hide-md></md-divider>
+         <!--  <div id="section2" flex hide-xs hide-sm>
             <p align="center">DOB:{{$ctrl.data.DOB}} ({{$ctrl.data.age}} years)</p>
             <hr>
-          </div>
-
-          <div id="section3" layout="row" layout-xs="column" layout-sm="column" flex>
-            <div flex >
+          </div> -->
+          <div hide-sm hide-xs hide-md>
+              <br>
+            </div>
+          <div id="section3" layout="row" layout-xs="column" layout-sm="column" layout-md="column" flex>
+            <div hide-sm hide-xs hide-md>
+              <br>
+            </div>
+            <div flex layout="column">
+            <p>
               <md-icon class="material-icons">phone</md-icon>
               <span>{{$ctrl.data.contact}}</span>
-            </div>
-            <div flex>
+            </p>
+            <p>
               <md-icon class="material-icons">room</md-icon>
               <span>{{$ctrl.data.location}}</span>
+            </p>
+              
             </div>
-            <div flex layout-wrap>
+           <!--  <div flex>
+            <p>
+              <md-icon class="material-icons">room</md-icon>
+              <span>{{$ctrl.data.location}}</span>
+            </p>
+              
+            </div> -->
+            <div flex>
+            <p>
               <md-icon class="material-icons">mail outline</md-icon>
               <span>{{$ctrl.data.email}}</span>
+            </p>
+              
             </div>
           </div>
-
+          <md-divider id="divider2" hide-xs></md-divider>
           <div id="section4" flex hide-xs>
-            <hr>
             SKILLS: (skill1 exp10) , (skill2 exp4) , (skill3 exp1)
           </div>
         </div>
       </md-card-content>
-      <md-card-actions layout="row" layout-align="end center" ng-transclude>
+      <md-card-actions id="skillcardtoolbar" layout="row" layout-align="end center" ng-transclude>
         <md-button><md-icon class="material-icons">share</md-icon></md-button>
         <md-button><md-icon class="material-icons">cloud download</md-icon></md-button>
       </md-card-actions>
