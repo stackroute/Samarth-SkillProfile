@@ -1,54 +1,60 @@
-.signin {
-    margin-right: 100px;
-    margin-left: 100px;
-    margin-top: 200px;
-    margin-bottom: 200px;
-}
-
-.md-fab {
-    margin-top: 100%;
-    /*margin-bottom: 16px;*/
-    width: 10%;
-}
-
-.signup-screen {
-    margin-top: 2%;
-    padding: 20px;
-    padding-bottom: 40px;
-    border-radius: 5px;
-    background-color: #efefef;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, .3);
-    color: white;
-    width: 500%;
-}
-
-.md-primary {
-    width: 100%;
-    height: 6%;
-}
-
-h3 {
-    text-align: center;
-    color: blue;
-}
-
-.back {
-    background-image: url('../images/job.jpg');
-    /*height:500%;*/
-    align: center;
-    margin-bottom: 700%;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    /*margin-left: 30%;*/
-    margin-right: auto;
-    margin-bottom: 10%;
-}
-
-.snbtn .spbtn {
-    width: 100%;
-    height: 6%;
-}
-
-.link {
-    margin: auto;
-}
+   .loginbtn {
+       margin-top: 250px;
+       color: white;
+       width: 50%;
+       margin-left: 20%;
+   }
+   
+   .signin {
+       margin-right: 100px;
+       margin-left: 100px;
+       margin-top: 200px;
+       margin-bottom: 200px;
+   }
+   
+   .md-fab {
+       margin-top: 100%;
+       width: 10%;
+   }
+   
+   .signup-screen {
+       margin-top: 2%;
+       padding: 20px;
+       padding-bottom: 40px;
+       border-radius: 5px;
+       background-color: #efefef;
+       box-shadow: 0 1px 6px rgba(0, 0, 0, .3);
+       color: white;
+       width: 500%;
+   }
+   
+   .md-primary {
+       width: 100%;
+       height: 6%;
+   }
+   
+   h3 {
+       text-align: center;
+       color: blue;
+   }
+   
+   .back {
+       background-image: url('../images/job.jpg');
+       /*height:500%;*/
+       align: center;
+       margin-bottom: 700%;
+       background-size: 100% 100%;
+       background-repeat: no-repeat;
+       /*margin-left: 30%;*/
+       margin-right: auto;
+       margin-bottom: 10%;
+   }
+   
+   .snbtn .spbtn {
+       width: 100%;
+       height: 6%;
+   }
+   
+   .link {
+       margin: auto;
+   }

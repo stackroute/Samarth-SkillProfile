@@ -1,8 +1,12 @@
-<div class="back">
-<div class="signin" layout="column" layout-align="center center" ng-controller="signinctrl">
-        <a ui-sref="skillprofile.signin">
-            <md-button class="md-fab  md-primary" ng-hide="action" ng-click="hideFun()">sign-in
+
+
+<div class="landingpage" layout="row" layout-align="center center">
+    <div layout="row" layout-align="start center" ng-controller="signinctrl">
+    <a ui-sref="skillprofile.signin">
+            <md-button class="md-raised md-primary loginbtn" ng-hide="action" ng-click="hideFun()">
+                Sign-In
             </md-button>
-        </a>   
-    </div>
- </div>
+            </a>
+        </div>
+    
+</div>

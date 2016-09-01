@@ -1,7 +1,7 @@
 {
 	"user": [{
 
-		"name":"Diamond Khanna",
+		"name":"Chandra Kumar Pratap",
 		"age":"22",
 		"profilepicture":"dk.PNG",
 		"professionpicture":"profession.png",
@@ -10,8 +10,9 @@
 		"DOB":"Feb 24 1994",
 		"contact":"9023650041",
 		"location":"Bangalore",
-		"email":"diamond1994@gmail.com",
-		"gender":"Male",
-		"maritalstatus":"Unmarried"
+		"email":"dk24@gmail.com",
+		"gender":"male",
+		"maritalstatus":"unmarried"
 	}]
 }
+	

@@ -1,15 +1,15 @@
 var app=angular
-		.module('sm-skillprofile')
-		.component('myEducationcard',
-		{
-			templateUrl:'/webcomponents/sectionseducationcard/templates/sectionseducationcard.html',
-			controller:educationCardController
+    .module('sm-skillprofile')
+    .component('myEducationcard',
+    {
+      templateUrl:'/webcomponents/sectionseducationcard/templates/sectionseducationcard.html',
+      controller:educationCardController
 
-		});
+    });
 
 function educationCardController($mdDialog,$http)
 {
-	var ctrl=this;
+  var ctrl=this;
   ctrl.school="";
   ctrl.location="";
   ctrl.board="";
@@ -20,7 +20,7 @@ function educationCardController($mdDialog,$http)
   ctrl.schools=[];
   ctrl.colleges=[];
 
-  $http.get('http://localhost:8081/profiles/01').then(function(response) 
+  $http.get('api/profiles/01').then(function(response) 
           {
             for(var prop in response.data)
             {
@@ -48,7 +48,7 @@ function educationCardController($mdDialog,$http)
             }
           });
 
-	ctrl.showAdvanced = function(ev,header,object) {
+  ctrl.showAdvanced = function(ev,header,object) {
       $mdDialog.show({
                       controller: DialogController,
                       templateUrl: '/webcomponents/sectionseducationcard/templates/educonvoNEW.html',
@@ -109,6 +109,17 @@ function educationCardController($mdDialog,$http)
                     "Affiliation":$scope.Affiliation
 
     }
+
+    $scope.eduobj={
+                    "Titleofeducation":$scope.Titleofeducation,
+                    "Completionyear":$scope.Completionyear,
+                    "Percentage":$scope.Percentage,
+                    "Name":$scope.Name,
+                    "Location":$scope.Location,
+                    "Affiliation":$scope.Affiliation
+
+    }
+
     $scope.hide = function() {
       $mdDialog.hide();
     };
@@ -119,22 +130,15 @@ function educationCardController($mdDialog,$http)
       $mdDialog.hide(answer);
     };
 
-    $scope.educationobj={
-             School:ctrl.school,
-             Location:ctrl.location,
-             Board:ctrl.board,
-             To:ctrl.to,
-             Standard:ctrl.standard
-           }
-
-  $scope.save=function()
-  {
-    console.log(ctrl.educationobj);
-    $http({
+    
+    $scope.save=function()
+    {
+      console.log(ctrl.educationobj);
+      $http({
             method:'POST',
             url:'http://localhost:8081/profiles',
            'Content-Type':'application/json',
-            data:ctrl.educationobj
+            data:$scope.eduobj
          })
          .then(function successCallback(response) {
               alert('success');
@@ -142,7 +146,7 @@ function educationCardController($mdDialog,$http)
               function errorCallback(response) {
               alert('error');
             });
-  }
+    }
   }
 
 }

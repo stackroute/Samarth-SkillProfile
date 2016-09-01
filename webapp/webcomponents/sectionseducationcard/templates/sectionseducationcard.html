@@ -1,3 +1,4 @@
+
 <md-card layout="column" layout-xs="column" layout-sm="column" layout md="column" flex>
   <md-card-header id="header">
     <md-card-header-text>
@@ -7,7 +8,9 @@
 
   <md-card-content layout="row" layout-xs="column"  layout-wrap layout-padding >
   
+
   <div layout="row" flex="50" layout-xs="column" flex-xs="100" layout-wrap layout-padding>
+
   <div layout="column">
     <div id="educardcontent" layout="row" flex="50" flex-xs="80" ng-repeat="school in $ctrl.schools" ng-click="$ctrl.showAdvanced($event,'Edit School',school)">
       <md-icon id="icon" flex="10" class="material-icons" >{{school.Type}}</md-icon>
@@ -21,7 +24,9 @@
   </div>
   </div>
   
+
   <div layout="row" flex="50" layout-xs="column" flex-xs="100" layout-wrap layout-padding>
+
   <div layout="column">
     <div id="educardcontent" layout="row" flex="50" flex-xs="80" ng-repeat="college in $ctrl.colleges" ng-click="$ctrl.showAdvanced($event,'Edit College',college)">
       <md-icon id="icon" flex="10" class="material-icons" >{{college.Type}}</md-icon>
@@ -38,7 +43,11 @@
   </md-card-content>
 
   <md-card-actions layout="row" layout-align="end end">
+<<<<<<< HEAD
     <md-button class="md-fab md-mini" ng-click="$ctrl.showAdvanced($event,'Add Education','')">+</md-button>
+=======
+    <md-button class="" ng-click="$ctrl.showAdvanced($event,'Add Education','')">Add</md-button>
+>>>>>>> c64f8e3cbc99f9b780b07234b20083841628b38e
     <!-- <md-button ng-click="$ctrl.showAdvanced($event,'Add College','')">+ college</md-button> -->
   </md-card-actions>
 </md-card>

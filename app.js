@@ -4,6 +4,7 @@ var favicon = require('serve-favicon');
 var morgan = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var jsonServer = require('json-server')
 
 //Express App created
 var app = express();
@@ -22,6 +23,17 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'bower_components')));
 app.use(express.static(path.join(__dirname, 'webapp')));
 
+//var samarthskill = jsonServer.create()
+
+//var samarthskillRouter = jsonServer.router('skillProfile.json');
+//var middlewares = jsonServer.defaults();
+
+//samarthskill.use(middlewares);
+//samarthskill.use(samarthskillRouter);
+
+//samarthskill.listen(8081);
+
+app.use('/api',jsonServer.router('skillProfile.json'));
 app.use(function(req, res, next) {
   var err = new Error('Resource not found');
   err.status = 404;

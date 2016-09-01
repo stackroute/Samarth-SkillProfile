@@ -1,19 +1,18 @@
+
 angular.module('sm-skillprofile')
     .component('myProjectsectioncard', {            
-        templateUrl: 'webcomponents/projectsectioncard/templates/projectsection.html',
+        templateUrl: 'webcomponents/sectionprojectcard/templates/sectionprojectcard.html',
         controller: projectsectioncardCtrl          
     });
 
 function projectsectioncardCtrl($http, $mdDialog) {
-    var ctrl = this; 
-        ctrl.collapsed=false; 
-        ctrl.totalProjects=0;
+    var ctrl = this;  
     ctrl.changeFont = 'changeProjectNameFont';
     ctrl.profile = {}; 
-
+    ctrl.totalProjects=0;
     $http({
         method: 'GET',
-        url: 'http://localhost:8081/profiles/01',
+        url: 'api/profiles/01',
     }).then(function successCallback(response) {
         for (var prop in response.data)  {
             if (prop != "id" && prop != "UserName" && prop != "Personalinfo" && prop != "Education" && prop != "Skills" && prop != "Work Experiance" && prop != "Certification") { 
@@ -30,7 +29,7 @@ function projectsectioncardCtrl($http, $mdDialog) {
     ctrl.addProject = function(ev, value, title) {
         $mdDialog.show({
                 controller: DialogController,
-                templateUrl: '/webcomponents/projectsectioncard/templates/addProjectDialog.html',
+                templateUrl: '/webcomponents/sectionprojectcard/templates/sectionprojectconversation.html',
                 parent: angular.element(document.body),
                 targetEvent: ev,
                 clickOutsideToClose: true,
@@ -56,9 +55,10 @@ function projectsectioncardCtrl($http, $mdDialog) {
         $scope.cancel = function() {
             $mdDialog.cancel();
         };
-        $scope.save = function(project, duration, location, client,salary) {
-            console.log("after save", project, duration, location, client,salary);
+        $scope.save = function(project, duration, location, client, teamsize, salary) {
+            console.log("after save", project, duration, location, client, teamsize, salary);
             $mdDialog.hide();
         };
     }        
 }
+
