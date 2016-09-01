@@ -85,6 +85,7 @@ function educationCardController($mdDialog,$http)
     }
     
     $scope.eduobj={
+                    "Type":"school",
                     "Titleofeducation":$scope.Titleofeducation,
                     "Completionyear":$scope.Completionyear,
                     "Percentage":$scope.Percentage,
@@ -110,7 +111,8 @@ function educationCardController($mdDialog,$http)
       
       $http({
             method:'POST',
-            url:'api/profiles/01',
+
+            url:'api/profiles/01/',
            'Content-Type':'application/json',
             data:$scope.eduobj
          })

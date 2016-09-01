@@ -54,235 +54,178 @@
 
         "Skills": [{
             "Type": "Primary",
-            "Name": "Angular js",
+            "Name": "Hair stylist",
             "Expertise": "begginner",
             "Experience": "4"
         }, {
-            "Type": "Secondary",
-            "Name": "Mongo",
-            "Expertise": "begginner",
-            "Experience": "1"
-        }, {
             "Type": "Primary",
-            "Name": "C++",
-            "Expertise": "begginner",
-            "Experience": "2"
-        }, {
-            "Type": "Secondary",
-            "Name": "Mongo",
-            "Expertise": "skilled",
-            "Experience": "1"
-        }, {
-            "Type": "Primary",
-            "Name": "C++",
+            "Name": "Welder",
             "Expertise": "proficient",
             "Experience": "2"
         }, {
             "Type": "Secondary",
-            "Name": "Angular js",
+            "Name": "Machinist",
             "Expertise": "skilled",
             "Experience": "4"
 
         }, {
             "Type": "Secondary",
-            "Name": "Mongo",
+            "Name": "Accountant",
             "Expertise": "proficient",
             "Experience": "1"
         }, {
             "Type": "Primary",
-            "Name": "C++",
+            "Name": "Receptionist",
             "Expertise": "skilled",
             "Experience": "2"
         }, {
             "Type": "Secondary",
-            "Name": "Mongo",
+            "Name": "Security Guard",
             "Expertise": "skilled",
             "Experience": "1"
         }, {
             "Type": "Secondary",
-            "Name": "C++",
+            "Name": "Beautician",
             "Expertise": "skilled",
             "Experience": "2"
-        }, {
-            "Type": "Primary",
-            "Name": "Angular js",
-            "Expertise": "begginner",
-            "Experience": "4"
-
-        }, {
-            "Type": "Primary",
-            "Name": "Mongo",
-            "Expertise": "expert",
-            "Experience": "1"
-        }, {
-            "Type": "Primary",
-            "Name": "C++",
-            "Expertise": "expert",
-            "Experience": "2"
-        }, {
+        },{
             "Type": "Secondary",
-            "Name": "Mongo",
-            "Expertise": "skilled",
-            "Experience": "1"
-        }, {
-            "Type": "Secondary",
-            "Name": "C++",
-            "Expertise": "skilled",
-            "Experience": "2"
-        }, {
-            "Type": "Primary",
-            "Name": "Angular js",
-            "Expertise": "begginner",
-            "Experience": "4"
-        }, {
-            "Type": "Secondary",
-            "Name": "Mongo",
+            "Name": "Driver",
             "Expertise": "begginner",
             "Experience": "1"
         }, {
             "Type": "Primary",
-            "Name": "C++",
+            "Name": "Cable operator",
             "Expertise": "begginner",
             "Experience": "2"
         }, {
             "Type": "Secondary",
-            "Name": "Mongo",
+            "Name": "Lathe worker",
             "Expertise": "skilled",
             "Experience": "1"
         }, {
             "Type": "Primary",
-            "Name": "C++",
+            "Name": "Painter",
             "Expertise": "proficient",
             "Experience": "2"
         }, {
             "Type": "Secondary",
-            "Name": "Angular js",
+            "Name": "Lathe worker",
             "Expertise": "skilled",
             "Experience": "4"
 
         }, {
             "Type": "Secondary",
-            "Name": "Mongo",
+            "Name": "Batting Coach",
             "Expertise": "proficient",
             "Experience": "1"
         }, {
             "Type": "Primary",
-            "Name": "C++",
+            "Name": "Plumber",
             "Expertise": "skilled",
             "Experience": "2"
         }, {
             "Type": "Secondary",
-            "Name": "Mongo",
+            "Name": "Carpenter",
             "Expertise": "skilled",
             "Experience": "1"
         }, {
             "Type": "Secondary",
-            "Name": "C++",
+            "Name": "System admin",
             "Expertise": "skilled",
             "Experience": "2"
         }, {
             "Type": "Primary",
-            "Name": "Angular js",
+            "Name": "Chief",
             "Expertise": "begginner",
             "Experience": "4"
 
         }, {
             "Type": "Primary",
-            "Name": "Mongo",
+            "Name": "Washerman",
             "Expertise": "expert",
             "Experience": "1"
         }, {
             "Type": "Primary",
-            "Name": "C++",
+            "Name": "Content Writer",
             "Expertise": "expert",
             "Experience": "2"
         }, {
             "Type": "Secondary",
-            "Name": "Mongo",
+            "Name": "Nursing",
             "Expertise": "skilled",
             "Experience": "1"
         }, {
             "Type": "Secondary",
-            "Name": "C++",
+            "Name": "Ground Staff",
             "Expertise": "skilled",
             "Experience": "2"
         }, {
             "Type": "Primary",
-            "Name": "Angular js",
+            "Name": "Gym Instructor",
             "Expertise": "begginner",
             "Experience": "4"
         }, {
             "Type": "Secondary",
-            "Name": "Mongo",
+            "Name": "Dish Washer",
             "Expertise": "begginner",
             "Experience": "1"
         }, {
             "Type": "Primary",
-            "Name": "C++",
+            "Name": "Delivery Boy",
             "Expertise": "begginner",
             "Experience": "2"
         }, {
             "Type": "Secondary",
-            "Name": "Mongo",
+            "Name": "Courier Boy",
             "Expertise": "skilled",
             "Experience": "1"
         }, {
             "Type": "Primary",
-            "Name": "C++",
-            "Expertise": "proficient",
-            "Experience": "2"
-        }, {
-            "Type": "Secondary",
-            "Name": "Angular js",
-            "Expertise": "skilled",
-            "Experience": "4"
-
-        }, {
-            "Type": "Secondary",
-            "Name": "Mongo",
-            "Expertise": "proficient",
-            "Experience": "1"
-        }, {
-            "Type": "Primary",
-            "Name": "C++",
-            "Expertise": "skilled",
-            "Experience": "2"
-        }, {
-            "Type": "Secondary",
-            "Name": "Mongo",
-            "Expertise": "skilled",
-            "Experience": "1"
-        }, {
-            "Type": "Secondary",
-            "Name": "C++",
-            "Expertise": "skilled",
-            "Experience": "2"
-        }, {
-            "Type": "Primary",
-            "Name": "Angular js",
+            "Name": "Teacher",
             "Expertise": "begginner",
             "Experience": "4"
 
         }, {
             "Type": "Primary",
-            "Name": "Mongo",
+            "Name": "DataEntry",
             "Expertise": "expert",
             "Experience": "1"
         }, {
             "Type": "Primary",
-            "Name": "C++",
+            "Name": "Maid",
             "Expertise": "expert",
             "Experience": "2"
         }, {
             "Type": "Secondary",
-            "Name": "Mongo",
+            "Name": "BPO",
             "Expertise": "skilled",
             "Experience": "1"
         }, {
             "Type": "Secondary",
-            "Name": "C++",
+            "Name": "Factory Helper",
             "Expertise": "skilled",
             "Experience": "2"
+        }, {
+            "Type": "Primary",
+            "Name": "Computer Repairer",
+            "Expertise": "begginner",
+            "Experience": "4"
+        }, {
+            "Type": "Secondary",
+            "Name": "Manager",
+            "Expertise": "begginner",
+            "Experience": "1"
+        }, {
+            "Type": "Primary",
+            "Name": "Wedding Planner",
+            "Expertise": "begginner",
+            "Experience": "2"
+        }, {
+            "Type": "Secondary",
+            "Name": "Event Manager",
+            "Expertise": "skilled",
+            "Experience": "1"
         }],
         "Work Experiance": [{
             "Organisation": "Wipro",
