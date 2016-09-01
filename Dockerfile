@@ -12,4 +12,5 @@ COPY . /usr/src/app/
 EXPOSE 8080
 
 WORKDIR /usr/src/app
+
 CMD ["npm", "start"]

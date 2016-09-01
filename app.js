@@ -4,6 +4,7 @@ var favicon = require('serve-favicon');
 var morgan = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var jsonServer = require('json-server')
 
 //Express App created
 var app = express();
@@ -22,29 +23,17 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'bower_components')));
 app.use(express.static(path.join(__dirname, 'webapp')));
 
-var jsonServer = require('json-server')
-var skillHomeServer = jsonServer.create()
-var skillCardServer = jsonServer.create()
-var skillProfileServer = jsonServer.create()
+//var samarthskill = jsonServer.create()
 
-var skillHomeRouter = jsonServer.router('skillhome.json');
-var skillCardServerRouter = jsonServer.router('skillcard.json');
-var skillProfileRouter = jsonServer.router('skillProfile.json');
-var middlewares = jsonServer.defaults();
+//var samarthskillRouter = jsonServer.router('skillProfile.json');
+//var middlewares = jsonServer.defaults();
 
-skillHomeServer.use(middlewares);
-skillHomeServer.use(skillHomeRouter);
+//samarthskill.use(middlewares);
+//samarthskill.use(samarthskillRouter);
 
-skillCardServer.use(middlewares);
-skillCardServer.use(skillCardServerRouter);
+//samarthskill.listen(8081);
 
-skillProfileServer.use(middlewares);
-skillProfileServer.use(skillProfileRouter);
-
-skillHomeServer.listen(8082);
-skillCardServer.listen(8083);
-skillProfileServer.listen(8081);
-
+app.use('/api',jsonServer.router('skillProfile.json'));
 app.use(function(req, res, next) {
   var err = new Error('Resource not found');
   err.status = 404;

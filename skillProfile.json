@@ -1,4 +1,3 @@
-
 {
     "profiles": [{
         "id": "01",
@@ -561,6 +560,67 @@
             "Salary": "32000"
         }],
         "Certification": [{}]
-    }]
-}
+    }],
+ "sidenav": [
+      {
+           
+            "state": "skillprofile.skillhome",
+            "title": "Portfolio",
+          "icon":"account_circle",
+           "seq": 1
+        }, {
+            "state": "skillprofile.workexperience",
+            "title": "Work Experience",
+            "icon":"work",
+           "seq": 5
+           
+        }, {
+            "state": "skillprofile.projects",
+            "title": "Projects",
+            "icon":"domain",
+           "seq": 4
+            
+        },
+        {
+            "state": "skillprofile.skills",
+            "title": "Skills",
+            "icon":"settings",
+           "seq": 2
+        }, 
+          {
+            "state": "skillprofile.education",
+            "title": "Education",
+            "icon":"school",
+           "seq": 3
+           
+        },{
+               "state": "skillprofile.notifications",
+               "title": "Personal info",
+               "icon":"person",
+           "seq": 6
+              
+           },
+           {
+               "state": "skillprofile.notifications",
+               "title": "Showcase",
+               "icon":"dashboard",
+           "seq": 7
+              
+           }
+    ],
+ "user": [{
 
+    "name":"Chandra Kumar Pratap",
+    "age":"22",
+    "profilepicture":"dk.PNG",
+    "professionpicture":"profession.png",
+    "currentdesignation":"Senior Project Engineer",
+    "profession":"Angular Developer",
+    "DOB":"Feb 24 1994",
+    "contact":"9023650041",
+    "location":"Bangalore",
+    "email":"diamond1994@gmail.com",
+    "gender":"Male",
+    "maritalstatus":"Unmarried"
+  }]
+}

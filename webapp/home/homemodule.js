@@ -21,7 +21,7 @@ angular.module('sm-skillprofile')
                             templateUrl: '/home/templates/footer.html'
                         },
                         "sidebar": {
-                            templateUrl: '/home/templates/sidenavcontents.html',
+                            templateUrl: '/home/templates/sidebar.html',
                             controller: 'navCtrl'
                         }
                     }
