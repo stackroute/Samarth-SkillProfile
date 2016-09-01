@@ -6,7 +6,7 @@ angular.module('sm-skillprofile')
 
 function questionBoxCtrl($timeout, quesnboxService) {
     var ctrl = this;
-
+        ctrl.showMaxBtn=false;
     ctrl.showInputBox=function(){
        ctrl.displayInputBox = false;
     }
@@ -36,6 +36,11 @@ function questionBoxCtrl($timeout, quesnboxService) {
         ctrl.displayInputBox = true;
         ctrl.displayAnswerdBox = true;
         $timeout(ctrl.showQuestionBox, 3000);
+    }
+     ctrl.minimizeQuestionBox = function() {
+        ctrl.displayInputBox = true;
+        ctrl.showMaxBtn=true;
+
     }
     ctrl.showQuestionBox = function() {
         ctrl.currentQuestionIndex = 0;
