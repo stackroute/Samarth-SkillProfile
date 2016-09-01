@@ -149,6 +149,7 @@
 	text-decoration:none;
 	font-size: 2em;
 	color:rgb(255, 64, 139);
+	cursor: pointer;
 
 
 }
@@ -167,5 +168,6 @@
 #btn #icon
 {
 	font-size:2.5em;
+	cursor: pointer;
 
 }
