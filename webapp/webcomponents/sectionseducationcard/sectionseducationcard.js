@@ -51,7 +51,7 @@ function educationCardController($mdDialog,$http)
   ctrl.showAdvanced = function(ev,header,object) {
       $mdDialog.show({
                       controller: DialogController,
-                      templateUrl: '/webcomponents/sectionseducationcard/templates/educationconversation.html',
+                      templateUrl: '/webcomponents/sectionseducationcard/templates/educonvoNEW.html',
                       parent: angular.element(document.body),
                       targetEvent: ev,
                       clickOutsideToClose:true,
@@ -90,7 +90,7 @@ function educationCardController($mdDialog,$http)
     }
     else
     {
-      $scope.Titleofeducation="my course";
+      $scope.Titleofeducation="course";
       $scope.Completionyear="some year";
       $scope.Percentage="some value";
       $scope.Name="some college";
@@ -109,6 +109,17 @@ function educationCardController($mdDialog,$http)
                     "Affiliation":$scope.Affiliation
 
     }
+
+    $scope.eduobj={
+                    "Titleofeducation":$scope.Titleofeducation,
+                    "Completionyear":$scope.Completionyear,
+                    "Percentage":$scope.Percentage,
+                    "Name":$scope.Name,
+                    "Location":$scope.Location,
+                    "Affiliation":$scope.Affiliation
+
+    }
+
     $scope.hide = function() {
       $mdDialog.hide();
     };
@@ -119,22 +130,15 @@ function educationCardController($mdDialog,$http)
       $mdDialog.hide(answer);
     };
 
-    $scope.educationobj={
-             School:ctrl.school,
-             Location:ctrl.location,
-             Board:ctrl.board,
-             To:ctrl.to,
-             Standard:ctrl.standard
-           }
-
-  $scope.save=function()
-  {
-    console.log(ctrl.educationobj);
-    $http({
+    
+    $scope.save=function()
+    {
+      console.log(ctrl.educationobj);
+      $http({
             method:'POST',
             url:'api/profiles',
            'Content-Type':'application/json',
-            data:ctrl.educationobj
+            data:$scope.eduobj
          })
          .then(function successCallback(response) {
               alert('success');
@@ -142,7 +146,7 @@ function educationCardController($mdDialog,$http)
               function errorCallback(response) {
               alert('error');
             });
-  }
+    }
   }
 
 }
