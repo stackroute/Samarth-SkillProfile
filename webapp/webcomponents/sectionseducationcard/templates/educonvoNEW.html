@@ -1,0 +1,50 @@
+<md-dialog aria-label="Education">
+  <form ng-cloak>
+    <md-toolbar id="conversationDialogtoolbar">
+      <div class="md-toolbar-tools">
+        <h2 id="headingtext">{{header}}</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon id="headingtext">close</md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <md-dialog-content layout="column" layout-wrap>
+      <div id="conversationDialogcontent"  layout-wrap layout-padding class="md-dialog-content conversationDialog">
+      <p>
+        I have done my
+        <span id="input1" contenteditable="true"><a>{{Titleofeducation}}</a></span>
+        in 
+        <span id="input1" contenteditable="true"><a>{{Completionyear}}</a></span> <br>
+        with an aggregate percentage of
+        <span id="input1" contenteditable="true"><a>{{Percentage}}</a></span>
+        . I did it from
+        <span id="input1" contenteditable="true"><a>{{Name}}</a></span> <br>
+        which is affiliated to
+        <span id="input1" contenteditable="true"><a>{{Affiliation}}</a></span>.
+        </p>
+      </div>
+
+      <div flex layout="row" layout-align="center center">
+        <a href="#">
+        <div id="btntxt" contenteditable="false">
+          <a href="#">SAVE DETAILS</a>
+        </div>
+        <div id="btn">
+          <a href="#"><md-icon id="icon">play_arrow</md-icon></a>
+        </div>
+        </a>
+        
+      </div>
+
+    </md-dialog-content>
+    <md-dialog-actions class="conversationDialog" layout="row" layout-align="center center">
+      <!-- <div id="btntxt" flex-offset="20" contenteditable="false">
+          <a href="#">SAVE DETAILS</a>
+        </div>
+        <div id="btn">
+          <a href="#"><md-icon>play_arrow</md-icon></a>
+        </div> -->
+    </md-dialog-actions>
+  </form>
+</md-dialog>
