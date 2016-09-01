@@ -2,14 +2,14 @@
     <md-card-title>
         <md-card-title-text layout="row">
             <div class="md-headline" flex="90">{{key}}</div>
-            <div flex="10">({{$ctrl.prim.length+$ctrl.secd.length}})</div>
+            <div flex="10">({{$ctrl.primary.length+$ctrl.secondary.length}})</div>
         </md-card-title-text>
     </md-card-title>
-    <h2 class="md-title"> Primary <span class="numbers">({{$ctrl.prim.length}})</span> 
+    <h2 class="md-title"> Primary <span class="numbers">({{$ctrl.primary.length}})</span> 
         </h2>
     <div layout="row" class="items" layout-wrap layout-padding>
 
-        <md-whiteframe class="md-whiteframe-1dp" flex="15" flex-xs="100" ng-repeat="value in $ctrl.prim" layout="column"  id="{{value.Expertise}}" ng-if="$index < 6">
+        <md-whiteframe class="md-whiteframe-1dp" flex="15" flex-xs="100" ng-repeat="value in $ctrl.primary" layout="column"  id="{{value.Expertise}}" ng-if="$index < 6">
         <div layout="row" >
         <span class="names">{{value.Name}}</span>
         </div>
@@ -21,7 +21,7 @@
             </div>
         </md-whiteframe>
     
-        <md-whiteframe class="md-whiteframe-1dp" flex="15" flex-xs="100" ng-repeat="value in $ctrl.prim" layout="column"  id="{{value.Expertise}}" ng-if="$index > 6" ng-show="collapsed">
+        <md-whiteframe class="md-whiteframe-1dp" flex="15" flex-xs="100" ng-repeat="value in $ctrl.primary" layout="column"  id="{{value.Expertise}}" ng-if="$index > 6" ng-show="collapsed">
             <div layout="row" >
         <span class="names">{{value.Name}}</span>
         </div>
@@ -34,8 +34,8 @@
         
         </md-whiteframe>
     
-        <div layout="row" flex="85"></div>
-        <div layout="row" flex="15" layout-align="center center">
+        <div layout="row" flex="80"></div>
+        <div layout="row" flex="20" layout-align="center center">
             <a ng-model="collapsed" ng-hide="collapsed" ng-click="collapsed=!collapsed">more
               <md-icon class="material-icons" ng-hide="collapsed">arrow_drop_down</md-icon>
             </a>
@@ -46,10 +46,10 @@
         
     </div>
     
-    <h2 class="md-title">Others <span class="numbers">({{$ctrl.secd.length}})</span></h2>
+    <h2 class="md-title">Others <span class="numbers">({{$ctrl.secondary.length}})</span></h2>
     <div layout="row" class="items" layout-wrap layout-padding>
         
-        <md-whiteframe class="md-whiteframe-1dp" flex="15" flex-xs="100" ng-repeat="value in $ctrl.secd" layout="column" id="{{value.Expertise}}" ng-if="$index < 6">
+        <md-whiteframe class="md-whiteframe-1dp" flex="15" flex-xs="100" ng-repeat="value in $ctrl.secondary" layout="column" id="{{value.Expertise}}" ng-if="$index < 6">
             <div layout="row" >
         <span class="names">{{value.Name}}</span>
         </div>
@@ -62,7 +62,7 @@
             
         </md-whiteframe>
         
-        <md-whiteframe class="md-whiteframe-1dp" flex="15" flex-xs="100" ng-repeat="value in $ctrl.secd" layout="column"  id="{{value.Expertise}}" ng-if="$index > 6" ng-show="collapsed1">
+        <md-whiteframe class="md-whiteframe-1dp" flex="15" flex-xs="100" ng-repeat="value in $ctrl.secondary" layout="column"  id="{{value.Expertise}}" ng-if="$index > 6" ng-show="collapsed1">
             <div layout="row" >
         <span class="names">{{value.Name}}</span>
         </div>
@@ -74,8 +74,8 @@
             </div>
             
         </md-whiteframe>
-        <div layout="row" flex="85"></div>
-        <div layout="row" flex="15" layout-align="center center">
+        <div layout="row" flex="80"></div>
+        <div layout="row" flex="20" layout-align="center center">
             <a ng-model="collapsed1" ng-hide="collapsed1" ng-click="collapsed1=!collapsed1">more
               <md-icon class="material-icons" ng-hide="collapsed1">arrow_drop_down</md-icon>
             </a>
