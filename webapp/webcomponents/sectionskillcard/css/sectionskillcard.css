@@ -3,21 +3,23 @@
  	margin:5px 5px; 
  	
  }
- .card  >div > md-whiteframe>span>md-icon{
- 	/*margin-left: 50px;*/
- 	    position: absolute;
+ .card  >div > md-whiteframe>div>div>md-icon{
+ 
+     /* position: absolute;
     margin-left: 60px;
-    margin-top: -20px;
- 	font-size: small;
+    margin-top: -20px;*/
+  font-size: small;
   cursor:pointer;
  }
-  .card  >div > md-whiteframe>span{
+  .card  >div > md-whiteframe>div>div{
   	margin-left:0.5em; 
   	font-size: small;
   }
  .names{
- 	margin-left:0.5em; 
+ 	margin-left:0.5em;
+  font-size: small; 
  	font-weight: bold;
+  margin-bottom: 0.5em;
  }
 
  .card >div >a

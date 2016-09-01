@@ -132,7 +132,7 @@ function educationCardController($mdDialog,$http)
     console.log(ctrl.educationobj);
     $http({
             method:'POST',
-            url:'http://localhost:8081/profiles',
+            url:'api/profiles',
            'Content-Type':'application/json',
             data:ctrl.educationobj
          })
