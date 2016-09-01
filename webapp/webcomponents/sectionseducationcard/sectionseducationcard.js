@@ -51,7 +51,7 @@ function educationCardController($mdDialog,$http)
 	ctrl.showAdvanced = function(ev,header,object) {
       $mdDialog.show({
                       controller: DialogController,
-                      templateUrl: '/webcomponents/sectionseducationcard/templates/educationconversation.html',
+                      templateUrl: '/webcomponents/sectionseducationcard/templates/educonvoNEW.html',
                       parent: angular.element(document.body),
                       targetEvent: ev,
                       clickOutsideToClose:true,
@@ -90,7 +90,7 @@ function educationCardController($mdDialog,$http)
     }
     else
     {
-      $scope.Titleofeducation="my course";
+      $scope.Titleofeducation="course";
       $scope.Completionyear="some year";
       $scope.Percentage="some value";
       $scope.Name="some college";

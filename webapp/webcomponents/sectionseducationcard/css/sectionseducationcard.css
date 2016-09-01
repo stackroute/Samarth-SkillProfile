@@ -18,8 +18,10 @@
 	min-width: 600px;
 	min-height:250px;
 	/*font-size: 30px;*/
-	font-size:3vw;
+	font-size:2em;
 	color: grey;
+	line-height: 1.5;
+	word-break: normal;
 }
 #headingtext
 {
@@ -108,4 +110,44 @@
 {
 	outline:none;
 	resize:all;
+}
+
+/*-----educonvoNEW styles-------*/
+
+
+#input1:focus
+{
+	outline:none;
+	
+}
+
+#btntxt
+{
+	background-color: #e0e0e0;
+	padding: 5px;
+	height:48px;
+}
+#btntxt a
+{
+	text-decoration:none;
+	font-size: 2em;
+	color:rgb(255, 64, 139);
+
+
+}
+
+#input1
+{
+	border-bottom: 1px dashed rgb(255, 64, 139);
+	color:rgb(255, 64, 139);
+}
+#btn
+{
+	background-color: #cac8c8;
+	padding: 4px;
+
+}
+#btn #icon
+{
+	font-size:2.5em;
 }
