@@ -1,4 +1,4 @@
-<md-dialog>
+<md-dialog> 
   <form ng-cloak>
     <md-toolbar>
       <div class="md-toolbar-tools">
@@ -12,19 +12,15 @@
     <md-dialog-content>
       <div class="md-dialog-content">
       I am skilled at <md-input-container>
-        <!-- <label>Title</label> -->
         <input ng-model="skillObject.Name">
       </md-input-container>
        having Experience of <md-input-container>
-        <!-- <label>Title</label> -->
         <input ng-model="skillObject.Experience">
       </md-input-container>
        years with Expertise level 
        <md-input-container>
-        <!-- <label>Ti</label> -->
         <input ng-model="skillObject.Expertise">
       </md-input-container>
-       <!-- {{skillObject}} -->
       </div>
     </md-dialog-content>
     <md-dialog-actions layout="row">
@@ -34,9 +30,6 @@
       <md-button ng-click="save(skillObject.Name,skillObject.Experience,skillObject.Expertise)">
        Save
       </md-button>
-      <!-- <md-button ng-click="answer('useful')">
-        Useful
-      </md-button> -->
     </md-dialog-actions>
   </form>
 </md-dialog>
