@@ -12,3 +12,7 @@
     text-decoration: underline;
     color: #ffffff;
 }
+.scrollbar-dynamic {
+    max-height: 300px;
+    overflow: auto;
+}

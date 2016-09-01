@@ -4,7 +4,7 @@ angular.module("sm-skillprofile")
        
        return {
 
-        fact: function() {
+        sidenav: function() {
 
                return $http.get('http://localhost:8082/sidenav')
                .then(function successCallback(response) {
