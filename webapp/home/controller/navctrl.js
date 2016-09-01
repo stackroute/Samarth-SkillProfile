@@ -1,6 +1,18 @@
  angular.module("sm-skillprofile")
      .controller('navCtrl', ['$scope', '$mdSidenav',
          function($scope, $mdSidenav) {
+ 
+
+
+  $scope.jqueryScrollbarOptions = {
+        "onScroll":function(y, x){
+            if(y.scroll == y.maxScroll){
+                alert('Scrolled to bottom');
+                console.log("hi");
+            }
+        }
+    };
+ 
 
             $scope.user = {
                 name: 'Chandra Kumar Pratap'

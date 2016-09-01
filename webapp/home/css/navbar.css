@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .md-toolbar-tools>div>md-input-container {
     font-size: small;
 }
@@ -11,4 +12,8 @@
     cursor: pointer;
     text-decoration: underline;
     color: #ffffff;
+}
+.scrollbar-dynamic {
+    max-height: 300px;
+    overflow: auto;
 }
