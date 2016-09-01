@@ -9,9 +9,9 @@
         </md-button>
       </div>
     </md-toolbar>
-    <md-dialog-content layout="column" layout-wrap>
-      <div id="conversationDialogcontent"  layout-wrap layout-padding class="md-dialog-content conversationDialog">
-      <p>
+    <md-dialog-content layout="column">
+      <div id="conversationDialogcontent" layout-padding layout-wrap>
+      <p layout-wrap>
         I have done my
         <span id="input1" contenteditable="true"><a>{{Titleofeducation}}</a></span>
         in 
@@ -25,7 +25,7 @@
         </p>
       </div>
 
-      <div flex layout="row" layout-align="center center">
+      <div flex layout="row" layout-align="center center" ng-click="cancel">
         <a href="#">
         <div id="btntxt" contenteditable="false">
           <a href="#">SAVE DETAILS</a>
