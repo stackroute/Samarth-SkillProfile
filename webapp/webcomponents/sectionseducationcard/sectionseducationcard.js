@@ -10,11 +10,6 @@ var app=angular
 function educationCardController($mdDialog,$http)
 {
   var ctrl=this;
-  ctrl.school="";
-  ctrl.location="";
-  ctrl.board="";
-  ctrl.to="";
-  ctrl.standard="";
 
   ctrl.eduDetails={};
   ctrl.schools=[];
@@ -69,16 +64,7 @@ function educationCardController($mdDialog,$http)
 
   function DialogController($scope, $mdDialog,$http,header,object) {
     $scope.header=header;
-    // console.log(object.Titleofeducation.length);
-    
-    $scope.calculatelength=function(str)
-    {
-      console.log("inside func");
-      console.log(str.length);
-      return str.length;
-    }
-    // $scope.size=$scope.calculatelength(str);
-    
+       
     if(object!='')
     {
       $scope.Titleofeducation=object.Titleofeducation;
@@ -98,19 +84,8 @@ function educationCardController($mdDialog,$http)
       $scope.Affiliation="some controlling body";
     }
     
-
-    // $scope.object=object;
-    $scope.object={
-                    "Titleofeducation":$scope.Titleofeducation,
-                    "Completionyear":$scope.Completionyear,
-                    "Percentage":$scope.Percentage,
-                    "Name":$scope.Name,
-                    "Location":$scope.Location,
-                    "Affiliation":$scope.Affiliation
-
-    }
-
     $scope.eduobj={
+                    "Type":"school",
                     "Titleofeducation":$scope.Titleofeducation,
                     "Completionyear":$scope.Completionyear,
                     "Percentage":$scope.Percentage,
@@ -133,10 +108,11 @@ function educationCardController($mdDialog,$http)
     
     $scope.save=function()
     {
-      console.log(ctrl.educationobj);
+      
       $http({
             method:'POST',
-            url:'api/profiles',
+
+            url:'api/profiles/01/',
            'Content-Type':'application/json',
             data:$scope.eduobj
          })
