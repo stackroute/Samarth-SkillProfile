@@ -8,7 +8,7 @@
                 </md-button>
 
                 <h2>
-                <span>Samarth-SkillProfile</span>
+                <span>{{title}}</span>
                </h2>
 
                
@@ -16,7 +16,7 @@
                 <div layout="row" layout-align="end center" flex>
                 <md-input-container>
                     <!-- <label>Language</label> -->
-                    <md-select ng-model="selectlang">
+                    <md-select ng-model="selectlang" ng-change="onChange()">
                         <md-option ng-repeat="lang in language" ng-value="lang">
                             {{lang}}
                         </md-option>

@@ -25,5 +25,8 @@
 .pointCursor{
   cursor: pointer;
 }
+.decreasemdIconFont md-icon{
+    font-size: 15px;
+}
 
 

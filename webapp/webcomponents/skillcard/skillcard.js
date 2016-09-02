@@ -12,7 +12,7 @@ function skillcardctrl($window)
             {
  				var ctrl=this;
  				ctrl.data1=ctrl.data;
-				console.log("download "+ctrl.data1);
+				console.log("download "+ctrl.data);
              	ctrl.downloaddata =JSON.stringify(ctrl.data1);
 
         		blob = new Blob([ctrl.downloaddata], { type: 'text/plain' }),
