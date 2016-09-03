@@ -10,11 +10,6 @@ var app=angular
 function educationCardController($mdDialog,$http)
 {
   var ctrl=this;
-  ctrl.school="";
-  ctrl.location="";
-  ctrl.board="";
-  ctrl.to="";
-  ctrl.standard="";
 
   ctrl.eduDetails={};
   ctrl.schools=[];
@@ -51,7 +46,7 @@ function educationCardController($mdDialog,$http)
   ctrl.showAdvanced = function(ev,header,object) {
       $mdDialog.show({
                       controller: DialogController,
-                      templateUrl: '/webcomponents/sectionseducationcard/templates/educationconversation.html',
+                      templateUrl: '/webcomponents/sectionseducationcard/templates/educonvoNEW.html',
                       parent: angular.element(document.body),
                       targetEvent: ev,
                       clickOutsideToClose:true,
@@ -69,16 +64,7 @@ function educationCardController($mdDialog,$http)
 
   function DialogController($scope, $mdDialog,$http,header,object) {
     $scope.header=header;
-    // console.log(object.Titleofeducation.length);
-    
-    $scope.calculatelength=function(str)
-    {
-      console.log("inside func");
-      console.log(str.length);
-      return str.length;
-    }
-    // $scope.size=$scope.calculatelength(str);
-    
+       
     if(object!='')
     {
       $scope.Titleofeducation=object.Titleofeducation;
@@ -90,7 +76,7 @@ function educationCardController($mdDialog,$http)
     }
     else
     {
-      $scope.Titleofeducation="my course";
+      $scope.Titleofeducation="course";
       $scope.Completionyear="some year";
       $scope.Percentage="some value";
       $scope.Name="some college";
@@ -98,9 +84,8 @@ function educationCardController($mdDialog,$http)
       $scope.Affiliation="some controlling body";
     }
     
-
-    // $scope.object=object;
-    $scope.object={
+    $scope.eduobj={
+                    "Type":"school",
                     "Titleofeducation":$scope.Titleofeducation,
                     "Completionyear":$scope.Completionyear,
                     "Percentage":$scope.Percentage,
@@ -109,6 +94,7 @@ function educationCardController($mdDialog,$http)
                     "Affiliation":$scope.Affiliation
 
     }
+
     $scope.hide = function() {
       $mdDialog.hide();
     };
@@ -119,22 +105,16 @@ function educationCardController($mdDialog,$http)
       $mdDialog.hide(answer);
     };
 
-    $scope.educationobj={
-             School:ctrl.school,
-             Location:ctrl.location,
-             Board:ctrl.board,
-             To:ctrl.to,
-             Standard:ctrl.standard
-           }
-
-  $scope.save=function()
-  {
-    console.log(ctrl.educationobj);
-    $http({
+    
+    $scope.save=function()
+    {
+      
+      $http({
             method:'POST',
-            url:'http://localhost:8081/profiles',
+
+            url:'api/profiles/01/',
            'Content-Type':'application/json',
-            data:ctrl.educationobj
+            data:$scope.eduobj
          })
          .then(function successCallback(response) {
               alert('success');
@@ -142,7 +122,7 @@ function educationCardController($mdDialog,$http)
               function errorCallback(response) {
               alert('error');
             });
-  }
+    }
   }
 
 }

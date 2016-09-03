@@ -1,3 +1,4 @@
+
 <!-- <div id="content" class="md-padding" layout-xs="column" layout="row"> -->
   <div id="totalcardarea" flex-xs flex-gt-xs  layout="column" layout-xs="column" class="md-padding">
     <md-card md-theme='default' md-theme-watch>
@@ -12,24 +13,26 @@
       </md-card-header>
       <md-card-content>
         <div layout="column">
-          
           <div layout="row" id="section1" flex hide-xs hide-md hide-sm>
             <div flex id="section1" align="left" layout="column">
               <div flex>
-               <p>DOB:{{$ctrl.data.DOB}} ({{$ctrl.data.age}} yrs)</p>
+               <p>DOB:{{$ctrl.data.DOB}} ({{$ctrl.data.age}} yrs)
+               </p>
               </div>
               <!-- <div flex>
                 <p>{{$ctrl.data.gender}}</p>
               </div> -->
+            
               <div flex layout>
                 <p>{{$ctrl.data.maritalstatus}}</p> ,
                 <p>{{$ctrl.data.gender}}</p>
               </div>
             </div>
             <md-divider></md-divider>
+            
             <div flex id="section2" align="center" layout="column" >
               <div flex>
-                <img id="professionimage" src="webcomponents/skillcard/images/profession.PNG">
+                <img id="professionimage" src="webcomponents/skillcard/images/profession.png">
               </div>
               <div flex>
                 <p>{{$ctrl.data.profession}}</p>
@@ -97,4 +100,5 @@
       </md-card-actions>
     </md-card>
   </div>
+
 <!-- </div>

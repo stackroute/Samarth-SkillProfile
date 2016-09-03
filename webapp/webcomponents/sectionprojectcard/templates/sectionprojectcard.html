@@ -7,8 +7,9 @@
             </md-card-title-text>
         </md-card-title>
         <div layout-padding layout-wrap layout="row" layout-xs="column">
-            <div flex="50" flext-xs="100" ng-repeat="value in data" ng-if="$index < 4">
-                <li><span class="changeProjectNameFont">{{value.Project}}</span></li>
+            <div layout="row"  flex="50" layout-xs="column" flext-xs="100" ng-repeat="value in data" ng-if="$index < 4">
+                <div flex="80" flex-xs="100">
+                    <md-icon>fiber_manual_record</md-icon><span class="changeProjectNameFont">{{value.Project}}</span>
                     <br>
                     <md-icon>schedule</md-icon><span class="changeProjectDurationFont">{{value.Duration}}</span>,
                     <md-icon>attach_money</md-icon>
@@ -18,11 +19,17 @@
                     <span class="changeProjectClientFont">{{value.Client}}</span>,
                     <md-icon>location_on</md-icon>
                     <span class="changeProjectLocationFont">{{value.Location}}</span></span>
-                
-                <md-divider></md-divider>
+                    <md-divider></md-divider>
+                </div>
+                <div flex="5" flex-xs="100">
+                    <md-button ng-click="$ctrl.addProject($event,value,'EditProject')">
+                        <md-icon>mode_edit</md-icon>
+                    </md-button>
+                </div>
             </div>
-            <div flex="50" flext-xs="100" ng-repeat="value in data" ng-if="$index >4" ng-show="$ctrl.collapsed">
-                <li><span class="changeProjectNameFont">{{value.Project}}</span>
+            <div layout="row" flex="50" flext-xs="100" ng-repeat="value in data" ng-if="$index >4" ng-show="$ctrl.collapsed">
+                <div flex="80">
+                    <md-icon>fiber_manual_record</md-icon><span class="changeProjectNameFont">{{value.Project}}</span>
                     <br>
                     <md-icon>schedule</md-icon><span class="changeProjectDurationFont">{{value.Duration}}</span>,
                     <md-icon>attach_money</md-icon>
@@ -32,24 +39,28 @@
                     <span class="changeProjectClientFont">{{value.Client}}</span>,
                     <md-icon>location_on</md-icon>
                     <span class="changeProjectLocationFont">{{value.Location}}</span></span>
-                </li>
-                <md-divider></md-divider>
-            </div>
-            <div layout="row" flex="85"></div>
-            <div layout="row" flex="15" layout-align="center center">
-                <a ng-model="$ctrl.collapsed" ng-hide="$ctrl.collapsed" ng-click="$ctrl.collapsed=!$ctrl.collapsed" class="pointCursor">more
-              <md-icon class="material-icons" ng-hide="$ctrl.collapsed">arrow_drop_down</md-icon>
-            </a>
-                <a ng-model="$ctrl.collapsed" ng-show="$ctrl.collapsed" ng-click="$ctrl.collapsed=!$ctrl.collapsed" class="pointCursor">less
-            <md-icon class="material-icons" ng-show="$ctrl.collapsed">arrow_drop_up</md-icon>
-            </a>
+                    <md-divider></md-divider>
+                </div>
+                <div flex="5">
+                    <md-button ng-click="$ctrl.addProject($event,value,'EditProject')">
+                        <md-icon>mode_edit</md-icon>
+                    </md-button>
+                </div>
             </div>
         </div>
+        <div layout="row" flex-offset="85" layout-align="center center">
+            <a ng-model="$ctrl.collapsed" ng-hide="$ctrl.collapsed" ng-click="$ctrl.collapsed=!$ctrl.collapsed" class="pointCursor">more
+              <md-icon class="material-icons" ng-hide="$ctrl.collapsed">arrow_drop_down</md-icon>
+            </a>
+            <a ng-model="$ctrl.collapsed" ng-show="$ctrl.collapsed" ng-click="$ctrl.collapsed=!$ctrl.collapsed" class="pointCursor">less
+            <md-icon class="material-icons" ng-show="$ctrl.collapsed">arrow_drop_up</md-icon>
+            </a>
+        </div>
         <md-card-actions layout="row" layout-align="end center">
-            <md-button ng-click="$ctrl.addProject($event,'','Add Project')">
-                ADD
-            </md-button>
-        </md-card-actions>
-    </md-card>
+    <md-button ng-click="$ctrl.addProject($event,'','Add Project')">
+        ADD
+    </md-button>
+</md-card-actions>
+</md-card>
 </div>
-
+</div>

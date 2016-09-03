@@ -1,23 +1,24 @@
+
 #content
 {
-    margin-top:30px;
-    /*background-color: white;*/
-    /*margin-top:30px;*/
-    width: 100%;
-    margin:auto;
-    line-height: 1;
+	margin-top:30px;
+	/*background-color: white;*/
+	/*margin-top:30px;*/
+	width: 100%;
+	margin:auto;
+	line-height: 1;
 }
 #totalcardarea md-card-content
 {
-    padding: 0px;
+	padding: 0px;
 }
 #totalcardarea md-card-content div
 {
-    padding:2px;
+	padding:2px;
 }
 #totalcardarea md-card-content p
 {
-    margin:0px;
+	margin:0px;
 }
 
 #totalcardarea
@@ -34,6 +35,10 @@
 #blankarea
 {
     height:2px;
+}
+#blankarea
+{
+	height:2px;
 }
 
 #avatar
