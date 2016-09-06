@@ -1,0 +1,43 @@
+<div ng-app="MyApp"  ng-controller="AppCtrl ">
+  <div class='md-padding' layout="row" flex>
+    <div layout="row" flex>
+     
+        <md-card class="card">
+          <md-card-header>
+            <md-card-title>
+              <md-card-title-text layout="row">
+                  <div class="md-headline" flex="90" layout="row" layout-align="start start">Personal Information</div>
+
+              </md-card-title-text>
+    </md-card-title>
+            </md-card-header>
+      
+          <md-card-content>
+           
+ <div layout="row" flex">
+   <div layout="column" flex="40">
+    <p >name:{{name}} </p>
+    <p >age:{{age}}</p>
+	<p >DOB:{{dob}}</p>
+	<p >Maritial Status:{{matstatus}}</p>
+   </div>
+   <div layout="column">
+	<p >contact:{{contact}}</p>
+	<p >Email:{{email}}</p>
+	<p >address:{{address}}</p>
+   <p>pincode:{{pin}}</p>
+   </div>
+          </md-card-content>
+              </div>
+          <div class="md-actions" layout="row" layout-align="end center">
+            <md-footer>
+            <md-button>Save</md-button>
+            <md-button>ADD</md-button>
+               </md-footer>
+          </div>
+             
+        </md-card>
+    
+    </div>
+  </div>
+</div>
