@@ -1,11 +1,11 @@
 var app=angular
-    .module('sm-skillprofile')
-    .component('myEducationcard',
-    {
-      templateUrl:'/webcomponents/sectionseducationcard/templates/sectionseducationcard.html',
-      controller:educationCardController
+.module('sm-skillprofile')
+.component('myEducationcard',
+{
+  templateUrl:'/webcomponents/sectionseducationcard/templates/sectionseducationcard.html',
+  controller:educationCardController
 
-    });
+});
 
 function educationCardController($mdDialog,$http)
 {
@@ -16,55 +16,55 @@ function educationCardController($mdDialog,$http)
   ctrl.colleges=[];
 
   $http.get('api/profiles/01').then(function(response) 
-          {
-            for(var prop in response.data)
-            {
-              if(prop=="Education")
-              {
-                ctrl.eduDetails[prop]=response.data[prop];
-              }
-            }
-            for(var prop in ctrl.eduDetails)
-            {
-              for(var key in ctrl.eduDetails[prop])
-              {
-                 for(var k in ctrl.eduDetails[prop][key])
-                  {
-                    if(ctrl.eduDetails[prop][key][k]=="school")
-                    {
-                      ctrl.schools.push(ctrl.eduDetails[prop][key]);
-                    }
-                    if(ctrl.eduDetails[prop][key][k]=="work")
-                    {
-                      ctrl.colleges.push(ctrl.eduDetails[prop][key]);
-                    }
-                  }
-              }
-            }
-          });
+  {
+    for(var prop in response.data)
+    {
+      if(prop=="Education")
+      {
+        ctrl.eduDetails[prop]=response.data[prop];
+      }
+    }
+    for(var prop in ctrl.eduDetails)
+    {
+      for(var key in ctrl.eduDetails[prop])
+      {
+       for(var k in ctrl.eduDetails[prop][key])
+       {
+        if(ctrl.eduDetails[prop][key][k]=="school")
+        {
+          ctrl.schools.push(ctrl.eduDetails[prop][key]);
+        }
+        if(ctrl.eduDetails[prop][key][k]=="work")
+        {
+          ctrl.colleges.push(ctrl.eduDetails[prop][key]);
+        }
+      }
+    }
+  }
+});
 
   ctrl.showAdvanced = function(ev,header,object) {
-      $mdDialog.show({
-                      controller: DialogController,
-                      templateUrl: '/webcomponents/sectionseducationcard/templates/educonvoNEW.html',
-                      parent: angular.element(document.body),
-                      targetEvent: ev,
-                      clickOutsideToClose:true,
-                      locals:
-                      {
-                        header:header,
-                        object:object
-                      }
-      })
-      .then(
-        function(answer) {},
-        function() {}
-        );
+    $mdDialog.show({
+      controller: DialogController,
+      templateUrl: '/webcomponents/sectionseducationcard/templates/educonvoNEW.html',
+      parent: angular.element(document.body),
+      targetEvent: ev,
+      clickOutsideToClose:true,
+      locals:
+      {
+        header:header,
+        object:object
+      }
+    })
+    .then(
+      function(answer) {},
+      function() {}
+      );
   };
 
   function DialogController($scope, $mdDialog,$http,header,object) {
     $scope.header=header;
-       
+    
     if(object!='')
     {
       $scope.Titleofeducation=object.Titleofeducation;
@@ -85,13 +85,13 @@ function educationCardController($mdDialog,$http)
     }
     
     $scope.eduobj={
-                    "Type":"school",
-                    "Titleofeducation":$scope.Titleofeducation,
-                    "Completionyear":$scope.Completionyear,
-                    "Percentage":$scope.Percentage,
-                    "Name":$scope.Name,
-                    "Location":$scope.Location,
-                    "Affiliation":$scope.Affiliation
+      "Type":"school",
+      "Titleofeducation":$scope.Titleofeducation,
+      "Completionyear":$scope.Completionyear,
+      "Percentage":$scope.Percentage,
+      "Name":$scope.Name,
+      "Location":$scope.Location,
+      "Affiliation":$scope.Affiliation
 
     }
 
@@ -110,18 +110,18 @@ function educationCardController($mdDialog,$http)
     {
       
       $http({
-            method:'POST',
+        method:'POST',
 
-            url:'api/profiles/01/',
-           'Content-Type':'application/json',
-            data:$scope.eduobj
-         })
-         .then(function successCallback(response) {
-              alert('success');
-              },
-              function errorCallback(response) {
-              alert('error');
-            });
+        url:'api/profiles/01/',
+        'Content-Type':'application/json',
+        data:$scope.eduobj
+      })
+      .then(function successCallback(response) {
+        alert('success');
+      },
+      function errorCallback(response) {
+        alert('error');
+      });
     }
   }
 

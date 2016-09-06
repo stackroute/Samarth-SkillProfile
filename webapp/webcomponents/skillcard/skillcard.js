@@ -8,9 +8,11 @@ angular.module('sm-skillprofile')
 			    },
 			transclude:true     
         });
-function skillcardctrl($window)
+function skillcardctrl($window,$timeout)
             {
  				var ctrl=this;
+ 				function createDownloadUrl(){
+ 				
  				ctrl.data1=ctrl.data;
 				console.log("download "+ctrl.data1);
              	ctrl.downloaddata =JSON.stringify(ctrl.data1);
@@ -18,6 +20,8 @@ function skillcardctrl($window)
         		blob = new Blob([ctrl.downloaddata], { type: 'text/plain' }),
         		url = $window.URL || $window.webkitURL;
     			ctrl.fileUrl = url.createObjectURL(blob);
+    		}
+    		$timeout(createDownloadUrl,1000);
 
             }
         
