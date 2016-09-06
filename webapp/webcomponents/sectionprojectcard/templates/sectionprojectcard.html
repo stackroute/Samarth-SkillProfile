@@ -6,17 +6,17 @@
                 <div flex="5">({{$ctrl.totalProjects}})</div>
             </md-card-title-text>
         </md-card-title>
-        <div layout-padding layout-wrap layout="row" layout-xs="column">
+        <div layout-padding layout-wrap layout="row" layout-xs="column" class="decreasemdIconFont">
             <div layout="row"  flex="50" layout-xs="column" flext-xs="100" ng-repeat="value in data" ng-if="$index < 4">
                 <div flex="80" flex-xs="100">
                     <md-icon>fiber_manual_record</md-icon><span class="changeProjectNameFont">{{value.Project}}</span>
                     <br>
-                    <md-icon>schedule</md-icon><span class="changeProjectDurationFont">{{value.Duration}}</span>,
+                    <md-icon>schedule</md-icon><span class="changeProjectDurationFont">{{value.Duration}}</span><span>,</span>
                     <md-icon>attach_money</md-icon>
                     <span class="changeProjectSalaryFont">{{value.Salary}}</span>
                     <br>
                     <md-icon>work</md-icon>
-                    <span class="changeProjectClientFont">{{value.Client}}</span>,
+                    <span class="changeProjectClientFont">{{value.Client}}</span><span>,</span>
                     <md-icon>location_on</md-icon>
                     <span class="changeProjectLocationFont">{{value.Location}}</span></span>
                     <md-divider></md-divider>
