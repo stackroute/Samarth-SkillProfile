@@ -25,7 +25,7 @@ angular.module('sm-skillprofile')
                             controller: 'navCtrl'
                         }
                     }
-                })
+                });
 
             $compileProvider.aHrefSanitizationWhitelist(/^\s*(|blob|):/);
         }

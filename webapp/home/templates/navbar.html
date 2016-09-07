@@ -3,44 +3,25 @@
         <md-toolbar style="position:fixed">
             <div class="md-toolbar-tools" layout="row">
                 <div layout="row" layout-align="start center" flex>
-<!-- <<<<<<< HEAD
-                    <md-button hide-gt-sm show-sm show-xs class="md-icon-button" aria-label="Settings" ng-click="togglemenu()">
-                        <md-icon>menu</md-icon>
-                    </md-button>
-                    <h2>
-                <span>Samarth-SkillProfile</span>
-======= -->
                 <md-button hide-gt-sm show-sm show-xs class="md-icon-button" aria-label="Settings" ng-click="togglemenu()">
                     <md-icon>menu</md-icon>
                 </md-button>
 
                 <h2>
                 <span>{{title}}</span>
-<!-- >>>>>>> 180f71c9289d54eb6bcbe760272cf8e9cdeb1436 -->
                </h2>
+
                 </div>
                 <div layout="row" layout-align="end center" flex>
-<!-- <<<<<<< HEAD
-                     -->                    <md-input-container>
+                     <md-input-container>
                         <!-- <label>Language</label> -->
-                        <md-select ng-model="selectlang">
+                        <md-select ng-model="selectlang" ng-change="onChange()">
                             <md-option ng-repeat="lang in language" ng-value="lang">
                                 {{lang}}
                             </md-option>
                         </md-select>
                     </md-input-container>
                     <a ui-sref="#">Signout</a>
-<!-- =======
-                <md-input-container>
-                    <label>Language</label>
-                    <md-select ng-model="selectlang" ng-change="onChange()">
-                        <md-option ng-repeat="lang in language" ng-value="lang">
-                            {{lang}}
-                        </md-option>
-                    </md-select>
-                </md-input-container>
-                <a ui-sref="#">Signout</a>
->>>>>>> 180f71c9289d54eb6bcbe760272cf8e9cdeb1436 -->
                 </div>
             </div>
         </md-toolbar>
