@@ -14,7 +14,7 @@
   <div layout="column">
     <div id="educardcontent" layout="row" flex="50" flex-xs="80" ng-repeat="school in $ctrl.schools" ng-click="$ctrl.showAdvanced($event,'Edit School',school)">
       <md-icon id="icon" flex="10" class="material-icons" >{{school.Type}}</md-icon>
-      <div flex>
+      <div flex> 
         {{school.Titleofeducation}} Standard <br>
         {{school.Completionyear}} , {{school.Percentage}} ,<br>
         {{school.Name}}, {{school.Affiliation}} <br>
