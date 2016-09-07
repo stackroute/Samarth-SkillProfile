@@ -6,10 +6,18 @@ angular.module('sm-skillprofile')
 
 function sectionskillcardctrl($http, sectionskillcard, $mdDialog) {
     var ctrl = this;
+         ctrl.limitval=3;
     ctrl.value = 40;
     ctrl.skill = {};
     ctrl.primary = [];
     ctrl.secondary = []; 
+    ctrl.increaseLimit=function(){
+        ctrl.limitval=ctrl.primary.length;
+    }
+
+    ctrl.decreaseLimit=function(){
+        ctrl.limitval=3;
+    }
 
     sectionskillcard.getjson().then(function(result) {
         ctrl.skill = result;
@@ -20,12 +28,12 @@ function sectionskillcardctrl($http, sectionskillcard, $mdDialog) {
                 // console.log(ctrl.skill[prop][key])
                 for (var k in ctrl.skill[prop][key]) {
 
-                    if (ctrl.skill[prop][key][k] == "Primary") //extracting all skill object containing primary type
+                    if (ctrl.skill[prop][key][k] == "primary") //extracting all skill object containing primary type
                     {
 
                         ctrl.primary.push(ctrl.skill[prop][key]); //making array of object containing skill of  type primary   
                     }
-                    if (ctrl.skill[prop][key][k] == "Secondary") //extracting all skill object containing primary type
+                    if (ctrl.skill[prop][key][k] == "secondary") //extracting all skill object containing primary type
                     {
                         ctrl.secondary.push(ctrl.skill[prop][key]); //making array of object containing skill type secondary
                     }

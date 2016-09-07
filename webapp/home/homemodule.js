@@ -1,7 +1,6 @@
 angular.module('sm-skillprofile')
     .config(['$stateProvider', '$urlMatcherFactoryProvider', '$urlRouterProvider','$compileProvider',
-        function($stateProvider, $urlMatcherFactoryProvider, $urlRouterProvider, $compileProvider) {
-
+        function($stateProvider, $urlMatcherFactoryProvider, $urlRouterProvider,$compileProvider) {
             $urlMatcherFactoryProvider.caseInsensitive(true);
 
             $urlRouterProvider.otherwise('/home/skillhome');
@@ -11,8 +10,8 @@ angular.module('sm-skillprofile')
                     url: '/home',
                     views: {
                         "content@": {
-                            templateUrl: '/auth/templates/signinpage.html'
-                            /*templateUrl: '/skillhome/templates/skillhome.html'*/
+                            // templateUrl: '/auth/templates/signinpage.html'
+                            templateUrl: '/skillhome/templates/skillhome.html'
                         },
                         "navbar": {
                             templateUrl: '/home/templates/navbar.html',
@@ -29,7 +28,6 @@ angular.module('sm-skillprofile')
                 })
 
             $compileProvider.aHrefSanitizationWhitelist(/^\s*(|blob|):/);
-
         }
     ])
 
