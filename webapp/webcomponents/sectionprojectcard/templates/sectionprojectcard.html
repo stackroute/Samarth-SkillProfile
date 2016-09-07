@@ -8,12 +8,11 @@
         </md-card-title>
         <div layout-padding layout-wrap layout="row" class="decreasemdIconFont">
             <div layout="row" flex="50" layout-xs="row" flex-xs="100" ng-repeat="value in data | limitTo: $ctrl.limitval" ng-model="$ctrl.limitval">
-
                 <div flex="80" flex-xs="80">
                     <md-icon>fiber_manual_record</md-icon><span class="changeProjectNameFont">{{value.Project}}</span>
                     <br>
                     <md-icon>schedule</md-icon><span class="changeProjectDurationFont">{{value.Duration}}</span><span>,</span>
-                     <span>&#8377;</span>
+                    <span>&#8377;</span>
                     <span class="changeProjectSalaryFont">{{value.Salary}}</span>
                     <br>
                     <md-icon>work</md-icon>
@@ -23,11 +22,10 @@
                     <md-divider></md-divider>
                 </div>
                 <div flex="5" flex-xs="5">
-                    <md-button ng-click="$ctrl.showAdvanced($event,'Add Project',value)">
+                    <md-button ng-click="$ctrl.showAdvanced($event,'Edit Project',value)">
                         <md-icon>mode_edit</md-icon>
                     </md-button>
                 </div>
-               
             </div>
         </div>
         <div layout="row" flex-offset="85" layout-align="center center">
@@ -39,7 +37,7 @@
             </a>
         </div>
         <md-card-actions layout="row " layout-align="end center ">
-       <md-button ng-click="$ctrl.showAdvanced($event,'Add Project','')">
+       <md-button ng-click="$ctrl.showAdvanced($event, 'Add Project', '') ">
         ADD
     </md-button>
 </md-card-actions>
