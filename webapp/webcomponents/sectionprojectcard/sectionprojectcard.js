@@ -10,6 +10,15 @@ function projectsectioncardCtrl($http, $mdDialog) {
     ctrl.changeFont = 'changeProjectNameFont';
     ctrl.profile = {}; 
     ctrl.totalProjects=0;
+    ctrl.limitval=4;
+    ctrl.increaseLimit=function(){
+        ctrl.limitval=ctrl.totalProjects.length;
+    }
+
+    ctrl.decreaseLimit=function(){
+        ctrl.limitval=4;
+    }
+
     $http({
         method: 'GET',
         url: 'api/profiles/01',
