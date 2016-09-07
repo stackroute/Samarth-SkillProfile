@@ -94,6 +94,10 @@
 {
 	outline: none;
 }
+#educardcontent
+{
+	cursor: pointer;
+}
 
 #savebtnicon
 {
