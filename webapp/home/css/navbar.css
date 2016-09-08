@@ -16,3 +16,6 @@
     max-height: 300px;
     overflow: auto;
 }
+md-content>md-toolbar{
+	position: fixed;
+}
