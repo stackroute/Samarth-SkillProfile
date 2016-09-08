@@ -36,14 +36,7 @@ var myApp = angular.module("sm-skillprofile", ['ngMaterial',
 
     $mdThemingProvider.definePalette('customPrimary',
                                        customPrimary);
-    /*$mdThemingProvider.theme('default')
-        .primaryPalette('custom', {
-            'hue-1': '400'
-        })
-        .accentPalette('custom', {
-            'hue-1': '400'
-        });*/
-
+   
     var customBackground ={
         '50': '#ffffff',
         '100': '#ffffff',

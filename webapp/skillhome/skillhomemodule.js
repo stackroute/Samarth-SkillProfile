@@ -19,7 +19,7 @@ angular.module('sm-skillprofile')
                     url: '/workexperience',
                     views: {
                         "content@": {
-                            templateUrl: '/skillhome/templates/workexperience.html'
+                            template: "<my-workexperiencecard></my-workexperiencecard>"
                         }
                     }
                 }).state('skillprofile.projects', {
