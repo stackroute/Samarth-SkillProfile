@@ -11,7 +11,7 @@
 </md-content>
 
     <md-content class='app-sidebar'>
-        <md-list ng-controller="sidenavCtrl">
+        <md-list ng-controller="sidenavCtrl" md-select-on-focus>
            <md-list-item md-ink-ripple ng-repeat="item in items | orderBy: 'seq'">
                     <md-item-content layout="row" layout-align="start center" ui-sref="{{item.state}}">
                         <div class="inset">
