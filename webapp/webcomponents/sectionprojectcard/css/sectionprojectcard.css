@@ -1,4 +1,10 @@
 
+
+ 
+
+
+
+
  .projectTitle {
      background-color: #e6e6e6;
  }
@@ -25,5 +31,9 @@
 .pointCursor{
   cursor: pointer;
 }
+.decreasemdIconFont md-icon{
+    font-size: 15px;
+}
 
 
+>>>>>>> 635be5a08ee46d3ee0847c9722a36139a2507ed3

@@ -1,5 +1,5 @@
 angular.module('sm-skillprofile')
-    .factory('quesnboxService', function() {
+    .service('quesnboxService', function() {
         return {
             questionGenerator: function() {
                 questionArray = ["What's your College Name?", "Where do you live?",

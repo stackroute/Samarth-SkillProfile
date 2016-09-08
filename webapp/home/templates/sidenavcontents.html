@@ -1,3 +1,6 @@
+
+
+
 <div layout="column">
     
     <md-content layout layout-align="center center" class="md-padding">
@@ -11,7 +14,7 @@
 </md-content>
 
     <md-content class='app-sidebar'>
-        <md-list ng-controller="sidenavCtrl" class="scrollbar-dynamic" data-jquery-scrollbar="jqueryScrollbarOptions">
+        <md-list ng-controller="sidenavCtrl">
            <md-list-item md-ink-ripple ng-repeat="item in items | orderBy: 'seq'">
                     <md-item-content layout="row" layout-align="start center" ui-sref="{{item.state}}">
                         <div class="inset">
@@ -24,3 +27,4 @@
         </md-list>
     </md-content>
 </div>
+

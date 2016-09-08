@@ -15,14 +15,25 @@ function personalinfoCardController($http) {
     //   ctrl.email='afrin@gmail.com';
     //   ctrl.address='7th block, koramangala,bangalore';
     //   ctrl.pin=571342;
-    ctrl.details = {};
+    ctrl.personal = {};
     $http({
         method: "GET",
-        url: 'http://localhost:8081/personalinfo'
-    }).success(function(response) {
-        ctrl.details = response;
-        console.log(response[0]);
-    });
+        url: 'api/profiles/01'
+    }).then(function successCallback(response) {
+        for (var prop in response.data)  {
+            if (prop=="Personalinfo" ) { 
+                ctrl.personal[prop] = response.data[prop]; 
+              
+            }
+        }
+    }, function errorCallback(response) {
+        console.log('Error ');
+    });  
+
+    // }).success(function(response) {
+    //     ctrl.details = response[0];
+    //     console.log(response[0]);
+    // });
 
     ctrl.save = function() {
 

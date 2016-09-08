@@ -1,3 +1,5 @@
+
+
 angular.module('sm-skillprofile')
     .component('mysectionSkillCard', {
         templateUrl: 'webcomponents/sectionskillcard/templates/sectionskillcard.html',
@@ -6,15 +8,21 @@ angular.module('sm-skillprofile')
 
 function sectionskillcardctrl($http, sectionskillcard, $mdDialog) {
     var ctrl = this;
+         ctrl.limitval=3;
     ctrl.value = 40;
     ctrl.skill = {};
-    ctrl.primary = {};
-    ctrl.prim = [];
-    ctrl.secd = [];
-    ctrl.secondary = {}; 
+    ctrl.primary = [];
+    ctrl.secondary = []; 
+    ctrl.increaseLimit=function(){
+        ctrl.limitval=ctrl.primary.length;
+    }
 
-    sectionskillcard.getjson().then(function(res) {
-        ctrl.skill = res;
+    ctrl.decreaseLimit=function(){
+        ctrl.limitval=3;
+    }
+
+    sectionskillcard.getjson().then(function(result) {
+        ctrl.skill = result;
         console.log("skill object", ctrl.skill);
 
         for (var prop in ctrl.skill) {
@@ -22,19 +30,19 @@ function sectionskillcardctrl($http, sectionskillcard, $mdDialog) {
                 // console.log(ctrl.skill[prop][key])
                 for (var k in ctrl.skill[prop][key]) {
 
-                    if (ctrl.skill[prop][key][k] == "Primary") //extracting all skill object containing primary type
+                    if (ctrl.skill[prop][key][k] == "primary") //extracting all skill object containing primary type
                     {
 
-                        ctrl.prim.push(ctrl.skill[prop][key]); //making array of object containing skill of  type primary   
+                        ctrl.primary.push(ctrl.skill[prop][key]); //making array of object containing skill of  type primary   
                     }
-                    if (ctrl.skill[prop][key][k] == "Secondary") //extracting all skill object containing primary type
+                    if (ctrl.skill[prop][key][k] == "secondary") //extracting all skill object containing primary type
                     {
-                        ctrl.secd.push(ctrl.skill[prop][key]); //making array of object containing skill type secondary
+                        ctrl.secondary.push(ctrl.skill[prop][key]); //making array of object containing skill type secondary
                     }
                 }
             }
         }
-        console.log(ctrl.prim);
+        // console.log(ctrl.primary);
 
     });
 

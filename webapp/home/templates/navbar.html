@@ -2,21 +2,21 @@
     <md-content>
         <md-toolbar style="position:fixed">
             <div class="md-toolbar-tools" layout="row">
-                <div layout="row" layout-align="start center" flex="50">
+                <div layout="row" layout-align="start center" flex>
                 <md-button hide-gt-sm show-sm show-xs class="md-icon-button" aria-label="Settings" ng-click="togglemenu()">
                     <md-icon>menu</md-icon>
                 </md-button>
 
                 <h2>
-                <span>Samarth-SkillProfile</span>
+                <span>{{title}}</span>
                </h2>
 
                
                </div>
-                <div layout="row" layout-align="end center" flex="50">
+                <div layout="row" layout-align="end center" flex>
                 <md-input-container>
                     <!-- <label>Language</label> -->
-                    <md-select ng-model="selectlang">
+                    <md-select ng-model="selectlang" ng-change="onChange()">
                         <md-option ng-repeat="lang in language" ng-value="lang">
                             {{lang}}
                         </md-option>

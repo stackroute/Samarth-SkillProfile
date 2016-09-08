@@ -1,28 +1,31 @@
-    <md-card  flex>
-        <md-card-header>
+    <md-card  flex  ng-repeat="per in $ctrl.personal">
+        
             <md-card-title class="title">
                 <md-card-title-text layout="row">
-                    <div  class="md-headline" >Personal Information</div>
+                    <div flex="90" class="md-headline" >Personal Information</div>
+                    <div flex="10">23</div>
                 </md-card-title-text>
             </md-card-title>
-        </md-card-header>
+       
         <md-card-content>
-            <div layout-padding layout-wrap layout="row" flex layout-xs="column">
-                <div layout="column" flex="40">
-                    <p>name:{{$ctrl.details.name }}</p>
-                    <p>age:{{$ctrl.details.age}}</p>
-                    <p>gender:{{$ctrl.details.gender}}
-                    <p>DOB:{{$ctrl.details.DOB}}</p>
+            <div layout-padding layout-wrap layout="row" flex layout-xs="column" ng-repeat="val in per" ng-if="$index<1">
+                <div layout="column" flex="40" >
+                    <p><b>name</b>:{{val.name }}</p>
+                    <p><b>dob</b>:{{val.dob}}</p>
+                    <p><b>gender</b>:{{val.gender}}
+                    <p><b>Maritialstatus</b>:{{val.maritialstatus}}</p>
+                    <!-- <p>DOB:{{$ctrl.details.DOB}}</p> -->
                     
                 </div>
     
  
-                <div layout="column" flex="60">
-                    <p>Maritial Status:{{$ctrl.details.maritialstatus}}</p>
-                    <p>contact:{{$ctrl.details.contact}}</p>
-                    <p>Email:{{$ctrl.details.email}}</p>
-                    <p>address:{{$ctrl.details.address}}</p>
-                    <p>pincode:{{$ctrl.details.pincode}}</p>
+                <div layout="column" flex="60"> 
+                    <!-- <p>Maritial Status:{{$ctrl.details.maritialstatus}}</p> -->
+                    <p><b>MotherToungue</b>:{{val.mothertongue}}</p>
+                    <p><b>Email</b>:{{val.email}}</p>
+                    <p><b>contact</b>:{{val.mobile}}</p>
+                    <p><b>address</b>:{{val.address}}</p>
+                    <!-- <p>pincode:{{$ctrl.details.pincode}}</p> -->
                 </div>
             </div>
         </md-card-content>

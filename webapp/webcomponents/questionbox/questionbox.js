@@ -1,3 +1,6 @@
+
+
+
 angular.module('sm-skillprofile')
     .component('myQuestionbox',{             
         templateUrl: 'webcomponents/questionbox/templates/questionbox.html',
@@ -6,7 +9,7 @@ angular.module('sm-skillprofile')
 
 function questionBoxCtrl($timeout, quesnboxService) {
     var ctrl = this;
-
+        ctrl.showMaxBtn=false;
     ctrl.showInputBox=function(){
        ctrl.displayInputBox = false;
     }
@@ -24,18 +27,28 @@ function questionBoxCtrl($timeout, quesnboxService) {
     ctrl.clear = '';
 
     ctrl.increaseIndex = function() {
-        ctrl.clear = '';
+        if (ctrl.clear=='') {
+                alert('Please Enter');
+        }
+        else
+        {
+           ctrl.clear = '';
         ctrl.currentQuestionIndex = ctrl.currentQuestionIndex + 1;
         ctrl.val = Math.floor((ctrl.currentQuestionIndex / ctrl.questionArray.length) * 100);
         if (ctrl.currentQuestionIndex == ctrl.questionArray.length) {
             $timeout(ctrl.hideQuestionBox, 300);
         }
-
+        }
     }
     ctrl.hideQuestionBox = function() {
         ctrl.displayInputBox = true;
         ctrl.displayAnswerdBox = true;
         $timeout(ctrl.showQuestionBox, 3000);
+    }
+     ctrl.minimizeQuestionBox = function() {
+        ctrl.displayInputBox = true;
+        ctrl.showMaxBtn=true;
+
     }
     ctrl.showQuestionBox = function() {
         ctrl.currentQuestionIndex = 0;
@@ -44,3 +57,4 @@ function questionBoxCtrl($timeout, quesnboxService) {
         ctrl.displayAnswerdBox = false;
     }                
 }
+

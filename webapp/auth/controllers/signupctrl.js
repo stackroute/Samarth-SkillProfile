@@ -1,7 +1,8 @@
 console.log('in');
 angular.module('sm-skillprofile')
-    .controller('signupController', ['$scope', '$http',
-        function($scope, $http) {
+    .controller('signupController', ['$scope', '$http', 'signupFactory',
+
+        function($scope, $http, signupFactory) {
             console.log('inq');
 
             $scope.add = function() {
@@ -14,17 +15,15 @@ angular.module('sm-skillprofile')
                     "password": $scope.password,
                     "Confirmpassword": $scope.Confirmpassword
                 }
-                $http({
-                        method: "POST",
-                        url: 'http://localhost:8081/user',
-                        data: $scope.user,
-                        dataType: "json",
-                        'Content-Type': 'application/json'
-                    })
-                    .then(function success(data) {
-                        $scope.user = data;
-                        $scope.user = {};
-                    })
-            };
+                signupFactory.signup($scope.user)
+                    .then(function(data) {
+                            console.log("data in contrller", data);
+                            alert("insert");
+                        },
+                        function(data) {
+                            $scope.error = data.error;
+                        }
+                    )
+            }
         }
     ]);
