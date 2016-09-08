@@ -1,4 +1,4 @@
 angular.module('sm-skillprofile')
-    .controller('notificationctrl', ['$scope', function($scope) {
+   .controller('notificationctrl', ['$scope', function($scope) {
 
-    }]);
+   }]);

@@ -14,29 +14,30 @@
       </md-card-header>
       <md-card-content>
         <div layout="column">
-          
           <div layout="row" id="section1" flex hide-xs hide-md hide-sm>
             <div flex id="section1" align="left" layout="column">
               <div flex>
-               <p>DOB:{{$ctrl.data.DOB}} ({{$ctrl.data.age}} yrs)</p>
+               <p>DOB:{{$ctrl.data.DOB}} ({{$ctrl.data.age}} yrs)
+               </p>
               </div>
               <!-- <div flex>
                 <p>{{$ctrl.data.gender}}</p>
               </div> -->
+            
               <div flex layout>
                 <p>{{$ctrl.data.maritalstatus}}</p> ,
                 <p>{{$ctrl.data.gender}}</p>
               </div>
             </div>
             <md-divider></md-divider>
+            
             <div flex id="section2" align="center" layout="column" >
               <div flex>
-                <img id="professionimage" src="webcomponents/skillcard/images/profession.PNG">
+                <img id="professionimage" src="webcomponents/skillcard/images/profession.png">
               </div>
               <div flex>
                 <p>{{$ctrl.data.profession}}</p>
               </div>
-
             </div>
             <!-- <div flex id="section2" align="center">
               (graph)
@@ -46,7 +47,6 @@
               <md-icon class="material-icons">star rate</md-icon>
               <md-icon class="material-icons">star rate</md-icon>
             </div> -->
-
           </div>
           <div id="blankarea" hide-sm hide-xs hide-md>
             <br>

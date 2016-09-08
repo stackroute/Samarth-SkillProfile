@@ -2,15 +2,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
 #header , #footer
 {
 	background-color: #d9d9d9;
@@ -90,6 +81,10 @@
 #educardcontent:focus
 {
 	outline: none;
+}
+#educardcontent
+{
+	cursor: pointer;
 }
 
 #savebtnicon

@@ -56,5 +56,8 @@ function questionBoxCtrl($timeout, quesnboxService) {
         ctrl.displayInputBox = false;
         ctrl.displayAnswerdBox = false;
     }                
+
 }
+
+
 
