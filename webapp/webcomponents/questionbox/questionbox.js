@@ -1,3 +1,6 @@
+
+
+
 angular.module('sm-skillprofile')
     .component('myQuestionbox',{             
         templateUrl: 'webcomponents/questionbox/templates/questionbox.html',
@@ -53,4 +56,8 @@ function questionBoxCtrl($timeout, quesnboxService) {
         ctrl.displayInputBox = false;
         ctrl.displayAnswerdBox = false;
     }                
+
 }
+
+
+

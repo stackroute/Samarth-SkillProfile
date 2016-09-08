@@ -44,6 +44,13 @@ angular.module('sm-skillprofile')
                             template:  "<my-educationcard></my-educationcard>"
                         }
                     }
+                }).state('skillprofile.personalinfo', {
+                    url: '/personalinfo',
+                    views: {
+                        "content@": {
+                            template:  "<my-personalinfocard></my-personalinfocard>"
+                        }
+                    }
                 })
         }
     ])

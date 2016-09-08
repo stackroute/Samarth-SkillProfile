@@ -1,112 +1,130 @@
 {
-  "profiles": [
-    {
+  "profiles": [{
+
       "id": "01",
       "UserName": "Vicky008",
       "Personalinfo": [
         {
-          "name": "Wolf Kinney",
-          "dob": "16-03-2015",
-          "gender": "male",
-          "email": "wolfkinney@rodeomad.com",
-          "mobile": "+1 (929) 575-3197",
-          "address": "829 Eldert Street, Wright, Wisconsin, 677"
-        },
-        {
-          "name": "Brown Cote",
-          "dob": "17-05-2016",
-          "gender": "male",
-          "email": "browncote@rodeomad.com",
-          "mobile": "+1 (979) 504-2051",
-          "address": "160 Pershing Loop, Brady, South Dakota, 3932"
-        },
-        {
-          "name": "Lilly Faulkner",
-          "dob": "08-05-2015",
-          "gender": "female",
-          "email": "lillyfaulkner@rodeomad.com",
-          "mobile": "+1 (981) 577-2012",
-          "address": "978 Hamilton Avenue, Cressey, Virgin Islands, 5219"
-        },
-        {
-          "name": "Bird Sharpe",
-          "dob": "11-04-2016",
-          "gender": "male",
-          "email": "birdsharpe@rodeomad.com",
-          "mobile": "+1 (964) 466-2003",
-          "address": "242 Varick Avenue, Suitland, Federated States Of Micronesia, 2197"
-        },
-        {
-          "name": "Tabitha Burks",
-          "dob": "08-07-2016",
-          "gender": "female",
-          "email": "tabithaburks@rodeomad.com",
-          "mobile": "+1 (987) 509-2856",
-          "address": "474 Bennet Court, Tonopah, District Of Columbia, 6369"
-        },
-        {
-          "name": "Mccormick Rivera",
-          "dob": "07-07-2016",
-          "gender": "male",
-          "email": "mccormickrivera@rodeomad.com",
-          "mobile": "+1 (838) 505-2010",
-          "address": "658 Campus Road, Tilden, Palau, 7190"
-        },
-        {
-          "name": "Parks Gardner",
-          "dob": "07-03-2015",
-          "gender": "male",
-          "email": "parksgardner@rodeomad.com",
-          "mobile": "+1 (900) 492-3913",
-          "address": "949 Hausman Street, Unionville, West Virginia, 5334"
-        },
-        {
-          "name": "Elisabeth Best",
-          "dob": "18-01-2015",
-          "gender": "female",
-          "email": "elisabethbest@rodeomad.com",
-          "mobile": "+1 (996) 510-3314",
-          "address": "987 Ridgewood Avenue, Barstow, Florida, 4429"
-        },
-        {
-          "name": "Tamra Mcfarland",
-          "dob": "25-03-2015",
-          "gender": "female",
-          "email": "tamramcfarland@rodeomad.com",
-          "mobile": "+1 (938) 575-3083",
-          "address": "605 Garden Street, Stagecoach, Kentucky, 5625"
-        },
-        {
-          "name": "Stevens Sloan",
-          "dob": "21-02-2015",
-          "gender": "male",
-          "email": "stevenssloan@rodeomad.com",
-          "mobile": "+1 (939) 442-2747",
-          "address": "728 Rockwell Place, Brazos, Kansas, 2493"
-        },
-        {
-          "name": "Amelia Gibbs",
-          "dob": "24-06-2014",
-          "gender": "female",
-          "email": "ameliagibbs@rodeomad.com",
-          "mobile": "+1 (817) 502-3312",
-          "address": "197 Judge Street, Gila, Alabama, 2148"
-        },
-        {
-          "name": "Douglas Moss",
-          "dob": "24-01-2014",
-          "gender": "male",
-          "email": "douglasmoss@rodeomad.com",
-          "mobile": "+1 (995) 501-2123",
-          "address": "423 Bayview Avenue, Welda, Utah, 7045"
-        },
-        {
-          "name": "Denise Burt",
-          "dob": "05-08-2015",
-          "gender": "female",
-          "email": "deniseburt@rodeomad.com",
-          "mobile": "+1 (915) 454-2780",
-          "address": "480 Knight Court, Greensburg, Michigan, 5929"
+              
+
+      "name": "Wolf Kinney",
+      "dob": "16-03-2015",
+      "gender": "male",
+      "maritialstatus":"unmarried",
+      "mothertongue":"english",
+      "email": "wolfkinney@rodeomad.com",
+      "mobile": "+1 (929) 575-3197",
+      "address": "829 Eldert Street, Wright, Wisconsin, 677"
+    },
+    {
+      "name": "Brown Cote",
+      "dob": "17-05-2016",
+      "gender": "male",
+      "maritialstatus":"unmarried",
+      "mothertongue":"english",
+      "email": "browncote@rodeomad.com",
+      "mobile": "+1 (979) 504-2051",
+      "address": "160 Pershing Loop, Brady, South Dakota, 3932"
+    },
+    {
+      "name": "Lilly Faulkner",
+      "dob": "08-05-2015",
+      "gender": "female",
+      "maritialstatus":"unmarried",
+      "mothertongue":"english",
+      "email": "lillyfaulkner@rodeomad.com",
+      "mobile": "+1 (981) 577-2012",
+      "address": "978 Hamilton Avenue, Cressey, Virgin Islands, 5219"
+    },
+    {
+      "name": "Bird Sharpe",
+      "dob": "11-04-2016",
+      "gender": "male",
+      "maritialstatus":"unmarried",
+      "mothertongue":"english",
+      "email": "birdsharpe@rodeomad.com",
+      "mobile": "+1 (964) 466-2003",
+      "address": "242 Varick Avenue, Suitland, Federated States Of Micronesia, 2197"
+    },
+    {
+      "name": "Tabitha Burks",
+      "dob": "08-07-2016",
+      "gender": "female",
+      "maritialstatus":"unmarried",
+      "mothertongue":"english",
+      "email": "tabithaburks@rodeomad.com",
+      "mobile": "+1 (987) 509-2856",
+      "address": "474 Bennet Court, Tonopah, District Of Columbia, 6369"
+    },
+    {
+      "name": "Mccormick Rivera",
+      "dob": "07-07-2016",
+      "gender": "male",
+      "maritialstatus":"unmarried",
+      "mothertongue":"english",
+      "email": "mccormickrivera@rodeomad.com",
+      "mobile": "+1 (838) 505-2010",
+      "address": "658 Campus Road, Tilden, Palau, 7190"
+    },
+    {
+      "name": "Parks Gardner",
+      "dob": "07-03-2015",
+      "gender": "male",
+      "maritialstatus":"unmarried",
+      "mothertongue":"english",
+      "email": "parksgardner@rodeomad.com",
+      "mobile": "+1 (900) 492-3913",
+      "address": "949 Hausman Street, Unionville, West Virginia, 5334"
+    },
+    {
+      "name": "Elisabeth Best",
+      "dob": "18-01-2015",
+      "gender": "female",
+      "maritialstatus":"unmarried",
+      "mothertongue":"english",
+      "email": "elisabethbest@rodeomad.com",
+      "mobile": "+1 (996) 510-3314",
+      "address": "987 Ridgewood Avenue, Barstow, Florida, 4429"
+    },
+    {
+      "name": "Tamra Mcfarland",
+      "dob": "25-03-2015",
+      "gender": "female",
+      "email": "tamramcfarland@rodeomad.com",
+      "mobile": "+1 (938) 575-3083",
+      "address": "605 Garden Street, Stagecoach, Kentucky, 5625"
+    },
+    {
+      "name": "Stevens Sloan",
+      "dob": "21-02-2015",
+      "gender": "male",
+      "email": "stevenssloan@rodeomad.com",
+      "mobile": "+1 (939) 442-2747",
+      "address": "728 Rockwell Place, Brazos, Kansas, 2493"
+    },
+    {
+      "name": "Amelia Gibbs",
+      "dob": "24-06-2014",
+      "gender": "female",
+      "email": "ameliagibbs@rodeomad.com",
+      "mobile": "+1 (817) 502-3312",
+      "address": "197 Judge Street, Gila, Alabama, 2148"
+    },
+    {
+      "name": "Douglas Moss",
+      "dob": "24-01-2014",
+      "gender": "male",
+      "email": "douglasmoss@rodeomad.com",
+      "mobile": "+1 (995) 501-2123",
+      "address": "423 Bayview Avenue, Welda, Utah, 7045"
+    },
+    {
+      "name": "Denise Burt",
+      "dob": "05-08-2015",
+      "gender": "female",
+      "email": "deniseburt@rodeomad.com",
+      "mobile": "+1 (915) 454-2780",
+      "address": "480 Knight Court, Greensburg, Michigan, 5929"
         },
         {
           "name": "Stephens Goodman",
@@ -1352,6 +1370,7 @@
           "Salary": "16843 Rs"
         }
       ]
+
     },
     {
       "id": "02",
@@ -3498,7 +3517,7 @@
       "seq": 3
     },
     {
-      "state": "skillprofile.notifications",
+      "state": "skillprofile.personalinfo",
       "title": "Personal info",
       "icon": "person",
       "seq": 6

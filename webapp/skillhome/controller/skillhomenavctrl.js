@@ -1,3 +1,6 @@
+
+    
+
 angular.module("sm-skillprofile")
     .controller('sidenavCtrl', ['$scope', '$mdSidenav', '$http', 'sidenavfactory', 'datagenerate',
         '$rootScope',
@@ -19,3 +22,4 @@ angular.module("sm-skillprofile")
             });
         }
     ]);
+

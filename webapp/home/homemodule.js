@@ -3,7 +3,7 @@ angular.module('sm-skillprofile')
         function($stateProvider, $urlMatcherFactoryProvider, $urlRouterProvider,$compileProvider) {
             $urlMatcherFactoryProvider.caseInsensitive(true);
 
-            $urlRouterProvider.otherwise('/home/skillhome');
+            $urlRouterProvider.otherwise('home/skillhome');
 
             $stateProvider
                 .state('skillprofile', {

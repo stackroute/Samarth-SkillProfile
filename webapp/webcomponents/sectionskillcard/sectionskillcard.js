@@ -1,3 +1,5 @@
+
+
 angular.module('sm-skillprofile')
     .component('mysectionSkillCard', {
         templateUrl: 'webcomponents/sectionskillcard/templates/sectionskillcard.html',

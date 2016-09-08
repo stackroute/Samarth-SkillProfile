@@ -105,3 +105,4 @@ function projectsectioncardCtrl($http, $mdDialog) {
     }
 
 }
+
