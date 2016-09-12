@@ -1,3 +1,4 @@
+<!-- 
 <div ng-repeat=" workex in $ctrl.workexperiance">
     <md-card>
         <md-card-title class="projectTitle">
@@ -24,7 +25,7 @@
                     </md-button>
                 </div>
             </div>
-            <!-- <div layout="row" flex="50" flext-xs="100" ng-repeat="value in data" ng-if="$index >4" ng-show="$ctrl.collapsed">
+            <div layout="row" flex="50" flext-xs="100" ng-repeat="value in data" ng-if="$index >4" ng-show="$ctrl.collapsed">
                 <div flex="80">
                     <md-icon>fiber_manual_record</md-icon><span class="changeProjectNameFont">{{value.Project}}</span>
                     <br>
@@ -56,8 +57,42 @@
                     <md-card-actions layout="row" layout-align="end center">
                 <md-button ng-click="$ctrl.addProject($event,'','Add Project')">
                     ADD
-                </md-button> -->
-            <!-- </md-card-actions> -->
-    </md-card>
+                </md-button>
+            </md-card-actions> -->
+    <!-- </md-card>
     </div>
+</div> -->
+ 
+<div ng-repeat=" workex in $ctrl.workexperiance">
+    <md-card>
+        <md-card-title class="projectTitle">
+            <md-card-title-text layout="row">
+                <div class="md-headline" flex="90">EXPERIENCE</div>
+            </md-card-title-text>
+        </md-card-title>
+        <div layout-padding layout-wrap layout="row">
+            <div layout="row" flex="50" layout-xs="column" flex-xs="100" ng-repeat="value in workex" ng-if="$index < 4">
+                <div flex="80" flex-xs="100">
+                    <font size="5">{{value.designation}}
+                        <br>
+                    </font>
+                    <font size="4">{{value.organisation }} 
+                    , {{value.projects}}</font><br>
+                    <md-icon class="material-icons">date_range</md-icon>
+                    <font size="3">
+                       {{value.joiningdate}}
+                        to {{value.leavingdate}}
+                        <br>{{value.location}}</font>
+                    <md-divider></md-divider>
+                </div>
+                <div flex="5" flex-xs="100">
+                    <md-button>
+                        <md-icon>mode_edit</md-icon>
+                    </md-button>
+                </div>
+            </div>
+        </div>
+    </md-card>
 </div>
+</div>
+

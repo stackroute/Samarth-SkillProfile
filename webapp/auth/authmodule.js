@@ -27,7 +27,7 @@ angular.module('sm-skillprofile')
                     url: '/passwordchange',
                     views: {
                         "content@": {
-                            templateUrl: '/auth/templates/forgotpassword.html',
+                            templateUrl: '/auth/templates/updatepassword.html',
                             controller:'signinController'
                         }
                     }
