@@ -1,45 +1,4 @@
-<<<<<<< HEAD
-#home {
-    color: white;
-}
 
-#sections {
-    color: white;
-}
-
-mysection-skill-card {
-    width: 100%;
-    margin: 0px;
-    height: inherit;
-}
-
-#skillCard {
-    font-style: italic;
-    width: 100%;
-}
-
-.heading {
-    margin-left: 35px;
-}
-
-.subheading {
-    margin-left: 10px;
-}
-
-my-projectsectioncard {
-    width: 100%;
-    margin: 0px;
-}
-
-my-educationcard {
-    width: 100%;
-    margin: 0px;
-}
-
-my-skillcard {
-    width: 100%;
-}
-=======
 #home {
     color: white;
 }
@@ -81,4 +40,3 @@ my-skillcard {
     width: 100%;
 }
  
->>>>>>> 0086bf7d571deaf3de2879a1b942f0ccbb582e7b

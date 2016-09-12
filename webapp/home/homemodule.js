@@ -3,15 +3,15 @@ angular.module('sm-skillprofile')
         function($stateProvider, $urlMatcherFactoryProvider, $urlRouterProvider,$compileProvider) {
             $urlMatcherFactoryProvider.caseInsensitive(true);
 
-            $urlRouterProvider.otherwise('home/skillhome');
+            $urlRouterProvider.otherwise('home');
 
             $stateProvider
                 .state('skillprofile', {
                     url: '/home',
                     views: {
                         "content@": {
-                            // templateUrl: '/auth/templates/signinpage.html'
-                            templateUrl: '/skillhome/templates/skillhome.html'
+                            templateUrl: '/auth/templates/signinpage.html'
+                            // templateUrl: '/skillhome/templates/skillhome.html'
                         },
                         "navbar": {
                             templateUrl: '/home/templates/navbar.html',

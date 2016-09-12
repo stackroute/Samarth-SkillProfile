@@ -15,6 +15,14 @@ angular.module('sm-skillprofile')
                         }
                     }
                 })
+                .state('skillprofile.searchjob', {
+                    url: '/search',
+                    views: {
+                        "content@": {
+                            templateUrl: '/skillhome/templates/jobsearch.html'
+                        }
+                    }
+                })
                 .state('skillprofile.workexperience', {
                     url: '/workexperience',
                     views: {

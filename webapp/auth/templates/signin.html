@@ -4,7 +4,7 @@
             <h3 class="md-title">Sign In</h3>
         </div>
         <div layout="row" layout-align="start center">
-            <md-input-container class="md-icon-float md-block">
+            <md-input-container class="md-icon-float md-block" >
                 <label>Mobile Number</label>
                 <md-icon class="material-icons">phone</md-icon>
                 <input type="tel" ng-model="phonenumber" name="number" required md-no-asterisk ng-pattern="/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/">
@@ -18,20 +18,26 @@
                 <label>Password</label>
                 <md-icon class="material-icons">lock</md-icon>
                 <input type="password" name="password" required md-no-asterisk ng-model="password">
+
                 <div ng-messages="signinForm.password.$error">
                     <div ng-message="required">Password is required.</div>
                 </div>
+
             </md-input-container>
         </div>
         <div layout="row" layout-align="start center">
-            <a ui-sref="skillprofile.skillhome">
-                <md-button class="md-raised md-primary">
+           <a>
+                <md-button class="md-raised md-primary" ng-click="login()">
                     Sign-In
                 </md-button>
             </a>
         </div>
         <div layout="row" layout-align="start center">
             <a ui-sref="skillprofile.signup" class="md-subhead md-padding">Create A New Account</a>
+        </div>
+       <div layout="row" layout-align="start center">
+            <a ui-sref="skillprofile.chnge_password" class="md-subhead md-padding">forgot password</a>
+        </div>
         </div>
     </form>
 </div>

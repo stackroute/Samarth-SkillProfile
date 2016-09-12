@@ -31,7 +31,7 @@ body {
 }
 .sidebarcss{
   margin-top: 60px;
-  border-right: 1px solid rgba(0,0,0,0.12);
+  /*border-right: 1px solid rgba(0,0,0,0.12);*/
     line-height: 50px;
    /*min-height: 100vh;*/
 }
@@ -44,14 +44,7 @@ a:hover{
 color:black;
 }
 
-#name{
-  text-align: center;
-}
-
-.app-sidebar {
-}
-
-.app-sidebar a {
+/*.app-sidebar a {
   color: #717171;
-}
+}*/
 

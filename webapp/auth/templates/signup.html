@@ -1,6 +1,6 @@
 
-<div class="background" layout="column" layout-align="start center" md-whiteframe="md-whiteframe-1dp" class="md-padding" ng-controller="signupController">
-    <form name="signupForm" id="form1" ng-submit="">
+<div class="background" layout="column" layout-align="start center" md-whiteframe="md-whiteframe-1dp" class="md-padding" >
+    <form name="signupForm" id="form1">
         <div layout="row" layout-align="center center">
             <h3 md-title>Sign Up</h3>
         </div>
@@ -11,6 +11,7 @@
                 <input type="text" ng-model="name" name="name">
             </md-input-container>
         </div>
+
         <div layout="row" layout-align="start center">
             <md-input-container md-no-float class="md-block">
                 <label>Phone number</label>
@@ -62,12 +63,12 @@
             </md-input-container>
         </div>
         <div layout="row" layout-align="center center">
-            <md-button type="submit" class="md-primary md-raised">
+            <md-button type="submit" class="md-primary md-raised"  ng-click="add()">
                 Create Account
             </md-button>
         </div>
         <div layout="row" layout-align="start center">
-            <a ui-sref="skillprofile.signin" class="md-subhead md-padding" ng-click="add()">Have a account? Sign-in</a>
+            <a ui-sref="skillprofile.signin" class="md-subhead md-padding">Have a account? Sign-in</a>
         </div>
     </form>
 

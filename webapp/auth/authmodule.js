@@ -9,7 +9,8 @@ angular.module('sm-skillprofile')
                     url: '/signin',
                     views: {
                         "content@": {
-                            templateUrl: '/auth/templates/signin.html'
+                            templateUrl: '/auth/templates/signin.html',
+                            controller:'signinController'
                         }
                     }
                 })
@@ -17,7 +18,17 @@ angular.module('sm-skillprofile')
                     url: '/signup',
                     views: {
                         "content@": {
-                            templateUrl: '/auth/templates/signup.html'
+                            templateUrl: '/auth/templates/signup.html',
+                            controller:'signupController'
+                        }
+                    }
+                })
+                 .state('skillprofile.chnge_password', {
+                    url: '/passwordchange',
+                    views: {
+                        "content@": {
+                            templateUrl: '/auth/templates/forgotpassword.html',
+                            controller:'signinController'
                         }
                     }
                 })

@@ -3493,40 +3493,46 @@
       "seq": 1
     },
     {
+      "state": "skillprofile.jobsearch",
+      "title": "Jobsearch",
+      "icon": "search",
+      "seq": 2
+    },
+    {
       "state": "skillprofile.workexperience",
       "title": "Work Experience",
       "icon": "work",
-      "seq": 5
+      "seq": 6
     },
     {
       "state": "skillprofile.projects",
       "title": "Projects",
       "icon": "domain",
-      "seq": 4
+      "seq": 5
     },
     {
       "state": "skillprofile.skills",
       "title": "Skills",
       "icon": "settings",
-      "seq": 2
+      "seq": 3
     },
     {
       "state": "skillprofile.education",
       "title": "Education",
       "icon": "school",
-      "seq": 3
+      "seq": 4
     },
     {
       "state": "skillprofile.personalinfo",
       "title": "Personal info",
       "icon": "person",
-      "seq": 6
+      "seq": 7
     },
     {
       "state": "skillprofile.notifications",
       "title": "Showcase",
       "icon": "dashboard",
-      "seq": 7
+      "seq": 8
     }
   ],
   "sidenavHindi": [
@@ -3537,40 +3543,46 @@
       "seq": 1
     },
     {
+      "state": "skillprofile.jobsearch",
+      "title": "नौकरी ढूंढना",
+      "icon": "search",
+      "seq": 2
+    },
+    {
       "state": "skillprofile.workexperience",
       "title": "काम का अनुभव",
       "icon": "work",
-      "seq": 5
+      "seq": 6
     },
     {
       "state": "skillprofile.projects",
       "title": "परियोजनाएं",
       "icon": "domain",
-      "seq": 4
+      "seq": 5
     },
     {
       "state": "skillprofile.skills",
       "title": "कौशल",
       "icon": "settings",
-      "seq": 2
+      "seq": 3
     },
     {
       "state": "skillprofile.education",
       "title": "शिक्षा",
       "icon": "school",
-      "seq": 3
+      "seq": 4
     },
     {
       "state": "skillprofile.notifications",
       "title": "व्यक्तिगत जानकारी",
       "icon": "person",
-      "seq": 6
+      "seq": 7
     },
     {
       "state": "skillprofile.notifications",
       "title": "शोकेस",
       "icon": "dashboard",
-      "seq": 7
+      "seq": 8
     }
   ],
   "navEnglish": {
