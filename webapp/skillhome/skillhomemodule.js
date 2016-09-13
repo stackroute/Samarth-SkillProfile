@@ -9,7 +9,16 @@ angular.module('sm-skillprofile')
                     url: '/skillhome',
                     views: {
                         "content@": {
-                            templateUrl: '/skillhome/templates/skillhome.html',
+                            templateUrl: '/skillhome/templates/skillhomecontent.html'
+                            /*controller: 'skillhomecontentctrl',
+                            controllerAs: 'skillcontentCtrl'*/
+                        },
+                        "sidebar": {
+                            templateUrl: '/home/templates/sidebar.html',
+                            controller: 'navCtrl'
+                        },
+                        "content2@":{
+                             templateUrl: '/skillhome/templates/skillhome.html',
                             controller: 'skillhomectrl',
                             controllerAs: 'skillCtrl'
                         }

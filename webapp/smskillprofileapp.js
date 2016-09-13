@@ -10,7 +10,7 @@ var myApp = angular.module("sm-skillprofile", ['ngMaterial',
     ])
     .controller('sm-skillprofilectrl', ['$scope',
         function($scope) {
-            //TBD
+            
         }
     ])
 

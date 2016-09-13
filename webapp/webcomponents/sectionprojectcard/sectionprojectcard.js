@@ -11,7 +11,7 @@ function projectsectioncardCtrl($http, $mdDialog) {
     ctrl.totalProjects = 0;
     ctrl.limitval = 4;
     ctrl.increaseLimit = function() {
-        ctrl.limitval = ctrl.totalProjects.length;
+        ctrl.limitval = ctrl.limitval+3;
     }
 
     ctrl.decreaseLimit = function() {
