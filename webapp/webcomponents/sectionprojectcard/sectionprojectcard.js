@@ -7,11 +7,12 @@ angular.module('sm-skillprofile')
 function projectsectioncardCtrl($http, $mdDialog) {
     var ctrl = this;  
     ctrl.changeFont = 'changeProjectNameFont';
-    ctrl.profile = {}; 
+    ctrl.profile = []; 
+    ctrl.profile1 = [];
     ctrl.totalProjects = 0;
     ctrl.limitval = 4;
     ctrl.increaseLimit = function() {
-        ctrl.limitval = ctrl.limitval+3;
+        ctrl.limitval = ctrl.limitval + 3;
     }
 
     ctrl.decreaseLimit = function() {
@@ -20,14 +21,16 @@ function projectsectioncardCtrl($http, $mdDialog) {
 
     $http({
         method: 'GET',
-        url: 'api/profiles/01',
+        url: 'http://localhost:8081/project/101'
     }).then(function successCallback(response) {
-        for (var prop in response.data)  {
-            if (prop != "id" && prop != "UserName" && prop != "Personalinfo" && prop != "Education" && prop != "Skills" && prop != "Work Experiance" && prop != "Certification") { 
-                ctrl.profile[prop] = response.data[prop]; 
-                ctrl.totalProjects = ctrl.profile[prop].length;
+        for (var noOfObjects = 0; noOfObjects< response.data.length; noOfObjects++) {
+            for (var record = 0; record < response.data[noOfObjects].projects.length; record++) {
+
+                ctrl.profile.push(response.data[noOfObjects].projects[record]);
             }
+            
         }
+
     }, function errorCallback(response) {
         console.log('Error accord during Project Section')
     });  
@@ -54,11 +57,11 @@ function projectsectioncardCtrl($http, $mdDialog) {
         $scope.header = header;
 
         if (object != '') {
-            $scope.Project = object.Project;
-            $scope.Duration = object.Duration;
-            $scope.Client = object.Client;
-            $scope.Location = object.Location;
-            $scope.Salary = object.Salary;
+            $scope.Project = object.name;
+            $scope.Duration = object.duration.duration;
+            $scope.Client = object.workplace;
+            $scope.Location = object.location;
+            $scope.Salary = object.income;
         } else {
             $scope.Project = "project";
             $scope.Duration = "some months";
@@ -66,15 +69,6 @@ function projectsectioncardCtrl($http, $mdDialog) {
             $scope.Location = "at some location";
             $scope.Salary = "some salary";
         }
-
-        /*$scope.projectobj={
-          "Project":$scope.Titleofeducation,
-          "Duration":$scope.Duration,
-          "Client":$scope.Client,
-          "Location":$scope.Location,
-          "Salary":$scope.Salary
-
-        }*/
 
         $scope.hide = function() {
             $mdDialog.hide();
@@ -89,18 +83,7 @@ function projectsectioncardCtrl($http, $mdDialog) {
 
         $scope.save = function() {
             console.log($scope.Duration);
-            /*$http({
-              method:'PATCH',
-              url:'api/profiles/01/',
-              'Content-Type':'application/json',
-              data:$scope.projectobj
-            })
-            .then(function successCallback(response) {
-              alert('success');
-            },
-            function errorCallback(response) {
-              alert('error');
-            });*/
+            
         }
     }
 

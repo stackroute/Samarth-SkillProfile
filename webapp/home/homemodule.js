@@ -12,7 +12,6 @@ angular.module('sm-skillprofile')
                         "content@": {
                             templateUrl: '/auth/templates/signinpage.html'
                             // templateUrl: '/skillhome/templates/skillhome.html'
-
                         },
                         "navbar": {
                             templateUrl: '/home/templates/navbar.html',

@@ -6,7 +6,7 @@ angular.module('sm-skillprofile')
         	var skill={};
             return    $http({ 
                     method: "get",
-                     url: "api/profiles/01",
+                     url: "http://localhost:8081/project/101",
                      
                 }).then(function mySucces(response)  { 
                     for (var prop in response.data)  { 

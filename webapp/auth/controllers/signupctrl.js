@@ -1,30 +1,38 @@
-console.log('in');
 angular.module('sm-skillprofile')
-    .controller('signupController', ['$scope', '$http',
-        function($scope, $http) {
-            console.log('inq');
+    .controller('signupController', ['$scope', '$http', 'signupFactory',
+
+        function($scope, $http, signupFactory) {
 
             $scope.add = function() {
-                console.log('in');
-                $scope.user = {
+                 $scope.user = {
                     "name": $scope.name,
                     "phonenumber": $scope.phonenumber,
-                    "email": $scope.email,
-                    "Location": $scope.Location,
-                    "password": $scope.password,
-                    "Confirmpassword": $scope.Confirmpassword
+                    "email": $scope.email
+                    // "Location": $scope.Location,
+                    // "password": $scope.password,
+                    // "Confirmpassword": $scope.Confirmpassword
                 }
-                $http({
-                        method: "POST",
-                        url: 'api/user',
-                        data: $scope.user,
-                        dataType: "json",
-                        'Content-Type': 'application/json'
-                    })
-                    .then(function success(data) {
-                        $scope.user = data;
-                        $scope.user = {};
-                    })
-            };
+                console.log($scope.user);
+                signupFactory.postsignup($scope.user)
+
+                    .then(function(data) {
+                            console.log("data in contrller", data);
+                             // console.log($scope.user,"below favt func");
+                            alert($scope.name + "successfully created account");
+                        },
+                        function(data) {
+                            $scope.error = data.error;
+                        })
+
+                    signupFactory.getsignup($scope.user.phonenumber)
+                    .then(function(data) {
+                            console.log("data in contrller", data);
+                           
+                        },
+                        function(data) {
+                            $scope.error = data.error;
+                        })
+                    
+            }
         }
     ]);

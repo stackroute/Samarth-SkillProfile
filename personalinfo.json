@@ -1,14 +1,15 @@
 {
-	"personalinfo": [{
+	"personalinfo": {
 
 		"name":"Diamond Khanna",
-		"DOB":"24/05/1994",
+		"age":"22",
 		"gender":"male",
-		"maritial status":"unmarried",
+		"DOB":"24/05/1994",
+		"maritialstatus":"unmarried",
 		"contact":"9023650041",
 		"email":"dk24@gmail.com",
 		"address":"7th block,koramangala,bangalore,karnataka",
 		"pincode":"524139"
 		
-	}]
+	}
 }

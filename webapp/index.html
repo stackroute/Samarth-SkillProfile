@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/assets/css/smskillprofile.css">
     <link rel="stylesheet" href="/webcomponents/skillcard/css/skillcard.css">
     <link rel="stylesheet" href="/webcomponents/questionbox/css/questionbox.css">
+    <link rel="stylesheet" href="/webcomponents/sectionpersonalinfocard/css/sectionpersonalinfocard.css">
     <link rel="stylesheet" href="/webcomponents/sectionprojectcard/css/sectionprojectcard.css">
     <link rel="stylesheet" href="/webcomponents/sectionskillcard/css/sectionskillcard.css">
     <link rel="stylesheet" href="/webcomponents/sectionseducationcard/css/sectionseducationcard.css">
@@ -27,7 +28,7 @@
         <div ui-view="content@" class="maincontent" flex="50" flex-sm="100" flex-xs="100"></div>
     </div> -->
     <div layout="row" flex>
-        <div ui-view="content@" class="maincontent" flex="100" flex-sm="100" flex-xs="100"></div>
+        <div ui-view="content" class="maincontent" flex="100" flex-sm="100" flex-xs="100"></div>
     </div>
     <div ui-view="footer"></div>
 </body>
@@ -44,6 +45,7 @@
 <script src="/skillhome/controller/skillhomenavctrl.js"></script>
 <script src="/skillhome/services/sidenavservice.js"></script>
 <script src="/webcomponents/skillcard/skillcard.js"></script>
+<script src="/webcomponents/sectionpersonalinfocard/sectionpersonalinfocard.js"></script>
 <script src="/webcomponents/sectionseducationcard/sectionseducationcard.js"></script>
 <script src="/webcomponents/questionbox/questionbox.js"></script>
 <script src="/webcomponents/questionbox/services/questionboxService.js"></script>
@@ -62,6 +64,8 @@
 <script src="/messages/controller/messagesctrl.js"></script>
 <script src="/auth/controllers/signinctrl.js"></script>
 <script src="/auth/controllers/signupctrl.js"></script>
+<script src="/auth/services/signupfactory.js"></script>
+<script src="/auth/services/signinfactory.js"></script>
 <script src="/auth/authmodule.js"></script>
 <script src="/home/controller/navctrl.js"></script>
 <script src="/home/services/languagechange.js"></script>

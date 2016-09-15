@@ -13,7 +13,7 @@ angular.module('sm-skillprofile')
                             /*controller: 'skillhomecontentctrl',
                             controllerAs: 'skillcontentCtrl'*/
                         },
-                        "sidebar": {
+                        "sidebar@": {
                             templateUrl: '/home/templates/sidebar.html',
                             controller: 'navCtrl'
                         },
@@ -24,33 +24,94 @@ angular.module('sm-skillprofile')
                         }
                     }
                 })
+                .state('skillprofile.searchjob', {
+                    url: '/search',
+                    views: {
+                        "content2@": {
+                            templateUrl: '/skillhome/templates/jobsearch.html'
+                        }
+                    }
+                })
                 .state('skillprofile.workexperience', {
                     url: '/workexperience',
                     views: {
+                        "content2@": {
+                            template: "<my-workexperiencecard></my-workexperiencecard>"
+                        }
+                        ,
                         "content@": {
-                            templateUrl: '/skillhome/templates/workexperience.html'
+                            templateUrl: '/skillhome/templates/skillhomecontent.html'
+                            /*controller: 'skillhomecontentctrl',
+                            controllerAs: 'skillcontentCtrl'*/
+                        },
+                        "sidebar@": {
+                            templateUrl: '/home/templates/sidebar.html',
+                            controller: 'navCtrl'
                         }
                     }
                 }).state('skillprofile.projects', {
                     url: '/projects',
                     views: {
-                        "content@": {
+                        "content2@": {
                             template:"<my-projectsectioncard></my-projectsectioncard>"
             
+                        },
+                        "content@": {
+                            templateUrl: '/skillhome/templates/skillhomecontent.html'
+                            /*controller: 'skillhomecontentctrl',
+                            controllerAs: 'skillcontentCtrl'*/
+                        },
+                        "sidebar@": {
+                            templateUrl: '/home/templates/sidebar.html',
+                            controller: 'navCtrl'
                         }
                     }
                 }).state('skillprofile.skills', {
                     url: '/skills',
                     views: {
-                        "content@": {
+                        "content2@": {
                             template: "<mysection-skill-card></mysection-skill-card>"
+                        },
+                        "content@": {
+                            templateUrl: '/skillhome/templates/skillhomecontent.html'
+                            /*controller: 'skillhomecontentctrl',
+                            controllerAs: 'skillcontentCtrl'*/
+                        },
+                        "sidebar@": {
+                            templateUrl: '/home/templates/sidebar.html',
+                            controller: 'navCtrl'
                         }
                     }
                 }).state('skillprofile.education', {
                     url: '/education',
                     views: {
-                        "content@": {
+                        "content2@": {
                             template:  "<my-educationcard></my-educationcard>"
+                        },
+                        "content@": {
+                            templateUrl: '/skillhome/templates/skillhomecontent.html'
+                            /*controller: 'skillhomecontentctrl',
+                            controllerAs: 'skillcontentCtrl'*/
+                        },
+                        "sidebar@": {
+                            templateUrl: '/home/templates/sidebar.html',
+                            controller: 'navCtrl'
+                        }
+                    }
+                }).state('skillprofile.personalinfo', {
+                    url: '/personalinfo',
+                    views: {
+                        "content2@": {
+                            template:  "<my-personalinfocard></my-personalinfocard>"
+                        },
+                        "content@": {
+                            templateUrl: '/skillhome/templates/skillhomecontent.html'
+                            /*controller: 'skillhomecontentctrl',
+                            controllerAs: 'skillcontentCtrl'*/
+                        },
+                        "sidebar@": {
+                            templateUrl: '/home/templates/sidebar.html',
+                            controller: 'navCtrl'
                         }
                     }
                 })
