@@ -36,4 +36,10 @@
   cursor: pointer;
   border:0;
 }
+.displayAlertMessage{
+    text-align: center;
+    color:red;
+    font-size: 22px;
+}
+
 

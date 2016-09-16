@@ -2,6 +2,13 @@
      .controller('navCtrl', ['$scope', '$mdSidenav', '$rootScope', 'datagenerate',
          function($scope, $mdSidenav, $rootScope, datagenerate) {
 
+
+               $scope.select = function(index) {
+                 $scope.selected = index;
+                 console.log($scope.selected);
+             };
+
+
              $scope.jqueryScrollbarOptions = {
                  "onScroll": function(y, x) {
                      if (y.scroll == y.maxScroll) {
@@ -46,6 +53,7 @@
 
                  }); //end datagenerate
              }
+             
              $scope.loadLangData($scope.selectlang);
 
              $rootScope.$on("lang_changed", function(event, data) {
