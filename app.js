@@ -5,8 +5,7 @@ var morgan = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var jsonServer = require('json-server');
-var mongoose= require('mongoose');
-mongoose.connect('mongodb://localhost:27017/samarthdb');
+
 
 //Express App created
 var app = express();
@@ -27,10 +26,6 @@ app.use(express.static(path.join(__dirname, 'webapp')));
 
 app.use('/api', jsonServer.router('samarthdb.json'));
 
-var authRouter=require('./appserver/auth/authRoutes');
-var userProcessor=require('./appserver/user/userProcessor');
-app.use("/auth",authRouter);
-app.use("/user",userProcessor);
 
 
 app.use(function(req, res, next) {
