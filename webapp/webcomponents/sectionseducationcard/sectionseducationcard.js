@@ -11,37 +11,38 @@ function educationCardController($mdDialog,$http)
 {
   var ctrl=this;
 
-  ctrl.eduDetails={};
+  ctrl.eduDetails=[];
   ctrl.schools=[];
   ctrl.colleges=[];
 
-  $http.get('api/profiles/01').then(function(response) 
-  {
-    for(var prop in response.data)
+$http.get('http://localhost:8081/education/101').then(function(response) 
+{
+    for (var noOfObjects = 0; noOfObjects < response.data[0].qualification.length; noOfObjects++) {
+          for (var record = 0; record < 1; record++) {
+            console.log("PEHLA OBJECT",response.data[0].qualification[noOfObjects]);
+            ctrl.eduDetails.push(response.data[0].qualification[noOfObjects]);
+          }
+    }
+    console.log("EDUCATION OBJECT MAIN",ctrl.eduDetails);
+
+    for(var i=0;i<ctrl.eduDetails.length;i++)
     {
-      if(prop=="Education")
+      if(ctrl.eduDetails[i].institute.type=="school")
       {
-        ctrl.eduDetails[prop]=response.data[prop];
+        ctrl.schools.push(ctrl.eduDetails[i]);
+      }
+      if(ctrl.eduDetails[i].institute.type=="college")
+      {
+        ctrl.eduDetails[i].institute.type="work";
+        ctrl.colleges.push(ctrl.eduDetails[i]);
       }
     }
-    for(var prop in ctrl.eduDetails)
-    {
-      for(var key in ctrl.eduDetails[prop])
-      {
-       for(var k in ctrl.eduDetails[prop][key])
-       {
-        if(ctrl.eduDetails[prop][key][k]=="school")
-        {
-          ctrl.schools.push(ctrl.eduDetails[prop][key]);
-        }
-        if(ctrl.eduDetails[prop][key][k]=="work")
-        {
-          ctrl.colleges.push(ctrl.eduDetails[prop][key]);
-        }
-      }
-    }
-  }
+
+    console.log("schools",ctrl.schools);
+    console.log("colleges",ctrl.colleges);
+
 });
+
 
   ctrl.showAdvanced = function(ev,header,object) {
     $mdDialog.show({
@@ -67,31 +68,25 @@ function educationCardController($mdDialog,$http)
     
     if(object!='')
     {
-      $scope.Titleofeducation=object.Titleofeducation;
-      $scope.Completionyear=object.Completionyear;
-      $scope.Percentage=object.Percentage;
-      $scope.Name=object.Name;
-      $scope.Location=object.Location;
-      $scope.Affiliation=object.Affiliation;
+      $scope.title=object.title;
+      $scope.batch=object.batch;
+      $scope.result=object.outcome.result;
+      $scope.unit=object.outcome.unit;
+      $scope.name=object.institute.name;
+      $scope.location=object.institute.location;
+      $scope.affiliation=object.institute.affiliation;
+      $scope.uniqueID=object._id;
     }
     else
     {
-      $scope.Titleofeducation="course";
-      $scope.Completionyear="some year";
-      $scope.Percentage="some value";
-      $scope.Name="some college";
-      $scope.Location="at some location";
-      $scope.Affiliation="some controlling body";
-    }
-    
-    $scope.eduobj={
-      "Type":"school",
-      "Titleofeducation":$scope.Titleofeducation,
-      "Completionyear":$scope.Completionyear,
-      "Percentage":$scope.Percentage,
-      "Name":$scope.Name,
-      "Location":$scope.Location,
-      "Affiliation":$scope.Affiliation
+
+      $scope.title="course";
+      $scope.batch="some year";
+      $scope.result="some value";
+      $scope.unit=" with some unit";
+      $scope.name="some educational body";
+      $scope.location="some location";
+      $scope.affiliation="some controlling body";
 
     }
 
@@ -106,22 +101,64 @@ function educationCardController($mdDialog,$http)
     };
 
     
-    $scope.save=function()
+    $scope.save=function(header)
     {
-      
-      $http({
-        method:'POST',
+      var education={
+          "record": [{
+                      "title": $scope.title,
+                      "batch": $scope.batch,
+                      "from": "march 2009",
+                      "to": "april 2010",
+                      "academicType": "Metric",
+                      "institute": {
+                        "name": $scope.name,
+                        "type": "school",
+                        "location": $scope.location,
+                        "affiliation": $scope.affiliation,
+                        "metadata": []
+                      },
+                      "outcome": {
+                        "result":$scope.result,
+                        "unit": $scope.unit
+                      }
+          }]
+      }
 
-        url:'api/profiles/01/',
-        'Content-Type':'application/json',
-        data:$scope.eduobj
+      if(header==("Add Education"))
+      {
+        $http({
+        method:'POST',
+        url:'http://localhost:8081/education/101',
+        // 'Content-Type':'application/json',
+        data:education
       })
       .then(function successCallback(response) {
-        alert('success');
+        alert('Education Added');
+        $scope.cancel();
+
       },
       function errorCallback(response) {
         alert('error');
       });
+      }
+      if(header=="Edit School"||header=="Edit College")
+      {
+        $http({
+        method:'PATCH',
+        url:'http://localhost:8081/education/101/'+$scope.title,
+        // 'Content-Type':'application/json',
+        data:education
+      })
+      .then(function successCallback(response) {
+        alert('Education Updated');
+        $scope.cancel();
+
+      },
+      function errorCallback(response) {
+        alert('error');
+      });
+      }
+      
     }
   }
 
