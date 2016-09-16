@@ -12,7 +12,11 @@ function projectsectioncardCtrl($http, $mdDialog) {
     ctrl.totalProjects = 0;
     ctrl.limitval = 4;
     ctrl.increaseLimit = function() {
-        ctrl.limitval = ctrl.limitval + 3;
+        /*if((ctrl.limitval+3)<=ctrl.totalProjects){
+          ctrl.limitval = ctrl.limitval+4;
+        }
+        else*/
+        ctrl.limitval = ctrl.totalProjects;
     }
 
     ctrl.decreaseLimit = function() {
@@ -23,13 +27,15 @@ function projectsectioncardCtrl($http, $mdDialog) {
         method: 'GET',
         url: 'http://localhost:8081/project/101'
     }).then(function successCallback(response) {
-        for (var noOfObjects = 0; noOfObjects< response.data.length; noOfObjects++) {
+        console.log("Length=" + response.data.length)
+        for (var noOfObjects = 0; noOfObjects < response.data.length; noOfObjects++) {
             for (var record = 0; record < response.data[noOfObjects].projects.length; record++) {
 
                 ctrl.profile.push(response.data[noOfObjects].projects[record]);
             }
-            
+
         }
+        ctrl.totalProjects=ctrl.profile.length;
 
     }, function errorCallback(response) {
         console.log('Error accord during Project Section')
@@ -63,11 +69,11 @@ function projectsectioncardCtrl($http, $mdDialog) {
             $scope.Location = object.location;
             $scope.Salary = object.income;
         } else {
-            $scope.Project = "project";
-            $scope.Duration = "some months";
-            $scope.Client = "client";
-            $scope.Location = "at some location";
-            $scope.Salary = "some salary";
+            $scope.Project = "";
+            $scope.Duration = "";
+            $scope.Client = "";
+            $scope.Location = "";
+            $scope.Salary = "";
         }
 
         $scope.hide = function() {
@@ -81,9 +87,53 @@ function projectsectioncardCtrl($http, $mdDialog) {
         };
 
 
-        $scope.save = function() {
-            console.log($scope.Duration);
-            
+        $scope.save = function(header) {
+
+            console.log("Header" + header)
+
+            var projectData = {
+
+                "records": [{
+                    "name": $scope.Project,
+                    "workplace": $scope.Client,
+                    "location": $scope.Location,
+                    "income": $scope.Salary,
+                    "duration": {
+                        "from": "09/08/2016",
+                        "to": "09/11/2016",
+                        "duration": $scope.Duration
+                    },
+                    "skills": ["Javascript"],
+                    "meta": []
+                }]
+            }
+            if (header == "Add Project") {
+                $http({
+                    method: 'POST',
+                    url: 'http://localhost:8081/project/101',
+                    data: projectData,
+                    crossDomain: true
+                }).then(function successCallback(response) {
+                    console.log("After adding project", response.data)
+
+                }, function errorCallback(response) {
+                    console.log('Error accord during Project Section')
+                });  
+            } else {
+
+                $http({
+                    method: 'PATCH',
+                    url: 'http://localhost:8081/project/101/'+object.name,
+                    data: projectData,
+                    crossDomain: true
+                }).then(function successCallback(response) {
+                    console.log("After updating project", response.data)
+
+                }, function errorCallback(response) {
+                    console.log('Error accord during updating Project Section')
+                });  
+
+            }
         }
     }
 
