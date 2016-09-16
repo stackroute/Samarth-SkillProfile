@@ -25,7 +25,7 @@ function projectsectioncardCtrl($http, $mdDialog) {
 
     $http({
         method: 'GET',
-        url: 'http://localhost:8081/project/102'
+        url: 'http://localhost:8081/project/101'
     }).then(function successCallback(response) {
         console.log("Length=" + response.data.length)
         for (var noOfObjects = 0; noOfObjects < response.data.length; noOfObjects++) {
@@ -110,7 +110,7 @@ function projectsectioncardCtrl($http, $mdDialog) {
             if (header == "Add Project") {
                 $http({
                     method: 'POST',
-                    url: 'http://localhost:8081/project/102',
+                    url: 'http://localhost:8081/project/101',
                     data: projectData,
                     crossDomain: true
                 }).then(function successCallback(response) {
@@ -123,7 +123,7 @@ function projectsectioncardCtrl($http, $mdDialog) {
 
                 $http({
                     method: 'PATCH',
-                    url: 'http://localhost:8081/project/102/'+object.name,
+                    url: 'http://localhost:8081/project/101/'+object.name,
                     data: projectData,
                     crossDomain: true
                 }).then(function successCallback(response) {
