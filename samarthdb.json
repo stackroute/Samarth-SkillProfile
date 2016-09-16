@@ -281,6 +281,137 @@
       "Name": "test-operating refrigeration systems",
       "Expertise": "proficient",
       "Experience": 8
+    }, {
+      "type": "secondary",
+      "Name": "installing compressors ",
+      "Expertise": "skilled",
+      "Experience": 6
+    },
+    {
+      "type": "primary",
+      "Name": "riveting",
+      "Expertise": "proficient",
+      "Experience": 4
+    },
+    {
+      "type": "primary",
+      "Name": "checking mechanisms and making adjustments",
+      "Expertise": "expert",
+      "Experience": 8
+    },
+    {
+      "type": "secondary",
+      "Name": "bolting",
+      "Expertise": "expert",
+      "Experience": 6
+    },
+    {
+      "type": "secondary",
+      "Name": "welding and brazing pipes to connect equipment",
+      "Expertise": "expert",
+      "Experience": 9
+    },
+    {
+      "type": "secondary",
+      "Name": "compressors",
+      "Expertise": "begginner",
+      "Experience": 3
+    },
+    {
+      "type": "primary",
+      "Name": "filling with refrigerant",
+      "Expertise": "expert",
+      "Experience": 8
+    },
+    {
+      "type": "secondary",
+      "Name": "drilling holes",
+      "Expertise": "begginner",
+      "Experience": 7
+    },
+    {
+      "type": "primary",
+      "Name": "installing compressors ",
+      "Expertise": "skilled",
+      "Experience": 10
+    },
+    {
+      "type": "secondary",
+      "Name": "recording causes of malfunctioning and action taken",
+      "Expertise": "begginner",
+      "Experience": 3
+    },
+    {
+      "type": "secondary",
+      "Name": "test-operating refrigeration systems",
+      "Expertise": "proficient",
+      "Experience": 8
+    },
+     {
+      "type": "secondary",
+      "Name": "installing compressors ",
+      "Expertise": "skilled",
+      "Experience": 6
+    },
+    {
+      "type": "primary",
+      "Name": "riveting",
+      "Expertise": "proficient",
+      "Experience": 4
+    },
+    {
+      "type": "primary",
+      "Name": "checking mechanisms and making adjustments",
+      "Expertise": "expert",
+      "Experience": 8
+    },
+    {
+      "type": "secondary",
+      "Name": "bolting",
+      "Expertise": "expert",
+      "Experience": 6
+    },
+    {
+      "type": "secondary",
+      "Name": "welding and brazing pipes to connect equipment",
+      "Expertise": "expert",
+      "Experience": 9
+    },
+    {
+      "type": "secondary",
+      "Name": "compressors",
+      "Expertise": "begginner",
+      "Experience": 3
+    },
+    {
+      "type": "primary",
+      "Name": "filling with refrigerant",
+      "Expertise": "expert",
+      "Experience": 8
+    },
+    {
+      "type": "secondary",
+      "Name": "drilling holes",
+      "Expertise": "begginner",
+      "Experience": 7
+    },
+    {
+      "type": "primary",
+      "Name": "installing compressors ",
+      "Expertise": "skilled",
+      "Experience": 10
+    },
+    {
+      "type": "secondary",
+      "Name": "recording causes of malfunctioning and action taken",
+      "Expertise": "begginner",
+      "Experience": 3
+    },
+    {
+      "type": "secondary",
+      "Name": "test-operating refrigeration systems",
+      "Expertise": "proficient",
+      "Experience": 8
     }
   ],
         "Work Experiance": [{
@@ -347,7 +478,7 @@
             "projects": "Jyoti Janjeevan",
             "location": "Mammoth"
         }, {
-            "organisation": "Pasturia",
+           "organisation": "Pasturia",
             "designation": "assistant professor",
             "joiningdate": "29-08-2015",
             "leavingdate": "18-03-2016",

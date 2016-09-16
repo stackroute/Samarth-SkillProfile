@@ -21,6 +21,5 @@ angular.module('sm-skillprofile')
                   return (response.error.message); 
                 });
            }
-
        };
    });

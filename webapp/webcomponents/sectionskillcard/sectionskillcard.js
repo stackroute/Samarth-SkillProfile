@@ -2,30 +2,44 @@ angular.module('sm-skillprofile')
     .component('mysectionSkillCard', {
         templateUrl: 'webcomponents/sectionskillcard/templates/sectionskillcard.html',
         controller: sectionskillcardctrl
+    })
+    .filter('capitalize', function() {
+        return function(input) {
+            return (!!input) ? input.charAt(0).toUpperCase() + input.substr(1).toLowerCase() : '';
+        }
     });
+
 
 function sectionskillcardctrl($http, sectionskillcard, $mdDialog) {
     var ctrl = this;
-         ctrl.limitval=3;
+    ctrl.limitval = 3;
+    ctrl.limitval2 = 3;
     ctrl.value = 40;
     ctrl.skill = {};
     ctrl.primary = [];
     ctrl.secondary = []; 
-    ctrl.increaseLimit=function(){
-        ctrl.limitval=ctrl.primary.length;
+    ctrl.increaseLimit = function() {
+        ctrl.limitval = ctrl.limitval + 3;
     }
 
-    ctrl.decreaseLimit=function(){
-        ctrl.limitval=3;
+    ctrl.decreaseLimit = function() {
+        ctrl.limitval = ctrl.limitval - 3;
+    }
+    ctrl.increaseLimit2 = function() {
+        ctrl.limitval2 = ctrl.limitval2 + 3;
+    }
+
+    ctrl.decreaseLimit2 = function() {
+        ctrl.limitval2 = ctrl.limitval2 - 3;
     }
 
     sectionskillcard.getjson().then(function(result) {
         ctrl.skill = result;
-        console.log("skill object", ctrl.skill);
+        //console.log("skill object", ctrl.skill);
 
         for (var prop in ctrl.skill) {
             for (var key in ctrl.skill[prop]) {
-                // console.log(ctrl.skill[prop][key])
+                console.log(ctrl.skill[prop][key])
                 for (var k in ctrl.skill[prop][key]) {
 
                     if (ctrl.skill[prop][key][k] == "primary") //extracting all skill object containing primary type
@@ -40,7 +54,7 @@ function sectionskillcardctrl($http, sectionskillcard, $mdDialog) {
                 }
             }
         }
-        // console.log(ctrl.primary);
+        console.log(ctrl.primary);
 
     });
 
@@ -68,6 +82,8 @@ function sectionskillcardctrl($http, sectionskillcard, $mdDialog) {
 
     function DialogController($scope, $mdDialog, val, header) {
         $scope.skillObject = val;
+        var skill=val.skillname;
+        console.log("coming", skill);
         $scope.header = header;
         $scope.hide = function() {
             $mdDialog.hide();
@@ -75,10 +91,45 @@ function sectionskillcardctrl($http, sectionskillcard, $mdDialog) {
         $scope.cancel = function() {
             $mdDialog.cancel();
         };
-        $scope.save = function(name, experience, expertise) {
-            console.log("after save", name, experience, expertise);
+        $scope.save = function(skillobj, header) {
+            // console.log("after save", $scope.skillObj);
+            var skillObj = {
+                "skills": [{
+                    "skillname": skillobj.skillname,
+                    "category": skillobj.category,
+                    "expertise": skillobj.expertise,
+                    "experience": skillobj.experience,
+                    "metadata": {}
+                }]
+            };
+            console.log()
+            if (header === "Add Skill") {
+                $http({ 
+                    method: "post",
+                    url: "http://localhost:8081/skill/102",
+                    data: skillObj
+                }).then(function mySucces(response)  { 
+                    // console.log("res",response.data[0])
+                    alert(response);
+                }, function myError(response) { 
+                    alert('error'); 
+                });
+            }
+            if (header === "Edit Skill") {
+                $http({ 
+                    method: "patch",
+                    url: "http://localhost:8081/skill/102/"+skill,
+                    data: skillObj
+                }).then(function mySucces(response)  { 
+                    console.log("res",response)
+                    // alert(response);
+                }, function myError(response) { 
+                    alert('error'); 
+                });
+            }
             $mdDialog.hide();
         };
     }
+
 
 }

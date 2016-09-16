@@ -18,9 +18,17 @@
   margin-bottom: 0.5em;
  }
 
- .card >div>div >a
+ .card >div>div >md-button
  {
- 	cursor: pointer;
+  /*font-weight: bold;*/
+ 	/*cursor: pointer;*/
+ }
+ .card >.items>div >md-button>md-icon
+ {
+  color: black;
+  font-weight: bolder;
+  /*font-size: x-large;*/
+  /*cursor: pointer;*/
  }
  .items{
  	/*margin:30px;*/
