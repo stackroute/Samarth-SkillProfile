@@ -1,3 +1,10 @@
+
+
+
+
+
+
+
 var app=angular
 .module('sm-skillprofile')
 .component('myEducationcard',
@@ -124,5 +131,6 @@ function educationCardController($mdDialog,$http)
       });
     }
   }
+
 
 }

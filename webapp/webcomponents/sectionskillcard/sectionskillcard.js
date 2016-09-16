@@ -109,8 +109,8 @@ function sectionskillcardctrl($http, sectionskillcard, $mdDialog) {
                     url: "http://localhost:8081/skill/102",
                     data: skillObj
                 }).then(function mySucces(response)  { 
-                    // console.log("res",response.data[0])
-                    alert(response);
+                    console.log("res",response.data[0])
+                    // alert(response);
                 }, function myError(response) { 
                     alert('error'); 
                 });

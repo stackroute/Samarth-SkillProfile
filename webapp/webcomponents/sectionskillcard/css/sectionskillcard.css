@@ -1,4 +1,3 @@
-
  .card  >div > md-whiteframe{
  	margin:5px 5px; 
  	
@@ -70,5 +69,6 @@
 		background: linear-gradient(to right, #E5EA5C 3%,white 0%);
 
 /*background-color: #F8F4D2   ;*/
+
 
 }

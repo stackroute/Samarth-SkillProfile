@@ -7,10 +7,7 @@ angular.module('sm-skillprofile')
             return    $http({ 
                     method: "get",
                     url: "http://localhost:8081/skill/102",
-                    // headers: {
-                    // 'Content-Type': 'application/json; charset=utf-8'
-                    // }
-
+                    
                 }).then(function mySucces(response)  { 
                    // console.log("res",response.data[0])
                     for (var prop in response.data[0])  { 

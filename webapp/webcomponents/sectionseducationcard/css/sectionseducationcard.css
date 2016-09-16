@@ -1,18 +1,6 @@
-/*#header , #footer
-{
-	background-color: rgb(63,81,181);
-}
 
-#heading
-{
-	color:white;
-}
-#icon
-{
-	margin-top:0px;
-}
 
-*/
+
 
 #header , #footer
 {
@@ -38,6 +26,9 @@
 	color: grey;
 	line-height: 1.5;
 	word-break: normal;
+}
+#conversationDialogcontent md-input-container{
+	margin-top:30px
 }
 #headingtext
 {
@@ -174,4 +165,9 @@
 	font-size:2.5em;
 	cursor: pointer;
 
+
+}
+
+#savebtn{
+	margin-top: 130px;
 }
