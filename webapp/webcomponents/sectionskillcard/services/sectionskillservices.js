@@ -6,16 +6,18 @@ angular.module('sm-skillprofile')
         	var skill={};
             return    $http({ 
                     method: "get",
-                     url: "http://localhost:8081/project/101",
-                     
+                    url: "http://localhost:8081/skill/102",
+                    
                 }).then(function mySucces(response)  { 
-                    for (var prop in response.data)  { 
-                        if (prop == "Skills")  { 
-                            skill[prop] = response.data[prop]; 
+                   // console.log("res",response.data[0])
+                    for (var prop in response.data[0])  { 
+                        if (prop == "skills")  { 
+
+                            skill[prop] = response.data[0][prop]; 
                         }
                         
                     }
-                   
+                   //console.log("skill",skill);
                      
                     return skill;
 

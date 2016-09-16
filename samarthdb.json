@@ -1,267 +1,419 @@
 {
+
     "profiles": [{
-
-        "id": "101",
+        "id": "01",
         "UserName": "Vicky008",
-        "Personalinfo": [{
-
-
-            "name": "Wolf Kinney",
-            "dob": "16-03-2015",
-            "gender": "male",
-            "maritialstatus": "unmarried",
-            "mothertongue": "english",
-            "email": "wolfkinney@rodeomad.com",
-            "mobile": "+1 (929) 575-3197",
-            "address": "829 Eldert Street, Wright, Wisconsin, 677"
-        }, {
-            "name": "Brown Cote",
-            "dob": "17-05-2016",
-            "gender": "male",
-            "maritialstatus": "unmarried",
-            "mothertongue": "english",
-            "email": "browncote@rodeomad.com",
-            "mobile": "+1 (979) 504-2051",
-            "address": "160 Pershing Loop, Brady, South Dakota, 3932"
-        }, {
-            "name": "Lilly Faulkner",
-            "dob": "08-05-2015",
-            "gender": "female",
-            "maritialstatus": "unmarried",
-            "mothertongue": "english",
-            "email": "lillyfaulkner@rodeomad.com",
-            "mobile": "+1 (981) 577-2012",
-            "address": "978 Hamilton Avenue, Cressey, Virgin Islands, 5219"
-        }, {
-            "name": "Bird Sharpe",
-            "dob": "11-04-2016",
-            "gender": "male",
-            "maritialstatus": "unmarried",
-            "mothertongue": "english",
-            "email": "birdsharpe@rodeomad.com",
-            "mobile": "+1 (964) 466-2003",
-            "address": "242 Varick Avenue, Suitland, Federated States Of Micronesia, 2197"
-        }, {
-            "name": "Tabitha Burks",
-            "dob": "08-07-2016",
-            "gender": "female",
-            "maritialstatus": "unmarried",
-            "mothertongue": "english",
-            "email": "tabithaburks@rodeomad.com",
-            "mobile": "+1 (987) 509-2856",
-            "address": "474 Bennet Court, Tonopah, District Of Columbia, 6369"
-        }, {
-            "name": "Mccormick Rivera",
-            "dob": "07-07-2016",
-            "gender": "male",
-            "maritialstatus": "unmarried",
-            "mothertongue": "english",
-            "email": "mccormickrivera@rodeomad.com",
-            "mobile": "+1 (838) 505-2010",
-            "address": "658 Campus Road, Tilden, Palau, 7190"
-        }, {
-            "name": "Parks Gardner",
-            "dob": "07-03-2015",
-            "gender": "male",
-            "maritialstatus": "unmarried",
-            "mothertongue": "english",
-            "email": "parksgardner@rodeomad.com",
-            "mobile": "+1 (900) 492-3913",
-            "address": "949 Hausman Street, Unionville, West Virginia, 5334"
-        }, {
-            "name": "Elisabeth Best",
-            "dob": "18-01-2015",
-            "gender": "female",
-            "maritialstatus": "unmarried",
-            "mothertongue": "english",
-            "email": "elisabethbest@rodeomad.com",
-            "mobile": "+1 (996) 510-3314",
-            "address": "987 Ridgewood Avenue, Barstow, Florida, 4429"
-        }, {
-            "name": "Tamra Mcfarland",
-            "dob": "25-03-2015",
-            "gender": "female",
-            "email": "tamramcfarland@rodeomad.com",
-            "mobile": "+1 (938) 575-3083",
-            "address": "605 Garden Street, Stagecoach, Kentucky, 5625"
-        }, {
-            "name": "Stevens Sloan",
-            "dob": "21-02-2015",
-            "gender": "male",
-            "email": "stevenssloan@rodeomad.com",
-            "mobile": "+1 (939) 442-2747",
-            "address": "728 Rockwell Place, Brazos, Kansas, 2493"
-        }, {
-            "name": "Amelia Gibbs",
-            "dob": "24-06-2014",
-            "gender": "female",
-            "email": "ameliagibbs@rodeomad.com",
-            "mobile": "+1 (817) 502-3312",
-            "address": "197 Judge Street, Gila, Alabama, 2148"
-        }, {
-            "name": "Douglas Moss",
-            "dob": "24-01-2014",
-            "gender": "male",
-            "email": "douglasmoss@rodeomad.com",
-            "mobile": "+1 (995) 501-2123",
-            "address": "423 Bayview Avenue, Welda, Utah, 7045"
-        }, {
-            "name": "Denise Burt",
-            "dob": "05-08-2015",
-            "gender": "female",
-            "email": "deniseburt@rodeomad.com",
-            "mobile": "+1 (915) 454-2780",
-            "address": "480 Knight Court, Greensburg, Michigan, 5929"
-        }, {
-            "name": "Stephens Goodman",
-            "dob": "18-05-2014",
-            "gender": "male",
-            "email": "stephensgoodman@rodeomad.com",
-            "mobile": "+1 (808) 407-3878",
-            "address": "399 Erasmus Street, Whitestone, New York, 9365"
-        }, {
-            "name": "Noelle Cortez",
-            "dob": "27-07-2016",
-            "gender": "female",
-            "email": "noellecortez@rodeomad.com",
-            "mobile": "+1 (943) 545-3445",
-            "address": "522 Kossuth Place, Ironton, Alaska, 6399"
-        }, {
-            "name": "Mcdowell Sparks",
-            "dob": "20-09-2015",
-            "gender": "male",
-            "email": "mcdowellsparks@rodeomad.com",
-            "mobile": "+1 (997) 508-3073",
-            "address": "445 Wyona Street, Baker, California, 9674"
-        }, {
-            "name": "Benjamin Hammond",
-            "dob": "09-07-2015",
-            "gender": "male",
-            "email": "benjaminhammond@rodeomad.com",
-            "mobile": "+1 (908) 490-2306",
-            "address": "327 Division Place, Limestone, Minnesota, 1147"
-        }, {
-            "name": "Victoria Caldwell",
-            "dob": "04-02-2014",
-            "gender": "female",
-            "email": "victoriacaldwell@rodeomad.com",
-            "mobile": "+1 (865) 552-3587",
-            "address": "137 King Street, Troy, Colorado, 4585"
-        }, {
-            "name": "Cervantes Mcdonald",
-            "dob": "01-10-2014",
-            "gender": "male",
-            "email": "cervantesmcdonald@rodeomad.com",
-            "mobile": "+1 (892) 442-2536",
-            "address": "348 Fleet Place, Bethpage, Maine, 9086"
-        }, {
-            "name": "Solis Klein",
-            "dob": "21-03-2015",
-            "gender": "male",
-            "email": "solisklein@rodeomad.com",
-            "mobile": "+1 (849) 520-3561",
-            "address": "504 Centre Street, Tuskahoma, Maryland, 1061"
-        }, {
-            "name": "Haynes Jimenez",
-            "dob": "04-05-2015",
-            "gender": "male",
-            "email": "haynesjimenez@rodeomad.com",
-            "mobile": "+1 (934) 483-2327",
-            "address": "636 Dewitt Avenue, Alleghenyville, Arizona, 5043"
-        }],
-        "Education": [{
+        "Personalinfo": [
+    {
+      "name": "Wolf Kinney",
+      "dob": "16-03-2015",
+      "gender": "male",
+      "email": "wolfkinney@rodeomad.com",
+      "mobile": "+1 (929) 575-3197",
+      "address": "829 Eldert Street, Wright, Wisconsin, 677"
+    },
+    {
+      "name": "Brown Cote",
+      "dob": "17-05-2016",
+      "gender": "male",
+      "email": "browncote@rodeomad.com",
+      "mobile": "+1 (979) 504-2051",
+      "address": "160 Pershing Loop, Brady, South Dakota, 3932"
+    },
+    {
+      "name": "Lilly Faulkner",
+      "dob": "08-05-2015",
+      "gender": "female",
+      "email": "lillyfaulkner@rodeomad.com",
+      "mobile": "+1 (981) 577-2012",
+      "address": "978 Hamilton Avenue, Cressey, Virgin Islands, 5219"
+    },
+    {
+      "name": "Bird Sharpe",
+      "dob": "11-04-2016",
+      "gender": "male",
+      "email": "birdsharpe@rodeomad.com",
+      "mobile": "+1 (964) 466-2003",
+      "address": "242 Varick Avenue, Suitland, Federated States Of Micronesia, 2197"
+    },
+    {
+      "name": "Tabitha Burks",
+      "dob": "08-07-2016",
+      "gender": "female",
+      "email": "tabithaburks@rodeomad.com",
+      "mobile": "+1 (987) 509-2856",
+      "address": "474 Bennet Court, Tonopah, District Of Columbia, 6369"
+    },
+    {
+      "name": "Mccormick Rivera",
+      "dob": "07-07-2016",
+      "gender": "male",
+      "email": "mccormickrivera@rodeomad.com",
+      "mobile": "+1 (838) 505-2010",
+      "address": "658 Campus Road, Tilden, Palau, 7190"
+    },
+    {
+      "name": "Parks Gardner",
+      "dob": "07-03-2015",
+      "gender": "male",
+      "email": "parksgardner@rodeomad.com",
+      "mobile": "+1 (900) 492-3913",
+      "address": "949 Hausman Street, Unionville, West Virginia, 5334"
+    },
+    {
+      "name": "Elisabeth Best",
+      "dob": "18-01-2015",
+      "gender": "female",
+      "email": "elisabethbest@rodeomad.com",
+      "mobile": "+1 (996) 510-3314",
+      "address": "987 Ridgewood Avenue, Barstow, Florida, 4429"
+    },
+    {
+      "name": "Tamra Mcfarland",
+      "dob": "25-03-2015",
+      "gender": "female",
+      "email": "tamramcfarland@rodeomad.com",
+      "mobile": "+1 (938) 575-3083",
+      "address": "605 Garden Street, Stagecoach, Kentucky, 5625"
+    },
+    {
+      "name": "Stevens Sloan",
+      "dob": "21-02-2015",
+      "gender": "male",
+      "email": "stevenssloan@rodeomad.com",
+      "mobile": "+1 (939) 442-2747",
+      "address": "728 Rockwell Place, Brazos, Kansas, 2493"
+    },
+    {
+      "name": "Amelia Gibbs",
+      "dob": "24-06-2014",
+      "gender": "female",
+      "email": "ameliagibbs@rodeomad.com",
+      "mobile": "+1 (817) 502-3312",
+      "address": "197 Judge Street, Gila, Alabama, 2148"
+    },
+    {
+      "name": "Douglas Moss",
+      "dob": "24-01-2014",
+      "gender": "male",
+      "email": "douglasmoss@rodeomad.com",
+      "mobile": "+1 (995) 501-2123",
+      "address": "423 Bayview Avenue, Welda, Utah, 7045"
+    },
+    {
+      "name": "Denise Burt",
+      "dob": "05-08-2015",
+      "gender": "female",
+      "email": "deniseburt@rodeomad.com",
+      "mobile": "+1 (915) 454-2780",
+      "address": "480 Knight Court, Greensburg, Michigan, 5929"
+    },
+    {
+      "name": "Stephens Goodman",
+      "dob": "18-05-2014",
+      "gender": "male",
+      "email": "stephensgoodman@rodeomad.com",
+      "mobile": "+1 (808) 407-3878",
+      "address": "399 Erasmus Street, Whitestone, New York, 9365"
+    },
+    {
+      "name": "Noelle Cortez",
+      "dob": "27-07-2016",
+      "gender": "female",
+      "email": "noellecortez@rodeomad.com",
+      "mobile": "+1 (943) 545-3445",
+      "address": "522 Kossuth Place, Ironton, Alaska, 6399"
+    },
+    {
+      "name": "Mcdowell Sparks",
+      "dob": "20-09-2015",
+      "gender": "male",
+      "email": "mcdowellsparks@rodeomad.com",
+      "mobile": "+1 (997) 508-3073",
+      "address": "445 Wyona Street, Baker, California, 9674"
+    },
+    {
+      "name": "Benjamin Hammond",
+      "dob": "09-07-2015",
+      "gender": "male",
+      "email": "benjaminhammond@rodeomad.com",
+      "mobile": "+1 (908) 490-2306",
+      "address": "327 Division Place, Limestone, Minnesota, 1147"
+    },
+    {
+      "name": "Victoria Caldwell",
+      "dob": "04-02-2014",
+      "gender": "female",
+      "email": "victoriacaldwell@rodeomad.com",
+      "mobile": "+1 (865) 552-3587",
+      "address": "137 King Street, Troy, Colorado, 4585"
+    },
+    {
+      "name": "Cervantes Mcdonald",
+      "dob": "01-10-2014",
+      "gender": "male",
+      "email": "cervantesmcdonald@rodeomad.com",
+      "mobile": "+1 (892) 442-2536",
+      "address": "348 Fleet Place, Bethpage, Maine, 9086"
+    },
+    {
+      "name": "Solis Klein",
+      "dob": "21-03-2015",
+      "gender": "male",
+      "email": "solisklein@rodeomad.com",
+      "mobile": "+1 (849) 520-3561",
+      "address": "504 Centre Street, Tuskahoma, Maryland, 1061"
+    },
+    {
+      "name": "Haynes Jimenez",
+      "dob": "04-05-2015",
+      "gender": "male",
+      "email": "haynesjimenez@rodeomad.com",
+      "mobile": "+1 (934) 483-2327",
+      "address": "636 Dewitt Avenue, Alleghenyville, Arizona, 5043"
+    }
+  ],
+       "Education": [{
             "Type": "school",
-            "Titleofeducation": "10th",
+            "Titleofeducation":"10th",
             "Name": "Desouza school",
             "Affiliation": "ICSE",
             "From": 2009,
             "Completionyear": 2010,
-            "Location": "Kolkata",
+            "Location":"Kolkata",
             "Percentage": "70%"
-        }, {
+        },
+        {
             "Type": "school",
-            "Titleofeducation": "12th",
+            "Titleofeducation":"12th",
             "Name": "St xavier school",
             "Affiliation": "ICSE",
             "From": 1998,
             "Completionyear": 2012,
-            "Location": "Bangalore",
+            "Location":"Bangalore",
             "Percentage": "89%"
-        }, {
+        },
+    {
             "Type": "work",
-            "Titleofeducation": "B.TECH",
+            "Titleofeducation":"B.TECH",
             "Name": "CGC College",
             "Affiliation": "Punjab University",
             "From": 1998,
             "Completionyear": 2016,
-            "Location": "Jhanjeri",
+            "Location":"Jhanjeri",
             "Percentage": "74%"
-        }, {
+        },
+    {
             "Type": "work",
-            "Titleofeducation": "M.TECH",
+            "Titleofeducation":"M.TECH",
             "Name": "UIET",
             "Affiliation": "Punjab University",
             "From": 1998,
             "Completionyear": 2018,
-            "Location": "Chandigarh",
+            "Location":"Chandigarh",
             "Percentage": "81%"
         }],
-        "Skills": [{
-            "type": "secondary",
-            "Name": "installing compressors ",
-            "Expertise": "skilled",
-            "Experience": 6
-        }, {
-            "type": "primary",
-            "Name": "riveting",
-            "Expertise": "proficient",
-            "Experience": 4
-        }, {
-            "type": "primary",
-            "Name": "checking mechanisms and making adjustments",
-            "Expertise": "expert",
-            "Experience": 8
-        }, {
-            "type": "secondary",
-            "Name": "bolting",
-            "Expertise": "expert",
-            "Experience": 6
-        }, {
-            "type": "secondary",
-            "Name": "welding and brazing pipes to connect equipment",
-            "Expertise": "expert",
-            "Experience": 9
-        }, {
-            "type": "secondary",
-            "Name": "compressors",
-            "Expertise": "begginner",
-            "Experience": 3
-        }, {
-            "type": "primary",
-            "Name": "filling with refrigerant",
-            "Expertise": "expert",
-            "Experience": 8
-        }, {
-            "type": "secondary",
-            "Name": "drilling holes",
-            "Expertise": "begginner",
-            "Experience": 7
-        }, {
-            "type": "primary",
-            "Name": "installing compressors ",
-            "Expertise": "skilled",
-            "Experience": 10
-        }, {
-            "type": "secondary",
-            "Name": "recording causes of malfunctioning and action taken",
-            "Expertise": "begginner",
-            "Experience": 3
-        }, {
-            "type": "secondary",
-            "Name": "test-operating refrigeration systems",
-            "Expertise": "proficient",
-            "Experience": 8
-        }],
+
+
+     "Skills": [
+    {
+      "type": "secondary",
+      "Name": "installing compressors ",
+      "Expertise": "skilled",
+      "Experience": 6
+    },
+    {
+      "type": "primary",
+      "Name": "riveting",
+      "Expertise": "proficient",
+      "Experience": 4
+    },
+    {
+      "type": "primary",
+      "Name": "checking mechanisms and making adjustments",
+      "Expertise": "expert",
+      "Experience": 8
+    },
+    {
+      "type": "secondary",
+      "Name": "bolting",
+      "Expertise": "expert",
+      "Experience": 6
+    },
+    {
+      "type": "secondary",
+      "Name": "welding and brazing pipes to connect equipment",
+      "Expertise": "expert",
+      "Experience": 9
+    },
+    {
+      "type": "secondary",
+      "Name": "compressors",
+      "Expertise": "begginner",
+      "Experience": 3
+    },
+    {
+      "type": "primary",
+      "Name": "filling with refrigerant",
+      "Expertise": "expert",
+      "Experience": 8
+    },
+    {
+      "type": "secondary",
+      "Name": "drilling holes",
+      "Expertise": "begginner",
+      "Experience": 7
+    },
+    {
+      "type": "primary",
+      "Name": "installing compressors ",
+      "Expertise": "skilled",
+      "Experience": 10
+    },
+    {
+      "type": "secondary",
+      "Name": "recording causes of malfunctioning and action taken",
+      "Expertise": "begginner",
+      "Experience": 3
+    },
+    {
+      "type": "secondary",
+      "Name": "test-operating refrigeration systems",
+      "Expertise": "proficient",
+      "Experience": 8
+    }, {
+      "type": "secondary",
+      "Name": "installing compressors ",
+      "Expertise": "skilled",
+      "Experience": 6
+    },
+    {
+      "type": "primary",
+      "Name": "riveting",
+      "Expertise": "proficient",
+      "Experience": 4
+    },
+    {
+      "type": "primary",
+      "Name": "checking mechanisms and making adjustments",
+      "Expertise": "expert",
+      "Experience": 8
+    },
+    {
+      "type": "secondary",
+      "Name": "bolting",
+      "Expertise": "expert",
+      "Experience": 6
+    },
+    {
+      "type": "secondary",
+      "Name": "welding and brazing pipes to connect equipment",
+      "Expertise": "expert",
+      "Experience": 9
+    },
+    {
+      "type": "secondary",
+      "Name": "compressors",
+      "Expertise": "begginner",
+      "Experience": 3
+    },
+    {
+      "type": "primary",
+      "Name": "filling with refrigerant",
+      "Expertise": "expert",
+      "Experience": 8
+    },
+    {
+      "type": "secondary",
+      "Name": "drilling holes",
+      "Expertise": "begginner",
+      "Experience": 7
+    },
+    {
+      "type": "primary",
+      "Name": "installing compressors ",
+      "Expertise": "skilled",
+      "Experience": 10
+    },
+    {
+      "type": "secondary",
+      "Name": "recording causes of malfunctioning and action taken",
+      "Expertise": "begginner",
+      "Experience": 3
+    },
+    {
+      "type": "secondary",
+      "Name": "test-operating refrigeration systems",
+      "Expertise": "proficient",
+      "Experience": 8
+    },
+     {
+      "type": "secondary",
+      "Name": "installing compressors ",
+      "Expertise": "skilled",
+      "Experience": 6
+    },
+    {
+      "type": "primary",
+      "Name": "riveting",
+      "Expertise": "proficient",
+      "Experience": 4
+    },
+    {
+      "type": "primary",
+      "Name": "checking mechanisms and making adjustments",
+      "Expertise": "expert",
+      "Experience": 8
+    },
+    {
+      "type": "secondary",
+      "Name": "bolting",
+      "Expertise": "expert",
+      "Experience": 6
+    },
+    {
+      "type": "secondary",
+      "Name": "welding and brazing pipes to connect equipment",
+      "Expertise": "expert",
+      "Experience": 9
+    },
+    {
+      "type": "secondary",
+      "Name": "compressors",
+      "Expertise": "begginner",
+      "Experience": 3
+    },
+    {
+      "type": "primary",
+      "Name": "filling with refrigerant",
+      "Expertise": "expert",
+      "Experience": 8
+    },
+    {
+      "type": "secondary",
+      "Name": "drilling holes",
+      "Expertise": "begginner",
+      "Experience": 7
+    },
+    {
+      "type": "primary",
+      "Name": "installing compressors ",
+      "Expertise": "skilled",
+      "Experience": 10
+    },
+    {
+      "type": "secondary",
+      "Name": "recording causes of malfunctioning and action taken",
+      "Expertise": "begginner",
+      "Experience": 3
+    },
+    {
+      "type": "secondary",
+      "Name": "test-operating refrigeration systems",
+      "Expertise": "proficient",
+      "Experience": 8
+    }
+  ],
         "Work Experiance": [{
             "organisation": "Bedlam",
             "designation": "junior salesman",
@@ -326,7 +478,7 @@
             "projects": "Jyoti Janjeevan",
             "location": "Mammoth"
         }, {
-            "organisation": "Pasturia",
+           "organisation": "Pasturia",
             "designation": "assistant professor",
             "joiningdate": "29-08-2015",
             "leavingdate": "18-03-2016",
@@ -760,138 +912,434 @@
             "projects": "Jyoti Janjeevan",
             "location": "Kaka"
         }],
-        "Projects": [{
-            "name": "Franklin Brewer",
-            "workplace": "Krier Place",
-            "location": "Sexton",
-            "income": 443620.3644,
-            "skills": [
-                "Nikki"
-            ],
-            "duration": {
-                "from": "2014-06-02",
-                "to": "2015-05-11",
-                "duration": "33 months"
-            }
-        }, {
-            "name": "Katherine Vaughn",
-            "workplace": "Mill Lane",
-            "location": "Winchester",
-            "income": 373404.1817,
-            "skills": [
-                "Marla"
-            ],
-            "duration": {
-                "from": "2016-01-27",
-                "to": "2016-01-30",
-                "duration": "12 months"
-            }
-        }, {
-            "name": "Dee Kelly",
-            "workplace": "Gotham Avenue",
-            "location": "Hollins",
-            "income": 775508.9747,
-            "skills": [
-                "Aileen"
-            ],
-            "duration": {
-                "from": "2016-01-27",
-                "to": "2016-01-09",
-                "duration": "57 months"
-            }
-        }, {
-            "name": "May Weiss",
-            "workplace": "Opal Court",
-            "location": "Monument",
-            "income": 898454.2066,
-            "skills": [
-                "Luann"
-            ],
-            "duration": {
-                "from": "2016-07-29",
-                "to": "2016-07-14",
-                "duration": "16 months"
-            }
-        }, {
-            "name": "Huff Miranda",
-            "workplace": "Irwin Street",
-            "location": "Frystown",
-            "income": 155064.0702,
-            "skills": [
-                "Avis"
-            ],
-            "duration": {
-                "from": "2015-01-31",
-                "to": "2014-11-29",
-                "duration": "7 months"
-            }
-        }, {
-            "name": "Randi Hoover",
-            "workplace": "Granite Street",
-            "location": "Venice",
-            "income": 127105.4973,
-            "skills": [
-                "Beth"
-            ],
-            "duration": {
-                "from": "2016-03-21",
-                "to": "2015-09-06",
-                "duration": "59 months"
-            }
-        }, {
-            "name": "Glenna Leon",
-            "workplace": "Johnson Avenue",
-            "location": "Brule",
-            "income": 354641.0122,
-            "skills": [
-                "Prince"
-            ],
-            "duration": {
-                "from": "2015-03-07",
-                "to": "2014-04-09",
-                "duration": "4 months"
-            }
-        }, {
-            "name": "Cherry Wood",
-            "workplace": "Tiffany Place",
-            "location": "Unionville",
-            "income": 523209.1587,
-            "skills": [
-                "Schneider"
-            ],
-            "duration": {
-                "from": "2015-01-15",
-                "to": "2014-08-05",
-                "duration": "20 months"
-            }
-        }, {
-            "name": "Nichole Le",
-            "workplace": "Gelston Avenue",
-            "location": "Volta",
-            "income": 642878.4696,
-            "skills": [
-                "Natalia"
-            ],
-            "duration": {
-                "from": "2014-06-30",
-                "to": "2016-08-24",
-                "duration": "99 months"
-            }
-        }, {
-            "name": "Holland Mckee",
-            "workplace": "Murdock Court",
-            "location": "Bourg",
-            "income": 154710.384,
-            "skills": [
-                "Robles"
-            ],
-            "duration": {
-                "from": "2016-09-13",
-                "to": "2015-09-02",
-                "duration": "79 months"
-            }
-        }]
 
+        "Projects": [{
+            "Project": "Manrega",
+            "Duration": "13 months",
+            "Client": "Remotion",
+            "Location": "Draper South Dakota",
+            "Salary": "57760 Rs"
+        }, {
+            "Project": "General Purpose Cast Iron Worm Gearboxes and Automation of Mechanical gear",
+            "Duration": "67 months",
+            "Client": "Nspire",
+            "Location": "Manchester Alabama",
+            "Salary": "21443 Rs"
+        }, {
+            "Project": "Manrega",
+            "Duration": "27 months",
+            "Client": "Octocore",
+            "Location": "Bendon Virginia",
+            "Salary": "74315 Rs"
+        }, {
+            "Project": "General Purpose Cast Iron Worm Gearboxes and Automation of Mechanical gear",
+            "Duration": "78 months",
+            "Client": "Vicon",
+            "Location": "Fowlerville Michigan",
+            "Salary": "18136 Rs"
+        }, {
+            "Project": "Precision Gearboxes for Small NEMA Motors",
+            "Duration": "49 months",
+            "Client": "Zillacom",
+            "Location": "Boonville Washington",
+            "Salary": "71893 Rs"
+        }, {
+            "Project": "Manrega",
+            "Duration": "23 months",
+            "Client": "Senmao",
+            "Location": "Maplewood Virgin Islands",
+            "Salary": "79460 Rs"
+        }, {
+            "Project": "Lloyds account",
+            "Duration": "34 months",
+            "Client": "Kneedles",
+            "Location": "Wells Federated States Of Micronesia",
+            "Salary": "37848 Rs"
+        }, {
+            "Project": "Manrega",
+            "Duration": "27 months",
+            "Client": "Apexia",
+            "Location": "Kipp Iowa",
+            "Salary": "36927 Rs"
+        }, {
+            "Project": "General Purpose Cast Iron Worm Gearboxes and Automation of Mechanical gear",
+            "Duration": "45 months",
+            "Client": "Idego",
+            "Location": "Dotsero Rhode Island",
+            "Salary": "67324 Rs"
+        }, {
+            "Project": "Precision Gearboxes for Small NEMA Motors",
+            "Duration": "76 months",
+            "Client": "Macronaut",
+            "Location": "Selma Massachusetts",
+            "Salary": "43378 Rs"
+        }, {
+            "Project": "Sarv shiksha abhiyaan",
+            "Duration": "4 months",
+            "Client": "Parleynet",
+            "Location": "Madaket Vermont",
+            "Salary": "28674 Rs"
+        }, {
+            "Project": "Precision Gearboxes for Small NEMA Motors",
+            "Duration": "58 months",
+            "Client": "Recritube",
+            "Location": "Mahtowa Utah",
+            "Salary": "70746 Rs"
+        }, {
+            "Project": "General Purpose Cast Iron Worm Gearboxes and Automation of Mechanical gear",
+            "Duration": "53 months",
+            "Client": "Marketoid",
+            "Location": "Wawona Mississippi",
+            "Salary": "35579 Rs"
+        }, {
+            "Project": "Automation of Mechanical gear and Linear Motion Slides and Actuators",
+            "Duration": "86 months",
+            "Client": "Plasmos",
+            "Location": "Geyserville Puerto Rico",
+            "Salary": "73955 Rs"
+        }, {
+            "Project": "General Purpose Cast Iron Worm Gearboxes and Automation of Mechanical gear",
+            "Duration": "19 months",
+            "Client": "Mantro",
+            "Location": "Jessie Colorado",
+            "Salary": "80347 Rs"
+        }, {
+            "Project": "Lloyds account",
+            "Duration": "84 months",
+            "Client": "Savvy",
+            "Location": "Tioga Oregon",
+            "Salary": "64460 Rs"
+        }, {
+            "Project": "Sarv shiksha abhiyaan",
+            "Duration": "43 months",
+            "Client": "Dancerity",
+            "Location": "Kent Nevada",
+            "Salary": "48869 Rs"
+        }, {
+            "Project": "Jyoti Janjeevan",
+            "Duration": "82 months",
+            "Client": "Bizmatic",
+            "Location": "Hall Hawaii",
+            "Salary": "76114 Rs"
+        }, {
+            "Project": "Lloyds account",
+            "Duration": "92 months",
+            "Client": "Biflex",
+            "Location": "Welda Wisconsin",
+            "Salary": "49330 Rs"
+        }, {
+            "Project": "Jyoti Janjeevan",
+            "Duration": "91 months",
+            "Client": "Digique",
+            "Location": "Ferney Maryland",
+            "Salary": "49551 Rs"
+        }, {
+            "Project": "Minerva",
+            "Duration": "63 months",
+            "Client": "Digigene",
+            "Location": "Grantville North Carolina",
+            "Salary": "97052 Rs"
+        }, {
+            "Project": "Manrega",
+            "Duration": "42 months",
+            "Client": "Mangelica",
+            "Location": "Worton Florida",
+            "Salary": "68329 Rs"
+        }, {
+            "Project": "Manrega",
+            "Duration": "70 months",
+            "Client": "Elpro",
+            "Location": "Robbins Northern Mariana Islands",
+            "Salary": "61310 Rs"
+        }, {
+            "Project": "General Purpose Cast Iron Worm Gearboxes and Automation of Mechanical gear",
+            "Duration": "100 months",
+            "Client": "Bolax",
+            "Location": "Tilden Illinois",
+            "Salary": "56919 Rs"
+        }, {
+            "Project": "Minerva",
+            "Duration": "32 months",
+            "Client": "Printspan",
+            "Location": "Galesville Louisiana",
+            "Salary": "71028 Rs"
+        }, {
+            "Project": "Swachh bharat abhiyan  ",
+            "Duration": "30 months",
+            "Client": "Frenex",
+            "Location": "Bethany North Dakota",
+            "Salary": "22164 Rs"
+        }, {
+            "Project": "Minerva",
+            "Duration": "12 months",
+            "Client": "Zillidium",
+            "Location": "Accoville West Virginia",
+            "Salary": "16764 Rs"
+        }, {
+            "Project": "Minerva",
+            "Duration": "68 months",
+            "Client": "Aquamate",
+            "Location": "Beaverdale Wyoming",
+            "Salary": "68977 Rs"
+        }, {
+            "Project": "Sarv shiksha abhiyaan",
+            "Duration": "95 months",
+            "Client": "Egypto",
+            "Location": "Edenburg Arizona",
+            "Salary": "74408 Rs"
+        }, {
+            "Project": "Sarv shiksha abhiyaan",
+            "Duration": "57 months",
+            "Client": "Bluplanet",
+            "Location": "Snyderville New Mexico",
+            "Salary": "66843 Rs"
+        }, {
+            "Project": "Precision Gearboxes for Small NEMA Motors",
+            "Duration": "39 months",
+            "Client": "Biotica",
+            "Location": "Hatteras Ohio",
+            "Salary": "82819 Rs"
+        }, {
+            "Project": "Sarv shiksha abhiyaan",
+            "Duration": "69 months",
+            "Client": "Geostele",
+            "Location": "Fairfield Maine",
+            "Salary": "78737 Rs"
+        }, {
+            "Project": "General Purpose Cast Iron Worm Gearboxes and Automation of Mechanical gear",
+            "Duration": "59 months",
+            "Client": "Geofarm",
+            "Location": "Hebron Oklahoma",
+            "Salary": "19571 Rs"
+        }, {
+            "Project": "Jyoti Janjeevan",
+            "Duration": "78 months",
+            "Client": "Skybold",
+            "Location": "Gorham District Of Columbia",
+            "Salary": "35044 Rs"
+        }, {
+            "Project": "General Purpose Cast Iron Worm Gearboxes and Automation of Mechanical gear",
+            "Duration": "70 months",
+            "Client": "Elemantra",
+            "Location": "Westwood Palau",
+            "Salary": "38044 Rs"
+        }, {
+            "Project": "Minerva",
+            "Duration": "95 months",
+            "Client": "Ecratic",
+            "Location": "Veyo Georgia",
+            "Salary": "39243 Rs"
+        }, {
+            "Project": "Jyoti Janjeevan",
+            "Duration": "78 months",
+            "Client": "Collaire",
+            "Location": "Vallonia Connecticut",
+            "Salary": "47968 Rs"
+        }, {
+            "Project": "Lloyds account",
+            "Duration": "91 months",
+            "Client": "Animalia",
+            "Location": "Brady Marshall Islands",
+            "Salary": "70648 Rs"
+        }, {
+            "Project": "Sarv shiksha abhiyaan",
+            "Duration": "62 months",
+            "Client": "Martgo",
+            "Location": "Fillmore New Jersey",
+            "Salary": "73630 Rs"
+        }, {
+            "Project": "Sarv shiksha abhiyaan",
+            "Duration": "34 months",
+            "Client": "Permadyne",
+            "Location": "Crown Guam",
+            "Salary": "99258 Rs"
+        }, {
+            "Project": "Automation of Mechanical gear and Linear Motion Slides and Actuators",
+            "Duration": "39 months",
+            "Client": "Everest",
+            "Location": "Tolu Kentucky",
+            "Salary": "91609 Rs"
+        }, {
+            "Project": "Precision Gearboxes for Small NEMA Motors",
+            "Duration": "18 months",
+            "Client": "Rodemco",
+            "Location": "Germanton Arkansas",
+            "Salary": "63055 Rs"
+        }, {
+            "Project": "Swachh bharat abhiyan  ",
+            "Duration": "9 months",
+            "Client": "Keeg",
+            "Location": "Colton Texas",
+            "Salary": "83281 Rs"
+        }, {
+            "Project": "Minerva",
+            "Duration": "45 months",
+            "Client": "Terragen",
+            "Location": "Shawmut Kansas",
+            "Salary": "44549 Rs"
+        }, {
+            "Project": "Jyoti Janjeevan",
+            "Duration": "16 months",
+            "Client": "Equicom",
+            "Location": "Marne Tennessee",
+            "Salary": "58195 Rs"
+        }, {
+            "Project": "Jyoti Janjeevan",
+            "Duration": "20 months",
+            "Client": "Dognosis",
+            "Location": "Neahkahnie Idaho",
+            "Salary": "49228 Rs"
+        }, {
+            "Project": "Automation of Mechanical gear and Linear Motion Slides and Actuators",
+            "Duration": "60 months",
+            "Client": "Turnabout",
+            "Location": "Ilchester Minnesota",
+            "Salary": "88432 Rs"
+        }, {
+            "Project": "Sarv shiksha abhiyaan",
+            "Duration": "96 months",
+            "Client": "Quinex",
+            "Location": "Shaft New York",
+            "Salary": "62713 Rs"
+        }, {
+            "Project": "General Purpose Cast Iron Worm Gearboxes and Automation of Mechanical gear",
+            "Duration": "47 months",
+            "Client": "Zolarex",
+            "Location": "Coloma South Carolina",
+            "Salary": "96682 Rs"
+        }, {
+            "Project": "Swachh bharat abhiyan  ",
+            "Duration": "30 months",
+            "Client": "Vortexaco",
+            "Location": "Hoagland Missouri",
+            "Salary": "90854 Rs"
+        }, {
+            "Project": "Manrega",
+            "Duration": "55 months",
+            "Client": "Elentrix",
+            "Location": "Imperial Nebraska",
+            "Salary": "84847 Rs"
+        }, {
+            "Project": "Minerva",
+            "Duration": "43 months",
+            "Client": "Earwax",
+            "Location": "Whitewater Indiana",
+            "Salary": "18649 Rs"
+        }, {
+            "Project": "Precision Gearboxes for Small NEMA Motors",
+            "Duration": "51 months",
+            "Client": "Zilladyne",
+            "Location": "Onton California",
+            "Salary": "62770 Rs"
+        }, {
+            "Project": "General Purpose Cast Iron Worm Gearboxes and Automation of Mechanical gear",
+            "Duration": "95 months",
+            "Client": "Klugger",
+            "Location": "Bagtown Alaska",
+            "Salary": "70662 Rs"
+        }, {
+            "Project": "Automation of Mechanical gear and Linear Motion Slides and Actuators",
+            "Duration": "20 months",
+            "Client": "Earthplex",
+            "Location": "Drytown Montana",
+            "Salary": "93497 Rs"
+        }, {
+            "Project": "Lloyds account",
+            "Duration": "75 months",
+            "Client": "Remold",
+            "Location": "Valmy New Hampshire",
+            "Salary": "90350 Rs"
+        }, {
+            "Project": "Swachh bharat abhiyan  ",
+            "Duration": "48 months",
+            "Client": "Gadtron",
+            "Location": "Topaz Delaware",
+            "Salary": "60375 Rs"
+        }, {
+            "Project": "General Purpose Cast Iron Worm Gearboxes and Automation of Mechanical gear",
+            "Duration": "43 months",
+            "Client": "Chorizon",
+            "Location": "Bradenville Pennsylvania",
+            "Salary": "92930 Rs"
+        }, {
+            "Project": "Swachh bharat abhiyan  ",
+            "Duration": "80 months",
+            "Client": "Netility",
+            "Location": "Stockdale South Dakota",
+            "Salary": "75640 Rs"
+        }, {
+            "Project": "Swachh bharat abhiyan  ",
+            "Duration": "84 months",
+            "Client": "Oronoko",
+            "Location": "Coral Alabama",
+            "Salary": "41546 Rs"
+        }, {
+            "Project": "Precision Gearboxes for Small NEMA Motors",
+            "Duration": "39 months",
+            "Client": "Balooba",
+            "Location": "Warren Virginia",
+            "Salary": "57356 Rs"
+        }, {
+            "Project": "Precision Gearboxes for Small NEMA Motors",
+            "Duration": "26 months",
+            "Client": "Cincyr",
+            "Location": "Axis Michigan",
+            "Salary": "48760 Rs"
+        }, {
+            "Project": "Automation of Mechanical gear and Linear Motion Slides and Actuators",
+            "Duration": "14 months",
+            "Client": "Brainclip",
+            "Location": "Corinne Washington",
+            "Salary": "55342 Rs"
+        }, {
+            "Project": "Swachh bharat abhiyan  ",
+            "Duration": "95 months",
+            "Client": "Zoinage",
+            "Location": "Morriston Virgin Islands",
+            "Salary": "65378 Rs"
+        }, {
+            "Project": "Jyoti Janjeevan",
+            "Duration": "58 months",
+            "Client": "Urbanshee",
+            "Location": "Wheaton Federated States Of Micronesia",
+            "Salary": "42507 Rs"
+        }, {
+            "Project": "General Purpose Cast Iron Worm Gearboxes and Automation of Mechanical gear",
+            "Duration": "43 months",
+            "Client": "Tubesys",
+            "Location": "Riegelwood Iowa",
+            "Salary": "76597 Rs"
+        }, {
+            "Project": "General Purpose Cast Iron Worm Gearboxes and Automation of Mechanical gear",
+            "Duration": "72 months",
+            "Client": "Homelux",
+            "Location": "Hayden Rhode Island",
+            "Salary": "84116 Rs"
+        }, {
+            "Project": "Minerva",
+            "Duration": "85 months",
+            "Client": "Maxemia",
+            "Location": "Wanship Massachusetts",
+            "Salary": "73563 Rs"
+        }, {
+            "Project": "Lloyds account",
+            "Duration": "84 months",
+            "Client": "Mediot",
+            "Location": "Sims Vermont",
+            "Salary": "69361 Rs"
+        }, {
+            "Project": "Minerva",
+            "Duration": "63 months",
+            "Client": "Hometown",
+            "Location": "Ellerslie Utah",
+            "Salary": "69872 Rs"
+        }, {
+            "Project": "Manrega",
+            "Duration": "97 months",
+            "Client": "Renovize",
+            "Location": "Jeff Mississippi",
+            "Salary": "16843 Rs"
+        }]
     }, {
         "id": "02",
         "UserName": "Avadhesh",
@@ -2721,6 +3169,7 @@
         }]
     }],
     "sidenavEnglish": [{
+
         "state": "skillprofile.skillhome",
         "title": "Portfolio",
         "icon": "account_circle",
@@ -2730,11 +3179,13 @@
         "title": "Work Experience",
         "icon": "work",
         "seq": 5
+
     }, {
         "state": "skillprofile.projects",
         "title": "Projects",
         "icon": "domain",
         "seq": 4
+
     }, {
         "state": "skillprofile.skills",
         "title": "Skills",
@@ -2745,18 +3196,22 @@
         "title": "Education",
         "icon": "school",
         "seq": 3
+
     }, {
-        "state": "skillprofile.personalinfo",
+        "state": "skillprofile.notifications",
         "title": "Personal info",
         "icon": "person",
         "seq": 6
+
     }, {
         "state": "skillprofile.notifications",
         "title": "Showcase",
         "icon": "dashboard",
         "seq": 7
+
     }],
     "sidenavHindi": [{
+
         "state": "skillprofile.skillhome",
         "title": "पोर्टफोलियो",
         "icon": "account_circle",
@@ -2766,11 +3221,13 @@
         "title": "काम का अनुभव",
         "icon": "work",
         "seq": 5
+
     }, {
         "state": "skillprofile.projects",
         "title": "परियोजनाएं",
         "icon": "domain",
         "seq": 4
+
     }, {
         "state": "skillprofile.skills",
         "title": "कौशल",
@@ -2781,24 +3238,28 @@
         "title": "शिक्षा",
         "icon": "school",
         "seq": 3
+
     }, {
-        "state": "skillprofile.personalinfo",
+        "state": "skillprofile.notifications",
         "title": "व्यक्तिगत जानकारी",
         "icon": "person",
         "seq": 6
+
     }, {
         "state": "skillprofile.notifications",
         "title": "शोकेस",
         "icon": "dashboard",
         "seq": 7
+
     }],
-    "navEnglish": {
-        "header": "Samarth Profile"
+    "navEnglish":{
+        "header":"Samarth Profile"
     },
-    "navHindi": {
-        "header": "समर्थ प्रोफाइल"
+    "navHindi":{
+        "header":"समर्थ प्रोफाइल"
     },
     "userEnglish": [{
+
         "name": "Chandra Kumar Pratap",
         "age": "22",
         "profilepicture": "dk.PNG",
@@ -2813,6 +3274,7 @@
         "maritalstatus": "Unmarried"
     }],
     "userHindi": [{
+
         "name": "चंदन कुमार प्रधान",
         "age": "२२",
         "profilepicture": "dk.PNG",
@@ -2826,5 +3288,4 @@
         "gender": "नर",
         "maritalstatus": "अविवाहित"
     }]
-
 }

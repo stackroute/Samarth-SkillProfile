@@ -6,7 +6,6 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var jsonServer = require('json-server');
 
-
 //Express App created
 var app = express();
 
@@ -25,7 +24,6 @@ app.use(express.static(path.join(__dirname, 'bower_components')));
 app.use(express.static(path.join(__dirname, 'webapp')));
 
 app.use('/api', jsonServer.router('samarthdb.json'));
-
 
 
 app.use(function(req, res, next) {
