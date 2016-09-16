@@ -13,19 +13,36 @@
       <div id="conversationDialogcontent" layout-padding layout-wrap>
         <p layout-wrap>
           I have done my
-          <span id="input1" contenteditable="true"><a>{{Titleofeducation}}</a></span>
+          <md-input-container>
+          <input id="input1" ng-model="title">
+          </md-input-container>
           in 
-          <span id="input1" contenteditable="true"><a>{{Completionyear}}</a></span> <br>
-          with an aggregate percentage of
-          <span id="input1" contenteditable="true"><a>{{Percentage}}</a></span>
+          <md-input-container>
+          <input id="input1" ng-model="batch">
+          </md-input-container>
+          with final score of
+          <md-input-container>
+          <input id="input1" ng-model="result">
+          </md-input-container>
+          <md-input-container>
+          <input id="input1" ng-model="unit">
+          </md-input-container>
           . I did it from
-          <span id="input1" contenteditable="true"><a>{{Name}}</a></span> <br>
+          <md-input-container>
+          <input id="input1" ng-model="name">
+          </md-input-container>
           which is affiliated to
-          <span id="input1" contenteditable="true"><a>{{Affiliation}}</a></span>.
+          <md-input-container>
+          <input id="input1" ng-model="affiliation"><br>
+          </md-input-container>
+          and is located in
+          <md-input-container>
+          <input id="input1" ng-model="location">
+          </md-input-container>
         </p>
       </div>
 
-      <div flex layout="row" layout-align="center center" ng-click="cancel()">
+      <div flex layout="row" layout-align="center center" ng-click="save(header)">
 
           <div id="btntxt" contenteditable="false">
             <a>SAVE DETAILS</a>
