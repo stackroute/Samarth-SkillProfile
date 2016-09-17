@@ -106,7 +106,7 @@ function sectionskillcardctrl($http, sectionskillcard, $mdDialog) {
             if (header === "Add Skill") {
                 $http({ 
                     method: "post",
-                    url: "http://localhost:8081/skill/102",
+                    url: "http://localhost:8081/skill/101",
                     data: skillObj
                 }).then(function mySucces(response)  { 
                     console.log("res",response.data[0])
@@ -118,7 +118,7 @@ function sectionskillcardctrl($http, sectionskillcard, $mdDialog) {
             if (header === "Edit Skill") {
                 $http({ 
                     method: "patch",
-                    url: "http://localhost:8081/skill/102/"+skill,
+                    url: "http://localhost:8081/skill/101/"+skill,
                     data: skillObj
                 }).then(function mySucces(response)  { 
                     console.log("res",response)
