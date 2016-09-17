@@ -4,7 +4,7 @@ angular.module('sm-skillprofile')
             postsignup: function(user) {
                 return $q(function(resolve, reject) {
                     console.log(user, "in factory post method");
-                    $http.post('/user/signup/'+user.phonenumber ,user)
+                    $http.post('http://localhost:8081/user/signup/'+user.phonenumber ,user)
                         .then(function(res) {
                                 console.log("response in factory", res);
                                 resolve(res.data);
@@ -17,7 +17,7 @@ angular.module('sm-skillprofile')
             },
             getsignup: function(getuser) {
                 return $q(function(resolve, reject) {
-                    $http.get('/user/signup/' + getuser)
+                    $http.get('http://localhost:8081/user/signup/' + getuser)
                         .then(function(res) {
                                 console.log("response in factory", res);
                                 resolve(res.data);

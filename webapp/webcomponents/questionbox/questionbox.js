@@ -12,6 +12,10 @@ function questionBoxCtrl($timeout, quesnboxService) {
     ctrl.showInputBox=function(){
        ctrl.displayInputBox = false;
     }
+
+    ctrl.hideDisplayAlertMessage=function(){
+       ctrl.displayAlertMessage=false;
+    }
      
     ctrl.startInpuBox = function() {
         $timeout(ctrl.showInputBox, 5000);

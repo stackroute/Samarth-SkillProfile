@@ -10,8 +10,8 @@ angular.module('sm-skillprofile')
                     url: '/home',
                     views: {
                         "content@": {
-                            templateUrl: '/auth/templates/signinpage.html'
-                            // templateUrl: '/skillhome/templates/skillhome.html'
+                             templateUrl: '/auth/templates/signinpage.html'
+                             
                         },
                         "navbar": {
                             templateUrl: '/home/templates/navbar.html',
@@ -19,11 +19,7 @@ angular.module('sm-skillprofile')
                         },
                         "footer": {
                             templateUrl: '/home/templates/footer.html'
-                        }/*,
-                        "sidebar": {
-                            templateUrl: '/home/templates/sidebar.html',
-                            controller: 'navCtrl'
-                        }*/
+                        }
                     }
                 });
 

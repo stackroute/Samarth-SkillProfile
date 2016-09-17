@@ -4,7 +4,7 @@ angular.module('sm-skillprofile')
            postsignin: function(user) {
                return $q(function(resolve, reject) {
                    console.log(user, "in factory post method");
-                   $http.post('/auth/signin' ,user)
+                   $http.post('http://localhost:8081/auth/signin' ,user)
 
                    .then(function(res) {
                            console.log("response in factory", res);
@@ -19,7 +19,7 @@ angular.module('sm-skillprofile')
            getsignin: function(edituser) {
                return $q(function(resolve, reject) {
                    console.log(edituser, "in factory getmethod");
-                   $http.get('/auth/signin/' + edituser)
+                   $http.get('http://localhost:8081/auth/signin/' + edituser)
 
                    .then(function(res) {
                            console.log("response in factory", res);
@@ -34,7 +34,7 @@ angular.module('sm-skillprofile')
             editsignin: function(edituser) {
                return $q(function(resolve, reject) {
                    console.log(edituser, "in factory patch method");
-                   $http.patch('/auth/signin/'+edituser.password,edituser)
+                   $http.patch('http://localhost:8081/auth/signin/'+edituser.password,edituser)
 
                    .then(function(res) {
                            console.log("response in factory", res);
