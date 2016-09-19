@@ -67,7 +67,10 @@
                     <md-icon>work</md-icon>
                     <span class="changeProjectClientFont">{{project.workplace}}</span><span>,</span>
                     <md-icon>location_on</md-icon>
-                    <span class="changeProjectLocationFont">{{project.location}}</span></span>
+                    <span class="changeProjectLocationFont">{{project.location}}</span></span><br>
+                    <md-icon>build</md-icon>
+                    <span ng-repeat="skill in project.skills">
+                    <span class="changeProjectLocationFont"> {{skill}} </span></span>
                     <md-divider></md-divider>
                 </div>
                 <div flex="5" flex-xs="5">

@@ -1,4 +1,6 @@
 <div layout="row" flex>
-    <div ui-view="sidebar@" class="sidebarcss" flex-offset="15" flex="20" hide-xs hide-sm></div>
-    <div ui-view="content2" class="maincontent" flex="50" flex-sm="100" flex-xs="100"></div>
+    <div  class="sidebarcss" flex-offset="15" flex="20" hide-xs hide-sm>
+    	<md-content ng-include src="'home/templates/sidenavcontents.html'">
+    </div>
+    <div ui-view="content2@" class="maincontent" flex="50" flex-sm="100" flex-xs="100"></div>
 </div>
