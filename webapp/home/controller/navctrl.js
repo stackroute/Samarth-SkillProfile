@@ -1,9 +1,10 @@
  angular.module("sm-skillprofile")
-     .controller('navCtrl', ['$scope', '$mdSidenav', '$rootScope', 'datagenerate',
-         function($scope, $mdSidenav, $rootScope, datagenerate) {
+     .controller('navCtrl', ['$scope', '$mdSidenav', '$rootScope', 'datagenerate', 'localStorageService',
+
+         function($scope, $mdSidenav, $rootScope, datagenerate, localStorageService) {
 
 
-               $scope.select = function(index) {
+             $scope.select = function(index) {
                  $scope.selected = index;
                  console.log($scope.selected);
              };
@@ -40,20 +41,29 @@
              $scope.onChange = function() {
                  console.log($scope.selectlang);
                  //$scope.loadLangData($scope.selectlang);
+                 submit("lang",$scope.selectlang)
+                 function submit(key, val) {
+                     return localStorageService.set(key, val);
+                 }
                  $rootScope.$emit("lang_changed", { language: $scope.selectlang })
              };
              // $scope.onChange();
 
              $scope.loadLangData = function(lang) {
-                 datagenerate.getjson("nav", lang).then(function(result) {
-                     // console.log(JSON.stringify(result));
-                     $scope.title = result.header;
-                     console.log("inside card1");
-                     console.log(result.header);
+                    submit("lang",lang);
+                    function submit(key, val) {
+                     return localStorageService.set(key, val);
+                    }
+                  
+                     datagenerate.getjson("nav", lang).then(function(result) {
+                         // console.log(JSON.stringify(result));
+                         $scope.title = result.header;
+                         console.log("inside card1");
+                         console.log(result.header);
 
-                 }); //end datagenerate
-             }
-             
+                     }); //end datagenerate
+                 }
+                 // $rootScope.$emit("lang_changed", { language: "English" })
              $scope.loadLangData($scope.selectlang);
 
              $rootScope.$on("lang_changed", function(event, data) {
@@ -61,5 +71,6 @@
                  $scope.loadLangData(data.language);
 
              });
+             console.log("registring navctrl");
          }
      ]);

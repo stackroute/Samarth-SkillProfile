@@ -10,8 +10,26 @@ angular.module('sm-skillprofile')
     });
 
 
-function sectionskillcardctrl($http, sectionskillcard, $mdDialog) {
+function sectionskillcardctrl($http, sectionskillcard, $mdDialog, datagenerate, $rootScope, localStorageService) {
     var ctrl = this;
+    ctrl.loadLangData = function(lang) {
+        datagenerate.getjson("section", lang).then(function(result) {
+            ctrl.items = result;
+            console.log("for skills");
+            console.log(result);
+
+        }); //end datagenerate
+    }
+    ctrl.loadLangData(getItem("lang"));
+
+    function getItem(key) {
+        return localStorageService.get(key);
+    }
+    //$scope.loadLangData("Hindi");
+    $rootScope.$on("lang_changed", function(event, data) {
+        console.log("User switch to language " + data.language);
+        ctrl.loadLangData(data.language);
+    });
     ctrl.limitval = 3;
     ctrl.limitval2 = 3;
     ctrl.value = 40;
@@ -39,7 +57,7 @@ function sectionskillcardctrl($http, sectionskillcard, $mdDialog) {
 
         for (var prop in ctrl.skill) {
             for (var key in ctrl.skill[prop]) {
-                console.log(ctrl.skill[prop][key])
+                //console.log(ctrl.skill[prop][key])
                 for (var k in ctrl.skill[prop][key]) {
 
                     if (ctrl.skill[prop][key][k] == "primary") //extracting all skill object containing primary type
@@ -54,7 +72,7 @@ function sectionskillcardctrl($http, sectionskillcard, $mdDialog) {
                 }
             }
         }
-        console.log(ctrl.primary);
+       // console.log(ctrl.primary);
 
     });
 
@@ -82,8 +100,8 @@ function sectionskillcardctrl($http, sectionskillcard, $mdDialog) {
 
     function DialogController($scope, $mdDialog, val, header) {
         $scope.skillObject = val;
-        var skill=val.skillname;
-        console.log("coming", skill);
+        var skill = val.skillname;
+        //console.log("coming", skill);
         $scope.header = header;
         $scope.hide = function() {
             $mdDialog.hide();
@@ -102,15 +120,15 @@ function sectionskillcardctrl($http, sectionskillcard, $mdDialog) {
                     "metadata": {}
                 }]
             };
-            console.log()
+            
             if (header === "Add Skill") {
                 $http({ 
                     method: "post",
                     url: "http://localhost:8081/skill/101",
                     data: skillObj
                 }).then(function mySucces(response)  { 
-                    console.log("res",response.data[0])
-                    // alert(response);
+                    console.log("res", response.data[0])
+                        // alert(response);
                 }, function myError(response) { 
                     alert('error'); 
                 });
@@ -118,11 +136,11 @@ function sectionskillcardctrl($http, sectionskillcard, $mdDialog) {
             if (header === "Edit Skill") {
                 $http({ 
                     method: "patch",
-                    url: "http://localhost:8081/skill/101/"+skill,
+                    url: "http://localhost:8081/skill/102/" + skill,
                     data: skillObj
                 }).then(function mySucces(response)  { 
-                    console.log("res",response)
-                    // alert(response);
+                    console.log("res", response)
+                        // alert(response);
                 }, function myError(response) { 
                     alert('error'); 
                 });
