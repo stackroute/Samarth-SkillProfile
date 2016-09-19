@@ -31,7 +31,7 @@ $http.get('http://localhost:8081/education/101').then(function(response)
       {
         ctrl.schools.push(ctrl.eduDetails[i]);
       }
-      if(ctrl.eduDetails[i].institute.type=="college")
+      if(ctrl.eduDetails[i].institute.type=="college" ||ctrl.eduDetails[i].institute.type=="other")
       {
         ctrl.eduDetails[i].institute.type="work";
         ctrl.colleges.push(ctrl.eduDetails[i]);
@@ -65,6 +65,16 @@ $http.get('http://localhost:8081/education/101').then(function(response)
 
   function DialogController($scope, $mdDialog,$http,header,object) {
     $scope.header=header;
+    // $scope.yearval="";
+
+    $scope.years=[];
+    for(var i=(new Date()).getFullYear();i>=1900;i--)
+    {
+      $scope.years.push(i);
+    }
+
+    
+
     
     if(object!='')
     {
@@ -76,6 +86,10 @@ $http.get('http://localhost:8081/education/101').then(function(response)
       $scope.location=object.institute.location;
       $scope.affiliation=object.institute.affiliation;
       $scope.uniqueID=object._id;
+      $scope.to=object.to;
+      $scope.from=object.from;
+      $scope.type=object.institute.type;
+      $scope.academicType=object.academicType;
     }
     else
     {
@@ -87,6 +101,11 @@ $http.get('http://localhost:8081/education/101').then(function(response)
       $scope.name="some educational body";
       $scope.location="some location";
       $scope.affiliation="some controlling body";
+      $scope.to=new Date();
+      $scope.from=new Date();
+      $scope.type="type of institute";
+      $scope.academicType="of academic type";
+      $scope.type=['school','college','other'];
 
     }
 
@@ -107,12 +126,12 @@ $http.get('http://localhost:8081/education/101').then(function(response)
           "record": [{
                       "title": $scope.title,
                       "batch": $scope.batch,
-                      "from": "march 2009",
-                      "to": "april 2010",
-                      "academicType": "Metric",
+                      "from": $scope.to,
+                      "to": $scope.from,
+                      "academicType": $scope.academicType,
                       "institute": {
                         "name": $scope.name,
-                        "type": "school",
+                        "type": $scope.type,
                         "location": $scope.location,
                         "affiliation": $scope.affiliation,
                         "metadata": []
