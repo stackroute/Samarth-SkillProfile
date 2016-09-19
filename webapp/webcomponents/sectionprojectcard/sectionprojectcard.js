@@ -4,8 +4,28 @@ angular.module('sm-skillprofile')
         controller: projectsectioncardCtrl          
     });
 
-function projectsectioncardCtrl($http, $mdDialog) {
+function projectsectioncardCtrl($http, $mdDialog, datagenerate, $rootScope,localStorageService) {
+
     var ctrl = this;  
+    ctrl.loadLangData = function(lang) {
+        datagenerate.getjson("section", lang).then(function(result) {
+            ctrl.items = result;
+            console.log("for skills");
+            console.log(result);
+
+        }); //end datagenerate
+    }
+    ctrl.loadLangData(getItem("lang"));
+
+    function getItem(key) {
+        return localStorageService.get(key);
+    }
+    //$scope.loadLangData("Hindi");
+    $rootScope.$on("lang_changed", function(event, data) {
+        console.log("User switch to language " + data.language);
+        ctrl.loadLangData(data.language);
+    });
+    
     ctrl.changeFont = 'changeProjectNameFont';
     ctrl.profile = []; 
     ctrl.profile1 = [];
@@ -25,7 +45,7 @@ function projectsectioncardCtrl($http, $mdDialog) {
 
     $http({
         method: 'GET',
-        url: 'http://localhost:8081/project/101'
+        url: 'http://localhost:8081/project/102'
     }).then(function successCallback(response) {
         console.log("Length=" + response.data.length)
         for (var noOfObjects = 0; noOfObjects < response.data.length; noOfObjects++) {
@@ -110,7 +130,7 @@ function projectsectioncardCtrl($http, $mdDialog) {
             if (header == "Add Project") {
                 $http({
                     method: 'POST',
-                    url: 'http://localhost:8081/project/101',
+                    url: 'http://localhost:8081/project/102',
                     data: projectData,
                     crossDomain: true
                 }).then(function successCallback(response) {
@@ -123,7 +143,7 @@ function projectsectioncardCtrl($http, $mdDialog) {
 
                 $http({
                     method: 'PATCH',
-                    url: 'http://localhost:8081/project/101/'+object.name,
+                    url: 'http://localhost:8081/project/102/'+object.name,
                     data: projectData,
                     crossDomain: true
                 }).then(function successCallback(response) {

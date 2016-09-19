@@ -1,7 +1,28 @@
 angular.module('sm-skillprofile')
-    .controller('signupController', ['$scope', '$http', 'signupFactory',
+    .controller('signupController', ['$scope', '$http', 'signupFactory', '$rootScope', 'datagenerate', 'localStorageService',
 
-        function($scope, $http, signupFactory) {
+        function($scope, $http, signupFactory, $rootScope, datagenerate, localStorageService) {
+
+             $scope.loadLangData = function(lang) {
+                datagenerate.getjson("section", lang).then(function(result) {
+                    // console.log(JSON.stringify(result));
+                    $scope.data = result;
+                    console.log("result",result);
+
+
+                }); //end datagenerate
+            }
+
+             $scope.loadLangData(getItem("lang"));
+            function getItem(key) {
+                return localStorageService.get(key);
+            }
+
+            $rootScope.$on("lang_changed", function(event, data) {
+                console.log("User switch to language ", data.language);
+                $scope.loadLangData(data.language);
+
+            });
 
             $scope.add = function() {
                  $scope.user = {

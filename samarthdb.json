@@ -1,4 +1,4 @@
-{
+{ 
 
     "profiles": [{
         "id": "01",
@@ -3287,5 +3287,61 @@
         "email": "diamond1994@gmail.com",
         "gender": "नर",
         "maritalstatus": "अविवाहित"
-    }]
+    }],
+  "sectionEnglish": {
+    "skillheader": "Skills",
+    "primary": "Primary",
+    "secondary": "Others",
+    "addskill": "Add Skill",
+    "addeducation":"Add Qualification",
+    "addproject":"Add Project",
+    "addworkexp":"Add Work",
+    "projectheader": "Project",
+    "educationheader": "Qualification",
+    "workexpheader": "Work Experience",
+    "personalinfoheader": "Personal Information",
+    "more": "more",
+    "less": "less",
+    "top": "Top",
+    "signin": "Sign in",
+    "signup": "Sign up",
+    "mobile": "Mobile no",
+    "password": "Password",
+    "confirm": "Confirm Password",
+    "name": "Name",
+    "location": "Location",
+    "email": "Email id",
+    "searchjob": "Search Job",
+    "create": "create new account",
+    "forgetP":"Forgot Password ?",
+    "havesign":"Have a account? Sign in"
+  }, 
+  "sectionHindi": {
+    "skillheader": "कौशल",
+    "primary": "प्राथमिक कौशल",
+    "secondary": "माध्यमिक कौशल",
+    "addskill": "नये कौशल जोड़े",
+    "addeducation":"नई शिक्षा जोड़े",
+    "addproject":"नई परियोजना को जोड़े",
+    "addworkexp":"नया काम करने का अनुभव जोड़े",
+    "projectheader": "परियोजना",
+    "educationheader": "शिक्षा",
+    "workexpheader": "काम का अनुभव",
+    "personalinfoheader": "व्यक्तिगत जानकारी",
+    "more": "अन्य",
+    "less": "कम",
+    "top": "उपर जाए",
+    "signin": "साइन इन करें",
+    "signup": "साइन अप करें",
+    "mobile": "मोबाइल नंबर",
+    "password": "पासवर्ड",
+    "confirm": "पासवर्ड की पुष्टि कीजिये",
+    "name": "नाम",
+    "location": "स्थान",
+    "email": "ईमेल आईडी",
+    "searchjob": "नौकरी खोजे",
+    "create": "नया खाता बनाएँ",
+    "forgetP":"पासवर्ड भूल गए ?",
+    "havesign":"खाता है ? साइन इन करें"
+  }
 }
