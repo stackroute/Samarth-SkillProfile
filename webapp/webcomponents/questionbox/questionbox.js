@@ -1,27 +1,27 @@
-
 angular.module('sm-skillprofile')
-    .component('myQuestionbox',{             
+    .component('myQuestionbox', {            
         templateUrl: 'webcomponents/questionbox/templates/questionbox.html',
         controller: questionBoxCtrl          
-});
+    });
 
 function questionBoxCtrl($timeout, quesnboxService) {
     var ctrl = this;
-        ctrl.showMaxBtn=false;
-        ctrl.displayAlertMessage=false;
-    ctrl.showInputBox=function(){
-       ctrl.displayInputBox = false;
+    ctrl.showMaxBtn = false;
+    ctrl.displayAlertMessage = false;
+    ctrl.showInputBox = function() {
+        ctrl.displayInputBox = false;
     }
 
-    ctrl.hideDisplayAlertMessage=function(){
-       ctrl.displayAlertMessage=false;
+    ctrl.hideDisplayAlertMessage = function() {
+        ctrl.displayAlertMessage = false;
     }
-     
+
     ctrl.startInpuBox = function() {
         $timeout(ctrl.showInputBox, 5000);
     }
 
     ctrl.questionArray = quesnboxService.questionGenerator();
+    ctrl.answerArray=[];
     ctrl.displayInputBox = true;
     ctrl.displayAnswerdBox = false;
     ctrl.currentQuestionIndex = 0;
@@ -30,18 +30,18 @@ function questionBoxCtrl($timeout, quesnboxService) {
     ctrl.clear = '';
 
     ctrl.increaseIndex = function() {
-        if (ctrl.clear=='') {
-                ctrl.displayAlertMessage=true;
-        }
-        else
-        {
-           ctrl.clear = '';
-           ctrl.displayAlertMessage=false;
-        ctrl.currentQuestionIndex = ctrl.currentQuestionIndex + 1;
-        ctrl.val = Math.floor((ctrl.currentQuestionIndex / ctrl.questionArray.length) * 100);
-        if (ctrl.currentQuestionIndex == ctrl.questionArray.length) {
-            $timeout(ctrl.hideQuestionBox, 300);
-        }
+        if (ctrl.clear == '') {
+            ctrl.displayAlertMessage = true;
+        } else {
+            
+            ctrl.displayAlertMessage = false;
+            ctrl.currentQuestionIndex = ctrl.currentQuestionIndex + 1;
+            ctrl.val = Math.floor((ctrl.currentQuestionIndex / ctrl.questionArray.length) * 100);
+            if (ctrl.currentQuestionIndex == ctrl.questionArray.length) {
+                $timeout(ctrl.hideQuestionBox, 300);
+            }
+            ctrl.answerArray.push(ctrl.clear);
+            ctrl.clear = '';
         }
     }
     ctrl.hideQuestionBox = function() {
@@ -49,9 +49,9 @@ function questionBoxCtrl($timeout, quesnboxService) {
         ctrl.displayAnswerdBox = true;
         $timeout(ctrl.showQuestionBox, 3000);
     }
-     ctrl.minimizeQuestionBox = function() {
+    ctrl.minimizeQuestionBox = function() {
         ctrl.displayInputBox = true;
-        ctrl.showMaxBtn=true;
+        ctrl.showMaxBtn = true;
 
     }
     ctrl.showQuestionBox = function() {
@@ -62,6 +62,3 @@ function questionBoxCtrl($timeout, quesnboxService) {
     }                
 
 }
-
-
-

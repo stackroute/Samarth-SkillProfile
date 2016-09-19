@@ -45,7 +45,7 @@ function projectsectioncardCtrl($http, $mdDialog, datagenerate, $rootScope,local
 
     $http({
         method: 'GET',
-        url: 'http://localhost:8081/project/102'
+        url: 'http://localhost:8081/project/101'
     }).then(function successCallback(response) {
         console.log("Length=" + response.data.length)
         for (var noOfObjects = 0; noOfObjects < response.data.length; noOfObjects++) {
@@ -55,7 +55,7 @@ function projectsectioncardCtrl($http, $mdDialog, datagenerate, $rootScope,local
             }
 
         }
-        ctrl.totalProjects=ctrl.profile.length;
+        ctrl.totalProjects = ctrl.profile.length;
 
     }, function errorCallback(response) {
         console.log('Error accord during Project Section')
@@ -81,19 +81,27 @@ function projectsectioncardCtrl($http, $mdDialog, datagenerate, $rootScope,local
 
     function DialogController($scope, $mdDialog, $http, header, object) {
         $scope.header = header;
-
+        $scope.projectObj=object;
         if (object != '') {
             $scope.Project = object.name;
             $scope.Duration = object.duration.duration;
             $scope.Client = object.workplace;
             $scope.Location = object.location;
             $scope.Salary = object.income;
+            /*$scope.Skills = [];
+            for (var skill in object.skills) {
+                console.log("Inside section project ",object.skills[skill]);
+                $scope.Skills.push(object.skills[skill]);
+            }*/
+
+
         } else {
             $scope.Project = "";
             $scope.Duration = "";
             $scope.Client = "";
             $scope.Location = "";
             $scope.Salary = "";
+            $scope.Skills = [];
         }
 
         $scope.hide = function() {
@@ -130,7 +138,7 @@ function projectsectioncardCtrl($http, $mdDialog, datagenerate, $rootScope,local
             if (header == "Add Project") {
                 $http({
                     method: 'POST',
-                    url: 'http://localhost:8081/project/102',
+                    url: 'http://localhost:8081/project/101',
                     data: projectData,
                     crossDomain: true
                 }).then(function successCallback(response) {
@@ -143,7 +151,7 @@ function projectsectioncardCtrl($http, $mdDialog, datagenerate, $rootScope,local
 
                 $http({
                     method: 'PATCH',
-                    url: 'http://localhost:8081/project/102/'+object.name,
+                    url: 'http://localhost:8081/project/101/' + object.name,
                     data: projectData,
                     crossDomain: true
                 }).then(function successCallback(response) {
