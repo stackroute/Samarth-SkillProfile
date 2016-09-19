@@ -4,8 +4,28 @@ angular.module('sm-skillprofile')
         controller: projectsectioncardCtrl          
     });
 
-function projectsectioncardCtrl($http, $mdDialog) {
+function projectsectioncardCtrl($http, $mdDialog, datagenerate, $rootScope,localStorageService) {
+
     var ctrl = this;  
+    ctrl.loadLangData = function(lang) {
+        datagenerate.getjson("section", lang).then(function(result) {
+            ctrl.items = result;
+            console.log("for skills");
+            console.log(result);
+
+        }); //end datagenerate
+    }
+    ctrl.loadLangData(getItem("lang"));
+
+    function getItem(key) {
+        return localStorageService.get(key);
+    }
+    //$scope.loadLangData("Hindi");
+    $rootScope.$on("lang_changed", function(event, data) {
+        console.log("User switch to language " + data.language);
+        ctrl.loadLangData(data.language);
+    });
+    
     ctrl.changeFont = 'changeProjectNameFont';
     ctrl.profile = []; 
     ctrl.profile1 = [];

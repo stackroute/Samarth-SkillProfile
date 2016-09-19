@@ -10,7 +10,8 @@ angular.module('sm-skillprofile')
                     url: '/home',
                     views: {
                         "content@": {
-                             templateUrl: '/auth/templates/signinpage.html'
+                             templateUrl: '/auth/templates/signinpage.html',
+                             controller:'signinpageCtrl'
                              
                         },
                         "navbar": {

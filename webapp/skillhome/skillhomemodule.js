@@ -8,6 +8,10 @@ angular.module('sm-skillprofile')
                 .state('skillprofile.skillhome', {
                     url: '/skillhome',
                     views: {
+                        "sidebar@": {
+                            templateUrl: '/home/templates/sidebar.html',
+                            controller: 'sidenavCtrl'
+                        },
                         "content@": {
                             templateUrl: '/skillhome/templates/skillhomecontent.html'
                         },
