@@ -33,7 +33,7 @@ function educationCardController($mdDialog,$http,datagenerate, $rootScope,localS
   ctrl.schools=[];
   ctrl.colleges=[];
 
-$http.get('http://localhost:8081/education/102').then(function(response) 
+$http.get('http://localhost:8081/education/101').then(function(response) 
 {
     for (var noOfObjects = 0; noOfObjects < response.data[0].qualification.length; noOfObjects++) {
           for (var record = 0; record < 1; record++) {
