@@ -29,8 +29,15 @@
                         <label>Location</label>
                         <input type="text" ng-model="Location" id="input1">
                     </md-input-container>
-                     at
-                    
+                     with skills 
+
+                     <md-input-container>
+                       <span ng-repeat="skill in projectObj.skills">
+                        <label>Skills</label>
+                        <input type="text" ng-model="skill" id="input1">
+                        </span>
+                    </md-input-container>
+                    at
                     <md-input-container>
                         <label>Client</label>
                         <input type="text" ng-model="Client" id="input1">

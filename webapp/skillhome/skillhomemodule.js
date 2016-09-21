@@ -20,13 +20,11 @@ angular.module('sm-skillprofile')
                             controller: 'skillhomectrl',
                             controllerAs: 'skillCtrl'
                         }
-
                     }
                 })
                 .state('skillprofile.skillhome.home', {
                     url: '/portfolio',
                     views: {
-
                         "content2@": {
                             templateUrl: '/skillhome/templates/skillhome.html',
                             controller: 'skillhomectrl',
