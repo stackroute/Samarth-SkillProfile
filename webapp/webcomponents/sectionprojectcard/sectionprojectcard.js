@@ -4,7 +4,7 @@ angular.module('sm-skillprofile')
         controller: projectsectioncardCtrl          
     });
 
-function projectsectioncardCtrl($http, $mdDialog, datagenerate, $rootScope,localStorageService) {
+function projectsectioncardCtrl($http, $mdDialog, datagenerate, $rootScope, localStorageService) {
 
     var ctrl = this;  
     ctrl.loadLangData = function(lang) {
@@ -22,10 +22,10 @@ function projectsectioncardCtrl($http, $mdDialog, datagenerate, $rootScope,local
     }
     //$scope.loadLangData("Hindi");
     $rootScope.$on("lang_changed", function(event, data) {
-       // console.log("User switch to language " + data.language);
+        // console.log("User switch to language " + data.language);
         ctrl.loadLangData(data.language);
     });
-    
+
     ctrl.changeFont = 'changeProjectNameFont';
     ctrl.profile = []; 
     ctrl.profile1 = [];
@@ -81,7 +81,7 @@ function projectsectioncardCtrl($http, $mdDialog, datagenerate, $rootScope,local
 
     function DialogController($scope, $mdDialog, $http, header, object) {
         $scope.header = header;
-        $scope.projectObj=object;
+        $scope.projectObj = object;
         if (object != '') {
             $scope.Project = object.name;
             $scope.Duration = object.duration.duration;
