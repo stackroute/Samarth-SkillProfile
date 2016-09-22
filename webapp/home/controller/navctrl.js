@@ -2,6 +2,7 @@
      .controller('navCtrl', ['$scope', '$http', '$state', '$mdSidenav', '$rootScope', 'datagenerate', 'localStorageService',
 
          function($scope, $http, $state, $mdSidenav, $rootScope, datagenerate, localStorageService) {
+             $rootScope.showSignout = false;
              $scope.signout = function() {
 
                  localStorageService.remove('JWT');
