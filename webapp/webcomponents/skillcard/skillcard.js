@@ -2,14 +2,24 @@ angular.module('sm-skillprofile')        .component('mySkillcard',   �
     templateUrl: 'webcomponents/skillcard/templates/skillcard.html',
                 controller: skillcardctrl,
     bindings: {
-        data: "="
+        // data: "="
     },
     transclude: true             
 });
 
-function skillcardctrl($window, $timeout,$mdDialog)            {
+function skillcardctrl($window, $timeout,$mdDialog,skillcardservice)            {
     var ctrl = this;
     var name;
+
+skillcardservice.getskillcarddata().then(function(result){
+  ctrl.data=result;
+});
+
+
+
+
+
+
     function createDownloadUrl() {
 
         name=ctrl.data.name+".png";
