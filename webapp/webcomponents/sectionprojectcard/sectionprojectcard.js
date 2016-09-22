@@ -4,14 +4,14 @@ angular.module('sm-skillprofile')
         controller: projectsectioncardCtrl          
     });
 
-function projectsectioncardCtrl($http, $mdDialog, datagenerate, $rootScope,localStorageService) {
+function projectsectioncardCtrl($http, $mdDialog, datagenerate, $rootScope, localStorageService) {
 
     var ctrl = this;  
     ctrl.loadLangData = function(lang) {
         datagenerate.getjson("section", lang).then(function(result) {
             ctrl.items = result;
-            console.log("for skills");
-            console.log(result);
+            // console.log("for skills");
+            // console.log(result);
 
         }); //end datagenerate
     }
@@ -22,10 +22,10 @@ function projectsectioncardCtrl($http, $mdDialog, datagenerate, $rootScope,local
     }
     //$scope.loadLangData("Hindi");
     $rootScope.$on("lang_changed", function(event, data) {
-        console.log("User switch to language " + data.language);
+        // console.log("User switch to language " + data.language);
         ctrl.loadLangData(data.language);
     });
-    
+
     ctrl.changeFont = 'changeProjectNameFont';
     ctrl.profile = []; 
     ctrl.profile1 = [];
@@ -45,7 +45,7 @@ function projectsectioncardCtrl($http, $mdDialog, datagenerate, $rootScope,local
 
     $http({
         method: 'GET',
-        url: 'http://localhost:8081/project/101'
+        url: 'http://localhost:8081/project/102'
     }).then(function successCallback(response) {
         console.log("Length=" + response.data.length)
         for (var noOfObjects = 0; noOfObjects < response.data.length; noOfObjects++) {
@@ -81,7 +81,7 @@ function projectsectioncardCtrl($http, $mdDialog, datagenerate, $rootScope,local
 
     function DialogController($scope, $mdDialog, $http, header, object) {
         $scope.header = header;
-        $scope.projectObj=object;
+        $scope.projectObj = object;
         if (object != '') {
             $scope.Project = object.name;
             $scope.Duration = object.duration.duration;
@@ -138,7 +138,7 @@ function projectsectioncardCtrl($http, $mdDialog, datagenerate, $rootScope,local
             if (header == "Add Project") {
                 $http({
                     method: 'POST',
-                    url: 'http://localhost:8081/project/101',
+                    url: 'http://localhost:8081/project/102',
                     data: projectData,
                     crossDomain: true
                 }).then(function successCallback(response) {
@@ -151,7 +151,7 @@ function projectsectioncardCtrl($http, $mdDialog, datagenerate, $rootScope,local
 
                 $http({
                     method: 'PATCH',
-                    url: 'http://localhost:8081/project/101/' + object.name,
+                    url: 'http://localhost:8081/project/102/' + object.name,
                     data: projectData,
                     crossDomain: true
                 }).then(function successCallback(response) {

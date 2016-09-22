@@ -1,5 +1,5 @@
 angular.module('sm-skillprofile')
-    .service('quesnboxService', function($http, $timeout) {
+    .service('quesnboxService', function($http) {
         return {
             questionGenerator: function() {
                 questionArray = [];

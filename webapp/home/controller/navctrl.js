@@ -1,8 +1,18 @@
  angular.module("sm-skillprofile")
-     .controller('navCtrl', ['$scope', '$mdSidenav', '$rootScope', 'datagenerate', 'localStorageService',
+     .controller('navCtrl', ['$scope', '$http', '$state', '$mdSidenav', '$rootScope', 'datagenerate', 'localStorageService',
 
-         function($scope, $mdSidenav, $rootScope, datagenerate, localStorageService) {
+         function($scope, $http, $state, $mdSidenav, $rootScope, datagenerate, localStorageService) {
+             $scope.signout = function() {
 
+                 localStorageService.remove('JWT');
+
+                 $http.defaults.headers.common.Authorization = '';
+
+                 if (localStorageService.get('JWT') == null) {
+                     $state.go('skillprofile.signin');
+
+                 }
+             }
 
              $scope.select = function(index) {
                  $scope.selected = index;
@@ -41,7 +51,8 @@
              $scope.onChange = function() {
                  console.log($scope.selectlang);
                  //$scope.loadLangData($scope.selectlang);
-                 submit("lang",$scope.selectlang)
+                 submit("lang", $scope.selectlang)
+
                  function submit(key, val) {
                      return localStorageService.set(key, val);
                  }
@@ -50,11 +61,12 @@
              // $scope.onChange();
 
              $scope.loadLangData = function(lang) {
-                    submit("lang",lang);
-                    function submit(key, val) {
-                     return localStorageService.set(key, val);
-                    }
-                  
+                     submit("lang", lang);
+
+                     function submit(key, val) {
+                         return localStorageService.set(key, val);
+                     }
+
                      datagenerate.getjson("nav", lang).then(function(result) {
                          // console.log(JSON.stringify(result));
                          $scope.title = result.header;
