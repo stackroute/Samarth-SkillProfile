@@ -9,8 +9,8 @@ var users = new Schema({
     "lastseenon": { type: Date, default: Date.now },
     "role": { type: String },
     "status": { type: String }
-   
+
 });
-var user= mongoose.model("userschema", users,"users");
+var user = mongoose.model("userschema", users, "users");
 
 module.exports = user

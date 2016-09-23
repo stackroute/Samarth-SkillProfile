@@ -27,7 +27,7 @@ angular.module('sm-skillprofile')
                 $scope.user = {
 
                     "name": $scope.name,
-                    "phonenumber": $scope.phonenumber,
+                    "mobile": $scope.phonenumber,
                     "email": $scope.email,
                     "password": $scope.password
 
@@ -37,10 +37,10 @@ angular.module('sm-skillprofile')
                     .then(function(data) {
                             console.log("data in contrller of signup", data);
 
-                            $scope.message = data.data.message;
+                            $scope.message = "Successfully created click here to sign in";
                         },
                         function(data) {
-                            $scope.error = data.error;
+                            $scope.error = "Error in creating new profile";
                         })
             },
 
@@ -55,11 +55,20 @@ angular.module('sm-skillprofile')
                 }
                 signinFactory.postsignin($scope.user)
                     .then(function(data) {
-                            console.log("data in contrller", data);
+                        console.log("data in contrller", data.phonenumber);
+                        $scope.error = data.error;
+
+                        $scope.success = data.success;
+                        console.log("Inside Signin Factury.....", data.phonenumber)
+
+                    })
+                signinFactory.getsignin($scope.user)
+                    .then(function(data) {
+                            console.log("data in get contrller", data.phonenumber);
                             $scope.error = data.error;
 
                             $scope.success = data.success;
-
+                            console.log("Inside Signin Factury.....", data.phonenumber)
                             localStorageService.set('JWT', data.token);
                             var token = localStorageService.get('JWT');
                             $http.defaults.headers.common.Authorization = data.token;
