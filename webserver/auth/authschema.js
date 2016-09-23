@@ -3,7 +3,7 @@ var Schema = mongoose.Schema;
 
 var users = new Schema({
 
-    "username": { type: String },
+    "username": { type: String, unique: true },
     "password": { type: String },
     "createdon": { type: Date, default: Date.now },
     "lastseenon": { type: Date, default: Date.now },

@@ -7,9 +7,7 @@ angular.module('sm-skillprofile')
                 return $q(function(resolve, reject) {
                     $http.post('/user/', postuser)
                         .then(function(res) {
-                            console.log("Inside signin factory", res)
-                                //$rootScope.candidateid = res.data.data[0].username;
-                                //console.log("Candidateid from signin factory=", $rootScope.candidateid);
+                            console.log("Inside signin factory", res);
                             resolve(res.data);
                         }, function(res) {
                             return (res.data);
@@ -23,8 +21,8 @@ angular.module('sm-skillprofile')
                     $http.post('/auth/', getuser)
                         .then(function(res) {
                             console.log("Inside signin factory", res)
-                                //$rootScope.candidateid = res.data.data[0].username;
-                                //console.log("Candidateid from signin factory=", $rootScope.candidateid);
+                            $rootScope.candidateid = res.data.data[0].username;
+                            console.log("Candidateid from signin factory=", $rootScope.candidateid);
                             resolve(res.data);
                         }, function(res) {
                             return (res.data);
