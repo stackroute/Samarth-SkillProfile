@@ -12,8 +12,8 @@ var jsonServer = require('json-server');
 
 
 var authRoutes = require('./webserver/auth/authrouter');
-var candidateRoutes = require('./webserver/user/userRoutes');
-mongoose.connect('mongodb://localhost:27017/authdb');
+var userRoutes = require('./webserver/user/userRoutes');
+mongoose.connect('mongodb://localhost:27017/samarthplatformdb');
 
 //Express App created
 var app = express();
@@ -36,7 +36,7 @@ app.use('/api', jsonServer.router('samarthdb.json'));
 
 
 app.use('/auth', authRoutes);
-app.use('/candidate', candidateRoutes);
+app.use('/user', userRoutes);
 
 app.use(function(req, res, next) {
     var err = new Error('Resource not found');

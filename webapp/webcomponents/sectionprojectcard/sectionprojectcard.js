@@ -45,7 +45,7 @@ function projectsectioncardCtrl($http, $mdDialog, datagenerate, $rootScope, loca
 
     $http({
         method: 'GET',
-        url: 'http://localhost:8081/project/102'
+        url: 'http://localhost:8081/project/' + $rootScope.candidateid
     }).then(function successCallback(response) {
         console.log("Length=" + response.data.length)
         for (var noOfObjects = 0; noOfObjects < response.data.length; noOfObjects++) {
