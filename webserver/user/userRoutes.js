@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var userProcessor = require('./userProcessor');
+
 var authProcessor = require('../auth/authprocessor');
 
 var userModel = require('../auth/authschema');
