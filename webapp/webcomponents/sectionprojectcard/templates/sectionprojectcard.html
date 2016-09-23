@@ -11,7 +11,7 @@
                 <div flex="80" flex-xs="80">
                     <md-icon>fiber_manual_record</md-icon><span class="changeProjectNameFont">{{project.name}}</span>
                     <br>
-                    <md-icon>schedule</md-icon><span class="changeProjectDurationFont">{{project.duration.duration}}</span><span>,</span>
+                    <md-icon>schedule</md-icon><span class="changeProjectDurationFont">{{project.duration.durationInMonths}}</span><span>,</span>
                     <span>&#8377;</span>
                     <span class="changeProjectSalaryFont">{{project.income}}</span>
                     <br>
@@ -21,7 +21,7 @@
                     <span class="changeProjectLocationFont">{{project.location}}</span></span>
                     <br>
                     <md-icon>build</md-icon>
-                    <span ng-repeat="skill in project.skills">
+                    <span ng-repeat="(skillname,skill) in project.skills">
                     <span class="changeProjectLocationFont"> {{skill}} </span></span>
                     <md-divider></md-divider>
                 </div>
