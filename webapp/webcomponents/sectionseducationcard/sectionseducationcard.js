@@ -49,7 +49,7 @@ $http.get('http://localhost:8081/education/101').then(function(response)
       {
         ctrl.schools.push(ctrl.eduDetails[i]);
       }
-      if(ctrl.eduDetails[i].institute.type=="college" ||ctrl.eduDetails[i].institute.type=="other")
+      if(ctrl.eduDetails[i].institute.type=="college" ||ctrl.eduDetails[i].institute.type=="other"||ctrl.eduDetails[i].institute.type=="work")
       {
         ctrl.eduDetails[i].institute.type="work";
         ctrl.colleges.push(ctrl.eduDetails[i]);
