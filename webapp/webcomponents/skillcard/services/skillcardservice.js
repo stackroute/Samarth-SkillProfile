@@ -1,27 +1,55 @@
 angular.module('sm-skillprofile')
-    .factory('skillcardservice', function($http,$filter) 
+    .service('skillcardservice', function($http,$filter) 
     {
         return {
             getskillcarddata: function() {
         	var skillcarddata={};
             return    $http({ 
                     method: "get",
-                    url: "http://localhost:8081/skillcard/8895275566",
+                    url: "http://localhost:8081/skillcard/9023650041",
                     
                 }).then(function mySucces(response)  { 
-
+console.log("haan v jaaan de rea");
                     var object=response.data.result;
 
-                    skillcarddata['name']=object.personalinfo[0].name;
-                    skillcarddata['age']=(new Date()).getFullYear()-$filter('date')(object.personalinfo[0].dob,"yyyy");
-                    skillcarddata['gender']=object.personalinfo[0].gender;
-                    skillcarddata['dob']=$filter('date')(object.personalinfo[0].dob,"dd/MMM/yyyy");
-                    skillcarddata['maritalstatus']=object.personalinfo[0].maritialstatus;
-                    skillcarddata['contact']=object.personalinfo[0].contact;
-                    skillcarddata['email']=object.personalinfo[0].email;
-                    skillcarddata['location']=object.workexp[0].workexperience[0].Location;
-                    skillcarddata['designation']=object.workexp[0].workexperience[0].role;
-                    skillcarddata['skills']=[(object.skill[0].skills[0].skillname)];
+                    if(object.personalinfo[0].name != undefined)
+                    {
+                        skillcarddata['name']=object.personalinfo[0].name;
+                    }
+                    if(object.personalinfo[0].dob != undefined)
+                    {
+                        skillcarddata['dob']=$filter('date')(object.personalinfo[0].dob,"dd/MMM/yyyy");
+                        skillcarddata['age']=(new Date()).getFullYear()-$filter('date')(object.personalinfo[0].dob,"yyyy");  
+                    }
+                    if(object.personalinfo[0].gender != undefined)
+                    {
+                        skillcarddata['gender']=object.personalinfo[0].gender;
+                    }
+                    if(object.personalinfo[0].maritialstatus != undefined)
+                    {
+                        skillcarddata['maritalstatus']=object.personalinfo[0].maritialstatus;             
+                    }
+                    if(object.personalinfo[0].contact != undefined)
+                    {
+                        skillcarddata['contact']=object.personalinfo[0].contact;
+                    }
+                    if(object.personalinfo[0].email != undefined)
+                    {
+                        skillcarddata['email']=object.personalinfo[0].email;
+                    }
+                    if(object.workexp[0].workexperience.length>0)
+                    //if(object.workexp[0].workexperience[0].Location != undefined)
+                    {
+                        skillcarddata['location']=object.workexp[0].workexperience[0].Location;
+                    }
+                    if(object.workexp[0].workexperience.length >0)
+                    {
+                        skillcarddata['designation']=object.workexp[0].workexperience[0].role;
+                    }
+                    if(object.skill[0].skills.length >0)
+                    {
+                     skillcarddata['skills']=[(object.skill[0].skills[0].skillname)];   
+                    }
                     // skillcarddata['name']=object.personalinfo[0].name;
 
                      console.log('SKILL CARD SERVICE',skillcarddata);

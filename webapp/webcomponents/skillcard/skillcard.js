@@ -1,4 +1,5 @@
-angular.module('sm-skillprofile')        .component('mySkillcard',          {            
+angular.module('sm-skillprofile')  
+      .component('mySkillcard',          {            
     templateUrl: 'webcomponents/skillcard/templates/skillcard.html',
                 controller: skillcardctrl,
     bindings: {
@@ -10,7 +11,7 @@ angular.module('sm-skillprofile')        .component('mySkillcard',   �
 function skillcardctrl($window, $timeout,$mdDialog,skillcardservice)            {
     var ctrl = this;
     var name;
-
+   console.log("Inside skill card ctrl....");
 skillcardservice.getskillcarddata().then(function(result){
   ctrl.data=result;
 });
