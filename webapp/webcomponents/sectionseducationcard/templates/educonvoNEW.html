@@ -2,7 +2,7 @@
   <form ng-cloak>
     <md-toolbar id="conversationDialogtoolbar">
       <div class="md-toolbar-tools">
-        <h2 id="headingtext">{{header}}</h2>
+        <h1 id="headingtext">{{header}}</h1>
         <span flex></span>
         <md-button class="md-icon-button" ng-click="cancel()">
           <md-icon id="headingtext">close</md-icon>
@@ -16,27 +16,56 @@
           <md-input-container>
           <input id="input1" ng-model="title">
           </md-input-container>
-          in 
-          <md-input-container>
-          <input id="input1" ng-model="batch">
+          (
+          <md-input-container >
+          <input id="input1" ng-model="academicType">
           </md-input-container>
+          )
+          in the year
+          <md-input-container id="datepicker">
+          <md-select ng-model="batch">
+            <md-option ng-repeat="year in years" ng-value="{{year}}">{{year}}</md-option>
+          </md-select>
+          </md-input-container>
+          <!-- ( from
+            <md-input-container>
+            <md-datepicker ng-model="from" md-placeholder="start date"
+            md-open-on-focus></md-datepicker>
+            </md-input-container>
+            to
+            <md-input-container>
+            <md-datepicker ng-model="to" md-placeholder="end date"
+            md-open-on-focus></md-datepicker>
+            </md-input-container>
+          ) -->
           with final score of
-          <md-input-container>
+          <md-input-container >
           <input id="input1" ng-model="result">
           </md-input-container>
-          <md-input-container>
+          <md-input-container >
           <input id="input1" ng-model="unit">
           </md-input-container>
           . I did it from
-          <md-input-container>
+          <md-input-container >
           <input id="input1" ng-model="name">
           </md-input-container>
+          (
+            <md-input-container >
+            <input id="input1" ng-model="type">
+            </md-input-container>
+
+            <!-- <md-input-container id="datepicker">
+            <md-select ng-model="type">
+            <md-option ng-repeat="itype in institutetypes" ng-value="{{itype}}">{{itype}}</md-option>
+            </md-select>
+            </md-input-container> -->
+          )
           which is affiliated to
-          <md-input-container>
+          <md-input-container >
           <input id="input1" ng-model="affiliation"><br>
           </md-input-container>
           and is located in
-          <md-input-container>
+          <md-input-container >
           <input id="input1" ng-model="location">
           </md-input-container>
         </p>
