@@ -21,7 +21,7 @@
     "cookie-parser": "^1.4.3",
     "express": "^4.14.0",
     "html2canvas": "^0.5.0-beta4",
-    "json-server": "^0.8.20",
+    "jsonwebtoken": "^7.1.9",
     "mongodb": "^2.0.55",
     "mongoose": "^4.6.0",
     "morgan": "^1.7.0",
