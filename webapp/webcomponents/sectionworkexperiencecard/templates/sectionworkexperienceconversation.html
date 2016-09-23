@@ -1,0 +1,72 @@
+<md-dialog aria-label="workexperiance">
+    <form ng-cloak>
+        <md-toolbar id="conversationDialogtoolbar">
+            <div class="md-toolbar-tools">
+                <h2 id="headingtext">{{header}}</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="cancel()">
+                    <md-icon id="headingtext">close</md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-dialog-content layout="column">
+            <div id="conversationDialogcontent" layout-padding layout-wrap>
+                <p layout-wrap>
+                    I worked in
+                    
+                    <md-input-container>
+                        <label>place were you worked</label>
+                        <input id="input1" type="text" ng-model="workplace">
+                    </md-input-container> with designation
+                    
+                    <md-input-container>
+                        <label>designation</label>
+                        <input type="text" ng-model="designation" id="input1">
+                    </md-input-container>
+                    during
+                    
+                    <md-input-container >
+                        <label>-mm-dd-yyyy</label>
+                        <input type="text" class="datepicker" ng-model="from|date:'dd/mm/yyyy" id="input1">
+                    </md-input-container>
+                     -
+                    <md-input-container>
+                    <label>mm-dd-yyyy</label>  
+                    <input type="text" ng-model="to" id="input1">
+                    </md-input-container>
+                    duration
+                    <md-input-container>
+                    <label>yrs/mnths/days</label>
+                    <input type="text" ng-model="year" id="input1">
+                    </md-input-container>
+                    at
+                    <md-input-container>
+                    <label>location</label>
+                    <input type="text" ng-model="Location">
+                    </md-input-container>
+                    with
+                     <md-input-container>
+                       
+                        <label>Skills</label>
+                        <input type="text" ng-model="skill" id="input1">
+                       
+                    </md-input-container>
+                   
+                    
+                </p>
+            </div>
+            <div id="savebtn" flex layout="row" layout-align="center center" ng-click="cancel()">
+                <div id="btntxt" contenteditable="false">
+                    <a>SAVE DETAILS</a>
+                </div>
+                <div id="btn">
+                    <a ng-click="save(header)">
+                        <md-icon id="icon">play_arrow</md-icon>
+                    </a>
+                </div>
+            </div>
+        </md-dialog-content>
+        <md-dialog-actions class="conversationDialog" layout="row" layout-align="center center">
+        </md-dialog-actions>
+    </form>
+</md-dialog>

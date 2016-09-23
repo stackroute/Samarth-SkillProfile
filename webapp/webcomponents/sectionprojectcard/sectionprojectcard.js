@@ -42,12 +42,13 @@ function projectsectioncardCtrl($http, $mdDialog, datagenerate, $rootScope, loca
     ctrl.decreaseLimit = function() {
         ctrl.limitval = 4;
     }
-
+    console.log("Inside project section ", $rootScope.candidateid)
     $http({
         method: 'GET',
         url: 'http://localhost:8081/project/' + $rootScope.candidateid
+
     }).then(function successCallback(response) {
-        console.log("Length=" + response.data.length)
+        console.log("Inside project response ", response.data)
         for (var noOfObjects = 0; noOfObjects < response.data.length; noOfObjects++) {
             for (var record = 0; record < response.data[noOfObjects].projects.length; record++) {
 
