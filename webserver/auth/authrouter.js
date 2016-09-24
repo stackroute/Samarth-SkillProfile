@@ -1,57 +1,51 @@
 var router = require('express').Router();
-var user = require('./authschema');
+var authByToken = require('./authbytoken');
 
-var jwt = require('jsonwebtoken');
-router.post('/', function(req, res) {
+router.post('/signup', function(req, res) {
+    return res.status(201).json({});
+});
 
-    console.log("req.body.phonenumber:", req.body.phonenumber);
+router.post('/signin', function(req, res) {
+    if (!req.body.uname || !req.body.pwd) {
+        res.json({
+            error: "Please try with valid credentials..!"
+        });
+        return;
+    }
 
-    user.find({ username: req.body.phonenumber }, function(err, docs) {
-        console.log(docs);
-        console.log("req.body:", req.body.password);
-
-
-        if (docs.length == 0) {
-            res.json({ success: false, error: 'Invalid Credentials' });
-
-        } else if (docs[0].username != req.body.phonenumber) {
-
-            res.json({ success: false, error: 'Authentication failed. Wrong phonenumber.' });
-        } else if (docs[0].password != req.body.password) {
-
-            res.json({ success: false, error: 'Authentication failed. Wrong password.' });
-        } else {
-
-
-            var token = jwt.sign({ 'name': 'saranya' }, "superSecret")
-            console.log("JWT token generated is, ", token);
-            res.json({ success: true, data: docs, message: 'Authentication success', token: token });
-
+    authByToken.signin(req.body.uname, req.body.pwd, function(err, jwtToken) {
+        if (err) {
+            return res.status(500).json({
+                error: "Internal error in processing request, please retry later..!"
+            });
         }
 
+        if (!jwtToken) {
+            console.error("Empty token generated...!");
+            // var err = new Error("Internal error in processing request, please retry later..!");
+            // err.status=401;
+            // throw err;
+        }
+
+        return res.status(200).json({
+            'user': user,
+            'token': jwtToken
+        });
+    }, function(err) {
+        res.status(403).json(err);
     })
-})
+});
 
-
-
-//     user.find({ username: req.body.phonenumber }, function(err, docs) {
-// console.log(docs);
-//         console.log("req.body:", req.body.password);
-//         if(docs.length == 0){
-//              res.json({ success: false, message: 'Authentication failed.wrong username' });
-//         }
-//          else {
-//             if (docs[0].password != req.body.password) {
-//                 res.json({ success: false, message: 'Authentication failed. Wrong password.' });
-//             } else {
-
-
-//                 var token = jwt.sign({ "name": "sharanya" }, req.body.password)
-//                 console.log("JWT token generated is, ", token);
-//                 res.json({ success: true, message: 'Authentication success',token:token });
-
-//             }
-//         }
-//      })
+router.get("/signout", function(req, res) {
+    console.log("Signing out user...!");
+    authByToken.signout(function(err, data) {
+        if (err) {
+            return res.status(500).json({
+                error: "Internal error in processing request, please retry later..!"
+            });
+        }
+        return res.status(200).json(data);
+    });
+});
 
 module.exports = router;
