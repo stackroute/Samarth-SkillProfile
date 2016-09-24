@@ -1,0 +1,57 @@
+<md-dialog>
+    <form ng-cloak>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>{{header}}</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="cancel()">
+                    <md-icon>close</md-icon>.
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-dialog-content>
+            <div class="md-dialog-content">
+                Iam
+                <md-input-container>
+                    <input ng-model="personalObject.name">
+                </md-input-container>
+                living at
+                <md-input-container>
+                    <input ng-model="personalObject.location">
+                </md-input-container>
+                i was born on
+                <md-input-container>
+                    <input  ng-model="personalObject.dob" formatted-date format="small"/>
+                </md-input-container>
+                i am a
+                <md-input-container>
+                    <input ng-model="personalObject.maritialstatus">
+                </md-input-container>
+                <md-input-container>
+                    <input ng-model="personalObject.gender">
+                </md-input-container>
+                my mothertongue is
+                <md-input-container>
+                    <input ng-model="personalObject.mothertongue">
+                </md-input-container>
+                my email is
+                <md-input-container>
+                    <input ng-model="personalObject.email">
+                </md-input-container>
+                and my permanent address is
+                <md-input-container>
+                    <input ng-model="personalObject.address">
+                </md-input-container>
+                <md-input-container>
+                    <input ng-model="personalObject.pincode">
+                </md-input-container>
+            </div>
+        </md-dialog-content>
+        <md-dialog-actions layout="row">
+            <span flex></span>
+            <md-button ng-click="save(personalObject,header)">
+                Save
+            </md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

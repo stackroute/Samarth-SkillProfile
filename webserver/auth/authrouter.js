@@ -4,9 +4,9 @@ var user = require('./authschema');
 var jwt = require('jsonwebtoken');
 router.post('/', function(req, res) {
 
-    console.log("req.body.phonenumber:", req.body.phonenumber);
+    console.log("req.body.mobile:", req.body.mobile);
 
-    user.find({ username: req.body.phonenumber }, function(err, docs) {
+    user.find({ username: req.body.mobile }, function(err, docs) {
         console.log(docs);
         console.log("req.body:", req.body.password);
 
@@ -16,7 +16,7 @@ router.post('/', function(req, res) {
 
         } else if (docs[0].username != req.body.phonenumber) {
 
-            res.json({ success: false, error: 'Authentication failed. Wrong phonenumber.' });
+            res.json({ success: false, error: 'Authentication failed. Wrong mobile.' });
         } else if (docs[0].password != req.body.password) {
 
             res.json({ success: false, error: 'Authentication failed. Wrong password.' });

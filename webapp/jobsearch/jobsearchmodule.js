@@ -3,13 +3,13 @@ angular.module('sm-skillprofile')
         function($stateProvider, $urlMatcherFactoryProvider, $urlRouterProvider) {
             $urlMatcherFactoryProvider.caseInsensitive(true);
             $stateProvider
-                .state('skillprofile.jobsearch', {
+                .state('skillprofile.skillhome.jobsearch', {
                     url: '/jobsearch',
                     views: {
-                        "content@": {
+                        "content2@": {
                             templateUrl: '/jobsearch/templates/jobsearch.html',
-                            controller: 'jobsearchctrl',
-                            controllerAs: 'jobCtrl'
+                            controller: 'jobsearchctrl'
+
                         }
                     }
                 })

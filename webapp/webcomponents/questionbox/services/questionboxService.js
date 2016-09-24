@@ -1,22 +1,44 @@
 angular.module('sm-skillprofile')
     .service('quesnboxService', function($http, $rootScope) {
         return {
-            questionGenerator: function() {
-                questionArray = [];
+            questionGenerator: function(lang) {
 
-                $http({
+                var sectionArray = [
+                    'project',
+                    'skills',
+                    'qualification'
+
+
+                ];
+                var randomNumber = Math.floor(Math.random() * sectionArray.length);
+                console.log("Section array....", sectionArray[randomNumber])
+                return $http({
                     method: 'GET',
-                    url: 'http://localhost:8081/candidates/' + $rootScope.candidateid + '/qboxquestions?sections=project&limit=2&skip=0&lang=Hindi'
+                    url: 'http://localhost:8081/candidates/7204487502/qboxquestions?sections=' + sectionArray[randomNumber] + '&limit=2&skip=0&lang=' + lang
                 }).then(function successCallback(response) {
-                    for (var key = 0; key < response.data.length; key++) {
-
-                        questionArray.push(response.data[key].query);
-                    }
+                    var questionObj = response.data;
+                    console.log("About to save questionObj", questionObj);
+                    return questionObj;
                 }, function errorCallback(response) {
                     console.log('Error accord during Project Section')
+                    return;
                 });  
 
-                return questionArray;
+            },
+            updatequestion: function(questiondata, answer) {
+                return $http({
+                    method: 'PATCH',
+                    url: 'http://localhost:8081/candidates/7204487502/' + answer,
+                    data: questiondata
+                }).then(function successCallback(response) {
+
+                    console.log("About to update answer");
+                    return response;
+                }, function errorCallback(response) {
+                    console.log('Error accord during Project Section')
+                    return;
+                });  
             }
         };
+
     });

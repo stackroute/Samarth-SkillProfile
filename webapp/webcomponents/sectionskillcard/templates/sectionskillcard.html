@@ -1,4 +1,4 @@
-<md-card class="card" ng-repeat="(key, value) in $ctrl.skill" layout="column">
+<md-card class="card" layout="column">
     <md-card-title>
         <md-card-title-text layout="row">
             <div class="md-headline" flex="90">{{$ctrl.items.skillheader}}</div>
@@ -22,7 +22,7 @@
         </md-whiteframe>
         <div layout="row" flex="80"></div>
         <div layout="column" flex="20" layout-align="center center">
-            <md-button class="md-icon-button" ng-click="$ctrl.decreaseLimit()" ng-disabled="$ctrl.limitval<=3" ng-hide="$ctrl.limitval<=3" >
+            <md-button class="md-icon-button" ng-click="$ctrl.decreaseLimit()" ng-disabled="$ctrl.limitval<=3" ng-hide="$ctrl.limitval<=3">
                 <md-icon class="material-icons">keyboard_arrow_up</md-icon>
             </md-button>
             <md-button class="md-icon-button" ng-click="$ctrl.increaseLimit()" ng-disabled="$ctrl.limitval>=$ctrl.primary.length" ng-hide="$ctrl.limitval>=$ctrl.primary.length">
@@ -60,9 +60,7 @@
     </div>
     <md-card-actions layout="row" layout-align="end end">
         <md-button ng-click="$ctrl.showAdvanced($event,'','Add Skill')">
-           {{$ctrl.items.addskill}}
+            {{$ctrl.items.addskill}}
         </md-button>
     </md-card-actions>
 </md-card>
-
-
