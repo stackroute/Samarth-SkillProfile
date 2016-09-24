@@ -1,8 +1,35 @@
 var jwt = require('jsonwebtoken');
 var UserModel = require("./users");
 
-var signup = function(formData) {
+var signup = function(newUser, callback, unauthCB) {
+    var newUserObj = new UserModel({
+        "uname": newUser.mobile,
+        "pwd": newUser.pwd,
+        "status": "active",
+        "createdon": new Date(),
+        "lastseenon": new Date()
+    });
 
+    newUserObj.save(function(err, user) {
+        if (err) {
+            console.error("Error in signup user ", err);
+            callback(err, null);
+            return;
+        }
+
+        if (!user) {
+            console.error("Empty user signed up..!");
+            callback("Unable to signup the user", null);
+        }
+
+        var sessionUser = {
+            "uname": user.uname,
+            "candidateid": "cid",
+            "lang": "english"
+        };
+
+        generateJWTToken(sessionUser, callback); //generate JWTToken
+    });
 };
 
 var signin = function(uname, pwd, callback, unauthCB) {
@@ -63,7 +90,9 @@ var generateJWTToken = function(user, cb) {
         issuer: user.email
     };
 
-    jwt.sign(payload, secretOrPrivateKey, options, cb);
+    jwt.sign(payload, secretOrPrivateKey, options, function(err, jwtToken) {
+        cb(err, user, jwtToken);
+    });
 }
 
 module.exports = {
