@@ -1,7 +1,9 @@
  angular.module("sm-skillprofile")
-     .controller('navCtrl', ['$scope', '$http', '$state', '$mdSidenav', '$rootScope', 'datagenerate', 'localStorageService',
+     .controller('navCtrl', ['$scope', '$http', '$state', '$mdSidenav',
+         '$rootScope', 'datagenerate', 'localStorageService', 'UserAuthService',
 
-         function($scope, $http, $state, $mdSidenav, $rootScope, datagenerate, localStorageService) {
+         function($scope, $http, $state, $mdSidenav, $rootScope, datagenerate,
+             localStorageService, UserAuthService) {
              $rootScope.showSignout = false;
              $scope.signout = function() {
 
@@ -29,9 +31,9 @@
                      }
                  }
              };
-             $scope.user = {
-                 name: 'Chandra Kumar Pratap'
-             }
+
+             //Get the current logged in user
+             $scope.user = UserAuthService.getUser();
 
              $scope.portfolio = {
                  completion: "40"
@@ -57,7 +59,9 @@
                  function submit(key, val) {
                      return localStorageService.set(key, val);
                  }
-                 $rootScope.$emit("lang_changed", { language: $scope.selectlang })
+                 $rootScope.$emit("lang_changed", {
+                     language: $scope.selectlang
+                 })
              };
              // $scope.onChange();
 

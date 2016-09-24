@@ -27,9 +27,15 @@ var signup = function(newUser, callback, unauthCB) {
             function(candidate) {
                 var sessionUser = {
                     "uname": user.uname,
-                    "candidateid": "cid",
-                    "lang": "english"
+                    "cid": candidate.candidateid,
+                    "lang": candidate.mothertongue,
+                    "name": candidate.name,
+                    "email": candidate.email,
+                    "gender": candidate.gender,
+                    "sm-token": "TBD"
                 };
+
+                console.log("Registered successfully ", sessionUser);
 
                 generateJWTToken(sessionUser, callback); //generate JWTToken
             },
@@ -71,13 +77,21 @@ var signin = function(uname, pwd, callback, unauthCB) {
                 return;
             }
 
+            //Now that user is authenticated locally, fetch the corresponding candidate token
             authCandidate.getCandidateAuthToken(user).then(
                 function(candidate) {
                     var sessionUser = {
                         "uname": user.uname,
-                        "candidateid": "cid",
-                        "lang": "english"
+                        "uname": user.uname,
+                        "cid": candidate.candidateid,
+                        "lang": candidate.mothertongue,
+                        "name": candidate.name,
+                        "email": candidate.email,
+                        "gender": candidate.gender,
+                        "sm-token": "TBD"
                     };
+
+                    console.log("Got token successfully ", sessionUser);
 
                     generateJWTToken(sessionUser, callback); //generate JWTToken
                 },
@@ -99,10 +113,11 @@ var generateJWTToken = function(user, cb) {
     var options = {
         algorithm: "HS256",
         expiresIn: 36000,
-        issuer: user.email
+        issuer: user.mobile
     };
 
     jwt.sign(payload, secretOrPrivateKey, options, function(err, jwtToken) {
+        console.log("Sending token ", user, jwtToken);
         cb(err, user, jwtToken);
     });
 }

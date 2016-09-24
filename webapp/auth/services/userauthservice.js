@@ -6,7 +6,7 @@ angular.module('sm-skillprofile')
 
         auth.saveUser = function(user) {
             if (user !== undefined) {
-                if (user.candidateid) {
+                if (user.uname) {
                     //@TODO set a expiry time stamp user.sessionTime = Date.now() + 2 minutes??
                     $window.localStorage['member-user'] = JSON.stringify(user);
                 } else {
