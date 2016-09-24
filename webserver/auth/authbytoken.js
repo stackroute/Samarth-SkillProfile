@@ -1,5 +1,6 @@
 var jwt = require('jsonwebtoken');
 var UserModel = require("./users");
+var authCandidate = require("./authcandidate");
 
 var signup = function(newUser, callback, unauthCB) {
     var newUserObj = new UserModel({
@@ -22,13 +23,20 @@ var signup = function(newUser, callback, unauthCB) {
             callback("Unable to signup the user", null);
         }
 
-        var sessionUser = {
-            "uname": user.uname,
-            "candidateid": "cid",
-            "lang": "english"
-        };
+        authCandidate.registerCandidate(newUser).then(
+            function(candidate) {
+                var sessionUser = {
+                    "uname": user.uname,
+                    "candidateid": "cid",
+                    "lang": "english"
+                };
 
-        generateJWTToken(sessionUser, callback); //generate JWTToken
+                generateJWTToken(sessionUser, callback); //generate JWTToken
+            },
+            function(err) {
+                callback(err);
+            }
+        ); //end of register candidate
     });
 };
 
@@ -63,16 +71,20 @@ var signin = function(uname, pwd, callback, unauthCB) {
                 return;
             }
 
-            //@TODO go get the candidate details from Platform
+            authCandidate.getCandidateAuthToken(user).then(
+                function(candidate) {
+                    var sessionUser = {
+                        "uname": user.uname,
+                        "candidateid": "cid",
+                        "lang": "english"
+                    };
 
-            var sessionUser = {
-                "uname": user.uname,
-                "candidateid": "cid",
-                "lang": "english"
-            };
-
-            generateJWTToken(sessionUser, callback); //generate JWTToken
-
+                    generateJWTToken(sessionUser, callback); //generate JWTToken
+                },
+                function(err) {
+                    callback(err);
+                }
+            ); //end of Auth Token of candidate            
         }); //end of user find query
 };
 
