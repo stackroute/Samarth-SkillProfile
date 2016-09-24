@@ -14,25 +14,8 @@ angular.module('sm-skillprofile')
                     return err;
 
                 });
-            },
-            getsignup: function(getuser) {
-                return $q(function(resolve, reject) {
-
-                    $http.get('/candidate/' + getuser)
-
-                    .then(function(res) {
-                            console.log("response in factory", res);
-                            resolve(res.data);
-                        }, function(res) {
-                            return (res.data);
-                            console.log("bye");
-                        }
-
-                    );
-                });
             }
-
-
         }
+
         return signupfact;
     }]);

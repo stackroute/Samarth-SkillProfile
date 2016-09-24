@@ -4,7 +4,7 @@
       <md-card-header id="headersection">
         <md-card-header-text>
           <span class="md-headline">{{$ctrl.data.name}}<br><span id="headerage" hide-lg>({{$ctrl.data.age}} yrs , {{$ctrl.data.gender}})</span></span>
-          <span class="md-subhead">{{$ctrl.data.currentdesignation}}</span>
+          <span class="md-subhead">{{$ctrl.data.designation}}</span>
         </md-card-header-text>
         <md-card-avatar id="avatar">
           <img class="md-user-avatar" src="webcomponents/skillcard/images/dk.PNG">
@@ -15,7 +15,7 @@
           <div layout="row" id="section1" flex hide-xs hide-md hide-sm>
             <div flex id="section1" align="left" layout="column">
               <div flex>
-               <p>DOB:{{$ctrl.data.DOB}} ({{$ctrl.data.age}} yrs)
+               <p>DOB:{{$ctrl.data.dob}} ({{$ctrl.data.age}} yrs)
                </p>
               </div>
               <!-- <div flex>
@@ -34,7 +34,7 @@
                 <img id="professionimage" src="webcomponents/skillcard/images/profession.png">
               </div>
               <div flex>
-                <p>{{$ctrl.data.profession}}</p>
+                <p>{{$ctrl.data.designation}}</p>
               </div>
             </div>
             <!-- <div flex id="section2" align="center">
@@ -89,7 +89,7 @@
           </div>
           <md-divider id="divider2" hide-xs></md-divider>
           <div id="section4" flex hide-xs>
-            SKILLS: (skill1 exp10) , (skill2 exp4) , (skill3 exp1)
+            SKILLS: {{$ctrl.data.skills[0]}}
           </div>
         </div>
       </md-card-content>

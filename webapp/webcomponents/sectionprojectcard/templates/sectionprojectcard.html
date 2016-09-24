@@ -1,4 +1,3 @@
-
 <div>
     <md-card>
         <md-card-title class="projectTitle">
@@ -12,16 +11,17 @@
                 <div flex="80" flex-xs="80">
                     <md-icon>fiber_manual_record</md-icon><span class="changeProjectNameFont">{{project.name}}</span>
                     <br>
-                    <md-icon>schedule</md-icon><span class="changeProjectDurationFont">{{project.duration.duration}}</span><span>,</span>
+                    <md-icon>schedule</md-icon><span class="changeProjectDurationFont">{{project.duration.durationInMonths}}</span><span>,</span>
                     <span>&#8377;</span>
                     <span class="changeProjectSalaryFont">{{project.income}}</span>
                     <br>
                     <md-icon>work</md-icon>
                     <span class="changeProjectClientFont">{{project.workplace}}</span><span>,</span>
                     <md-icon>location_on</md-icon>
-                    <span class="changeProjectLocationFont">{{project.location}}</span></span><br>
+                    <span class="changeProjectLocationFont">{{project.location}}</span></span>
+                    <br>
                     <md-icon>build</md-icon>
-                    <span ng-repeat="skill in project.skills">
+                    <span ng-repeat="(skillname,skill) in project.skills">
                     <span class="changeProjectLocationFont"> {{skill}} </span></span>
                     <md-divider></md-divider>
                 </div>
@@ -34,7 +34,7 @@
         </div>
         <div layout="row" flex-offset="90" layout-align="center center">
             <a ng-model="$ctrl.collapsed" ng-hide="$ctrl.collapsed" ng-click="$ctrl.collapsed=!$ctrl.collapsed ;$ctrl.increaseLimit()" class="pointCursor">
-              <md-icon class="material-icons" ng-hide="$ctrl.collapsed">keyboard_arrow_down</md-icon>
+                <md-icon class="material-icons" ng-hide="$ctrl.collapsed">keyboard_arrow_down</md-icon>
             </a>
             <a ng-model="$ctrl.collapsed" ng-show="$ctrl.collapsed" ng-click="$ctrl.collapsed=!$ctrl.collapsed;$ctrl.decreaseLimit()" " class="pointCursor ">
             <md-icon class="material-icons " ng-show="$ctrl.collapsed ">keyboard_arrow_up</md-icon>
