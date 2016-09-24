@@ -3,7 +3,7 @@ angular.module("sm-skillprofile")
 
              $scope.loadLangData = function(lang) {
                  datagenerate.getjson("section", lang).then(function(result) {
-                     // console.log(JSON.stringify(result));
+                      console.log(result);
                      $scope.signin = result.signin;
                      console.log("result",result.signin);
                      

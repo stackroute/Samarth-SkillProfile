@@ -35,7 +35,10 @@ function sectionskillcardctrl($http, sectionskillcard, $mdDialog, datagenerate, 
     ctrl.value = 40;
     ctrl.skill = {};
     ctrl.primary = [];
-    ctrl.secondary = []; 
+    ctrl.plen=0;
+    ctrl.slen=0;
+    ctrl.secondary = [];
+    ctrl.total = 0; 
     ctrl.increaseLimit = function() {
         ctrl.limitval = ctrl.limitval + 3;
     }
@@ -72,9 +75,13 @@ function sectionskillcardctrl($http, sectionskillcard, $mdDialog, datagenerate, 
                 }
             }
         }
+        ctrl.total=ctrl.primary.length+ctrl.secondary.length;
+        ctrl.plen=ctrl.primary.length;
+        ctrl.slen=ctrl.secondary.length;
        // console.log(ctrl.primary);
 
-    });
+    }); 
+    
 
     ctrl.status = '  ';
     ctrl.customFullscreen = false;
@@ -120,7 +127,7 @@ function sectionskillcardctrl($http, sectionskillcard, $mdDialog, datagenerate, 
                     "metadata": {}
                 }]
             };
-            
+
             if (header === "Add Skill") {
                 $http({ 
                     method: "post",

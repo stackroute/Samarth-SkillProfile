@@ -48,7 +48,6 @@ function projectsectioncardCtrl($http, $mdDialog, datagenerate, $rootScope, loca
         url: 'http://localhost:8081/project/' + $rootScope.candidateid
 
     }).then(function successCallback(response) {
-        console.log("Inside project response ", response.data)
         for (var noOfObjects = 0; noOfObjects < response.data.length; noOfObjects++) {
             for (var record = 0; record < response.data[noOfObjects].projects.length; record++) {
 
@@ -59,6 +58,7 @@ function projectsectioncardCtrl($http, $mdDialog, datagenerate, $rootScope, loca
         ctrl.totalProjects = ctrl.profile.length;
 
     }, function errorCallback(response) {
+
         console.log('Error accord during Project Section')
     });  
 

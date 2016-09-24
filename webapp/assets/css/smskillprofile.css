@@ -19,6 +19,7 @@ body {
 
 .sidenav {
     text-align: center;
+    position: fixed;
 }
 
 .maincontent {
