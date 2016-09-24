@@ -1,11 +1,11 @@
-<md-card class="card" ng-repeat="(key, value) in $ctrl.skill" layout="column">
+<md-card class="card" layout="column">
     <md-card-title>
         <md-card-title-text layout="row">
             <div class="md-headline" flex="90">{{$ctrl.items.skillheader}}</div>
-            <div flex="10">({{$ctrl.primary.length+$ctrl.secondary.length}})</div>
+            <div flex="10">({{$ctrl.total}})</div>
         </md-card-title-text>
     </md-card-title>
-    <h2 class="md-title"> {{$ctrl.items.primary}} <span class="numbers">({{$ctrl.primary.length}})</span> 
+    <h2 class="md-title"> {{$ctrl.items.primary}} <span class="numbers">({{$ctrl.plen}})</span> 
         </h2>
     <div layout="row" class="items" layout-wrap layout-padding>
         <md-whiteframe class="md-whiteframe-1dp" flex="30" flex-xs="100" ng-repeat="value in $ctrl.primary| limitTo: $ctrl.limitval" ng-model="$ctrl.limitval" layout="column" id="{{value.expertise}}">
@@ -34,7 +34,7 @@
             
         </div> -->
     </div>
-    <h2 class="md-title">{{$ctrl.items.secondary}} <span class="numbers">({{$ctrl.secondary.length}})</span></h2>
+    <h2 class="md-title">{{$ctrl.items.secondary}} <span class="numbers">({{$ctrl.slen}})</span></h2>
     <div layout="row" class="items" layout-wrap layout-padding>
         <md-whiteframe class="md-whiteframe-1dp" flex="30" flex-xs="100" ng-repeat="value in $ctrl.secondary| limitTo: $ctrl.limitval2" ng-model="$ctrl.limitval2" layout="column" id="{{value.expertise}}">
             <div layout="row">

@@ -3,17 +3,15 @@
         <md-toolbar>
             <div class="md-toolbar-tools" layout="row" layout-align="start center">
                 <div layout="row" layout-align="start center" flex>
-                <md-button hide-gt-sm show-sm show-xs class="md-icon-button" aria-label="Settings" ng-click="togglemenu()">
-                    <md-icon>menu</md-icon>
-                </md-button>
-
-                <h2>
+                    <md-button hide-gt-sm show-sm show-xs class="md-icon-button" aria-label="Settings" ng-click="togglemenu()">
+                        <md-icon>menu</md-icon>
+                    </md-button>
+                    <h2>
                 <span>{{title}}</span>
                </h2>
-
                 </div>
                 <div layout="row" layout-align="end center" flex>
-                     <md-input-container>
+                    <md-input-container>
                         <!-- <label>Language</label> -->
                         <md-select ng-model="selectlang" ng-change="onChange()">
                             <md-option ng-repeat="lang in language" ng-value="lang">
@@ -21,7 +19,8 @@
                             </md-option>
                         </md-select>
                     </md-input-container>
-                    <a ui-sref="#">Signout</a>
+                    <a ng-click="signout()" ng-show="showSignout
+">Signout</a>
                 </div>
             </div>
         </md-toolbar>

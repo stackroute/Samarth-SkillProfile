@@ -1,6 +1,5 @@
-
-<div class="background" layout="column" layout-align="start center" md-whiteframe="md-whiteframe-1dp" class="md-padding" >
-    <form name="signupForm" id="form1">
+<div class="background" layout="column" layout-align="start center" md-whiteframe="md-whiteframe-1dp" class="md-padding">
+    <form name="signupForm" id="form1" ng-submit="createUser()">
         <div layout="row" layout-align="center center">
             <h3 md-title>{{data.signup}}</h3>
         </div>
@@ -11,7 +10,6 @@
                 <input type="text" ng-model="name" name="name">
             </md-input-container>
         </div>
-
         <div layout="row" layout-align="start center">
             <md-input-container md-no-float class="md-block">
                 <label>{{data.mobile}}</label>
@@ -43,34 +41,35 @@
             </md-input-container>
         </div>
         <div layout="row" layout-align="start center">
-            <md-input-container class="md-icon-float  md-block">
+            <md-input-container md-no-float class="md-block">
                 <label>{{data.password}}</label>
                 <md-icon class="material-icons">lock</md-icon>
-                <input type="password" name="password" required md-no-asterisk ng-model="password">
-                <div ng-messages="signupForm.password.$error">
-                    <div ng-message="required">Password is required.</div>
+                <input ng-model="password" type="password" name="password" required md-no-asterisk ng-required="true" minlength="8" maxlength="20" ng-pattern="/^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^*()_+])[A-Za-z\d][A-Za-z\d!@#$%^*()_+]{7,19}$/">
+                <div flex layout-align="right" ng-messages="signupForm.password.$error" class="error" role="alert">
+                    <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">Password should be 8-20 characters </div>
                 </div>
             </md-input-container>
         </div>
         <div layout="row" layout-align="start center">
-            <md-input-container class="md-icon-float  md-block">
-                <md-icon class="material-icons">lock</md-icon>
+            <md-input-container md-no-float class="md-block">
                 <label>{{data.confirm}}</label>
-                <input type="password" name="Confirmpassword" required md-no-asterisk ng-model="Confirmpassword">
-                <div ng-messages="signupForm.Confirmpassword.$error">
-                    <div ng-message="required">Confirm your Password</div>
+                <md-icon class="material-icons">lock</md-icon>
+                <input ng-model="Confirmpassword" type="password" required md-no-asterisk name="Cfpassword" valid-password-c required>
+                <div flex layout-align="right" ng-messages="signupForm.Cfpassword.$error" class="error" role="alert">
+                    <div ng-message-exp="required">This is required </div>
+                    <div class="msg-error" ng-show="signupForm.Cfpassword.$error.noMatch">
+                        passwords donot match</div>
                 </div>
             </md-input-container>
         </div>
         <div layout="row" layout-align="center center">
-            <md-button type="submit" class="md-primary md-raised"  ng-click="add()">
+            <md-button type="submit" class="md-primary md-raised">
                 {{data.create}}
             </md-button>
         </div>
+        <div ui-sref="skillprofile.signin" style="cursor:pointer" ng-model="message">{{message}}</div>
         <div layout="row" layout-align="start center">
             <a ui-sref="skillprofile.signin" class="md-subhead md-padding">{{data.havesign}}</a>
         </div>
-    </form>
-
-
 </div>
+</form>

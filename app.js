@@ -1,10 +1,19 @@
+var http = require('http');
 var express = require('express');
+var apiroutes = express.Router();
+var jwt = require('jsonwebtoken');
 var path = require('path');
 var favicon = require('serve-favicon');
 var morgan = require('morgan');
+var mongoose = require('mongoose');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var jsonServer = require('json-server');
+
+
+var authRoutes = require('./webserver/auth/authrouter');
+var userRoutes = require('./webserver/user/userRoutes');
+mongoose.connect('mongodb://localhost:27017/samarthplatformdb');
 
 //Express App created
 var app = express();
@@ -25,6 +34,9 @@ app.use(express.static(path.join(__dirname, 'webapp')));
 
 app.use('/api', jsonServer.router('samarthdb.json'));
 
+
+app.use('/auth', authRoutes);
+app.use('/user', userRoutes);
 
 app.use(function(req, res, next) {
     var err = new Error('Resource not found');
@@ -51,4 +63,3 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
-

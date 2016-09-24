@@ -19,19 +19,17 @@ angular.module('sm-skillprofile')
                     views: {
                         "content@": {
                             templateUrl: '/auth/templates/signup.html',
-                            controller:'signupController'
-                        }
-                    }
-                })
-                 .state('skillprofile.chnge_password', {
-                    url: '/passwordchange',
-                    views: {
-                        "content@": {
-                            templateUrl: '/auth/templates/updatepassword.html',
                             controller:'signinController'
+                          
+
+
+
                         }
                     }
                 })
+                
+                 
+                 
                 
         }
     ])

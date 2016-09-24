@@ -1,19 +1,30 @@
 angular.module('sm-skillprofile')
-    .controller('signinController', ['$scope', '$http', '$state', 'signinFactory', '$rootScope', 'datagenerate', 'localStorageService',
 
-        function($scope, $http, $state, signinFactory, $rootScope, datagenerate, localStorageService) {
+.directive('validPasswordC', function() {
+        return {
+            require: 'ngModel',
+            link: function(scope, elm, attrs, ctrl) {
+                ctrl.$parsers.unshift(function(viewValue, $scope) {
+                    var noMatch = viewValue != scope.signupForm.password.$viewValue
+                    ctrl.$setValidity('noMatch', !noMatch)
+                })
+            }
+        }
+    })
+    .controller('signinController', ['$scope', '$http', '$state', 'signinFactory', 'signupFactory', '$rootScope', 'datagenerate', 'localStorageService', '$window',
+
+        function($scope, $http, $state, signinFactory, signupFactory, $rootScope, datagenerate, localStorageService, $window) {
 
             $scope.loadLangData = function(lang) {
                 datagenerate.getjson("section", lang).then(function(result) {
-                    // console.log(JSON.stringify(result));
+
                     $scope.data = result;
-                    // console.log("result",result.signin);
 
-
-                }); //end datagenerate
+                });
             }
 
-             $scope.loadLangData(getItem("lang"));
+            $scope.loadLangData(getItem("lang"));
+
             function getItem(key) {
                 return localStorageService.get(key);
             }
@@ -23,60 +34,76 @@ angular.module('sm-skillprofile')
                 $scope.loadLangData(data.language);
 
             });
+            $scope.createUser = function() {
+                    $scope.user = {
+
+                        "name": $scope.name,
+                        "mobile": $scope.phonenumber,
+                        "email": $scope.email,
+                        "password": $scope.password
+
+                    }
+
+                    signupFactory.postsignup($scope.user)
+                        .then(function(result) {
+                                console.log("data in contrller of signup", result);
+
+                                if (result.data == "Candidate already exists, try editing instead...!") {
+                                    $scope.message = "Mobile number already exist with other profile"
+                                } else {
+                                    $scope.message = "Successfully created click here to sign in";
+
+                                }
+                            },
+                            function(data) {
+                                $scope.error = "Error in creating new profile with the given mobile number";
+                            })
+                },
 
 
 
+                $scope.login = function() {
 
-            $scope.login = function() {
                     $scope.user = {
                         "phonenumber": $scope.phonenumber,
                         "password": $scope.password
 
                     }
-                    console.log($scope.user.phonenumber);
                     signinFactory.postsignin($scope.user)
                         .then(function(data) {
-                                console.log("data in contrller", data);
-                            },
-                            function(data) {
-                                $scope.error = data.error;
-                                alert("error");
-                            });
+                            console.log("data in contrller", data.phonenumber);
+                            $scope.error = data.error;
 
-                    signinFactory.getsignin($scope.user.phonenumber)
+                            $scope.success = data.success;
+                            console.log("Inside Signin Factury.....", data.phonenumber)
+
+                        })
+                    signinFactory.getsignin($scope.user)
                         .then(function(data) {
-                                console.log("data in contrller", data);
-                                if (data.length == 0) {
-                                    alert("you are not registered");
-                                } else {
+                                console.log("data in get contrller", data.phonenumber);
+                                $scope.error = data.error;
+
+                                $scope.success = data.success;
+                                console.log("Inside Signin Factury.....", data.phonenumber)
+                                localStorageService.set('JWT', data.token);
+                                var token = localStorageService.get('JWT');
+                                $http.defaults.headers.common.Authorization = data.token;
+
+                                if (token == data.token && $scope.success == true) {
+                                    console.log("token", token + "data.token", data.token)
                                     $state.go("skillprofile.skillhome");
+                                } else {
+                                    $state.go("skillprofile.signin");
                                 }
                             },
-
                             function(data) {
                                 $scope.error = data.error;
-                                alert("error");
-                            });
-                },
-                $scope.edit = function() {
-                    $scope.editUser = {
-                        username: $scope.username,
-                        password: $scope.new_password
-                    }
 
-                    signinFactory.editsignin($scope.editUser)
-
-                    .then(function(data) {
-                            console.log("data in contrller", data);
-                        },
-
-                        function(data) {
-                            $scope.error = data.error;
-                            alert("error");
-                        });
-
-
+                            })
                 }
 
+
+
         }
+
     ]);

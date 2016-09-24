@@ -4,7 +4,7 @@ angular.module('sm-skillprofile')
         controller: projectsectioncardCtrl          
     });
 
-function projectsectioncardCtrl($http, $mdDialog, datagenerate, $rootScope,localStorageService) {
+function projectsectioncardCtrl($http, $mdDialog, datagenerate, $rootScope, localStorageService) {
 
     var ctrl = this;  
     ctrl.loadLangData = function(lang) {
@@ -22,10 +22,10 @@ function projectsectioncardCtrl($http, $mdDialog, datagenerate, $rootScope,local
     }
     //$scope.loadLangData("Hindi");
     $rootScope.$on("lang_changed", function(event, data) {
-       // console.log("User switch to language " + data.language);
+        // console.log("User switch to language " + data.language);
         ctrl.loadLangData(data.language);
     });
-    
+
     ctrl.changeFont = 'changeProjectNameFont';
     ctrl.profile = []; 
     ctrl.profile1 = [];
@@ -45,8 +45,9 @@ function projectsectioncardCtrl($http, $mdDialog, datagenerate, $rootScope,local
 
     $http({
         method: 'GET',
-        url: 'http://localhost:8081/project/102'
+        url: 'http://localhost:8081/project/' + $rootScope.candidateid
     }).then(function successCallback(response) {
+        console.log("project response",response);
         console.log("Length=" + response.data.length)
         for (var noOfObjects = 0; noOfObjects < response.data.length; noOfObjects++) {
             for (var record = 0; record < response.data[noOfObjects].projects.length; record++) {
@@ -58,6 +59,7 @@ function projectsectioncardCtrl($http, $mdDialog, datagenerate, $rootScope,local
         ctrl.totalProjects = ctrl.profile.length;
 
     }, function errorCallback(response) {
+
         console.log('Error accord during Project Section')
     });  
 
@@ -81,7 +83,7 @@ function projectsectioncardCtrl($http, $mdDialog, datagenerate, $rootScope,local
 
     function DialogController($scope, $mdDialog, $http, header, object) {
         $scope.header = header;
-        $scope.projectObj=object;
+        $scope.projectObj = object;
         if (object != '') {
             $scope.Project = object.name;
             $scope.Duration = object.duration.duration;
