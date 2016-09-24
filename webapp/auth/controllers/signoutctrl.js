@@ -1,6 +1,6 @@
 angular.module('sm-skillprofile')
-    .controller('authCtrl', ['$rootScope', '$scope', '$state', 'UserAuthService',
-        'LangService', 'datagenerate',
+    .controller('signoutCtrl', ['$rootScope', '$scope', '$state',
+        'UserAuthService', 'LangService', 'datagenerate',
         function($rootScope, $scope, $state, UserAuthService, LangService,
             datagenerate) {
             $scope.loadLangData = function(lang) {

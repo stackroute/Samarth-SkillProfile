@@ -7,7 +7,11 @@ angular.module('sm-skillprofile')
             $stateProvider
                 .state('skillprofile.signout', {
                     url: '/signout',
-                    controller: 'signoutCtrl'
+                    views: {
+                        "content@": {
+                            controller: 'signoutCtrl'
+                        }
+                    }
                 })
                 .state('skillprofile.signin', {
                     url: '/signin',
