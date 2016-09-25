@@ -23,7 +23,7 @@
     <link rel="stylesheet" type="text/css" href="/home/css/navbar.css">
 </head>
 
-<body ng-app="sm-skillprofile" ng-controller="sm-skillprofilectrl" ng-cloak>
+<body ng-app="sm-skillprofile" ng-controller="skillprofilectrl" ng-cloak>
     <div ui-view="navbar"></div>
     <!-- <div layout="row" flex>
         <div ng-show="showSidenav" ui-view="sidebar" class="sidebarcss" flex-offset="15" flex="20" hide-xs hide-sm></div>
@@ -44,6 +44,7 @@
 <script src="/webcomponents/skillcard/blob.js"></script>
 <script src="/html2canvas/build/html2canvas.js"></script>
 <script src="smskillprofileapp.js"></script>
+<script src="/app/services/langservice.js"></script>
 <script src="/skillhome/skillhomemodule.js"></script>
 <script src="/skillhome/controller/skillhomectrl.js"></script>
 <script src="/skillhome/controller/skillhomenavctrl.js"></script>
@@ -67,12 +68,15 @@
 <script src="/notifications/controller/notificationctrl.js"></script>
 <script src="/messages/messagesmodule.js"></script>
 <script src="/messages/controller/messagesctrl.js"></script>
+<script src="/auth/controllers/signoutctrl.js"></script>
 <script src="/auth/controllers/signinctrl.js"></script>
-<script src="/auth/services/signupfactory.js"></script>
-<script src="/auth/services/signinfactory.js"></script>
 <script src="/auth/authmodule.js"></script>
+<script src="/app/controller/skillprofilectrl.js"></script>
 <script src="/home/controller/navctrl.js"></script>
 <script src="/home/services/languagechange.js"></script>
+<script src="/auth/services/userauthservice.js"></script>
+<script src="/auth/services/userauthinterceptor.js"></script>
+<script src="/auth/controllers/authctrl.js"></script>
 <script src="/home/homemodule.js"></script>
 <script src="/home/controller/signinpagectrl.js"></script>
 <script src="/webcomponents/sectionworkexperiencecard/sectionworkexperiencecard.js"></script>

@@ -1,13 +1,13 @@
 <div layout="column" layout-align="center center" md-whiteframe="md-whiteframe-1dp" class="md-padding">
-    <form name="signinForm" id="form1">
+    <form name="signinForm" id="form1" ng-submit="signin()">
         <div layout="row" layout-align="center center">
-            <h3 class="md-title">{{data.signin}}</h3>
+            <h3 class="md-title">{{resourceData.signin}}</h3>
         </div>
         <div layout="row" layout-align="start center">
             <md-input-container class="md-icon-float md-block">
-                <label>{{data.mobile}}</label>
+                <label>{{resourceData.mobile}}</label>
                 <md-icon class="material-icons">phone</md-icon>
-                <input type="tel" ng-model="phonenumber" name="number" required md-no-asterisk ng-pattern="/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/">
+                <input type="tel" ng-model="user.uname" name="number" required md-no-asterisk ng-pattern="/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/">
                 <div ng-messages="signinForm.number.$error">
                     <div ng-message="required">Should be a 10 digit number</div>
                 </div>
@@ -15,9 +15,9 @@
         </div>
         <div layout="row" layout-align="start center">
             <md-input-container class="md-icon-float md-block">
-                <label>{{data.password}}</label>
+                <label>{{resourceData.password}}</label>
                 <md-icon class="material-icons">lock</md-icon>
-                <input type="password" name="password" required md-no-asterisk ng-model="password">
+                <input type="password" name="user.password" required md-no-asterisk ng-model="user.pwd">
                 <div ng-messages="signinForm.password.$error">
                     <div ng-message="required">Password is required.</div>
                 </div>
@@ -25,17 +25,10 @@
         </div>
         <div layout="row" layout-align="start center" ng-model="error" style="color:red">{{error}} </div>
         <div layout="row" layout-align="start center">
-            <a>
-                <md-button class="md-raised md-primary" ng-click="login()">
-                    Sign-In
-                </md-button>
-            </a>
+            <md-button type="submit" class="md-primary md-raised">Sign-In</md-button>
         </div>
         <div layout="row" layout-align="center center">
-            <a ui-sref="skillprofile.signup">
-                 Create New Account
-           </a>
+            <a ui-sref="skillprofile.signup">Create New Account</a>
         </div>
-</div>
-</form>
+    </form>
 </div>
