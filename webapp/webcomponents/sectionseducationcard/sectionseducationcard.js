@@ -8,11 +8,12 @@ var app = angular
 
 function educationCardController($mdDialog, $http, datagenerate, $rootScope, localStorageService) {
     var ctrl = this;
+    var candidateid = localStorageService.get("candidateid");
     ctrl.loadLangData = function(lang) {
         datagenerate.getjson("section", lang).then(function(result) {
             ctrl.items = result;
-            console.log("for skills");
-            console.log(result);
+
+
 
         }); //end datagenerate
     }
@@ -23,7 +24,7 @@ function educationCardController($mdDialog, $http, datagenerate, $rootScope, loc
     }
     //$scope.loadLangData("Hindi");
     $rootScope.$on("lang_changed", function(event, data) {
-        console.log("User switch to language " + data.language);
+
         ctrl.loadLangData(data.language);
     });
 
@@ -31,14 +32,15 @@ function educationCardController($mdDialog, $http, datagenerate, $rootScope, loc
     ctrl.schools = [];
     ctrl.colleges = [];
 
-    $http.get('http://localhost:8081/education/' + $rootScope.candidateid).then(function(response) {
+    $http.get('http://localhost:8081/education/' + candidateid).then(function(response) {
+
         for (var noOfObjects = 0; noOfObjects < response.data[0].qualification.length; noOfObjects++) {
             for (var record = 0; record < 1; record++) {
-                console.log("PEHLA OBJECT", response.data[0].qualification[noOfObjects]);
+
                 ctrl.eduDetails.push(response.data[0].qualification[noOfObjects]);
             }
         }
-        console.log("EDUCATION OBJECT MAIN", ctrl.eduDetails);
+
 
         for (var i = 0; i < ctrl.eduDetails.length; i++) {
             if (ctrl.eduDetails[i].institute.type == "school") {
@@ -49,9 +51,6 @@ function educationCardController($mdDialog, $http, datagenerate, $rootScope, loc
                 ctrl.colleges.push(ctrl.eduDetails[i]);
             }
         }
-
-        console.log("schools", ctrl.schools);
-        console.log("colleges", ctrl.colleges);
 
     });
 
@@ -74,7 +73,8 @@ function educationCardController($mdDialog, $http, datagenerate, $rootScope, loc
             );
     };
 
-    function DialogController($scope, $mdDialog, $http, header, object) {
+    function DialogController($scope, $mdDialog, $http, header, object, localStorageService) {
+        var candidateid = localStorageService.get("candidateid");
         $scope.header = header;
         // $scope.yearval="";
 
@@ -129,7 +129,7 @@ function educationCardController($mdDialog, $http, datagenerate, $rootScope, loc
 
         $scope.save = function(header) {
             var education = {
-                "record": [{
+                "qualification": [{
                     "title": $scope.title,
                     "batch": $scope.batch,
                     "from": $scope.to,
@@ -152,33 +152,33 @@ function educationCardController($mdDialog, $http, datagenerate, $rootScope, loc
             if (header == ("Add Education")) {
                 $http({
                         method: 'POST',
-                        url: 'http://localhost:8081/education/102',
+                        url: 'http://localhost:8081/education/' + candidateid,
                         // 'Content-Type':'application/json',
                         data: education
                     })
                     .then(function successCallback(response) {
-                            alert('Education Added');
+                            console.log("education added");
                             $scope.cancel();
 
                         },
                         function errorCallback(response) {
-                            alert('error');
+                            console.log('error in adding education');
                         });
             }
             if (header == "Edit School" || header == "Edit College") {
                 $http({
                         method: 'PATCH',
-                        url: 'http://localhost:8081/education/102/' + $scope.title,
+                        url: 'http://localhost:8081/education/' + candidateid + "/" + $scope.title,
                         // 'Content-Type':'application/json',
                         data: education
                     })
                     .then(function successCallback(response) {
-                            alert('Education Updated');
+                            console.log('Education Updated');
                             $scope.cancel();
 
                         },
                         function errorCallback(response) {
-                            alert('error');
+                            console.log('error in updating education');
                         });
             }
 

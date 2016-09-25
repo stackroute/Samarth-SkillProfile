@@ -19,16 +19,16 @@
                             </md-option>
                         </md-select>
                     </md-input-container>
-                    <a ng-click="signout()" ng-show="showSignout
-">Signout</a>
+                    <div>
+                        <a ng-click="signout()" ng-show="showSignout">Signout</a>
+                    </div>
                 </div>
-            </div>
         </md-toolbar>
     </md-content>
-</div>
-<div>
-    <md-sidenav class="md-sidenav-left md-whiteframe-4dp" md-component-id="left">
-        <md-content ng-include src="'home/templates/sidenavcontents.html'" ng-click="togglemenu()"></md-content>
-    </md-sidenav>
-</div>
-<hr>
+    </div>
+    <div>
+        <md-sidenav class="md-sidenav-left md-whiteframe-4dp " md-component-id="left ">
+            <md-content ng-include src=" 'home/templates/sidenavcontents.html' " ng-click="togglemenu() "></md-content>
+        </md-sidenav>
+    </div>
+    <hr>

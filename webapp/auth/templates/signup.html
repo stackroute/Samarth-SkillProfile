@@ -1,26 +1,29 @@
-<div class="background" layout="column" layout-align="start center" md-whiteframe="md-whiteframe-1dp" class="md-padding">
+<div class="background" layout="column" layout-align="center center" md-whiteframe="md-whiteframe-1dp" class="md-padding">
     <form name="signupForm" id="form1" ng-submit="createUser()">
         <div layout="row" layout-align="center center">
             <h3 md-title>{{data.signup}}</h3>
         </div>
-        <div layout="row" layout-align="start center">
-            <md-input-container md-no-float class=" md-block">
+        <div layout="row" layout-align="center center">
+            <md-input-container md-no-float class="md-block">
                 <label>{{data.name}}</label>
                 <md-icon class="material-icons">person</md-icon>
-                <input type="text" ng-model="name" name="name">
+                <input type="text" name="name" minlength="5" maxlength="30" ng-model="name" ng-pattern="/^[a-zA-Z]*$/" />
+                <div ng-messages="signupForm.name.$error">
+                    <div ng-message-exp="['minlength','maxlength']">Name should contain below 30 characters</div>
+                </div>
             </md-input-container>
         </div>
-        <div layout="row" layout-align="start center">
+        <div layout="row" layout-align="center center">
             <md-input-container md-no-float class="md-block">
                 <label>{{data.mobile}}</label>
                 <md-icon class="material-icons">phone</md-icon>
-                <input type="tel" name="number" required md-no-asterisk ng-model="phonenumber" ng-pattern="/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/">
+                <input type="tel" name="number" only-digits required md-no-asterisk ng-model="phonenumber" ng-pattern="/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/">
                 <div ng-messages="signupForm.number.$error">
                     <div ng-message="required">Should be a 10 digit number</div>
                 </div>
             </md-input-container>
         </div>
-        <div layout="row" layout-align="start center">
+        <div layout="row" layout-align="center center">
             <md-input-container md-no-float class="md-block">
                 <label>{{data.email}}</label>
                 <md-icon class="material-icons">mail</md-icon>
@@ -30,17 +33,17 @@
                 </div>
             </md-input-container>
         </div>
-        <div layout="row" layout-align="start center">
+        <div layout="row" layout-align="center center">
             <md-input-container md-no-float class="md-block">
                 <label>{{data.location}}</label>
                 <md-icon class="material-icons">place</md-icon>
-                <input type="text" name="Location" required md-no-asterisk ng-model="Location">
+                <input type="text" name="Location" only-letters required md-no-asterisk ng-pattern="/^[a-zA-Z]*$/" ng-model="Location">
                 <div ng-messages="signupForm.Location.$error">
-                    <div ng-message="required">This is required.</div>
+                    <!-- <div ng-message="required">This is required.</div> -->
                 </div>
             </md-input-container>
         </div>
-        <div layout="row" layout-align="start center">
+        <div layout="row" layout-align="center center">
             <md-input-container md-no-float class="md-block">
                 <label>{{data.password}}</label>
                 <md-icon class="material-icons">lock</md-icon>
@@ -50,7 +53,7 @@
                 </div>
             </md-input-container>
         </div>
-        <div layout="row" layout-align="start center">
+        <div layout="row" layout-align="center center">
             <md-input-container md-no-float class="md-block">
                 <label>{{data.confirm}}</label>
                 <md-icon class="material-icons">lock</md-icon>
@@ -62,13 +65,13 @@
                 </div>
             </md-input-container>
         </div>
-        <div layout="row" layout-align="center center">
-            <md-button type="submit" class="md-primary md-raised">
+        <div layout="row" layout-xs="column" flex-xs="95" flex-gt-xs="100">
+            <md-button id="signinbtn" type="submit" class="md-primary md-raised">
                 {{data.create}}
             </md-button>
         </div>
         <div ui-sref="skillprofile.signin" style="cursor:pointer" ng-model="message">{{message}}</div>
-        <div layout="row" layout-align="start center">
+        <div layout="row" layout-align="center center">
             <a ui-sref="skillprofile.signin" class="md-subhead md-padding">{{data.havesign}}</a>
         </div>
 </div>

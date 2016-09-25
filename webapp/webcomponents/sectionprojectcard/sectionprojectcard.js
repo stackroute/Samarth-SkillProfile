@@ -7,6 +7,7 @@ angular.module('sm-skillprofile')
 function projectsectioncardCtrl($http, $mdDialog, datagenerate, $rootScope, localStorageService) {
 
     var ctrl = this;  
+    var candidateid = localStorageService.get("candidateid");
     ctrl.loadLangData = function(lang) {
         datagenerate.getjson("section", lang).then(function(result) {
             ctrl.items = result;
@@ -45,7 +46,7 @@ function projectsectioncardCtrl($http, $mdDialog, datagenerate, $rootScope, loca
     console.log("Inside project section ", $rootScope.candidateid)
     $http({
         method: 'GET',
-        url: 'http://localhost:8081/project/' + $rootScope.candidateid
+        url: 'http://localhost:8081/project/' + candidateid
 
     }).then(function successCallback(response) {
         for (var noOfObjects = 0; noOfObjects < response.data.length; noOfObjects++) {
@@ -80,12 +81,13 @@ function projectsectioncardCtrl($http, $mdDialog, datagenerate, $rootScope, loca
             );
     };
 
-    function DialogController($scope, $mdDialog, $http, header, object) {
+    function DialogController($scope, $mdDialog, $http, header, object, localStorageService) {
+        var candidateid = localStorageService.get("candidateid");
         $scope.header = header;
         $scope.projectObj = object;
         if (object != '') {
             $scope.Project = object.name;
-            $scope.Duration = object.duration.duration;
+            $scope.Duration = object.duration.durationInMonths;
             $scope.Client = object.workplace;
             $scope.Location = object.location;
             $scope.Salary = object.income;
@@ -122,7 +124,7 @@ function projectsectioncardCtrl($http, $mdDialog, datagenerate, $rootScope, loca
 
             var projectData = {
 
-                "records": [{
+                "projects": [{
                     "name": $scope.Project,
                     "workplace": $scope.Client,
                     "location": $scope.Location,
@@ -130,16 +132,17 @@ function projectsectioncardCtrl($http, $mdDialog, datagenerate, $rootScope, loca
                     "duration": {
                         "from": "09/08/2016",
                         "to": "09/11/2016",
-                        "duration": $scope.Duration
+                        "durationInMonths": $scope.Duration
                     },
                     "skills": ["Javascript"],
                     "meta": []
                 }]
             }
             if (header == "Add Project") {
+
                 $http({
                     method: 'POST',
-                    url: 'http://localhost:8081/project/102',
+                    url: 'http://localhost:8081/project/' + candidateid,
                     data: projectData,
                     crossDomain: true
                 }).then(function successCallback(response) {
@@ -149,10 +152,10 @@ function projectsectioncardCtrl($http, $mdDialog, datagenerate, $rootScope, loca
                     console.log('Error accord during Project Section')
                 });  
             } else {
-
+                console.log("projectdata", projectData);
                 $http({
                     method: 'PATCH',
-                    url: 'http://localhost:8081/project/102/' + object.name,
+                    url: 'http://localhost:8081/project/' + candidateid + "/" + object.name,
                     data: projectData,
                     crossDomain: true
                 }).then(function successCallback(response) {

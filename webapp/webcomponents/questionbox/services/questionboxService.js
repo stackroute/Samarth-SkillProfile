@@ -1,5 +1,5 @@
 angular.module('sm-skillprofile')
-    .service('quesnboxService', function($http, $rootScope) {
+    .service('quesnboxService', function($http, $rootScope, localStorageService) {
         return {
             questionGenerator: function(lang) {
 
@@ -10,11 +10,12 @@ angular.module('sm-skillprofile')
 
 
                 ];
+                var candidateid = localStorageService.get("candidateid");
                 var randomNumber = Math.floor(Math.random() * sectionArray.length);
                 console.log("Section array....", sectionArray[randomNumber])
                 return $http({
                     method: 'GET',
-                    url: 'http://localhost:8081/candidates/7204487502/qboxquestions?sections=' + sectionArray[randomNumber] + '&limit=2&skip=0&lang=' + lang
+                    url: 'http://localhost:8081/candidates/' + candidateid + '/qboxquestions?sections=' + sectionArray[randomNumber] + '&limit=2&skip=0&lang=' + lang
                 }).then(function successCallback(response) {
                     var questionObj = response.data;
                     console.log("About to save questionObj", questionObj);
@@ -28,7 +29,7 @@ angular.module('sm-skillprofile')
             updatequestion: function(questiondata, answer) {
                 return $http({
                     method: 'PATCH',
-                    url: 'http://localhost:8081/candidates/7204487502/' + answer,
+                    url: 'http://localhost:8081/candidates/' + candidateid + '/' + answer,
                     data: questiondata
                 }).then(function successCallback(response) {
 

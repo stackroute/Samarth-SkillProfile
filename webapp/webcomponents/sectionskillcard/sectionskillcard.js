@@ -12,11 +12,10 @@ angular.module('sm-skillprofile')
 
 function sectionskillcardctrl($http, sectionskillcard, $mdDialog, datagenerate, $rootScope, localStorageService) {
     var ctrl = this;
+    var candidateid = localStorageService.get("candidateid");
     ctrl.loadLangData = function(lang) {
         datagenerate.getjson("section", lang).then(function(result) {
             ctrl.items = result;
-            console.log("for skills");
-            console.log(result);
 
         }); //end datagenerate
     }
@@ -27,7 +26,7 @@ function sectionskillcardctrl($http, sectionskillcard, $mdDialog, datagenerate, 
     }
     //$scope.loadLangData("Hindi");
     $rootScope.$on("lang_changed", function(event, data) {
-        console.log("User switch to language " + data.language);
+
         ctrl.loadLangData(data.language);
     });
     ctrl.limitval = 3;
@@ -35,8 +34,8 @@ function sectionskillcardctrl($http, sectionskillcard, $mdDialog, datagenerate, 
     ctrl.value = 40;
     ctrl.skill = {};
     ctrl.primary = [];
-    ctrl.plen=0;
-    ctrl.slen=0;
+    ctrl.plen = 0;
+    ctrl.slen = 0;
     ctrl.secondary = [];
     ctrl.total = 0; 
     ctrl.increaseLimit = function() {
@@ -75,13 +74,13 @@ function sectionskillcardctrl($http, sectionskillcard, $mdDialog, datagenerate, 
                 }
             }
         }
-        ctrl.total=ctrl.primary.length+ctrl.secondary.length;
-        ctrl.plen=ctrl.primary.length;
-        ctrl.slen=ctrl.secondary.length;
-       // console.log(ctrl.primary);
+        ctrl.total = ctrl.primary.length + ctrl.secondary.length;
+        ctrl.plen = ctrl.primary.length;
+        ctrl.slen = ctrl.secondary.length;
+        // console.log(ctrl.primary);
 
-    }); 
-    
+    });
+
 
     ctrl.status = '  ';
     ctrl.customFullscreen = false;
@@ -105,7 +104,8 @@ function sectionskillcardctrl($http, sectionskillcard, $mdDialog, datagenerate, 
             });
     };
 
-    function DialogController($scope, $mdDialog, val, header) {
+    function DialogController($scope, $mdDialog, val, header, localStorageService) {
+        var candidateid = localStorageService.get("candidateid");
         $scope.skillObject = val;
         var skill = val.skillname;
         //console.log("coming", skill);
@@ -131,25 +131,25 @@ function sectionskillcardctrl($http, sectionskillcard, $mdDialog, datagenerate, 
             if (header === "Add Skill") {
                 $http({ 
                     method: "post",
-                    url: "http://localhost:8081/skill/101",
+                    url: "http://localhost:8081/skill/" + candidateid,
                     data: skillObj
                 }).then(function mySucces(response)  { 
                     console.log("res", response.data[0])
                         // alert(response);
                 }, function myError(response) { 
-                    alert('error'); 
+                    console.log("error in adding skill section") 
                 });
             }
             if (header === "Edit Skill") {
                 $http({ 
                     method: "patch",
-                    url: "http://localhost:8081/skill/102/" + skill,
+                    url: "http://localhost:8081/skill/" + candidateid + "/" + skill,
                     data: skillObj
                 }).then(function mySucces(response)  { 
                     console.log("res", response)
                         // alert(response);
                 }, function myError(response) { 
-                    alert('error'); 
+                    console.log('error in updating skill section'); 
                 });
             }
             $mdDialog.hide();

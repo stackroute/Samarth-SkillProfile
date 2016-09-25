@@ -1,28 +1,29 @@
 angular.module('sm-skillprofile')
-    .factory('sectionskillcard', function($http) 
-    {
+    .factory('sectionskillcard', function($http, $rootScope, localStorageService) {
         return {
             getjson: function() {
-        	var skill={};
-            return    $http({ 
+                var skill = {};
+                var candidateid = localStorageService.get("candidateid");
+
+                return $http({ 
                     method: "get",
-                    url: "http://localhost:8081/skill/7749995677",
-                    
+                    url: "http://localhost:8081/skill/" + candidateid,
+
                 }).then(function mySucces(response)  { 
-                   // console.log("res",response.data[0])
+                    // console.log("res",response.data[0])
                     for (var prop in response.data[0])  { 
                         if (prop == "skills")  { 
 
                             skill[prop] = response.data[0][prop]; 
                         }
-                        
+
                     }
-                   //console.log("skill",skill);
+                    //console.log("skill",skill);
                      
                     return skill;
 
                 }, function myError(response) { 
-                    alert('error'); 
+                    console.log('error in getting sectionskill'); 
                 });
             }
 

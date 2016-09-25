@@ -6,7 +6,7 @@
              $scope.signout = function() {
 
                  localStorageService.remove('JWT');
-
+                 localStorageService.remove("candidateid");
                  $http.defaults.headers.common.Authorization = '';
 
                  if (localStorageService.get('JWT') == null) {

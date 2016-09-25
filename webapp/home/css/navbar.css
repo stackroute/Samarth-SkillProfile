@@ -5,6 +5,7 @@
 .md-toolbar-tools>div>a {
     cursor: pointer;
     font-size: small;
+    position: fixed;
 }
 
 .md-toolbar-tools>a:hover {
@@ -13,6 +14,6 @@
     color: #ffffff;
 }
 
-md-content>md-toolbar{
-	position: fixed;
+md-content>md-toolbar {
+    position: fixed;
 }

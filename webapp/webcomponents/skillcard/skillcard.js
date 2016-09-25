@@ -1,5 +1,4 @@
-angular.module('sm-skillprofile')  
-      .component('mySkillcard',          {            
+angular.module('sm-skillprofile')        .component('mySkillcard',          {            
     templateUrl: 'webcomponents/skillcard/templates/skillcard.html',
                 controller: skillcardctrl,
     bindings: {
@@ -8,13 +7,13 @@ angular.module('sm-skillprofile')  
     transclude: true             
 });
 
-function skillcardctrl($window, $timeout,$mdDialog,skillcardservice)            {
+function skillcardctrl($window, $timeout, $mdDialog, skillcardservice)            {
     var ctrl = this;
     var name;
-   console.log("Inside skill card ctrl....");
-skillcardservice.getskillcarddata().then(function(result){
-  ctrl.data=result;
-});
+    console.log("Inside skill card ctrl....");
+    skillcardservice.getskillcarddata().then(function(result) {
+        ctrl.data = result;
+    });
 
 
 
@@ -23,9 +22,8 @@ skillcardservice.getskillcarddata().then(function(result){
 
     function createDownloadUrl() {
 
-        name=ctrl.data.name+".png";
-        ctrl.data1 = ctrl.data;
-        console.log("download " + ctrl.data);             
+        name = ctrl.data.name + ".png";
+        ctrl.data1 = ctrl.data;            
         ctrl.downloaddata = JSON.stringify(ctrl.data1);
 
         blob = new Blob([ctrl.downloaddata], { type: 'text/plain' }),
@@ -34,49 +32,31 @@ skillcardservice.getskillcarddata().then(function(result){
     }
     var getCanvas;
     $timeout(createDownloadUrl, 1000);
-    
-    
+
+
     ctrl.render = function(ev) {
         var card = angular.element(document.querySelector('#totalcardarea'));
         html2canvas(card, {
             onrendered: function(canvas) {
-                console.log("canvas", canvas);
+
                 getCanvas = canvas;
-                ctrl.downloadcard();  
-               // ctrl.showConfirm(ev);     
+                ctrl.downloadcard();
+                // ctrl.showConfirm(ev);     
             }
         });
-        console.log("inside render");
+
 
     }  
-  //   ctrl.showConfirm = function(ev) {
-  //   // Appending dialog to document.body to cover sidenav in docs app
-  //   var confirm = $mdDialog.confirm()
-  //         .title('Are you sure want to download')
-  //         .textContent('Skillcard changes to png format')
-          
-  //         .targetEvent(ev)
-  //         .ok('Download')
-  //         .cancel('Cancel');
 
-  //   $mdDialog.show(confirm).then(function() {
-  //       alert("download");
-  //       ctrl.downloadcard();
-  //     // $scope.status = 'You decided to get rid of your debt.';
-  //   }, function() {
-  //       getcanvas="";
-  //     //$scope.status = 'You decided to keep your debt.';
-  //   });
-  // };    
-     ctrl.downloadcard = function() {
+    ctrl.downloadcard = function() {
         var imgageData = getCanvas.toDataURL("image/png");
         var newData = imgageData.replace(/^data:image\/png/, "data:application/octet-stream");
         //window.location.href = newData;
         //window.open(newData,name)
-         var dwld = angular.element(document.querySelector('#download'));
-         dwld.attr("download", name).attr("href", newData)    
+        var dwld = angular.element(document.querySelector('#download'));
+        dwld.attr("download", name).attr("href", newData)    
     }
-                
+
 }        
 
-               
+           

@@ -1,11 +1,12 @@
 angular.module('sm-skillprofile')
-    .service('skillcardservice', function($http, $filter, $rootScope) {
+    .service('skillcardservice', function($http, $filter, $rootScope, localStorageService) {
         return {
             getskillcarddata: function() {
                 var skillcarddata = {};
+                var candidateid = localStorageService.get("candidateid");
                 return $http({ 
                     method: "get",
-                    url: "http://localhost:8081/skillcard/" + $rootScope.candidateid,
+                    url: "http://localhost:8081/skillcard/" + candidateid,
 
                 }).then(function mySucces(response)  { 
                     console.log("haan v jaaan de rea");
@@ -46,7 +47,7 @@ angular.module('sm-skillprofile')
                     console.log('SKILL CARD SERVICE', skillcarddata);
                     return skillcarddata;
                 }, function myError(response) { 
-                    alert('error'); 
+                    console.log("error in getting skillcard details"); 
                 });
             }
 

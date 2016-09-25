@@ -13,8 +13,9 @@ var app = angular
         }
     });
     */
-function workexperienceCardController($http, $mdDialog) {
+function workexperienceCardController($http, $mdDialog, localStorageService) {
     var ctrl = this;
+    var candidateid = localStorageService.get("candidateid");
     ctrl.workexperiences = [];
     ctrl.workexperience1 = [];
     ctrl.totalworkexperience = 0;
@@ -27,7 +28,7 @@ function workexperienceCardController($http, $mdDialog) {
     ctrl.decreaseLimit = function() {
         ctrl.limitval = 4;
     }
-    $http.get('http://localhost:8081/work/1234566')
+    $http.get('http://localhost:8081/work/' + candidateid)
         .then(function success(response) {
             console.log("data", response.data);
             //console.log("sri",response.data[0].workexperiences.length);
@@ -74,7 +75,8 @@ function workexperienceCardController($http, $mdDialog) {
     };
 
 
-    function DialogController($scope, $mdDialog, $http, header, object) {
+    function DialogController($scope, $mdDialog, $http, header, object, localStorageService) {
+        var candidateid = localStorageService.get("candidateid");
         $scope.header = header;
         $scope.projectObj = object;
         if (object != '') {
@@ -133,7 +135,7 @@ function workexperienceCardController($http, $mdDialog) {
             if (header == "Add Workexperience") {
                 $http({
                     method: 'POST',
-                    url: 'http://localhost:8081/work/1234566',
+                    url: 'http://localhost:8081/work/' + candidateid,
                     data: workdata,
                     crossDomain: true
                 }).then(function successCallback(response) {
@@ -146,7 +148,7 @@ function workexperienceCardController($http, $mdDialog) {
 
                 $http({
                     method: 'PATCH',
-                    url: 'http://localhost:8081/work/1234566/' + object.workplace,
+                    url: 'http://localhost:8081/work/1234566/' + candidateid,
                     data: workdata,
                     crossDomain: true
                 }).then(function successCallback(response) {

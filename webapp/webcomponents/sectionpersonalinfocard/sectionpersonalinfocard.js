@@ -29,20 +29,19 @@ angular.module('sm-skillprofile')
 
 
 
-function personalinfoCardController($http, $mdDialog) {
+function personalinfoCardController($http, $mdDialog, $rootScope, localStorageService) {
     var ctrl = this;
     ctrl.personalInfo = {};
-    // ctrl.personal = {};
+    var candidateid = localStorageService.get("candidateid");
     $http({
         method: "GET",
-        url: 'http://localhost:8081/personalinfo/7204487510'
+        url: 'http://localhost:8081/personalinfo/' + candidateid
     }).then(function successCallback(response) {
-        console.log("hai", response.data)
-        console.log("Inside personal Info ", response.data[0]);
+
         ctrl.personalInfo = response.data[0];
-        console.log("Again Inside personal Info ", ctrl.personalInfo);
+
     }, function errorCallback(response) {
-        console.log('Error ');
+        console.log('Error in personal info');
     }); 
     ctrl.value = false;
     ctrl.value1 = true; 
@@ -79,7 +78,7 @@ function personalinfoCardController($http, $mdDialog) {
 
     function DialogController($scope, $mdDialog, val, header) {
         $scope.personalObject = val;
-        console.log("personalinfo object aaagaya", $scope.personalObject)
+
         $scope.header = header;
         $scope.hide = function() {
             $mdDialog.hide();
@@ -104,18 +103,18 @@ function personalinfoCardController($http, $mdDialog) {
                     "pincode": personalinfoObject.pincode
                 }
             };
-            console.log('keerthana', personalinfoObj.personalInfo);
+
             if (header === "Edit Info") {
                 $http({ 
                     method: "POST",
-                    url: "http://localhost:8081/personalinfo/7204487510",
+                    url: "http://localhost:8081/personalinfo/" + candidateid,
                     data: personalinfoObj
 
                 }).then(function mySucces(response)  { 
-                    console.log("res inn pi", response)
-                        // alert(response);
+                    //console.log("res inn pi", response)
+
                 }, function myError(response) { 
-                    alert('error'); 
+                    console.log(response); 
                 });
             }
             $mdDialog.hide();

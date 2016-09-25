@@ -1,5 +1,5 @@
 angular.module('sm-skillprofile')
-    .factory('signinFactory', ['$rootScope', '$http', '$q', function($rootScope, $http, $q) {
+    .factory('signinFactory', ['$rootScope', '$http', '$q', 'localStorageService', function($rootScope, $http, $q, localStorageService) {
         var signinfact = {
             postsignin: function(postuser) {
                 console.log(postuser);
@@ -21,8 +21,21 @@ angular.module('sm-skillprofile')
                     $http.post('/auth/', getuser)
                         .then(function(res) {
                             console.log("Inside signin factory", res)
-                            $rootScope.candidateid = res.data.data[0].username;
-                            console.log("Candidateid from signin factory=", $rootScope.candidateid);
+                            $rootScope.hidetoggle = false;
+                            console.log("checking toggle menu", $rootScope.togglemenu);
+                            // $rootScope.candidateid = res.data.data[0].mobile;
+                            // console.log("Candidateid from signin factory=", $rootScope.candidateid);
+                            try {
+                                $rootScope.candidateid = res.data.data[0].mobile;
+                                localStorageService.set("candidateid", $rootScope.candidateid);
+
+                                $rootScope.showSignout = true;
+                                console.log("Show signout", $rootScope.showSignout)
+                            } catch (err) {
+                                localStorageService.remove("candidateid");
+                                $rootScope.showSignout = false;
+                                console.log("Invalid credentials");
+                            }
                             resolve(res.data);
                         }, function(res) {
                             return (res.data);

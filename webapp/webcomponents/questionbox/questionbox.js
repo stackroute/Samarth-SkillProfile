@@ -5,6 +5,7 @@ angular.module('sm-skillprofile')
     });
 
 function questionBoxCtrl($timeout, quesnboxService, $rootScope, localStorageService) {
+    var candidateid = localStorageService.get("candidateid");
     var ctrl = this;
     ctrl.showMaxBtn = false;
     ctrl.displayAlertMessage = false;

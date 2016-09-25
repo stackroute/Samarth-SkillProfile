@@ -3,7 +3,7 @@ var Schema = mongoose.Schema;
 
 var users = new Schema({
 
-    "username": { type: String, unique: true },
+    "mobile": { type: String, unique: true },
     "password": { type: String },
     "createdon": { type: Date, default: Date.now },
     "lastseenon": { type: Date, default: Date.now },
@@ -13,4 +13,4 @@ var users = new Schema({
 });
 var user = mongoose.model("userschema", users, "users");
 
-module.exports = user
+module.exports = user;

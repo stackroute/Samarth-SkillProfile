@@ -1,8 +1,10 @@
    .loginbtn {
        margin-top: 250px;
        color: white;
+       /*margin-left:150px; */
+       /*margin:auto;*/
        width: 50%;
-       margin-left: 20%;
+       /*margin-left: 20%;*/
    }
    
    .signin {
@@ -58,3 +60,5 @@
    .link {
        margin: auto;
    }
+
+   
