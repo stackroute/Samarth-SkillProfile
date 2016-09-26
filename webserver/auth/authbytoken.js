@@ -23,21 +23,34 @@ var signup = function(newUser, callback, unauthCB) {
             callback("Unable to signup the user", null);
         }
 
-        authCandidate.registerCandidate(newUser).then(
+        authCandidate.registerCandidate(user).then(
             function(candidate) {
-                var sessionUser = {
-                    "uname": user.uname,
-                    "cid": candidate.candidateid,
-                    "lang": candidate.mothertongue,
-                    "name": candidate.name,
-                    "email": candidate.email,
-                    "gender": candidate.gender,
-                    "sm-token": "TBD"
-                };
+                console.log("Registered successfully ", candidate);
 
-                console.log("Registered successfully ", sessionUser);
+                authCandidate.getCandidateAuthToken(user).then(
+                    function(authData) {
+                        candidateProfile = authData.candidate;
+                        platformToken = authData.token;
 
-                generateJWTToken(sessionUser, callback); //generate JWTToken
+                        var candidateUser = {
+                            "uname": user.uname,
+                            "cid": candidateProfile.candidateid,
+                            "lang": candidateProfile.mothertongue,
+                            "name": candidateProfile.name,
+                            "email": candidateProfile.email,
+                            "gender": candidateProfile.gender,
+                            "ctkn": platformToken
+                        };
+
+                        generateJWTToken(candidateUser, callback); //generate JWTToken
+                    },
+                    function(err) {
+                        console.log(
+                            "Error in getting candidate auth token from platform ",
+                            err);
+                        unauthCB(err);
+                    }
+                );
             },
             function(err) {
                 callback(err);
@@ -79,24 +92,27 @@ var signin = function(uname, pwd, callback, unauthCB) {
 
             //Now that user is authenticated locally, fetch the corresponding candidate token
             authCandidate.getCandidateAuthToken(user).then(
-                function(candidate) {
-                    var sessionUser = {
+                function(authData) {
+                    candidateProfile = authData.candidate;
+                    platformToken = authData.token;
+
+                    var candidateUser = {
                         "uname": user.uname,
-                        "uname": user.uname,
-                        "cid": candidate.candidateid,
-                        "lang": candidate.mothertongue,
-                        "name": candidate.name,
-                        "email": candidate.email,
-                        "gender": candidate.gender,
-                        "sm-token": "TBD"
+                        "cid": candidateProfile.candidateid,
+                        "lang": candidateProfile.mothertongue,
+                        "name": candidateProfile.name,
+                        "email": candidateProfile.email,
+                        "gender": candidateProfile.gender,
+                        "ctkn": platformToken
                     };
 
-                    console.log("Got token successfully ", sessionUser);
-
-                    generateJWTToken(sessionUser, callback); //generate JWTToken
+                    generateJWTToken(candidateUser, callback); //generate JWTToken
                 },
                 function(err) {
-                    callback(err);
+                    console.log(
+                        "Error in getting candidate auth token from platform ",
+                        err);
+                    unauthCB(err);
                 }
             ); //end of Auth Token of candidate            
         }); //end of user find query
@@ -108,12 +124,12 @@ var signout = function(cb) {
 };
 
 var generateJWTToken = function(user, cb) {
-    var payload = user;
-    var secretOrPrivateKey = 'SAMARTH-WEBAPP-SECRET';
+    var payload = user.uname;
+    var secretOrPrivateKey = 'SAMARTH-SKILL-PROFILE-WEBAPP-SECRET';
     var options = {
         algorithm: "HS256",
         expiresIn: 36000,
-        issuer: user.mobile
+        issuer: user.uname
     };
 
     jwt.sign(payload, secretOrPrivateKey, options, function(err, jwtToken) {

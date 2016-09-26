@@ -7,7 +7,7 @@ var registerCandidate = function(candidateObj) {
         var options = {
             method: 'POST',
             json: true,
-            url: 'http://' + platformURL + '/candidate/' + candidateObj.mobile,
+            url: 'http://' + platformURL + '/candidate/',
             form: candidateObj
         };
 
@@ -38,9 +38,10 @@ var getCandidateAuthToken = function(user) {
         var options = {
             method: 'POST',
             json: true,
-            url: 'http://' + platformURL + '/candidate/' + user.uname,
+            url: 'http://' + platformURL + '/auth/candidate/',
             form: {
-                mobile: user.uname
+                cid: user.uname,
+                ct: '@TODO-samarth-skill-profile-webapp-token'
             }
         };
 
