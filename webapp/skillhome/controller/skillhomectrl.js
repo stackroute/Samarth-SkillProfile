@@ -9,6 +9,7 @@ angular.module('sm-skillprofile')
                 $location.hash(elementId);
                 $anchorScroll();
             }
+
             // $scope.loadLangData = function(lang) {
             //         datagenerate.getjson("user", lang).then(function(result) {
             //             $scope.carddata = result;

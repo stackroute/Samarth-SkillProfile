@@ -6,7 +6,8 @@ angular.module('sm-skillprofile')
                     var u = $window.localStorage['member-user'];
                     if (u !== undefined) {
                         u = JSON.parse(u);
-                        config.headers['x-access-token'] = u.token;
+                        config.headers['x-user-access-token'] = u.token;
+                        config.headers['x-access-token'] = u.ptkn;
                     }
                     return config;
                 },

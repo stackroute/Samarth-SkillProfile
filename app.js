@@ -8,6 +8,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var authRoutes = require('./webserver/auth/authrouter');
+var authByToken = require('./webserver/auth/authbytoken');
 
 mongoose.connect('mongodb://localhost:27017/samarthplatformdb');
 
@@ -27,6 +28,29 @@ app.use(cookieParser());
 
 app.use(express.static(path.join(__dirname, 'bower_components')));
 app.use(express.static(path.join(__dirname, 'webapp')));
+
+function isUserAuthenticated(req, res, next) {
+    var token = req.body.usrtoken || req.query.usrtoken || req.headers[
+        'x-user-access-token'];
+
+    if (!token) {
+        console.log("Token not found for authentication validation....!");
+        return res.status(403).json({
+            error: 'Invalid user request or unauthorised request..!'
+        });
+    }
+
+    authByToken.isUserAuthenticated(token, function(user) {
+            req.user = user;
+            next();
+        },
+        function(err) {
+            res.status(403).json({
+                error: err
+            });
+        }
+    );
+}
 
 app.use('/', authRoutes);
 

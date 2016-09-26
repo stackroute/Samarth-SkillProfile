@@ -8,38 +8,24 @@
 .circle {
     
     border-radius: 50%;
-
     width: 70px;
     height: 70px;
     /* background: #E1E1BB; */  
             /*background:#E0C8F7;*/
             background:#A1BAB7;
             /*background: #72E9FF;*/
-/* =======
-    width: 50px;
-    height: 50px;
-    background: #E1E1BB;   
->>>>>>> 3a889ca40e03443740378886cdfdf20970a83f83 */
     text-align:center;
 
 }my-workexperiencecard{
     width:100%;
 } 
-
 .md-raised {
     margin-right: 1px;
 }
 
- /* .designation{
+ .designation{
     padding-top: 17px;
- }  */
-
-
-
-.desigation{
-    margin-left: 20%;
-}
->>>>>>> 3a889ca40e03443740378886cdfdf20970a83f83
+} 
 
 
 

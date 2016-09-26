@@ -1,21 +1,21 @@
  angular.module("sm-skillprofile")
      .controller('navCtrl', ['$scope', '$http', '$state', '$mdSidenav',
-         '$rootScope', 'datagenerate', 'localStorageService', 'UserAuthService',
+         '$rootScope', 'datagenerate', 'localStorageService', 'UserAuthService', '$timeout',
 
          function($scope, $http, $state, $mdSidenav, $rootScope, datagenerate,
-             localStorageService, UserAuthService) {
+             localStorageService, UserAuthService, $timeout) {
              $rootScope.showSignout = false;
-             $scope.signout = function() {
+             // $scope.signout = function() {
 
-                 localStorageService.remove('JWT');
+             //     localStorageService.remove('JWT');
 
-                 $http.defaults.headers.common.Authorization = '';
+             //     $http.defaults.headers.common.Authorization = '';
 
-                 if (localStorageService.get('JWT') == null) {
-                     $state.go('skillprofile.signin');
+             //     if (localStorageService.get('JWT') == null) {
+             //         $state.go('skillprofile.signin');
 
-                 }
-             }
+             //     }
+             // }
 
              $scope.select = function(index) {
                  $scope.selected = index;
@@ -31,17 +31,26 @@
                      }
                  }
              };
-
-             //Get the current logged in user
-             $scope.user = UserAuthService.getUser();
-
              if (UserAuthService.getUser() == undefined) {
-                 console.log(" hide nav bar ");
+                 console.log(" hide nav bar ", UserAuthService.getUser());
                  $scope.displaysidenav = false;
              } else {
                  console.log("show nav bar ", UserAuthService.getUser());
                  $scope.displaysidenav = true;
              }
+
+             $timeout($scope.Onlogout = function() {
+                     if (UserAuthService.getUser() == undefined) {
+                         console.log(" hide nav bar ", UserAuthService.getUser());
+                         $scope.displaysidenav = false;
+                     } else {
+                         console.log("show nav bar ", UserAuthService.getUser());
+                         $scope.displaysidenav = true;
+                     }
+                 }, 3000)
+                 //Get the current logged in user
+             console.log("get user", UserAuthService.getUser())
+
 
 
              $scope.togglemenu = buildToggler('left');

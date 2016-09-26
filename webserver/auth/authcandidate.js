@@ -3,12 +3,11 @@ var request = require('request');
 var platformURL = "localhost:8081"; //@TODO take this from config
 
 var registerCandidate = function(candidateObj) {
-    console.log("Inside auth candidate", candidateObj);
     return new Promise(function(resolve, reject) {
         var options = {
             method: 'POST',
             json: true,
-            url: 'http://' + platformURL + '/candidate/' + candidateObj.mobile,
+            url: 'http://' + platformURL + '/candidate/',
             form: candidateObj
         };
 
@@ -39,9 +38,10 @@ var getCandidateAuthToken = function(user) {
         var options = {
             method: 'POST',
             json: true,
-            url: 'http://' + platformURL + '/candidate/' + user.uname,
+            url: 'http://' + platformURL + '/auth/candidate/',
             form: {
-                mobile: user.uname
+                cid: user.uname,
+                ct: '@TODO-samarth-skill-profile-webapp-token'
             }
         };
 
@@ -52,7 +52,7 @@ var getCandidateAuthToken = function(user) {
                     error: err
                 });
             } else if (res.statusCode >= 200 && res.statusCode <= 299) {
-                console.debug("Successfully authorized candidate ", body);
+                console.log("Successfully authorized candidate ", body);
                 resolve(body);
             }
         });

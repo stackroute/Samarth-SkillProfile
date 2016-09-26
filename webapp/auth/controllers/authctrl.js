@@ -20,7 +20,7 @@ angular.module('sm-skillprofile')
                 UserAuthService.signIn($scope.user).then(function(user) {
                     goToHome();
                 }, function(err) {
-                    console.log("Error in signin: ", err.error);
+                    console.log("Error in signin: ", err);
                     $scope.error = err.error;
                 });
             };
@@ -31,7 +31,7 @@ angular.module('sm-skillprofile')
                     $scope.message = "Successfully completed signup..!";
                     goToHome();
                 }, function(err) {
-                    console.log("Error in signin: ", err.error);
+                    console.log("Error in signin: ", err);
                     $scope.message = err.error;
                 });
             }

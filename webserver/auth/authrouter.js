@@ -13,29 +13,34 @@ router.post('/signup', function(req, res) {
         });
     }
 
-    authByToken.signup(req.body,
-        function(err, user, jwtToken) {
-            if (err) {
-                return res.status(500).json({
-                    error: "Internal error in processing request, please retry later..!"
-                });
-            }
+    try {
+        authByToken.signup(req.body,
+            function(err, user, jwtToken) {
+                if (err) {
+                    return res.status(500).json({
+                        error: "Internal error in processing request, please retry later..!"
+                    });
+                }
 
-            if (!jwtToken) {
-                console.error("Empty token generated...!");
-                return res.status(403).json({
-                    error: "Internal error in processing request, please retry later..!"
-                });
-            }
+                if (!jwtToken) {
+                    console.error("Empty token generated...!");
+                    return res.status(403).json({
+                        error: "Internal error in processing request, please retry later..!"
+                    });
+                }
 
-            return res.status(200).json({
-                'user': user,
-                'token': jwtToken
+                user['token'] = jwtToken;
+                return res.status(200).json(user);
+            },
+            function(err) {
+                return res.status(403).json(err);
             });
-        },
-        function(err) {
-            return res.status(403).json(err);
+    } catch (err) {
+        console.error("Error in singnup ", err);
+        return res.status(500).json({
+            error: "Internal error in processing request, please retry later..!"
         });
+    }
 });
 
 router.post('/signin', function(req, res) {
@@ -46,41 +51,53 @@ router.post('/signin', function(req, res) {
         return;
     }
 
-    authByToken.signin(req.body.uname, req.body.pwd,
-        function(err, user, jwtToken) {
+    try {
+
+        authByToken.signin(req.body.uname, req.body.pwd,
+            function(err, user, jwtToken) {
+                if (err) {
+                    return res.status(500).json({
+                        error: "Internal error in processing request, please retry later..!"
+                    });
+                }
+
+                if (!jwtToken) {
+                    console.error("Empty token generated...!");
+                    res.status(403).json({
+                        error: "Internal error in processing request, please retry later..!"
+                    });
+                }
+
+                user['token'] = jwtToken;
+                return res.status(200).json(user);
+            },
+            function(err) {
+                return res.status(403).json(err);
+            });
+    } catch (err) {
+        console.error("Error in signin ", err);
+        return res.status(500).json({
+            error: "Internal error in processing request, please retry later..!"
+        });
+    }
+});
+
+router.get("/signout", function(req, res) {
+    try {
+        authByToken.signout(function(err, data) {
             if (err) {
                 return res.status(500).json({
                     error: "Internal error in processing request, please retry later..!"
                 });
             }
-
-            if (!jwtToken) {
-                console.error("Empty token generated...!");
-                res.status(403).json({
-                    error: "Internal error in processing request, please retry later..!"
-                });
-            }
-
-            return res.status(200).json({
-                'user': user,
-                'token': jwtToken
-            });
-        },
-        function(err) {
-            return res.status(403).json(err);
+            return res.status(200).json(data);
         });
-});
-
-router.get("/signout", function(req, res) {
-    console.log("Signing out user...!");
-    authByToken.signout(function(err, data) {
-        if (err) {
-            return res.status(500).json({
-                error: "Internal error in processing request, please retry later..!"
-            });
-        }
-        return res.status(200).json(data);
-    });
+    } catch (err) {
+        console.error("Error in singout ", err);
+        return res.status(500).json({
+            error: "Internal error in processing request, please retry later..!"
+        });
+    }
 });
 
 module.exports = router;

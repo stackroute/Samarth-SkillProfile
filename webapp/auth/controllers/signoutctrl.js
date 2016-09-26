@@ -2,7 +2,7 @@ angular.module('sm-skillprofile')
     .controller('signoutCtrl', ['$rootScope', '$scope', '$state',
         'UserAuthService', 'LangService', 'datagenerate',
         function($rootScope, $scope, $state, UserAuthService, LangService,
-            datagenerate) {
+            datagenerate, localStorageService) {
             $scope.loadLangData = function(lang) {
                 datagenerate.getjson("section", lang).then(function(result) {
                     $scope.resourceData = result;
@@ -16,6 +16,7 @@ angular.module('sm-skillprofile')
 
             $scope.signout = function() {
                 $scope.error = "";
+                // localStorageService.remove("User");
                 UserAuthService.signout()
                     .then(function(res) {
                             //Alternatively you can redirect user to landing page
