@@ -65,12 +65,12 @@ function sectionskillcardctrl($http, sectionskillcard, $mdDialog, datagenerate, 
                 //console.log(ctrl.skill[prop][key])
                 for (var k in ctrl.skill[prop][key]) {
 
-                    if (ctrl.skill[prop][key][k] == "primary") //extracting all skill object containing primary type
+                    if (ctrl.skill[prop][key][k] == "Primary") //extracting all skill object containing primary type
                     {
 
                         ctrl.primary.push(ctrl.skill[prop][key]); //making array of object containing skill of  type primary   
                     }
-                    if (ctrl.skill[prop][key][k] == "secondary") //extracting all skill object containing primary type
+                    if (ctrl.skill[prop][key][k] == "Secondary") //extracting all skill object containing primary type
                     {
                         ctrl.secondary.push(ctrl.skill[prop][key]); //making array of object containing skill type secondary
                     }
@@ -83,6 +83,39 @@ function sectionskillcardctrl($http, sectionskillcard, $mdDialog, datagenerate, 
         // console.log(ctrl.primary);
 
     });
+    $rootScope.$on("skilldatachanged", function() {
+        sectionskillcard.getjson().then(function(result) {
+            ctrl.skill = result;
+            //console.log("skill object", ctrl.skill);
+            ctrl.primary = [];
+            ctrl.secondary = [];
+            ctrl.total = 0;
+            ctrl.plen = 0;
+            ctrl.slen = 0;
+            for (var prop in ctrl.skill) {
+                for (var key in ctrl.skill[prop]) {
+                    //console.log(ctrl.skill[prop][key])
+                    for (var k in ctrl.skill[prop][key]) {
+
+                        if (ctrl.skill[prop][key][k] == "Primary") //extracting all skill object containing primary type
+                        {
+
+                            ctrl.primary.push(ctrl.skill[prop][key]); //making array of object containing skill of  type primary   
+                        }
+                        if (ctrl.skill[prop][key][k] == "Secondary") //extracting all skill object containing primary type
+                        {
+                            ctrl.secondary.push(ctrl.skill[prop][key]); //making array of object containing skill type secondary
+                        }
+                    }
+                }
+            }
+            ctrl.total = ctrl.primary.length + ctrl.secondary.length;
+            ctrl.plen = ctrl.primary.length;
+            ctrl.slen = ctrl.secondary.length;
+            // console.log(ctrl.primary);
+
+        });
+    })
 
 
     ctrl.status = '  ';
@@ -142,7 +175,8 @@ function sectionskillcardctrl($http, sectionskillcard, $mdDialog, datagenerate, 
                     data: skillObj
                 }).then(function mySucces(response)  { 
                     console.log("res", response.data[0])
-                        // alert(response);
+                    $rootScope.$emit("skilldatachanged", {});
+                    // alert(response);
                 }, function myError(response) { 
                     console.log("error in adding skill section") 
                 });
@@ -154,7 +188,8 @@ function sectionskillcardctrl($http, sectionskillcard, $mdDialog, datagenerate, 
                     data: skillObj
                 }).then(function mySucces(response)  { 
                     console.log("res", response)
-                        // alert(response);
+                    $rootScope.$emit("skilldatachanged", {});
+                    // alert(response);
                 }, function myError(response) { 
                     console.log('error in updating skill section'); 
                 });

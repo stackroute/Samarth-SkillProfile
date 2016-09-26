@@ -61,7 +61,29 @@ function projectsectioncardCtrl($http, $mdDialog, datagenerate, $rootScope, loca
     }, function errorCallback(response) {
 
         console.log('Error accord during Project Section')
-    });  
+    });
+    $rootScope.$on("projectdata", function() {
+        ctrl.profile = [];
+        ctrl.totalProjects = 0;
+        $http({
+            method: 'GET',
+            url: 'http://localhost:8081/project/' + candidateid
+
+        }).then(function successCallback(response) {
+            for (var noOfObjects = 0; noOfObjects < response.data.length; noOfObjects++) {
+                for (var record = 0; record < response.data[noOfObjects].projects.length; record++) {
+
+                    ctrl.profile.push(response.data[noOfObjects].projects[record]);
+                }
+
+            }
+            ctrl.totalProjects = ctrl.profile.length;
+
+        }, function errorCallback(response) {
+
+            console.log('Error accord during Project Section')
+        });
+    })  
 
     ctrl.showAdvanced = function(ev, header, object) {
         $mdDialog.show({
@@ -154,6 +176,7 @@ function projectsectioncardCtrl($http, $mdDialog, datagenerate, $rootScope, loca
                     crossDomain: true
                 }).then(function successCallback(response) {
                     console.log("After adding project", response.data)
+                    $rootScope.$emit("projectdata", {});
 
                 }, function errorCallback(response) {
                     console.log('Error accord during Project Section')
@@ -167,7 +190,7 @@ function projectsectioncardCtrl($http, $mdDialog, datagenerate, $rootScope, loca
                     crossDomain: true
                 }).then(function successCallback(response) {
                     console.log("After updating project", response.data)
-
+                    $rootScope.$emit("projectdata", {});
                 }, function errorCallback(response) {
                     console.log('Error accord during updating Project Section')
                 });  

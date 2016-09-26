@@ -31,7 +31,6 @@ function educationCardController($mdDialog, $http, datagenerate, $rootScope, loc
     ctrl.eduDetails = [];
     ctrl.schools = [];
     ctrl.colleges = [];
-
     $http.get('http://localhost:8081/education/' + candidateid).then(function(response) {
 
         for (var noOfObjects = 0; noOfObjects < response.data[0].qualification.length; noOfObjects++) {
@@ -54,6 +53,36 @@ function educationCardController($mdDialog, $http, datagenerate, $rootScope, loc
 
     });
 
+    $rootScope.$on("datachanged", function() {
+        ctrl.eduDetails = [];
+        ctrl.schools = [];
+        ctrl.colleges = [];
+        console.log("data changed");
+        $http.get('http://localhost:8081/education/' + candidateid).then(function(response) {
+
+            for (var noOfObjects = 0; noOfObjects < response.data[0].qualification.length; noOfObjects++) {
+                for (var record = 0; record < 1; record++) {
+
+                    ctrl.eduDetails.push(response.data[0].qualification[noOfObjects]);
+                }
+            }
+
+
+            for (var i = 0; i < ctrl.eduDetails.length; i++) {
+                if (ctrl.eduDetails[i].institute.type == "school") {
+                    ctrl.schools.push(ctrl.eduDetails[i]);
+                }
+                if (ctrl.eduDetails[i].institute.type == "college" || ctrl.eduDetails[i].institute.type == "other" || ctrl.eduDetails[i].institute.type == "work") {
+                    ctrl.eduDetails[i].institute.type = "work";
+                    ctrl.colleges.push(ctrl.eduDetails[i]);
+                }
+            }
+
+        });
+
+    })
+
+
 
     ctrl.showAdvanced = function(ev, header, object) {
         $mdDialog.show({
@@ -73,7 +102,7 @@ function educationCardController($mdDialog, $http, datagenerate, $rootScope, loc
             );
     };
 
-    function DialogController($scope, $mdDialog, $http, header, object, localStorageService, UserAuthService) {
+    function DialogController($scope, $mdDialog, $http, header, object, localStorageService, UserAuthService, $rootScope) {
         var candidateid = UserAuthService.getUser().uname;
         $scope.header = header;
         // $scope.yearval="";
@@ -158,6 +187,7 @@ function educationCardController($mdDialog, $http, datagenerate, $rootScope, loc
                     })
                     .then(function successCallback(response) {
                             console.log("education added");
+                            $rootScope.$emit("datachanged", {});
                             $scope.cancel();
 
                         },
@@ -174,6 +204,7 @@ function educationCardController($mdDialog, $http, datagenerate, $rootScope, loc
                     })
                     .then(function successCallback(response) {
                             console.log('Education Updated');
+                            $rootScope.$emit("datachanged", {});
                             $scope.cancel();
 
                         },

@@ -12,8 +12,8 @@ var app = angular.module('sm-skillprofile')
                 salary: "5 lakhs p.a",
                 experience: 0,
                 skillsrequired: ['jquery', 'javascript'],
-                minimumqualification: ['B-tech 65% and above'],
-                jobdescription: "Lorem ipsum dolor sit amet,consectetur adipiscing elit. Ut pellentesque porttitor magna sed malesuada. Nam rutrum sed massa non mollis. Cras a aliquet nunc. Cras feugiat nulla erat, at facilisis leo ullamcorper vel. Praesent sed lectus nec eros rutrum laoreet sed eget ex. In ac pulvinar velit, eget vulputate mi. Praesent et lobortis sapien. Quisque ac diam ex. Nullam rhoncus tristique ante quis fermentum. Quisque non volutpat est. Donec condimentum tincidunt turpis, sit amet feugiat est finibus in. Praesent efficitur est at velit aliquam accumsan."
+                minimumqualification: ['B-tech min 65%'],
+                jobdescription: "Sales Trainer would be responsible for the knowledge and skills of Replicon sales team members. An integral part of the Replicon Learning & Development team, the trainer will need to establish and maintain effective working relationships with key stakeholders and consult with them in order to develop and maintain an effective and up to date sales learning curriculum."
             }, {
                 companyname: "Delloitte",
                 designation: "Junior consultant",
@@ -21,8 +21,8 @@ var app = angular.module('sm-skillprofile')
                 salary: "4 lakhs p.a",
                 experience: 1,
                 skillsrequired: ['java'],
-                minimumqualification: ['B-tech 75% and above'],
-                jobdescription: "Lorem ipsum dolor sit amet,consectetur adipiscing elit. Ut pellentesque porttitor magna sed malesuada. Nam rutrum sed massa non mollis. Cras a aliquet nunc. Cras feugiat nulla erat, at facilisis leo ullamcorper vel. Praesent sed lectus nec eros rutrum laoreet sed eget ex. In ac pulvinar velit, eget vulputate mi. Praesent et lobortis sapien. Quisque ac diam ex. Nullam rhoncus tristique ante quis fermentum. Quisque non volutpat est. Donec condimentum tincidunt turpis, sit amet feugiat est finibus in. Praesent efficitur est at velit aliquam accumsan."
+                minimumqualification: ['B-tech min 75%'],
+                jobdescription: "Replicon is searching for self-motivated individuals to join our successful team as a Customer Success Manager (CSM) in our Bangalore office. This opportunity will use your skills as a product expert and a strategic relationship builder to grow and maintain current Replicon Customers."
             }, {
                 companyname: "Infosys",
                 designation: "HR",
@@ -30,8 +30,8 @@ var app = angular.module('sm-skillprofile')
                 salary: "7.5 lakhs p.a",
                 experience: 2,
                 skillsrequired: ['jquery', 'javascript'],
-                minimumqualification: ['B-tech 60% and above'],
-                jobdescription: "Lorem ipsum dolor sit amet,consectetur adipiscing elit. Ut pellentesque porttitor magna sed malesuada. Nam rutrum sed massa non mollis. Cras a aliquet nunc. Cras feugiat nulla erat, at facilisis leo ullamcorper vel. Praesent sed lectus nec eros rutrum laoreet sed eget ex. In ac pulvinar velit, eget vulputate mi. Praesent et lobortis sapien. Quisque ac diam ex. Nullam rhoncus tristique ante quis fermentum. Quisque non volutpat est. Donec condimentum tincidunt turpis, sit amet feugiat est finibus in. Praesent efficitur est at velit aliquam accumsan."
+                minimumqualification: ['B-tech min 60%'],
+                jobdescription: "Replicon is searching for self-motivated individuals to join our successful team as a Customer Success Manager (CSM) in our Bangalore office. This opportunity will use your skills as a product expert and a strategic relationship builder to grow and maintain current Replicon Customers."
             }, {
                 companyname: "Wipro Limited",
                 designation: "Project Engineer",
@@ -39,8 +39,8 @@ var app = angular.module('sm-skillprofile')
                 salary: "3.2 lakhs p.a",
                 experience: 0,
                 skillsrequired: ['java', 'javascript', 'jquery'],
-                minimumqualification: ['B-tech 65% and above'],
-                jobdescription: "Lorem ipsum dolor sit amet,consectetur adipiscing elit. Ut pellentesque porttitor magna sed malesuada. Nam rutrum sed massa non mollis. Cras a aliquet nunc. Cras feugiat nulla erat, at facilisis leo ullamcorper vel. Praesent sed lectus nec eros rutrum laoreet sed eget ex. In ac pulvinar velit, eget vulputate mi. Praesent et lobortis sapien. Quisque ac diam ex. Nullam rhoncus tristique ante quis fermentum. Quisque non volutpat est. Donec condimentum tincidunt turpis, sit amet feugiat est finibus in. Praesent efficitur est at velit aliquam accumsan."
+                minimumqualification: ['B-tech 65% above'],
+                jobdescription: "Replicon is searching for self-motivated individuals to join our successful team as a Customer Success Manager (CSM) in our Bangalore office. This opportunity will use your skills as a product expert and a strategic relationship builder to grow and maintain current Replicon Customers."
             }, {
                 companyname: "Microsoft",
                 designation: "Project Designer",
@@ -48,8 +48,8 @@ var app = angular.module('sm-skillprofile')
                 salary: "12 lakhs p.a",
                 experience: 5,
                 skillsrequired: ['jquery', 'javascript', 'azure', 'angular', 'sabkuch aana chahiye'],
-                minimumqualification: ['B-tech 85% and above'],
-                jobdescription: "Lorem ipsum dolor sit amet,consectetur adipiscing elit. Ut pellentesque porttitor magna sed malesuada. Nam rutrum sed massa non mollis. Cras a aliquet nunc. Cras feugiat nulla erat, at facilisis leo ullamcorper vel. Praesent sed lectus nec eros rutrum laoreet sed eget ex. In ac pulvinar velit, eget vulputate mi. Praesent et lobortis sapien. Quisque ac diam ex. Nullam rhoncus tristique ante quis fermentum. Quisque non volutpat est. Donec condimentum tincidunt turpis, sit amet feugiat est finibus in. Praesent efficitur est at velit aliquam accumsan."
+                minimumqualification: ['B-tech 85% above'],
+                jobdescription: "Replicon is searching for self-motivated individuals to join our successful team as a Customer Success Manager (CSM) in our Bangalore office. This opportunity will use your skills as a product expert and a strategic relationship builder to grow and maintain current Replicon Customers."
             }
 
         ];

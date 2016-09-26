@@ -66,20 +66,9 @@ function workexperienceCardController($http, $mdDialog, UserAuthService, datagen
     ctrl.decreaseLimit = function() {
         ctrl.limitval = 2;
     }
+
     $http.get('http://localhost:8081/work/' + candidateid)
         .then(function success(response) {
-            // console.log("data", response.data);
-            //console.log("sri",response.data[0].workexperiences.length);
-            /* for (var prop in response.data[0]) {
-                 if (prop == "workexperience") {
-                     console.log("inside comparison", response.data[0].workexperience)
-                     ctrl.workexperience = response.data[0].workexperience;
-
-                 }
-
-             }*/
-            //console.log("length", response.data.length);
-            //console.log("workexp", ctrl.workexperiences);
             for (var noofobj = 0; noofobj < response.data.length; noofobj++) {
                 for (var record = 0; record < response.data[noofobj].workexperience.length; record++) {
                     ctrl.workexperiences.push(response.data[noofobj].workexperience[record]);
@@ -92,6 +81,25 @@ function workexperienceCardController($http, $mdDialog, UserAuthService, datagen
         }, function error(response) {
             console.log("error occored");
         });
+    $rootScope.$on("workexpdata", function() {
+        ctrl.workexperiences = [];
+        ctrl.totalworkexperience = 0;
+        $http.get('http://localhost:8081/work/' + candidateid)
+            .then(function success(response) {
+                for (var noofobj = 0; noofobj < response.data.length; noofobj++) {
+                    for (var record = 0; record < response.data[noofobj].workexperience.length; record++) {
+                        ctrl.workexperiences.push(response.data[noofobj].workexperience[record]);
+                    }
+                    ctrl.totalworkexperience = ctrl.workexperiences.length;
+                    // console.log("total", ctrl.totalworkexperience);
+
+                }
+                //console.log("total",totalworkexperience);
+            }, function error(response) {
+                console.log("error occored");
+            });
+
+    })
 
     ctrl.showAdvanced = function($event, header, object) {
 
@@ -192,7 +200,7 @@ function workexperienceCardController($http, $mdDialog, UserAuthService, datagen
                     crossDomain: true
                 }).then(function successCallback(response) {
                     console.log("After adding workexperience", response.data)
-
+                    $rootScope.$emit("workexpdata", {});
                 }, function errorCallback(response) {
                     console.log('Error accord during at post Section')
                 });  
@@ -204,6 +212,7 @@ function workexperienceCardController($http, $mdDialog, UserAuthService, datagen
                     data: workdata,
                     crossDomain: true
                 }).then(function successCallback(response) {
+                    $rootScope.$emit("workexpdata", {});
                     console.log("After updating ", response.data)
 
                 }, function errorCallback(response) {
