@@ -84,7 +84,8 @@ function questionBoxCtrl($timeout, quesnboxService, $rootScope, localStorageServ
     }
     ctrl.minimizeQuestionBox = function() {
         ctrl.displayInputBox = true;
-        ctrl.showMaxBtn = true;
+        //ctrl.showMaxBtn = true;
+        $timeout(ctrl.showQuestionBox, 10000);
 
     }
     ctrl.showQuestionBox = function() {

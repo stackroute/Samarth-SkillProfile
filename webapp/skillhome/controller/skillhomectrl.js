@@ -9,26 +9,7 @@ angular.module('sm-skillprofile')
                 $location.hash(elementId);
                 $anchorScroll();
             }
-
-            // $scope.loadLangData = function(lang) {
-            //         datagenerate.getjson("user", lang).then(function(result) {
-            //             $scope.carddata = result;
-            //             console.log("for side nav");
-            //             console.log(result);
-
-            //         }); //end datagenerate
-            //     }
-            //     // $scope.loadLangData("English");
-            // $scope.loadLangData(getItem("lang"));
-
-            // function getItem(key) {
-            //     return localStorageService.get(key);
-            // }
-            // $rootScope.$on("lang_changed", function(event, data) {
-            //     console.log("User switch to language " + data.language);
-            //     $scope.loadLangData(data.language);
-            // });
-
+            $rootScope.$emit("callparent", {});
 
 
 

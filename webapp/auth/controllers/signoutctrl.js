@@ -20,6 +20,7 @@ angular.module('sm-skillprofile')
                 UserAuthService.signout()
                     .then(function(res) {
                             //Alternatively you can redirect user to landing page
+                            $rootScope.$emit("callparentmethod", {});
                             $state.go("skillprofile.signin");
                         },
                         function(err) {

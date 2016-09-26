@@ -16,6 +16,25 @@
 
              //     }
              // }
+             $rootScope.$on("callparentmethod", function() {
+                 if (UserAuthService.getUser() == undefined) {
+                     console.log(" hide nav bar ", UserAuthService.getUser());
+                     $scope.displaysidenav = false;
+                 } else {
+                     console.log("show nav bar ", UserAuthService.getUser());
+
+                     $scope.displaysidenav = true;
+                 }
+             })
+             $rootScope.$on("callparent", function() {
+                 if (UserAuthService.getUser() == undefined) {
+                     console.log(" hide nav bar ", UserAuthService.getUser());
+                     $scope.displaysidenav = false;
+                 } else {
+                     console.log("show nav bar ", UserAuthService.getUser());
+                     $scope.displaysidenav = true;
+                 }
+             })
 
              $scope.select = function(index) {
                  $scope.selected = index;
@@ -39,16 +58,16 @@
                  $scope.displaysidenav = true;
              }
 
-             $timeout($scope.Onlogout = function() {
-                     if (UserAuthService.getUser() == undefined) {
-                         console.log(" hide nav bar ", UserAuthService.getUser());
-                         $scope.displaysidenav = false;
-                     } else {
-                         console.log("show nav bar ", UserAuthService.getUser());
-                         $scope.displaysidenav = true;
-                     }
-                 }, 3000)
-                 //Get the current logged in user
+             // $timeout($scope.Onlogout = function() {
+             //         if (UserAuthService.getUser() == undefined) {
+             //             console.log(" hide nav bar ", UserAuthService.getUser());
+             //             $scope.displaysidenav = false;
+             //         } else {
+             //             console.log("show nav bar ", UserAuthService.getUser());
+             //             $scope.displaysidenav = true;
+             //         }
+             //     }, 3000)
+             //Get the current logged in user
              console.log("get user", UserAuthService.getUser())
 
 
