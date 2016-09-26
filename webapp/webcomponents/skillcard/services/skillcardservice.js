@@ -14,7 +14,7 @@ angular.module('sm-skillprofile')
 
                     if (object.personalinfo[0].name != undefined) {
                         skillcarddata['name'] = object.personalinfo[0].name;
-                        localStorageService.set("User", object.personalinfo[0].name);
+                        localStorageService.set('User', object.personalinfo[0].name);
                     }
                     if (object.personalinfo[0].dob != undefined) {
                         skillcarddata['dob'] = $filter('date')(object.personalinfo[0].dob, "dd/MMM/yyyy");

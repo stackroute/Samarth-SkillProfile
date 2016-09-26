@@ -1,5 +1,5 @@
 angular.module('sm-skillprofile')
-    .factory('UserAuthService', function($http, $q, $window) {
+    .factory('UserAuthService', function($http, $q, $window, localStorageService) {
         var auth = {
             user: undefined
         };
@@ -89,6 +89,7 @@ angular.module('sm-skillprofile')
 
         auth.signout = function() {
             //As a first step invalidate or destroy the local user object
+            localStorageService.remove('User');
             auth.removeUser();
             //Returning promise object
             return $q(function(resolve, reject) {

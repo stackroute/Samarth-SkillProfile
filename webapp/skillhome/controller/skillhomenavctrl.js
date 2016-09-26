@@ -13,7 +13,7 @@ angular.module("sm-skillprofile")
             }
             $scope.loadLangData(getItem("lang"));
             $scope.completion = 70;
-            $scope.username = localStorageService.get("User");
+            $scope.username = localStorageService.get('User');
             console.log("username", $scope.username);
 
             function getItem(key) {

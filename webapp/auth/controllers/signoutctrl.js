@@ -16,7 +16,7 @@ angular.module('sm-skillprofile')
 
             $scope.signout = function() {
                 $scope.error = "";
-                // localStorageService.remove("User");
+                //localStorageService.remove("User");
                 UserAuthService.signout()
                     .then(function(res) {
                             //Alternatively you can redirect user to landing page
