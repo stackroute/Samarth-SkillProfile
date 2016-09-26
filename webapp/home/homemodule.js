@@ -5,11 +5,11 @@ angular.module('sm-skillprofile')
             $compileProvider) {
             $urlMatcherFactoryProvider.caseInsensitive(true);
 
-            $urlRouterProvider.otherwise('/home');
+            $urlRouterProvider.otherwise('/signin');
 
             $stateProvider
                 .state('skillprofile', {
-                    url: '/home',
+                    url: '/signin',
                     views: {
                         "content@": {
                             templateUrl: '/auth/templates/signinpage.html',

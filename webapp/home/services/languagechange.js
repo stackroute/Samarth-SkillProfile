@@ -5,7 +5,7 @@ angular.module('sm-skillprofile')
                 var data = {};
                 return $http({
                     method: 'GET',
-                    url: 'http://localhost:8081/resource/' + key + lang,
+                    url: 'http://172.23.238.154:8081/resource/' + key + lang,
                     type: 'JSON'
 
                 }).then(function mySucces(response) {
