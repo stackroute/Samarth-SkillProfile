@@ -13,47 +13,38 @@
             <div id="conversationDialogcontent" layout-padding layout-wrap>
                 <p layout-wrap>
                     I have done
-                    
                     <md-input-container>
                         <label>Projectname</label>
                         <input id="input1" type="text" ng-model="Project">
                     </md-input-container> Project with duration
-                    
                     <md-input-container>
                         <label>Duration</label>
                         <input type="text" ng-model="Duration" id="input1">
                     </md-input-container>
                     in
-                    
                     <md-input-container>
                         <label>Location</label>
                         <input type="text" ng-model="Location" id="input1">
                     </md-input-container>
-                     with skills 
-
-                     <md-input-container>
-                       <span ng-repeat="skill in projectObj.skills">
+                    with skills
+                    <md-input-container>
                         <label>Skills</label>
-                        <input type="text" ng-model="skill" id="input1">
-                        </span>
+                        <input type="text" ng-model="skills">
                     </md-input-container>
                     at
                     <md-input-container>
                         <label>Client</label>
                         <input type="text" ng-model="Client" id="input1">
                     </md-input-container>
-                   
                     <br> and Salary was
-                    
-                     <md-input-container>
+                    <md-input-container>
                         <label>Salary</label>
                         <input type="text" ng-model="Salary" id="input1">
                     </md-input-container>
-                    
                 </p>
             </div>
             <div id="savebtn" flex layout="row" layout-align="center center" ng-click="cancel()">
-                <div id="btntxt" contenteditable="false">
+                <div id="btntxt" contenteditable="false" ng-click="save(header)">
                     <a>SAVE DETAILS</a>
                 </div>
                 <div id="btn">

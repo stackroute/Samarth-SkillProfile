@@ -1,90 +1,94 @@
 <md-dialog aria-label="Education">
-  <form ng-cloak>
-    <md-toolbar id="conversationDialogtoolbar">
-      <div class="md-toolbar-tools">
-        <h1 id="headingtext">{{header}}</h1>
-        <span flex></span>
-        <md-button class="md-icon-button" ng-click="cancel()">
-          <md-icon id="headingtext">close</md-icon>
-        </md-button>
-      </div>
-    </md-toolbar>
-    <md-dialog-content layout="column">
-      <div id="conversationDialogcontent" layout-padding layout-wrap>
-        <p layout-wrap>
-          I have done my
-          <md-input-container>
-          <input id="input1" ng-model="title">
-          </md-input-container>
-          (
-          <md-input-container >
-          <input id="input1" ng-model="academicType">
-          </md-input-container>
-          )
-          in the year
-          <md-input-container id="datepicker">
-          <md-select ng-model="batch">
-            <md-option ng-repeat="year in years" ng-value="{{year}}">{{year}}</md-option>
-          </md-select>
-          </md-input-container>
-          <!-- ( from
-            <md-input-container>
-            <md-datepicker ng-model="from" md-placeholder="start date"
-            md-open-on-focus></md-datepicker>
-            </md-input-container>
-            to
-            <md-input-container>
-            <md-datepicker ng-model="to" md-placeholder="end date"
-            md-open-on-focus></md-datepicker>
-            </md-input-container>
-          ) -->
-          with final score of
-          <md-input-container >
-          <input id="input1" ng-model="result">
-          </md-input-container>
-          <md-input-container >
-          <input id="input1" ng-model="unit">
-          </md-input-container>
-          . I did it from
-          <md-input-container >
-          <input id="input1" ng-model="name">
-          </md-input-container>
-          (
-            <md-input-container >
-            <input id="input1" ng-model="type">
-            </md-input-container>
-
-            <!-- <md-input-container id="datepicker">
-            <md-select ng-model="type">
-            <md-option ng-repeat="itype in institutetypes" ng-value="{{itype}}">{{itype}}</md-option>
-            </md-select>
-            </md-input-container> -->
-          )
-          which is affiliated to
-          <md-input-container >
-          <input id="input1" ng-model="affiliation"><br>
-          </md-input-container>
-          and is located in
-          <md-input-container >
-          <input id="input1" ng-model="location">
-          </md-input-container>
-        </p>
-      </div>
-
-      <div flex layout="row" layout-align="center center" ng-click="save(header)">
-
-          <div id="btntxt" contenteditable="false">
-            <a>SAVE DETAILS</a>
-          </div>
-          <div id="btn">
-            <a><md-icon id="icon">play_arrow</md-icon></a>
-          </div>
-        
-      </div>
-
-    </md-dialog-content>
-    <md-dialog-actions class="conversationDialog" layout="row" layout-align="center center">
-
-      </md-dialog-actions>
+    <form ng-cloak>
+        <md-toolbar id="conversationDialogtoolbar">
+            <div class="md-toolbar-tools">
+                <h1 id="headingtext">{{header}}</h1>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="cancel()">
+                    <md-icon id="headingtext">close</md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-dialog-content layout="column">
+            <div id="conversationDialogcontent" layout-padding layout-wrap>
+                <p layout-wrap>
+                    I have done my
+                    <md-input-container>
+                        <label>Course</label>
+                        <input id="input1" ng-model="title">
+                    </md-input-container>
+                    (
+                    <md-input-container>
+                        <label>LeveL of Course</label>
+                        <input id="input1" ng-model="academicType">
+                    </md-input-container>
+                    ) in the year
+                    <md-input-container id="datepicker">
+                        <label>Batch</label>
+                        <md-select ng-model="batch">
+                            <md-option ng-repeat="year in years" ng-value="{{year}}">{{year}}</md-option>
+                        </md-select>
+                    </md-input-container>
+                    <!-- ( from
+           <md-input-container>
+           <md-datepicker ng-model="from" md-placeholder="start date"
+           md-open-on-focus></md-datepicker>
+           </md-input-container>
+           to
+           <md-input-container>
+           <md-datepicker ng-model="to" md-placeholder="end date"
+           md-open-on-focus></md-datepicker>
+           </md-input-container>
+         ) -->
+                    with final score of
+                    <md-input-container>
+                        <label>Score</label>
+                        <input id="input1" ng-model="result">
+                    </md-input-container>
+                    <md-input-container>
+                        <label>Unit</label>
+                        <input id="input1" ng-model="unit">
+                    </md-input-container>
+                    . I did it from
+                    <md-input-container>
+                        <label>Institute Name</label>
+                        <input id="input1" ng-model="name">
+                    </md-input-container>
+                    (
+                    <md-input-container>
+                        <label>school/college/work/other</label>
+                        <input id="input1" ng-model="type">
+                    </md-input-container>
+                    <!-- <md-input-container id="datepicker">
+           <md-select ng-model="type">
+           <md-option ng-repeat="itype in institutetypes" ng-value="{{itype}}">{{itype}}</md-option>
+           </md-select>
+           </md-input-container> -->
+                    ) which is affiliated to
+                    <md-input-container>
+                        <label>Affiliation</label>
+                        <input id="input1" ng-model="affiliation">
+                        <br>
+                    </md-input-container>
+                    and is located in
+                    <md-input-container>
+                        <label>Location</label>
+                        <input id="input1" ng-model="location">
+                    </md-input-container>
+                </p>
+            </div>
+            <div flex layout="row" layout-align="center center" ng-click="save(header)">
+                <div id="btntxt" contenteditable="false">
+                    <a>SAVE DETAILS</a>
+                </div>
+                <div id="btn">
+                    <a>
+                        <md-icon id="icon">play_arrow</md-icon>
+                    </a>
+                </div>
+            </div>
+        </md-dialog-content>
+        <md-dialog-actions class="conversationDialog" layout="row" layout-align="center center">
+        </md-dialog-actions>
     </form>
-  </md-dialog>
+</md-dialog>

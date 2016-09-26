@@ -1,14 +1,14 @@
-<div layout="column">
+<div layout="column" ng-controller="sidenavCtrl">
     <md-content layout layout-align="center center" class="md-padding">
         <img class="radiusCircle" ng-src="/home/images/user.png">
     </md-content>
     <md-content layout='column' layout-align="center center">
-        <h4 class='md-title'>{{user.name}}</h4>
-        <md-progress-linear md-mode="determinate" ng-value='value'></md-progress-linear>
-        <p class="md-caption" style='margin: auto 5px 0px auto;' layout layout-align="end center">{{value}}%</p>
+        <h4 class='md-title'>{{username}}</h4>
+        <md-progress-linear md-mode="determinate" ng-value='completion'></md-progress-linear>
+        <p class="md-caption" style='margin: auto 5px 0px auto;' layout layout-align="end center">{{completion}}%</p>
     </md-content>
     <md-content class='app-sidebar'>
-        <md-list ng-controller="sidenavCtrl">
+        <md-list>
             <md-list-item ng-click="select($index)" ui-sref="{{item.state}}" ng-repeat="item in items | orderBy: 'seq'">
                 <md-item-content layout="row" layout-align="start center">
                     <div class="inset">

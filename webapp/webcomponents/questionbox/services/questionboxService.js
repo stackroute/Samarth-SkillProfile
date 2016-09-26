@@ -1,5 +1,6 @@
 angular.module('sm-skillprofile')
-    .service('quesnboxService', function($http, $rootScope, localStorageService) {
+    .service('quesnboxService', function($http, $rootScope, localStorageService, UserAuthService) {
+        var candidateid = UserAuthService.getUser().uname;
         return {
             questionGenerator: function(lang) {
 
@@ -10,7 +11,6 @@ angular.module('sm-skillprofile')
 
 
                 ];
-                var candidateid = localStorageService.get("candidateid");
                 var randomNumber = Math.floor(Math.random() * sectionArray.length);
                 console.log("Section array....", sectionArray[randomNumber])
                 return $http({

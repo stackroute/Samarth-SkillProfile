@@ -1,9 +1,9 @@
 angular.module('sm-skillprofile')
-    .service('skillcardservice', function($http, $filter, $rootScope, localStorageService) {
+    .service('skillcardservice', function($http, $filter, $rootScope, localStorageService, UserAuthService) {
         return {
             getskillcarddata: function() {
                 var skillcarddata = {};
-                var candidateid = localStorageService.get("candidateid");
+                var candidateid = UserAuthService.getUser().uname;
                 return $http({ 
                     method: "get",
                     url: "http://localhost:8081/skillcard/" + candidateid,
@@ -14,6 +14,7 @@ angular.module('sm-skillprofile')
 
                     if (object.personalinfo[0].name != undefined) {
                         skillcarddata['name'] = object.personalinfo[0].name;
+                        localStorageService.set("User", object.personalinfo[0].name);
                     }
                     if (object.personalinfo[0].dob != undefined) {
                         skillcarddata['dob'] = $filter('date')(object.personalinfo[0].dob, "dd/MMM/yyyy");

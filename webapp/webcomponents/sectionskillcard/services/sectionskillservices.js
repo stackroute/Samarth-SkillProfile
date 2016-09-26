@@ -1,9 +1,9 @@
 angular.module('sm-skillprofile')
-    .factory('sectionskillcard', function($http, $rootScope, localStorageService) {
+    .factory('sectionskillcard', function($http, $rootScope, localStorageService, UserAuthService) {
         return {
             getjson: function() {
                 var skill = {};
-                var candidateid = localStorageService.get("candidateid");
+                var candidateid = UserAuthService.getUser().uname;
 
                 return $http({ 
                     method: "get",

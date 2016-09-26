@@ -6,9 +6,9 @@ var app = angular
 
     });
 
-function educationCardController($mdDialog, $http, datagenerate, $rootScope, localStorageService) {
+function educationCardController($mdDialog, $http, datagenerate, $rootScope, localStorageService, UserAuthService) {
     var ctrl = this;
-    var candidateid = localStorageService.get("candidateid");
+    var candidateid = UserAuthService.getUser().uname;
     ctrl.loadLangData = function(lang) {
         datagenerate.getjson("section", lang).then(function(result) {
             ctrl.items = result;
@@ -73,8 +73,8 @@ function educationCardController($mdDialog, $http, datagenerate, $rootScope, loc
             );
     };
 
-    function DialogController($scope, $mdDialog, $http, header, object, localStorageService) {
-        var candidateid = localStorageService.get("candidateid");
+    function DialogController($scope, $mdDialog, $http, header, object, localStorageService, UserAuthService) {
+        var candidateid = UserAuthService.getUser().uname;
         $scope.header = header;
         // $scope.yearval="";
 
@@ -101,18 +101,18 @@ function educationCardController($mdDialog, $http, datagenerate, $rootScope, loc
             $scope.academicType = object.academicType;
         } else {
 
-            $scope.title = "course";
-            $scope.batch = "some year";
-            $scope.result = "some value";
-            $scope.unit = " with some unit";
-            $scope.name = "some educational body";
-            $scope.location = "some location";
-            $scope.affiliation = "some controlling body";
-            $scope.to = new Date();
-            $scope.from = new Date();
-            $scope.type = "type of institute";
-            $scope.academicType = "of academic type";
-            $scope.type = ['school', 'college', 'other'];
+            // $scope.title = "course";
+            // $scope.batch = "some year";
+            // $scope.result = "some value";
+            // $scope.unit = " with some unit";
+            // $scope.name = "some educational body";
+            // $scope.location = "some location";
+            // $scope.affiliation = "some controlling body";
+            // $scope.to = new Date();
+            // $scope.from = new Date();
+            // $scope.type = "type of institute";
+            // $scope.academicType = "of academic type";
+            // $scope.type = ['school', 'college', 'other'];
 
         }
 

@@ -4,8 +4,9 @@ angular.module('sm-skillprofile')
         controller: questionBoxCtrl          
     });
 
-function questionBoxCtrl($timeout, quesnboxService, $rootScope, localStorageService) {
-    var candidateid = localStorageService.get("candidateid");
+function questionBoxCtrl($timeout, quesnboxService, $rootScope, localStorageService, UserAuthService) {
+    var candidateid = UserAuthService.getUser().uname
+    console.log("data from user", candidateid);
     var ctrl = this;
     ctrl.showMaxBtn = false;
     ctrl.displayAlertMessage = false;

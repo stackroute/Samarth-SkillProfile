@@ -26,18 +26,31 @@
                     during
                     
                     <md-input-container >
-                        <label>-mm-dd-yyyy</label>
-                        <input type="text" class="datepicker" ng-model="from|date:'dd/mm/yyyy" id="input1">
+
+                        <label>mm-dd-yyyy</label>
+                        <input type="text" class="datepicker" ng-model="from" id="input1" formatted-date format="medium"/>
+                       <!--  <label>-mm-dd-yyyy</label>
+                       <input type="text" class="datepicker" ng-model="from|date:'dd/mm/yyyy" id="input1">
+                       >>>>>>> 3a889ca40e03443740378886cdfdf20970a83f83 -->
                     </md-input-container>
                      -
                     <md-input-container>
                     <label>mm-dd-yyyy</label>  
-                    <input type="text" ng-model="to" id="input1">
+
+                    <input type="text" ng-model="to" id="input1" formatted-date format="medium"/>
+                    </md-input-container>
+                    duration
+                    <md-input-container>
+                    <label>year/month/days</label>
+                    <input type="text" ng-model="year" id="input1" >
+
+                    <!-- <input type="text" ng-model="to" id="input1">
                     </md-input-container>
                     duration
                     <md-input-container>
                     <label>yrs/mnths/days</label>
                     <input type="text" ng-model="year" id="input1">
+                    >>>>>>> 3a889ca40e03443740378886cdfdf20970a83f83 -->
                     </md-input-container>
                     at
                     <md-input-container>
@@ -47,8 +60,13 @@
                     with
                      <md-input-container>
                        
+
+                        <label>Skill1,skill2,skill3...</label>
+                        <input type="text" ng-model="skills" id="input1">
+<!-- =======
                         <label>Skills</label>
                         <input type="text" ng-model="skill" id="input1">
+>>>>>>> 3a889ca40e03443740378886cdfdf20970a83f83 -->
                        
                     </md-input-container>
                    

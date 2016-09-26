@@ -29,10 +29,28 @@ angular.module('sm-skillprofile')
 
 
 
-function personalinfoCardController($http, $mdDialog, $rootScope, localStorageService) {
+function personalinfoCardController($http, $mdDialog, $rootScope, localStorageService, UserAuthService, datagenerate) {
     var ctrl = this;
     ctrl.personalInfo = {};
-    var candidateid = localStorageService.get("candidateid");
+    var candidateid = UserAuthService.getUser().uname;
+
+    ctrl.loadLangData = function(lang) {
+        datagenerate.getjson("section", lang).then(function(result) {
+            ctrl.items = result;
+
+        }); //end datagenerate
+    }
+    ctrl.loadLangData(getItem("lang"));
+
+    function getItem(key) {
+        return localStorageService.get(key);
+    }
+    //$scope.loadLangData("Hindi");
+    $rootScope.$on("lang_changed", function(event, data) {
+
+        ctrl.loadLangData(data.language);
+    });
+
     $http({
         method: "GET",
         url: 'http://localhost:8081/personalinfo/' + candidateid
@@ -78,6 +96,7 @@ function personalinfoCardController($http, $mdDialog, $rootScope, localStorageSe
 
     function DialogController($scope, $mdDialog, val, header) {
         $scope.personalObject = val;
+        var candidateid = UserAuthService.getUser().uname;
 
         $scope.header = header;
         $scope.hide = function() {

@@ -3,7 +3,7 @@
         <md-toolbar>
             <div class="md-toolbar-tools" layout="row" layout-align="start center">
                 <div layout="row" layout-align="start center" flex>
-                    <md-button hide-gt-sm show-sm show-xs class="md-icon-button" aria-label="Settings" ng-click="togglemenu()">
+                    <md-button ng-show="displaysidenav" hide-gt-sm show-xs class="md-icon-button" aria-label="Settings" ng-click="togglemenu()">
                         <md-icon>menu</md-icon>
                     </md-button>
                     <h2>
@@ -19,17 +19,15 @@
                             </md-option>
                         </md-select>
                     </md-input-container>
-                    <!-- <div>
-                        <a ng-click="signout()" ng-show="showSignout">Signout</a>
-                    </div> -->
-                    <a ui-sref="skillprofile.signout" ng-show="showSignout">Signout</a>
+                    <a ui-sref="skillprofile.signout" ng-show="displaysidenav">Signout</a>
                 </div>
+            </div>
         </md-toolbar>
     </md-content>
-    </div>
-    <div>
-        <md-sidenav class="md-sidenav-left md-whiteframe-4dp " md-component-id="left ">
-            <md-content ng-include src=" 'home/templates/sidenavcontents.html' " ng-click="togglemenu() "></md-content>
-        </md-sidenav>
-    </div>
-    <hr>
+</div>
+<div>
+    <md-sidenav class="md-sidenav-left md-whiteframe-4dp" md-component-id="left">
+        <md-content ng-include src="'home/templates/sidenavcontents.html'" ng-click="togglemenu()"></md-content>
+    </md-sidenav>
+</div>
+<hr>

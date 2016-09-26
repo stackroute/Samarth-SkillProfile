@@ -3,6 +3,7 @@ var request = require('request');
 var platformURL = "localhost:8081"; //@TODO take this from config
 
 var registerCandidate = function(candidateObj) {
+    console.log("Inside auth candidate", candidateObj);
     return new Promise(function(resolve, reject) {
         var options = {
             method: 'POST',

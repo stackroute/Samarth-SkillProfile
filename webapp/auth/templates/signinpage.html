@@ -1,9 +1,10 @@
-<div class="landingpage"  flex-xs="100"  layout="row"  layout-wrap>
-   <div layout="row" layout-align="center center" style="margin:auto">
-    <!-- <a ui-sref="skillprofile.signin"> -->
-            <md-button flex-offset="70" class="md-raised md-primary loginbtn" ui-sref="skillprofile.signin" ng-hide="action">
+<div class="landingpage" layout="row" layout-align="center center">
+    <div layout="row" layout-align="start center">
+    <a ui-sref="skillprofile.signin">
+            <md-button class="md-raised md-primary loginbtn" ng-hide="action" ng-click="hideFun()">
                 {{signin}}
             </md-button>
-            <!-- </a> -->
-    </div>    
+            </a>
+        </div>
+    
 </div>

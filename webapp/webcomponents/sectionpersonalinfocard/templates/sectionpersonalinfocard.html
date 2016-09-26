@@ -2,7 +2,7 @@
     <md-card flex>
         <md-card-title class="title">
             <md-card-title-text layout="row">
-                <div class="md-headline">Personal Information</div>
+                <div class="md-headline">{{$ctrl.items.personalinfoheader}}</div>
                 <!-- <div flex="10">23</div> -->
             </md-card-title-text>
         </md-card-title>
@@ -94,7 +94,7 @@
         </md-card-content>
         <md-card-actions layout="row" flex layout-align="end end">
             <md-footer>
-                <md-button ng-click="$ctrl.showAdvanced($event,$ctrl.personalInfo,'Edit Info')">Edit</md-button>
+                <md-button ng-click="$ctrl.showAdvanced($event,$ctrl.personalInfo,'Edit Info')">{{$ctrl.items.edit}}</md-button>
             </md-footer>
         </md-card-actions>
     </md-card>

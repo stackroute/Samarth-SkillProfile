@@ -8,7 +8,7 @@
              $scope.signout = function() {
 
                  localStorageService.remove('JWT');
-                 localStorageService.remove("candidateid");
+
                  $http.defaults.headers.common.Authorization = '';
 
                  if (localStorageService.get('JWT') == null) {
@@ -35,9 +35,14 @@
              //Get the current logged in user
              $scope.user = UserAuthService.getUser();
 
-             $scope.portfolio = {
-                 completion: "40"
-             };
+             if (UserAuthService.getUser() == undefined) {
+                 console.log(" hide nav bar ");
+                 $scope.displaysidenav = false;
+             } else {
+                 console.log("show nav bar ", UserAuthService.getUser());
+                 $scope.displaysidenav = true;
+             }
+
 
              $scope.togglemenu = buildToggler('left');
 

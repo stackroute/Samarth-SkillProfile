@@ -10,15 +10,18 @@ angular.module('sm-skillprofile')
     });
 
 
-function sectionskillcardctrl($http, sectionskillcard, $mdDialog, datagenerate, $rootScope, localStorageService) {
+function sectionskillcardctrl($http, sectionskillcard, $mdDialog, datagenerate, $rootScope, localStorageService, UserAuthService) {
     var ctrl = this;
-    var candidateid = localStorageService.get("candidateid");
+    var candidateid = UserAuthService.getUser().uname;
+    console.log("Inside skill section", candidateid);
     ctrl.loadLangData = function(lang) {
         datagenerate.getjson("section", lang).then(function(result) {
             ctrl.items = result;
 
         }); //end datagenerate
     }
+
+
     ctrl.loadLangData(getItem("lang"));
 
     function getItem(key) {
@@ -104,8 +107,12 @@ function sectionskillcardctrl($http, sectionskillcard, $mdDialog, datagenerate, 
             });
     };
 
-    function DialogController($scope, $mdDialog, val, header, localStorageService) {
-        var candidateid = localStorageService.get("candidateid");
+    function DialogController($scope, $mdDialog, val, header, localStorageService, UserAuthService) {
+        $scope.exp = [];
+        for (i = 0; i <= 40; i++) {
+            $scope.exp.push(i);
+        }
+        var candidateid = UserAuthService.getUser().uname;
         $scope.skillObject = val;
         var skill = val.skillname;
         //console.log("coming", skill);

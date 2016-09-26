@@ -4,10 +4,10 @@ angular.module('sm-skillprofile')
         controller: projectsectioncardCtrl          
     });
 
-function projectsectioncardCtrl($http, $mdDialog, datagenerate, $rootScope, localStorageService) {
+function projectsectioncardCtrl($http, $mdDialog, datagenerate, $rootScope, localStorageService, UserAuthService) {
 
     var ctrl = this;  
-    var candidateid = localStorageService.get("candidateid");
+    var candidateid = UserAuthService.getUser().uname;
     ctrl.loadLangData = function(lang) {
         datagenerate.getjson("section", lang).then(function(result) {
             ctrl.items = result;
@@ -43,7 +43,7 @@ function projectsectioncardCtrl($http, $mdDialog, datagenerate, $rootScope, loca
     ctrl.decreaseLimit = function() {
         ctrl.limitval = 4;
     }
-    console.log("Inside project section ", $rootScope.candidateid)
+
     $http({
         method: 'GET',
         url: 'http://localhost:8081/project/' + candidateid
@@ -81,21 +81,28 @@ function projectsectioncardCtrl($http, $mdDialog, datagenerate, $rootScope, loca
             );
     };
 
-    function DialogController($scope, $mdDialog, $http, header, object, localStorageService) {
-        var candidateid = localStorageService.get("candidateid");
+    function DialogController($scope, $mdDialog, $http, header, object, localStorageService, UserAuthService) {
+        var candidateid = UserAuthService.getUser().uname;
         $scope.header = header;
         $scope.projectObj = object;
+        $scope.skills = $scope.projectObj.skills;
+        console.log("skills", $scope.skills)
+
+        $scope.submit = function() {
+            $scope.Skills.push('');
+        };
         if (object != '') {
             $scope.Project = object.name;
             $scope.Duration = object.duration.durationInMonths;
             $scope.Client = object.workplace;
             $scope.Location = object.location;
             $scope.Salary = object.income;
-            /*$scope.Skills = [];
-            for (var skill in object.skills) {
-                console.log("Inside section project ",object.skills[skill]);
-                $scope.Skills.push(object.skills[skill]);
-            }*/
+            // $scope.Skills = [];
+            // for (var skill in object.skills) {
+            //     console.log("Inside section project ",object.skills[skill]);
+            //     $scope.Skills.push(object.skills[skill]);
+            // }*/
+
 
 
         } else {
@@ -104,7 +111,7 @@ function projectsectioncardCtrl($http, $mdDialog, datagenerate, $rootScope, loca
             $scope.Client = "";
             $scope.Location = "";
             $scope.Salary = "";
-            $scope.Skills = [];
+            $scope.Skills = ["skillname"];
         }
 
         $scope.hide = function() {
@@ -119,7 +126,7 @@ function projectsectioncardCtrl($http, $mdDialog, datagenerate, $rootScope, loca
 
 
         $scope.save = function(header) {
-
+            var skill = $scope.skills.toString().split(",");
             console.log("Header" + header)
 
             var projectData = {
@@ -134,12 +141,12 @@ function projectsectioncardCtrl($http, $mdDialog, datagenerate, $rootScope, loca
                         "to": "09/11/2016",
                         "durationInMonths": $scope.Duration
                     },
-                    "skills": ["Javascript"],
+                    "skills": skill,
                     "meta": []
                 }]
             }
             if (header == "Add Project") {
-
+                console.log("before adding project", projectData);
                 $http({
                     method: 'POST',
                     url: 'http://localhost:8081/project/' + candidateid,
