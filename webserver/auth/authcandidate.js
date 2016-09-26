@@ -52,7 +52,7 @@ var getCandidateAuthToken = function(user) {
                     error: err
                 });
             } else if (res.statusCode >= 200 && res.statusCode <= 299) {
-                console.debug("Successfully authorized candidate ", body);
+                console.log("Successfully authorized candidate ", body);
                 resolve(body);
             }
         });

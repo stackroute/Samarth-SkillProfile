@@ -23,7 +23,8 @@ var signup = function(newUser, callback, unauthCB) {
             callback("Unable to signup the user", null);
         }
 
-        authCandidate.registerCandidate(user).then(
+        //Register the candidate by sending the form data
+        authCandidate.registerCandidate(newUser).then(
             function(candidate) {
                 console.log("Registered successfully ", candidate);
 
@@ -39,7 +40,7 @@ var signup = function(newUser, callback, unauthCB) {
                             "name": candidateProfile.name,
                             "email": candidateProfile.email,
                             "gender": candidateProfile.gender,
-                            "ctkn": platformToken
+                            "ptkn": platformToken
                         };
 
                         generateJWTToken(candidateUser, callback); //generate JWTToken
@@ -103,7 +104,7 @@ var signin = function(uname, pwd, callback, unauthCB) {
                         "name": candidateProfile.name,
                         "email": candidateProfile.email,
                         "gender": candidateProfile.gender,
-                        "ctkn": platformToken
+                        "ptkn": platformToken
                     };
 
                     generateJWTToken(candidateUser, callback); //generate JWTToken
@@ -124,8 +125,8 @@ var signout = function(cb) {
 };
 
 var generateJWTToken = function(user, cb) {
-    var payload = user.uname;
-    var secretOrPrivateKey = 'SAMARTH-SKILL-PROFILE-WEBAPP-SECRET';
+    var payload = user;
+    var secretOrPrivateKey = getUserTokenSecret();
     var options = {
         algorithm: "HS256",
         expiresIn: 36000,
@@ -138,8 +139,29 @@ var generateJWTToken = function(user, cb) {
     });
 }
 
+var verifyAuthToken = function(token, callback, unauthCB) {
+    var secretOrPrivateKey = getUserTokenSecret();
+
+    jwt.verify(token, secretOrPrivateKey,
+        function(err, payload) {
+            if (err) {
+                console.error("Error in decoding user token: ", err);
+                unauthCB(err);
+                return;
+            }
+
+            callback(payload);
+        }
+    ); //end of verify
+}
+
+var getUserTokenSecret = function() {
+    return 'SAMARTH-SKILL-PROFILE-WEBAPP-SECRET';
+}
+
 module.exports = {
     signup: signup,
     signin: signin,
-    signout: signout
+    signout: signout,
+    isUserAuthenticated: verifyAuthToken
 }

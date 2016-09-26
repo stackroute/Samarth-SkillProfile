@@ -67,11 +67,9 @@ angular.module('sm-skillprofile')
                                 auth.removeUser(); //ensuring user is not saved locally
                                 reject(res.data);
                             } else if (res.status >= 200 && res.status <= 299) {
-                                if (res.data.user && res.data.token) {
-                                    res.data.user.token = res.data.token;
+                                if (res.data.uname && res.data.token) {
                                     //Successfully authenticated
-                                    auth.saveUser(res.data.user);
-                                    //console.log("response",res.data.token);
+                                    auth.saveUser(res.data);
                                     resolve(auth.getCurrentUser());
                                 } else {
                                     //Login request passed but required data was not returned
@@ -122,11 +120,9 @@ angular.module('sm-skillprofile')
                                 auth.removeUser(); //ensuring user is not saved locally
                                 reject(res.data);
                             } else if (res.status >= 200 && res.status <= 299) {
-                                if (res.data.user && res.data.token) {
-                                    res.data.user.token = res.data.token;
+                                if (res.data.uname && res.data.token) {
                                     //Successfully authenticated
-                                    auth.saveUser(res.data.user);
-                                    //console.log("response",res.data.token);
+                                    auth.saveUser(res.data);
                                     resolve(auth.getCurrentUser());
                                 } else {
                                     //Signup request passed but required data was not returned

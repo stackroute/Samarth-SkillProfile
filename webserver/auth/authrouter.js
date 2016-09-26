@@ -29,10 +29,8 @@ router.post('/signup', function(req, res) {
                     });
                 }
 
-                return res.status(200).json({
-                    'user': user,
-                    'token': jwtToken
-                });
+                user['token'] = jwtToken;
+                return res.status(200).json(user);
             },
             function(err) {
                 return res.status(403).json(err);
@@ -70,10 +68,8 @@ router.post('/signin', function(req, res) {
                     });
                 }
 
-                return res.status(200).json({
-                    'user': user,
-                    'token': jwtToken
-                });
+                user['token'] = jwtToken;
+                return res.status(200).json(user);
             },
             function(err) {
                 return res.status(403).json(err);
