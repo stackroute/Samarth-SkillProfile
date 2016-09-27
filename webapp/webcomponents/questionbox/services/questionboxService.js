@@ -1,6 +1,8 @@
 angular.module('sm-skillprofile')
     .service('quesnboxService', function($http, $rootScope, localStorageService, UserAuthService) {
         var candidateid = UserAuthService.getUser().uname;
+        var candidateid = 7204487502;
+
         return {
             questionGenerator: function(lang) {
 

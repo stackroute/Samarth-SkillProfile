@@ -25,10 +25,10 @@
         </div>
         <div layout="row" layout-align="start center" ng-model="error" style="color:red">{{error}} </div>
         <div layout="row" layout-align="start center">
-            <md-button type="submit" class="md-primary md-raised">Sign-In</md-button>
+            <md-button type="submit" class="md-primary md-raised">{{resourceData.signin}}</md-button>
         </div>
         <div layout="row" layout-align="center center">
-            <a ui-sref="skillprofile.signup">Create New Account</a>
+            <a ui-sref="skillprofile.signup">{{resourceData.create}}</a>
         </div>
     </form>
 </div>

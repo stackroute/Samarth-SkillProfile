@@ -1,6 +1,3 @@
-
-
-
 version: '2'
 services:
   webapp:
@@ -14,5 +11,14 @@ services:
       - 8080
     ports:
       - "80:8080"
-
-
+  samarth:
+    image: samarth/samarth-platform:v0.1.0
+    build:
+      context: ./
+      dockerfile: 
+    network_mode: host
+    restart: always
+    expose:
+      -8081
+    ports:
+      - "80:8081"

@@ -9,7 +9,7 @@ angular.module('sm-skillprofile')
                     url: "http://localhost:8081/skillcard/" + candidateid,
 
                 }).then(function mySucces(response)  { 
-                    console.log("haan v jaaan de rea");
+
                     var object = response.data.result;
 
                     if (object.personalinfo[0].name != undefined) {
@@ -32,19 +32,21 @@ angular.module('sm-skillprofile')
                     if (object.personalinfo[0].email != undefined) {
                         skillcarddata['email'] = object.personalinfo[0].email;
                     }
-                    if (object.workexp[0].workexperience.length > 0)
-                    //if(object.workexp[0].workexperience[0].Location != undefined)
-                    {
+                    if (object.workexp[0].workexperience.length > 0) {
                         skillcarddata['location'] = object.workexp[0].workexperience[0].Location;
                     }
                     if (object.workexp[0].workexperience.length > 0) {
-                        skillcarddata['designation'] = object.workexp[0].workexperience[0].role;
+                        skillcarddata['designation'] = object.workexp[0].workexperience[0].designation;
                     }
+                    // if (object.skill[0].skills.length > 0) {
+                    //     skillcarddata['skills'] = [(object.skill[0].skills[0].skillname)];
+                    // }
                     if (object.skill[0].skills.length > 0) {
-                        skillcarddata['skills'] = [(object.skill[0].skills[0].skillname)];
+                        skillcarddata['skills'] = [(object.skill[0].skills)];
                     }
-                    // skillcarddata['name']=object.personalinfo[0].name;
 
+                    // skillcarddata['name']=object.personalinfo[0].name;
+                    console.log(skillcarddata['skills'], "skills in sc");
                     console.log('SKILL CARD SERVICE', skillcarddata);
                     return skillcarddata;
                 }, function myError(response) { 

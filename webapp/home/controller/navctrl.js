@@ -83,10 +83,13 @@
              }
 
              $scope.selectlang = "English";
-             $scope.language = ['English', 'Hindi'];
+             $scope.language = ['English', 'Hindi', 'Telugu', 'Tamil', 'Punjabi', 'Marathi', 'Bengali', 'Urdu', 'Odiya', 'Gujrati'];
              $scope.onChange = function() {
                  console.log($scope.selectlang);
                  //$scope.loadLangData($scope.selectlang);
+                 if ($scope.selectlang != 'English' && $scope.selectlang != 'Hindi') {
+                     $scope.selectlang = 'English';
+                 }
                  submit("lang", $scope.selectlang)
 
                  function submit(key, val) {

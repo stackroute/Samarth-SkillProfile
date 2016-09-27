@@ -85,7 +85,8 @@
                 </div>
                 <md-divider id="divider2" hide-xs></md-divider>
                 <div id="section4" flex hide-xs>
-                    SKILLS: {{$ctrl.data.skills[0]}}
+                    SKILLS:
+                    <span ng-repeat="val in $ctrl.data.skills[0]">{{val.skillname}} &nbsp</span>
                 </div>
             </div>
         </md-card-content>
