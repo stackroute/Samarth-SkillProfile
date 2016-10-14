@@ -16,10 +16,13 @@ angular.module('sm-skillprofile')
                             controller: 'skillhomectrl',
                             controllerAs: 'skillCtrl'
                         },
+                        "content3@": {
+                            template: '<my-skillcard></my-skillcard>'
+                        }/*,
                         "sidebar@": {
                             templateUrl: '/home/templates/sidebar.html',
                             controller: 'sidenavCtrl'
-                        }
+                        }*/
                     }
                 })
                 .state('skillprofile.skillhome.home', {

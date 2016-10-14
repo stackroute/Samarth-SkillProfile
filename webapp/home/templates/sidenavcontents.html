@@ -1,4 +1,4 @@
-<div layout="column" ng-controller="sidenavCtrl">
+<div layout="column" ng-controller="sidenavCtrl" >
     <md-content layout layout-align="center center" class="md-padding">
         <img class="radiusCircle" ng-src="/home/images/user.png">
     </md-content>
@@ -9,7 +9,7 @@
     </md-content>
     <md-content class='app-sidebar'>
         <md-list>
-            <md-list-item ng-click="select($index)" ui-sref="{{item.state}}" ng-repeat="item in items | orderBy: 'seq'">
+            <md-list-item ng-click="select($index)" ui-sref="{{item.state}}" ng-repeat="item in items | orderBy: 'seq'" ng-class="isActive($index)">
                 <md-item-content layout="row" layout-align="start center">
                     <div class="inset">
                         <md-icon class="material-icons">{{item.icon}}</md-icon>

@@ -13,11 +13,10 @@ function skillcardctrl($window, $timeout, $mdDialog, skillcardservice)     
     console.log("Inside skill card ctrl....");
     skillcardservice.getskillcarddata().then(function(result) {
         ctrl.data = result;
+        console.log("====================================================================");
+        console.log(ctrl.data);
+        console.log("====================================================================");
     });
-
-
-
-
 
 
     function createDownloadUrl() {

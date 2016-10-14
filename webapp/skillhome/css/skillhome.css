@@ -1,4 +1,8 @@
 
+.test{
+    background: red;
+}
+
 #home {
     color: white;
 }
@@ -39,4 +43,7 @@ my-educationcard {
 my-skillcard {
     width: 100%;
 }
- 
+
+.link_active{
+    background: skyblue;
+ }

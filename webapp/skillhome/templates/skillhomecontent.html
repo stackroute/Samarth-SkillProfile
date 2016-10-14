@@ -1,6 +1,12 @@
+<!-- 
+<div ui-view="content3@"></div> -->
 <div layout="row" flex>
-    <div  class="sidebarcss" flex-offset="15" flex="20" hide-xs hide-sm>
-    	<md-content ng-include src="'home/templates/sidenavcontents.html'">
+	<div ui-view="content3@" flex-offset="15" flex="70" flex-sm="100" flex-xs="100" hide-sm hide-xs></div>
+	<div ui-view="content3@"  flex="100" flex-sm="100" flex-xs="100" hide-gt-sm></div>
+</div>
+<div layout="row" flex>
+    <div class="sidebarcss " flex-offset="15" flex="20" hide-xs hide-sm>
+        <md-content ng-include src="'home/templates/sidenavcontents.html'"></md-content>
     </div>
     <div ui-view="content2@" class="maincontent" flex="50" flex-sm="100" flex-xs="100"></div>
 </div>
